@@ -37,3 +37,4 @@ One of Linux's greatest strengths is its flexibility and customizability. Users 
 
 
 The first command below *su root*' is used in Linux to switch to the root user account, which is the superuser or administrative account with full priviledges over the system.
+![sammylin6525@DevopsEngr:~$ su root.](images/root_user.ng)
