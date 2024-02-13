@@ -1,2 +1,2 @@
-# Linux
+# 1. Linux
 ## Introduction to Linux
