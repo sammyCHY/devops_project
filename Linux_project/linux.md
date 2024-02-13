@@ -34,3 +34,6 @@ Linux includes extensive networking capabilities, making it a popular choice for
 One of Linux's greatest strengths is its flexibility and customizability. Users can tailor their Linux systems to meet specific requirements, choosing from a vast array of software packages, desktop environments, and system configurations.
 
 **Learning Linux can be a rewarding journey, offering valuable skills in system administration, software development, and cybersecurity. Whether you're a beginner or an experienced user, Linux provides a powerful platform for exploration, innovation, and collaboration**.
+
+
+The first command below *su root*' is used in Linux to switch to the root user account, which is the superuser or administrative account with full priviledges over the system.
