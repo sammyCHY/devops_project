@@ -35,7 +35,7 @@ One of Linux's greatest strengths is its flexibility and customizability. Users 
 
 **Learning Linux can be a rewarding journey, offering valuable skills in system administration, software development, and cybersecurity. Whether you're a beginner or an experienced user, Linux provides a powerful platform for exploration, innovation, and collaboration**.
 
-                                            # FILE MANIPULATION
+  # FILE MANIPULATION
 ## 1. sudo command: 
 The **sudo** command in Linux allows a permitted user to execute a command as the superuser or another user, as specified in the sudoers configuration file. The word "**sudo**" stands for "superuser do."
  
