@@ -55,3 +55,16 @@ Here's how you use it:
 ![The image below shows the pwd command](images/image/pwd1.png)
 
 ![The image below shows the pwd command](images/image/pwd.png)
+
+
+## 3. cd command: 
+The cd command in the command line stands for "change directory." It is used to change the current working directory in the shell.
+
+Here's how you typically use it:
+
+cd [directory]
+For example, to change to a directory named "Documents," you would type:
+**cd Documents**
+![here's is the image indicating cd command](images/image/cd.png)
+
+
