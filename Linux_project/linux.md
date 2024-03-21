@@ -51,6 +51,7 @@ pwd stands for **"print working directory."** When you run the pwd command, it d
 Here's how you use it:
 
 /home/ubuntu/
+
 ![The image below shows the pwd command](images/image/pwd1)
 
 ![The image below shows the pwd command](images/image/pwd)
