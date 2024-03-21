@@ -52,6 +52,6 @@ Here's how you use it:
 
 /home/ubuntu/
 
-![The image below shows the pwd command](images/image/pwd1)
+![The image below shows the pwd command](images/image/pwd1.png)
 
-
+![The image below shows the pwd command](images/image/pwd.png)
