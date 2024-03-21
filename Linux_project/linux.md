@@ -39,7 +39,12 @@ One of Linux's greatest strengths is its flexibility and customizability. Users 
 ## 1. sudo command: 
 The **sudo** command in Linux allows a permitted user to execute a command as the superuser or another user, as specified in the sudoers configuration file. The word "**sudo**" stands for "superuser do."
 
+The commands on the images below are for **sudo**
 ![the image below is a screenshot of sudo command](images/apt-get.png)
+
+![the image below is a screenshot of sudo command2](images/image/sudo apt upgrade.png)
+
+
 
  
 
