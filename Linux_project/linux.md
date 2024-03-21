@@ -69,3 +69,13 @@ For example, to change to a directory named "Documents," you would type:
 ![here's is the image indicating cd command](images/image/cd.png)
 
 
+## 4. ls command:
+The **ls command** is used to list files and directories in a directory. It's one of the most commonly used commands in the command line interface.
+
+Here's the basic syntax:
+
+ls [options] [directory]     ls /path/to/directory
+
+![The image below show ls command](images/image/ls.png)
+
+![The image below show ls command](images/image/ls_flags.png)
