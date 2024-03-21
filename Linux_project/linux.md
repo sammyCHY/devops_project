@@ -45,7 +45,13 @@ The commands on the images below are for **sudo**
 The second command is an option on how to use **sudo**
 ![the image below is a screenshot of sudo command](images/image/sudoo.png)
 
+## 2. pwd:
+pwd stands for **"print working directory."** When you run the pwd command, it displays the current working directory, which is the directory in the file system where you are currently located or "working."
 
+Here's how you use it:
 
- 
+/home/ubuntu/
+![The image below shows the pwd command](images/image/pwd1)
+
+![The image below shows the pwd command](images/image/pwd)
 
