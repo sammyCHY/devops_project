@@ -79,3 +79,14 @@ ls [options] [directory]     ls /path/to/directory
 ![The image below show ls command](images/image/ls.png)
 
 ![The image below show ls command](images/image/ls_flags.png)
+
+
+## 5. cat command:
+The **cat command** short for "concatenate" and is primarily used to display the contents of files. It's one of the fundamental commands in the command line interface.
+
+Here's the basic syntax:
+
+cat [options] [file(s)]  or   cat file1.txt file2.txt
+
+![The image below show cat command](images/image/cat.png)
+
