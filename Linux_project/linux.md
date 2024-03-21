@@ -42,7 +42,8 @@ The **sudo** command in Linux allows a permitted user to execute a command as th
 The commands on the images below are for **sudo**
 ![the image below is a screenshot of sudo command](images/apt-get.png)
 
-![the image below is a screenshot of sudo command2](images/image/sudo apt upgrade.png)
+The second command is an option on how to use **sudo**
+![the image below is a screenshot of sudo command](images/image/sudoo.png)
 
 
 
