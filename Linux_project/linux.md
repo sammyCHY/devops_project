@@ -90,3 +90,22 @@ cat [options] [file(s)]  or   cat file1.txt file2.txt
 
 ![The image below show cat command](images/image/cat.png)
 
+## 6. cp command:
+The **"cp command"** is used to copy files and directories. It stands for "copy."
+
+Here's the basic syntax:
+
+cp [options] source destination
+source: Specifies the file or directory you want to copy.
+destination: Specifies the target location where you want to copy the file or directory.
+If you're copying a single file, you would use cp like this:
+ 
+For example, to copy a file named file1.txt to a directory named backup, you would use:
+
+cp file1.txt backup/
+If you're copying multiple files, you can specify them one after the other, followed by the destination directory. For example:
+
+cp file1.txt file2.txt file3.txt backup/
+
+![The image below show cp command](images/image/cp.png)
+
