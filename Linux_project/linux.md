@@ -124,5 +124,7 @@ For example, to move a file named file1.txt to a directory named backup, you wou
 
 mv file1.txt backup/
 If you're moving multiple files, you can specify them one after the other, followed by the destination directory. For example:
+
+
 ![The image below show mv command](images/image/mv.png)
 
