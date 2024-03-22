@@ -146,3 +146,13 @@ The **rmdir command** is used to remove empty directories (folders). It stands f
   
 ![The image below show rmdir command](images/image/rmdir.png)
 
+
+## 10. rm command:
+The rm command in Linux and Unix-like operating systems is used to remove files or directories. It stands for "remove."
+
+Here's the basic syntax:
+
+rm [options] file(s) or directory(s)
+
+![The image below show rm command](images/image/rm.png)
+
