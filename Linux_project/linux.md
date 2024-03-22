@@ -109,3 +109,20 @@ cp file1.txt file2.txt file3.txt backup/
 
 ![The image below show cp command](images/image/cp.png)
 
+
+## 7. mv command:
+The mv command is used to move files or directories from one location to another. It can also be used to rename files or directories.
+
+Here's the basic syntax:
+mv [options] source destination
+source: Specifies the file or directory you want to move or rename.
+destination: Specifies the target location where you want to move the file or directory, or the new name if you're renaming.
+If you're moving a single file, you would use mv like this:
+
+mv sourcefile destination
+For example, to move a file named file1.txt to a directory named backup, you would use:
+
+mv file1.txt backup/
+If you're moving multiple files, you can specify them one after the other, followed by the destination directory. For example:
+![The image below show mv command](images/image/mv.png)
+
