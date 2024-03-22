@@ -137,4 +137,12 @@ mkdir [options] directory_name
 
 ![The image below show mkdir command](images/image/mkdir.png)
 
+## 9. rmdir command:
+The **rmdir command** is used to remove empty directories (folders). It stands for "remove directory."
+
+- Here's the basic syntax:
+
+- rmdir [options] directory_name
+  
+![The image below show rmdir command](images/image/rmdir.png)
 
