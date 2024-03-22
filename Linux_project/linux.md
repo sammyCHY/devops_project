@@ -128,3 +128,13 @@ If you're moving multiple files, you can specify them one after the other, follo
 
 ![The image below show mv command](images/image/mv.png)
 
+## 8. mkdir command:
+The **mkdir command** is used to create directories (folders). It stands for "make directory."
+
+Here's the basic syntax:
+
+mkdir [options] directory_name
+
+![The image below show mkdir command](images/image/mkdir.png)
+
+
