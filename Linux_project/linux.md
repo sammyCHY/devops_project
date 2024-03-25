@@ -184,9 +184,22 @@ bash
 Copy code
 find [options] [starting_directory] [expression]
 
+
 ![The image below show find command](images/image/find.png)
 
 ![The image below show find command](images/image/find1.png)
+
+
+## 14. grep command:
+The **grep command** in Linux and Unix-like operating systems is a powerful tool used for searching text patterns within files or command output. It stands for "global regular expression print."
+
+Here's the basic syntax:
+grep [options] pattern [file(s)]
+
+![The image below show grep command](images/image/grep.png)
+
+![The image below show grep command](images/image/grep1.png)
+
 
 
 
