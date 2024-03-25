@@ -165,6 +165,7 @@ touch [options] file(s)
 
 ![The image below show touch command](images/image/touch.png)
 
+
 ## 12. locate command:
 The **locate command** is used to quickly search for files and directories in the file system based on their names. It's a fast and efficient way to find files, especially when you know the name or part of the name but not the exact location.
 
@@ -172,5 +173,20 @@ Here's the basic syntax:
 locate [options] pattern
 
 ![The image below show locate command](images/image/locate.png)
+
+
+## 13. find command:
+The find command in Linux and Unix-like operating systems is a powerful tool for searching and locating files and directories in a file system hierarchy. It allows you to search for files based on various criteria such as name, type, size, permissions, and more.
+
+Here's the basic syntax:
+
+bash
+Copy code
+find [options] [starting_directory] [expression]
+
+![The image below show find command](images/image/find.png)
+
+![The image below show find command](images/image/find1.png)
+
 
 
