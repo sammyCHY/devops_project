@@ -156,3 +156,12 @@ rm [options] file(s) or directory(s)
 
 ![The image below show rm command](images/image/rm.png)
 
+
+## 11. touch command:
+The **touch command** is used to create empty files and update the timestamps of existing files. Its primary purpose is to change the access and modification timestamps of files, but if a file doesn't exist, touch will create it.
+
+Here's the basic syntax:
+touch [options] file(s)
+
+![The image below show touch command](images/image/touch.png)
+
