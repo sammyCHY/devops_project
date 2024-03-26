@@ -465,7 +465,45 @@ The **vi command** is a powerful and widely used text editor for the command-lin
 The **jed command** is a lightweight text editor that is part of the "JED" (Joe's Editor) family of text editors. JED is designed to be simple and easy to use, while still providing features commonly found in more advanced text editors.
 
  
-![The image below show vi command](images/image/vi.png)
+![The image below show vim_vi command](images/image/vim_vi.png)
+
+
+## 37. alias, unalias command:
+The **alias command** is used to create and manage custom command aliases. An alias is essentially a shortcut or abbreviation for a longer command or series of commands. It allows users to define their own command names or modify existing command behavior.
+
+
+## 38. su command:
+The **su command** short for "substitute user" or "switch user," is used to change the current user context to that of another user. It allows you to temporarily adopt the environment (including permissions and privileges) of a different user without logging out of the current session.
+
+Here's the basic syntax for the su command:
+su [options] [username]
+[username]: Specifies the username of the user to switch to. If no username is provided, su will attempt to switch to the root user (superuser).
+
+![The image below show su command](images/image/su.png)
+
+
+![The image below show su command](images/image/su1.png)
+
+
+
+## 39. htop command:
+When you run htop, it launches an interactive terminal application that displays a color-coded list of running processes, along with information about CPU and memory usage, process IDs (PIDs), user names, and more. The interface provides various navigation and management options, making it easier to monitor and control processes.
+
+
+
+ ## 40. ps command:
+The **ps command** in Unix-like operating systems is used to display information about processes running on the system. It provides a snapshot of the currently running processes, including their process IDs (PIDs), associated terminal, CPU and memory usage, execution status, and more.
+
+Here's the basic syntax for the ps command:
+ps [options]
+
+
+![The image below show ps command](images/image/ps.png)
+
+
+
+
+
 
 
 
