@@ -404,5 +404,73 @@ To display the current hostname:
 
 
 ## 34. useradd, userdel commands:
+The **useradd command** is used to create a new user account. It's typically used with superuser privileges (e.g., sudo) since creating new user accounts usually requires administrative permissions. Then, userdel command can be used to delete user account.
+
+Here's how you can use the useradd command:
+
+sudo useradd [options] username
+username: Specifies the username for the new user account.
+For example, to create a new user account with the username sammylin6525, you would use:
+
+sudo useradd sammylin6525
+By default, the useradd command creates a new user account with minimal settings. However, you can customize the behavior and settings using various options.
+
+![The image below show useradd command](images/image/useradd.png)
+
+
+## 35. apt-get command:
+The **apt-get command** in Debian-based Linux distributions (such as Ubuntu) is used to manage software packages. It allows users to install, remove, update, and upgrade packages from software repositories.
+
+Here's how you can use the apt-get command:
+**sudo apt-get** [options] command
+
+command: Specifies the action to be performed (e.g., install, remove, update, upgrade, etc.).
+[options]: Optional flags and parameters to customize the behavior of the command.
+Here are some common apt-get commands:
+
+- install package: Installs the specified package(s) and any dependencies.
+- remove package: Removes the specified package(s) from the system.
+- update: Downloads the package lists from the repositories and updates them to get information about the latest versions of packages.
+- upgrade: Upgrades installed packages to their latest versions. This command does not install new packages or remove existing ones.
+- dist-upgrade: Performs the same function as upgrade, but may also remove or install additional packages if necessary to upgrade the system to the latest version.
+For example, to install the nginx web server package, you would use:
+
+sudo apt-get install nginx
+To update the package lists from the repositories:
+for example
+sudo apt-get update
+And to upgrade installed packages to their latest versions:
+
+bash
+Copy code
+sudo apt-get upgrade
+You can also combine commands, such as:
+
+bash
+Copy code
+sudo apt-get update && sudo apt-get upgrade
+This command first updates the package lists and then upgrades the installed packages.
+
+The apt-get command is a powerful package management tool in Debian-based Linux distributions, and it offers many more options and features. You can explore additional functionalities by checking its manual page (man apt-get) or using the --help option (apt-get --help).
+
+
+![The image below show apt-get command](images/image/apt-get.png)
+
+
+## 36. nano, vi, jed command:
+The **nano command** is a simple and easy-to-use text editor for the command line. It's designed to be user-friendly and provides basic text editing capabilities similar to graphical text editors.
+
+The **vi command** is a powerful and widely used text editor for the command-line interface. It's known for its efficiency and versatility, making it a favorite among many developers and system administrators.
+
+The **jed command** is a lightweight text editor that is part of the "JED" (Joe's Editor) family of text editors. JED is designed to be simple and easy to use, while still providing features commonly found in more advanced text editors.
+
+ 
+![The image below show vi command](images/image/vi.png)
+
+
+
+
+
+
 
 
