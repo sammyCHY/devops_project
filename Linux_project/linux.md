@@ -489,6 +489,8 @@ su [options] [username]
 ## 39. htop command:
 When you run htop, it launches an interactive terminal application that displays a color-coded list of running processes, along with information about CPU and memory usage, process IDs (PIDs), user names, and more. The interface provides various navigation and management options, making it easier to monitor and control processes.
 
+![The image below show htop command](images/image/htop.png)
+
 
 
  ## 40. ps command:
