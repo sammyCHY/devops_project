@@ -406,4 +406,3 @@ To display the current hostname:
 ## 34. useradd, userdel commands:
 
 
-
