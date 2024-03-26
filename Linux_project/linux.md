@@ -279,12 +279,9 @@ The **chown command** is used to change the ownership of files and directories. 
 Here's the basic syntax:
 chown [options] new_owner[:new_group] file(s) or directory(s)
 
-
 ![The image below show chown command](images/image/chown.png)
 
-![The image below show chown command](images/image/chown1.png)
-
-
+ 
 ## 23. jobs command:
 In Unix-like operating systems, the **jobs command** is used to display the status of jobs running in the background within the current shell session. Jobs are processes started from the shell that can run asynchronously, either in the foreground or the background.
 
