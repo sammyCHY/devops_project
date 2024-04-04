@@ -81,7 +81,7 @@ Follow these process to open initialize git repo:
 - while you are inside the folder run **git init** command
 
 
-![The image below shows the pwd command](image/images/git_init.png)
+![The image below shows the git_init command](image/images/git_init.png)
 
 
 # 3. Git Commit:
@@ -91,11 +91,64 @@ It is more or less like saving the changes made on the files. Changes can be add
 ### Follow this steps to make our first **git commit**
 
 - In your working directory create a file using the command touch git.txt.
-- write a sentence inside the file and save changes.
-- add the changes to git stagging area using this command **git add**
+- Write a sentence inside the file and save changes.
+- Add the changes to git stagging area using this command **git add**
 - To commit the changes to your git run this command **git commit -m "initial commit"**
 
-![The image below shows the pwd command](image/images/git_commit.png)
+![The image below shows the git_commit command](image/images/git_commit.png)
+
+
+# 4. WORKING WITH BRANCHES:
+**Git branches** are independent lines of development that allow you to work on different features, fixes, or experiments in isolation from each other. They enable you to develop new features, fix bugs, or make changes to your project without affecting the main codebase until the changes are ready to be merged.
+
+### Follow the process for create a first git branch
+To create a new branch run this command **git checkout -b**
+The -b flag helps to create and change into a new branch
+make a new branch by running this command **git checkout -b my-new-branch**
+
+![The image below shows the git_checkout command](image/images/git_checkout.png)
+
+
+# 5. LISTING GIT BRANCHES:
+Use this command below to list the branches on the local git repository
+**git branch**
+
+
+![The image below shows the git_branch command](image/images/git_branch.png)
+
+
+
+# 6. CHANGE INTO AN OLD BRANCH:
+Run this command below
+git checkout >branch_name<
+
+![The image below shows the git_checkout_oldbranch command](image/images/git_checkout_oldbranch.png)
+
+
+
+# 7. GIT MERGING:
+**Git merging** is the process of integrating changes from one branch into another. It combines the changes made in a source branch with the changes made in a target branch, creating a new commit that incorporates both sets of changes.
+eg if we want to add the content of branch B into A.
+first we change into branch A and run the git command below:
+**git merge B**
+
+
+![The image below shows the git_merge_B command](image/images/git_merge_B.png)
+
+
+# 8. DELETING A GIT BRANCH:
+you can carryout the task by using this command below:
+git branch -d >branch_name<
+
+To learn more on git branches, use the command below.
+**git branch --help**
+
+
+
+
+
+
+
 
 
   
