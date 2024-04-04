@@ -80,4 +80,7 @@ Follow these process to open initialize git repo:
 - move into your working directory or folder by using this command  >cd to foldername<
 - while you are inside the folder run **git init** command
 
+
+![The image below shows the pwd command](image/images/pwd1.png)
+
   
