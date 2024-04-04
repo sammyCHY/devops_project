@@ -141,7 +141,17 @@ you can carryout the task by using this command below:
 git branch -d >branch_name<
 
 To learn more on git branches, use the command below.
+
 **git branch --help**
+
+
+# 9. PUSHING LOCAL GIT REPOSITORY TO REMOTE GITHUB REPOSITORY:
+Add a remote repository to the local repository using this command below.
+
+- git remote add origin >link to github repo<
+
+
+![The image below shows the git_remote_add command](image/images/git_remote_add.png)
 
 
 
