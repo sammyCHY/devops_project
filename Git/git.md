@@ -81,6 +81,6 @@ Follow these process to open initialize git repo:
 - while you are inside the folder run **git init** command
 
 
-![The image below shows the pwd command](image/images/pwd1.png)
+![The image below shows the pwd command](image/images/git_init.png)
 
   
