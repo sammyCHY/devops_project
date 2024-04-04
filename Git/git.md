@@ -83,4 +83,19 @@ Follow these process to open initialize git repo:
 
 ![The image below shows the pwd command](image/images/git_init.png)
 
+
+# 3. Git Commit:
+The **git commit command** is used to record changes to the repository. It creates a snapshot of the changes staged in the index (staging area) and commits them to the Git repository's history. 
+It is more or less like saving the changes made on the files. Changes can be adding, modifying, deleting files or text.
+
+### Follow this steps to make our first **git commit**
+
+- In your working directory create a file using the command touch git.txt.
+- write a sentence inside the file and save changes.
+- add the changes to git stagging area using this command **git add**
+- To commit the changes to your git run this command **git commit -m "initial commit"**
+
+![The image below shows the pwd command](image/images/git_commit.png)
+
+
   
