@@ -157,7 +157,24 @@ To get the remote link on the github, click on the green button, copy the https 
 
 ![The image below shows the github_remotelink command](image/images/github_remotelink.png)
 
+- After the commiting the changes in the local repo, then, the content can be push to the remote repo using the command bellow.
 
+**git push origin <branch name<**
+
+
+![The image below shows the git_push_origin command](image/images/git_push_origin.png)
+
+The words origin refers to the remote repo link, it evaluates to the remote repo url, It can be any words of your choice.
+
+
+# 10. CLONING REMOTE GIT REPOSITORY:
+The **git clone command** is used to create a copy of an existing Git repository. It clones a repository from a remote source, such as a URL or a path to another directory, and creates a new directory with the cloned repository.
+It also help us to make a copy of our remote repository into our local machine and also see it as a git tools for downloading remote repository into our local machine.
+
+The command is as follows.
+**git clone >link to the remote repository<**
+
+![The image below shows the git_clone command](image/images/git_clone.png)
 
 
 
