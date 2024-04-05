@@ -153,8 +153,9 @@ Add a remote repository to the local repository using this command below.
 
 ![The image below shows the git_remote_add command](image/images/git_remote_add.png)
 
+To get the remote link on the github, click on the green button, copy the https link. A sample is shown below.
 
-
+![The image below shows the github_remotelink command](image/images/github_remotelink.png)
 
 
 
