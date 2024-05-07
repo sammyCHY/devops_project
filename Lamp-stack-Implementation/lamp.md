@@ -53,3 +53,49 @@ AWS is known for its scalability, reliability, flexibility, and pay-as-you-go pr
 Below is the location to stop the intance.
 
  ![The image below shows the stopping on instance](image/image/stopping_instance.png) 
+
+
+ # Installing Apache and Updating the Firewall
+
+ ### Step 1
+ what is Apache?
+
+ `Apache http Server` The Apache HTTP Server, commonly referred to as Apache, is one of the most widely-used open-source web servers in the world. It is maintained and developed by the Apache Software Foundation. Apache HTTP Server is known for its reliability, performance, and extensibility, making it a popular choice for hosting websites and serving web content.
+
+## Here are some key features and aspects of the Apache HTTP Server:
+
+- HTTP Protocol Support: Apache HTTP Server supports the Hypertext Transfer Protocol (HTTP) and its secure variant, HTTPS (HTTP over SSL/TLS). It can serve both static and dynamic content over the web.
+
+  
+- Modular Architecture: Apache uses a modular architecture, allowing administrators to extend and customize its functionality through modules. Modules can add features such as authentication, URL rewriting, caching, compression, and more.
+
+
+- Cross-Platform: Apache HTTP Server is cross-platform and runs on various operating systems, including Linux, Unix, macOS, and Windows. This makes it suitable for a wide range of environments and deployments.
+
+
+- Virtual Hosting: Apache supports virtual hosting, allowing multiple websites to be hosted on a single server. This feature enables efficient resource utilization and cost savings, especially in shared hosting environments.
+
+
+- Security Features: Apache provides various security features to protect web applications and servers from common threats. These include access control, authentication mechanisms, SSL/TLS encryption, and support for secure protocols and ciphers.
+
+
+- Performance Optimization: Apache HTTP Server offers various performance optimization features to improve web server performance and scalability. These include process/thread management, request handling optimizations, caching mechanisms, and more.
+
+
+- Logging and Monitoring: Apache generates detailed access and error logs, providing valuable insights into web server activity and troubleshooting information. Administrators can use log analysis tools to monitor server performance, detect anomalies, and debug issues.
+
+
+- Community and Support: Apache HTTP Server has a large and active community of users and developers who contribute to its development, documentation, and support. There are numerous resources available, including documentation, forums, mailing lists, and third-party tutorials.
+Overall, Apache HTTP Server is a robust and versatile web server that powers millions of websites and web applications worldwide. Its flexibility, performance, and extensive feature set make it a preferred choice for hosting providers, enterprises, developers, and hobbyists alike.
+
+Install Apache using Ubuntu's Package Manager `apt`
+
+First update a list of Packages in package manager by running the command bellow.
+`sudo apt update`
+Then, run Apache2 package installation with command below.
+`sudo apt install apache2`
+
+ ![The image below shows the sudo_apt_update](image/image/sudo-apt-update.png)
+
+
+ ![The image below shows the install apache2](image/image/sudo-apt-install-apache2.png) 
