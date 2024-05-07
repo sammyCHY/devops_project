@@ -35,3 +35,5 @@ Security and Identity: AWS provides security services and features, including AW
 - Analytics and Big Data: AWS offers analytics and big data services, such as Amazon EMR for big data processing, Amazon Athena for interactive query analysis, Amazon Kinesis for real-time data streaming, AWS Glue for data integration, and more.
 AWS is known for its scalability, reliability, flexibility, and pay-as-you-go pricing model, making it a popular choice for businesses of all sizes, from startups to large enterprises, to build and deploy their applications and services in the cloud.
 
+![Uploading image.png…]()
+
