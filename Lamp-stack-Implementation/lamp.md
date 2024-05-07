@@ -98,4 +98,4 @@ Then, run Apache2 package installation with command below.
  ![The image below shows the sudo_apt_update](image/image/sudo-apt-update.png)
 
 
- ![The image below shows the install apache2](image/image/sudo-apt-install-apache2.png) 
+ ![The image below shows the install_apache2](image/image/sudo-apt-install-apache2.png) 
