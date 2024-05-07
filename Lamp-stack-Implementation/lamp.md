@@ -37,3 +37,12 @@ AWS is known for its scalability, reliability, flexibility, and pay-as-you-go pr
 
  ![The image below shows the asw_server](image/image/aws_server.png)
 
+
+ The image above is the interface of the **aws** platform, after creating an instance, a private key was downloaded on a local host from **AWS** while setting up the server, It is a PEM file format. However, the PEM will be used to connect to our EC2 instance via **ssh.** 
+ Thereafter, remenber to run the command below to have access to the downloaded private key, then connect ssh key from the instance server.
+
+  ![The image below shows the cd Downloads](image/image/cd.png)
+
+
+
+
