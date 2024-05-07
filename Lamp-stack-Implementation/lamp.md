@@ -46,6 +46,6 @@ AWS is known for its scalability, reliability, flexibility, and pay-as-you-go pr
 
   ### 2. Connect to the Instance: you can connect to the server by running the command below.
 
-  'ssh -i "sammy-ec2.pem" ubuntu@ec2-18-219-135-230.us-east-2.compute.amazonaws.com'
+  (ssh -i "sammy-ec2.pem" ubuntu@ec2-18-219-135-230.us-east-2.compute.amazonaws.com)
 
 
