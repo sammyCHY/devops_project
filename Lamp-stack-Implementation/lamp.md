@@ -48,3 +48,8 @@ AWS is known for its scalability, reliability, flexibility, and pay-as-you-go pr
 
   `ssh -i "sammy-ec2.pem" ubuntu@ec2-18-219-135-230.us-east-2.compute.amazonaws.com`
 
+
+- It is adviseable to read the information about AWS `free tier limits` and make sure that the **EC2** instance stopped when it's not in use.
+Below is the location to stop the intance.
+
+ ![The image below shows the stopping on instance](image/image/stopping_instance.png) 
