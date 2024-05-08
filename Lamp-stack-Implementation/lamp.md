@@ -159,8 +159,23 @@ After tha installation, then type the command below to login into the MYSQL.
 - `$ sudo mysql`
 
 ![The image below shows after mysql installation](image/image/sudo-mysql.png) 
- 
- 
+
+This will connect to the MYSQL server as the administrative database user root, which is inferred by the use of sudo when running this command. Expect output like the result above.
+
+It's recommended that you run a security script that comes pre-installed with MYSQL. This script will remove some insecure default settings and lock down access to your database system. Before running the script you will set a password for the root user, using mysql_native_password as default authentication method. We're defining this password as `PassWord.1`
+
+
+- `ALTER USER 'root'@'localhost' IDENTIFIELD with mysql_native_password BY 'PassWord.1';`
+
+After, Exit mysql with the command below.
+
+- `mysql > exit`
+
+ To start interactive script running:
+
+ - `$ sudo mysql_secure_installation`
+
+ ![The image below shows after mysql secure installation](image/image/sudo-mysql-secure-installation.png)   
 
 
  
