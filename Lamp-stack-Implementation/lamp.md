@@ -209,3 +209,35 @@ To install these 3 packages at once, then run the command below.
  ![The image below shows sudo apt install php](image/image/sudo-apt-install-phpcntl.png) 
 
 
+Once the installation is finished, then run the following command to confirm your PHP version:
+
+`php -v`
+
+![The image below show php version](image/image/php-v.png) 
+
+
+At this point, LAMP Stack is completly installed and fully operational.
+
+- `Linux (Ubuntu)`
+- `Apache HTTP Server`
+- `MYSQL`
+- `PHP`
+
+
+
+# Enable PHP on the website
+
+### Step 4 - Creating a virtual Host for Website using Apache.
+
+In this project we are going to setup a domain called `projectlamp` although it can be replaced with your choice.
+
+We are starting by creating a directory for `projectlamp` using 'mkdir' command as follows:
+
+`$ sudo mkdir /var/www/projectlamp`
+
+![The image below shows projectlamp](image/image/sudo-mkdir-projectlamp.png)
+
+
+ 
+
+
