@@ -99,3 +99,10 @@ Then, run Apache2 package installation with command below.
 
 
  ![The image below shows the install_apache2](image/image/sudo-apt-install-apache2.png) 
+
+
+ ![The image below shows the install_apache2b](image/image/sudo-apt-install-apache2b.png)
+
+
+ ![The image below shows the install_apache2c](image/image/sudo-apt-install-apache2c.png) 
+
