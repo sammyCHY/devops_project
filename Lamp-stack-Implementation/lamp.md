@@ -283,8 +283,60 @@ Finally, reload Apache so these changes takes effect:
 ![The image below shows projectlamp](image/image/sudo-systemctl-reloadapache2.png)
 
 
+Thereafter, a new website is now active, but the web root /var/www/projectlamp is still empty. Create an index.html file in that location so that we test the virtual host workers as expected:
+
+![The image below shows url](image/image/url-dns.png)
 
 
+
+
+
+
+# Creating a Virtual Host for Website using Apache.
+
+### Step5 - Enable PHP on the website.
+
+With the default Directory index settings on Apache, a file named `index.html` will always take precedence over an `index.php` file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary `index.html` file containing an informative message to visitors.  Because this page will take precedence over the `index.php` page, it will then become the landing page for the application. Once maintenace is over, The `index.html` is renamed or removed from the document root, bringing back the regular application page.
+
+Incase you want to to change this behaviour, you will need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
+
+![The image below shows projectlamp](image/image/sudo-viapache-projectlamp.png)
+
+![The image below shows if-module](image/image/if-module.png)
+
+
+After saving and closing the file, you will need to reload Apache so that changes take effect:
+
+- `$ sudo systemctl reload apache2`
+
+  Finally, we will create a PHP script to test that PHP is correctly installed and configured on your server.
+
+ Now that I have a custom location to host website's file and folders. I will create a PHP test script to confirm that Apache is able to handle and process request for PHP files. 
+
+ Create a new file named `index.php` inside my custom web root folder.
+
+- `$ vim /var/www/projectlamp/index.php`
+
+  The code above will open a blank file in vim text editor. Add the following text, which is valid PHP code, inside the file"
+
+  `<?php`
+  `phpinfo();`
+
+After, then, save and close the file, refresh the page and a page similar to the code above will appear.
+
+Then, remember, this page prove information about the server from the perspective of PHP.
+
+If you this page below in your browser, then know that the PHP server installation is working as expected.
+
+![The image below shows php-info](image/image/php_info.png)
+
+
+
+It is adviseable to remove the file created because it contains sensitive information about my PHP environment and my Ubuntu server, then, I can use `rm` to execute.
+
+- `$ sudo rm /var/projectlamp/index.php`
+
+ #  THE END!
 
 
 
