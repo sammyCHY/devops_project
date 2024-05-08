@@ -158,7 +158,7 @@ After tha installation, then type the command below to login into the MYSQL.
 
 - `$ sudo mysql`
 
- [The image below shows mysql](image/image/sudo-mysql.png) 
+[The image below shows mysql](image/image/sudo-mysql.png) 
  
 
 
