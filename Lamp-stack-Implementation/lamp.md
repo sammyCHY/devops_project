@@ -153,6 +153,12 @@ Run the command below to install Mysql-server.
 
 ![The image below shows the installation of mysql](image/image/sudo-apt-install-mysql2.png) 
 
+
+After tha installation, then type the command below to login into the MYSQL.
+
+- `$ sudo mysql`
+
+ [The image below shows mysql](image/image/sudo-mysql.png) 
  
 
 
