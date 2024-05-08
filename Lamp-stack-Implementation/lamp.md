@@ -185,6 +185,27 @@ After, Exit mysql with the command below.
 
   ![The image below shows sudo mysql-p](image/image/sudo-mysql-p.png) 
 
+The `-p` flag in this command, which will prompt you for the password used after changing the **root** user password.
 
- 
+To exit MYSQL console, type the command below.
+
+`mysql> exit`
+
+
+# Installing PHP
+
+### Step 3 - Installing PHP.
+
+PHP is the component of our setup that will process code to display dynamic content to the end user. In addition to the `PHP` package, you will need `php-mysql` A PHP-module that allows PHP to communicate with mysql based database. You will also need `libapache2-mod-php` to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependancies.
+
+To install these 3 packages at once, then run the command below.
+
+- `$ sudo apt install php libapache2-mod-php php-mysql`
+
+  
+![The image below shows sudo apt install php](image/image/sudo-apt-install-php.png) 
+
+
+ ![The image below shows sudo apt install php](image/image/sudo-apt-install-phpcntl.png) 
+
 
