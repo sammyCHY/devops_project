@@ -106,3 +106,13 @@ Then, run Apache2 package installation with command below.
 
  ![The image below shows the install_apache2c](image/image/sudo-apt-install-apache2c.png) 
 
+
+ To verify that apache2 is running as a Service in our OS, then, use the following command.
+
+ `$ sudo systemctl status apache2`
+
+ 
+
+
+ 
+
