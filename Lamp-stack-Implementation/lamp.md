@@ -237,7 +237,56 @@ We are starting by creating a directory for `projectlamp` using 'mkdir' command 
 
 ![The image below shows projectlamp](image/image/sudo-mkdir-projectlamp.png)
 
+Next is to assign ownership of the directory with the `$user` environment variable, which will reference your current system user:
 
- 
+- `$ sudo chown -R $USER:$USER /var/www/projectlamp`
+
+
+![The image below shows projectlamp](image/image/sudo-chown-projectlamp.png)
+
+Then, create and open a new configuration file in Apache's `sites-available` directory using any preferred command-line editor, like vi or vim.  
+
+![The image below shows projectlamp](image/image/sudo-viapache-projectlamp.png)
+
+The above command will create a new blank file. then paste this setup on the editor configuration by hitting `i` on the keyboard to enter the insert mode, and paste the text:
+
+Thereafter, than safe and exit the vi editor.
+
+
+![The image below shows ls apache2 projectlamp](image/image/sudo-ls-apache2-projectlamp.png)
+
+
+Thereafter, you can now use a2ensite command to enable the new virtual host:
+
+`- $ sudo a2ensite projectlamp`
+
+
+![The image below shows a2ensite projectlamp](image/image/sudo-a2ensite-projectlamp.png)
+
+
+To disable Apache's default website use a2dissite command.
+
+
+![The image below shows projectlamp](image/image/sudo-a2dissite.png) 
+
+To make sure your configuration file doesn't contain syntax errors.
+
+`$ sudo apache2ctl configtest`
+
+![The image below shows projectlamp](image/image/sudo-apache2ctl-config.png)
+
+
+Finally, reload Apache so these changes takes effect:
+
+- `$ sudo systemctl reload apache2`
+
+![The image below shows projectlamp](image/image/sudo-systemctl-reloadapache2.png)
+
+
+
+
+
+
+
 
 
