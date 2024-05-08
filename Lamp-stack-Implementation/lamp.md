@@ -175,7 +175,15 @@ After, Exit mysql with the command below.
 
  - `$ sudo mysql_secure_installation`
 
- ![The image below shows after mysql secure installation](image/image/sudo-mysql-secure-installation.png)   
+ ![The image below shows after mysql secure installation](image/image/sudo-mysql-secure-installation.png)  
+
+
+ After, then follow up the prompt with "yes" to finalise the installation.
+ Then, when the installation is finshed, test if you're able to login to the MYSQL console by typing the command below
+
+-  `$ sudo mysql -p`
+
+  ![The image below shows sudo mysql-p](image/image/sudo-mysql-p.png) 
 
 
  
