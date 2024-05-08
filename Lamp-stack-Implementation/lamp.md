@@ -111,6 +111,8 @@ Then, run Apache2 package installation with command below.
 
  `$ sudo systemctl status apache2`
 
+ ![The image below shows the apache2 status](image/image/sudo-apache2-status.png) 
+
  
 
 
