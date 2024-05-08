@@ -122,6 +122,19 @@ or
 
 ![The image below shows the curl](image/image/curl.png) 
 
+The two command are thesame just that one is IP and the other is DNS, you can use either, just make sure the Apache web service response to `curl` command with some payload.
+
+Now, It's time to test if the Apache HTTP Server can respond to request from the Internet. Open a web browser of your choice and try to access the following url.
+
+`http://3.15.239.94:80`
+
+Remember, If the following page display, then the webserver is now correctly installed and accessible through your firewall.
+
+
+![The image below shows the http](image/image/http.png) 
+
+
+
  
 
  
