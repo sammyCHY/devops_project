@@ -135,6 +135,13 @@ Remember, If the following page display, then the webserver is now correctly ins
 
 
 
+# Installing Mysql
+
+### Step2 - Installing Mysql
+
+Just concluded the installation of web server and it's running perfectly, therfore we need to install a Database Management System (DBMS) to be able to manage data for the created website in a `#relational database`. MYSQL
+
+
  
 
  
