@@ -139,10 +139,17 @@ Remember, If the following page display, then the webserver is now correctly ins
 
 ### Step2 - Installing Mysql
 
-Just concluded the installation of web server and it's running perfectly, therfore we need to install a Database Management System (DBMS) to be able to manage data for the created website in a `#relational database`. MYSQL
+Just concluded the installation of web server and it's running perfectly, therfore we need to install a Database Management System (DBMS) to be able to manage data for the created website in a **relational database**. **MYSQL** is a popular relational database management system used within PHP environments, therefore,It's going to be used in our project.
+
+Again, use `apt` to acquire and install this software:
+
+Run the command below to install Mysql-server.
+`$ sudo apt install-server`
+
+![The image below shows the installation of mysql](image/image/sudo-apt-install-mysql.png)
 
 
- 
+![The image below shows the installation of mysql](image/image/sudo-apt-install-mysql2.png) 
 
  
 
