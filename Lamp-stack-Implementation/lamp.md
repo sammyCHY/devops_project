@@ -118,7 +118,7 @@ Check if we can access our site locally in our Ubuntu shell, by running the comm
 
 `curl http://localhost:80`
 or 
-`curl http://127.0.0.1:80`
+`curl http://3.15.239.94:80`
 
 ![The image below shows the curl](image/image/curl.png) 
 
