@@ -112,6 +112,17 @@ Then, run Apache2 package installation with command below.
  `$ sudo systemctl status apache2`
 
  ![The image below shows the apache2 status](image/image/sudo-apache2-status.png) 
+Always pay attention to the status, once it is green and running, then, you did everything correctly,know that the first webserver has been launched in the cloud.
+
+Check if we can access our site locally in our Ubuntu shell, by running the command below:
+
+`curl http://localhost:80`
+or 
+`curl http://127.0.0.1:80`
+
+![The image below shows the curl](image/image/curl.png) 
+
+ 
 
  
 
