@@ -144,7 +144,9 @@ Just concluded the installation of web server and it's running perfectly, therfo
 Again, use `apt` to acquire and install this software:
 
 Run the command below to install Mysql-server.
-`$ sudo apt install-server`
+
+- `$ sudo apt install-server`
+
 
 ![The image below shows the installation of mysql](image/image/sudo-apt-install-mysql.png)
 
