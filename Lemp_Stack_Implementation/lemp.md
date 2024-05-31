@@ -15,7 +15,10 @@ Nginx is for displaying of web pages to our visitors, therefore, we are going to
 
 - First of all, am going to start start updating my server package index by running the command below; `$ sudo apt update` and `sudo apt install nginx`
 
+![The image shows the sudo apt update of the server and install of the nginx server](image/image/sudo_apt_update.png) 
+
   
+![The image shows the sudo apt update of the server and install of the nginx server](image/image/sudo_apt_install_nginx.png) 
 
 
 
