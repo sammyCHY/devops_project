@@ -4,6 +4,19 @@ First of all, I will run this command bellow on my Git Bash
 
 `ssh -i "sammy-ec2.pem" ubuntu@ec2-3-138-120-20.us-east-2.compute.amazonaws.com`
 
+![The image below shows the access link to the server ssh-i](image/image/ssh-1_key.png) 
+
+
+## Installing the Nginx Web Server
+
+### Step 1 - Installing the Nginx Web Server:
+
+Nginx is for displaying of web pages to our visitors, therefore, we are going to employ high performance web server. I am going to use `apt` package manager to install this package.
+
+- First of all, am going to start start updating my server package index by running the command below; `$ sudo apt update` and `sudo apt install nginx`
+
+  
+
 
 
 
