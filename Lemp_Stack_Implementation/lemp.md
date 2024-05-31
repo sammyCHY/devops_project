@@ -20,6 +20,14 @@ Nginx is for displaying of web pages to our visitors, therefore, we are going to
   
 ![The image shows the sudo apt update of the server and install of the nginx server](image/image/sudo_apt_install_nginx.png) 
 
+After the installation, then observe if it is green and running, which means the installation is correct and successfull.
+
+- The command below is to show the installation status.
+- `$ sudo systemctl status nginx`
+
+![The image below shows the nginx installation status](image/image/sudo_systemctl_status_nginx.png) 
+
+
 
 
 
