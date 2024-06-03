@@ -69,10 +69,29 @@ Bellow is the command to achieve that.
 ![The image below shows the installation of mysql](image/image/sudo_apt_install_mysql-server.png) 
 
 
+After the installation, log into the MYSQL console by typing the command bellow.
+
+`$ sudo mysql`
+
+![The image below shows the installation of mysql](image/image/sudo_mysql.png) 
 
 
+To exit MYSQL shell with: run the command.
+`mysql> exit`
+
+Start the interactive script by running:
+
+`$ sudo mysql_secure_installation`
+
+![The image below shows the interactive script on mysql](image/image/sudo_mysql_secure_installation.png) 
 
 
+![The image below shows the interactive script on mysql](image/image/sudo_mysql_secure_installation2.png) 
 
+
+![The image below shows the interactive script on mysql](image/image/sudo_mysql_secure_installation3.png) 
+
+
+![The image below shows the interactive script on mysql](image/image/sudo_mysql_secure_installation4.png) 
 
 
