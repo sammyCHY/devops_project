@@ -53,6 +53,22 @@ Now, it's time to test how our Nginx server can respond to requests from the int
 ![The image below shows the Nginx server responds to internet](image/image/http_public_ip.png) 
 
 
+## Installing MYSQL
+
+### Step 2- Installing MYSQL
+
+Now that I have my server up and running, I need to install a Database Management System (DBMS) to be able to manage data my site in a rational database.
+
+However, I will use `apt` to acquire and install the software:
+
+Bellow is the command to achieve that.
+
+`$ sudo apt install mysql-server`
+
+
+![The image below shows the installation of mysql](image/image/sudo_apt_install_mysql-server.png) 
+
+
 
 
 
