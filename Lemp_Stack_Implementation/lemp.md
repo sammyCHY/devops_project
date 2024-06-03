@@ -30,6 +30,19 @@ After the installation, then observe if it is green and running, which means the
 Before we can receive any traffic by our Web Server, we need to open `TCP PORT 80` which is default port that web brouser use to access web pages in the internet. However, we all know, we have TCP port22 open by default on our EC2 machine to accces it via SSH, so we need to add a rule to EC2 configuration to open inbound connection through port 80:
 
 
+![The image below shows the add rule on Ec2 configuration](image/image/edit_inbound.png) 
+
+After confirming the success running of our server,firstly, I will check how to access it locally in the Ubuntu shell, run the command bellow.
+
+`$ curl http://localhost:80`
+or 
+`$ curl http://127.0.0.1:80`
+
+![The image below shows running ubuntu shell](image/image/curl_http.png) 
+
+
+
+![The image below shows the running ubuntu shell](image/image/curl_http2.png) 
 
 
 
