@@ -94,4 +94,13 @@ Start the interactive script by running:
 
 ![The image below shows the interactive script on mysql](image/image/sudo_mysql_secure_installation4.png) 
 
+After I have finished the installation, I have to test if I will be able to login to my MYSQL console by typing the command bellow:
+
+`$ sudo mysql -p`
+
+![The image below shows the login on mysql console](image/image/sudo_mysql-p_tilldown.png) 
+
+MYSQL Server is now installed and secured. Next. I will install PHP, the final component in the LEMP Stack Project.
+
+
 
