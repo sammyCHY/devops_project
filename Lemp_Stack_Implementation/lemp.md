@@ -32,7 +32,7 @@ Before we can receive any traffic by our Web Server, we need to open `TCP PORT 8
 
 ![The image below shows the add rule on Ec2 configuration](image/image/edit_inbound.png) 
 
-After confirming the success running of our server,firstly, I will check how to access it locally in the Ubuntu shell, run the command bellow.
+After confirming the success running of our server,firstly, I will check how to access it locally in the Ubuntu shell by running the command bellow.
 
 `$ curl http://localhost:80`
 or 
@@ -43,6 +43,17 @@ or
 
 
 ![The image below shows the running ubuntu shell](image/image/curl_http2.png) 
+
+
+Now, it's time to test how our Nginx server can respond to requests from the internet by Opening a web browser and try to access the following url.
+
+`http://<public-IP-Address>:80`
+
+
+![The image below shows the Nginx server responds to internet](image/image/http_public_ip.png) 
+
+
+
 
 
 
