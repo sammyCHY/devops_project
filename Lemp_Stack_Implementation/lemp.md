@@ -27,6 +27,11 @@ After the installation, then observe if it is green and running, which means the
 
 ![The image below shows the nginx installation status](image/image/sudo_systemctl_status_nginx.png) 
 
+Before we can receive any traffic by our Web Server, we need to open `TCP PORT 80` which is default port that web brouser use to access web pages in the internet. However, we all know, we have TCP port22 open by default on our EC2 machine to accces it via SSH, so we need to add a rule to EC2 configuration to open inbound connection through port 80:
+
+
+
+
 
 
 
