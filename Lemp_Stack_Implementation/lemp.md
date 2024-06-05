@@ -115,5 +115,5 @@ To install these 2 packages at once, I need to run the command bellow.
 `$ sudo apt install php-fpm php-mysql`
 
 
-![The image below shows the php installation](image/image/sudo_apt_install_php_fpm_php-mysql.png) 
+![The image below shows the php installation](image/image/sudo_apt_install_php-fpm_php-mysql.png) 
 
