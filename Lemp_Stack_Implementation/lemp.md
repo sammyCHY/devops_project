@@ -102,5 +102,18 @@ After I have finished the installation, I have to test if I will be able to logi
 
 MYSQL Server is now installed and secured. Next. I will install PHP, the final component in the LEMP Stack Project.
 
+#  Installing PHP
 
+## Step 3 - Installing PHP
+
+I have Nginx installed to serve my content and MYSQL installed to install and manage my data. Now am proceeding to install PHP to process code and generate dynamic content for the web server.
+
+Nginx requires an external program to handle PHP processing and act as a bridge between the PHP interpreter itself and the web server. This allows for a better overall performance in most PHP-based websites, but it requires additional configuration. I will need to install `php-fpm`, which stands for PHP fast CGI process manager"  and tell Nginx to pass PHP requests to this software for processing. Additionally, you will need `php-mysql`, a PHP module that allows PHP to communicate with Mysql-based database. Core PHP packages will automatically bi installed as dependencies.
+
+To install these 2 packages at once, I need to run the command bellow.
+
+`$ sudo apt install php-fpm php-mysql`
+
+
+![The image below shows the php installation](image/image/sudo_apt_install_php_fpm_php-mysql.png) 
 
