@@ -117,3 +117,9 @@ To install these 2 packages at once, I need to run the command bellow.
 
 ![The image below shows the php installation](image/image/sudo_apt_install_php-fpm_php-mysql.png) 
 
+#  Configuring Nginx to Use PHP Processor
+
+### Step 4 - Configuring Nginx to Use PHP Processor
+
+In this guide, I will use **ProjectLEMP** as an example domain name.
+On Ubuntu 20.04, Nginx has one server block enabled by default and is configured to serve documents out of a directory at `/var/www/html`. for the your_domain website, leaving `/var/www/html` in place as the default directory to be served if a client request does not match any other sites.
