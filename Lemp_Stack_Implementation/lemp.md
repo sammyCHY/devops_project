@@ -181,3 +181,10 @@ Bellow is the assessment of web browser by visiting the domain name or the publi
 ![The image below shows the Nginx configuration](image/image/info_php.png)
 
 
+If I have to remove the PHP environment and the Ubuntu server. Then, I can use `rm` to remove the file:
+
+`$ sudo rm /var/www/domain/info.php`
+
+![The image below shows the remove of PHP file](image/image/sudo_rm_projectLEMP.png)
+
+
