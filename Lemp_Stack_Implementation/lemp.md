@@ -188,3 +188,19 @@ If I have to remove the PHP environment and the Ubuntu server. Then, I can use `
 ![The image below shows the remove of PHP file](image/image/sudo_rm_projectLEMP.png)
 
 
+
+#  Retrieving data from MYSQL database with PHP
+
+### Step 6 - Retrieving data from MYSQL database with PHP.
+
+In this phase I create a test database (DB) with simple "To do list" and configure access to it, so that the Nginx website would be able to query data from the **DB** and display it.
+
+I will create a database named **example_database** and a user named **example_user** 
+
+First, connect to the MYSQL console using the **root** account:
+
+`$ sudo mysql`
+
+![The image below shows the connect to MYSQL root](image/image/sudo_mysql.png)
+
+
