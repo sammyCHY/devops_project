@@ -245,7 +245,7 @@ To access the page in my web browser by visiting the domain name or public IP ad
 
 The message displayed above simply means the PHP environment is ready and interact with the MYSQL server.
 
-Therefore this project is designed to build a flexible foundation for serving PHP websites and applications to the end user, visitors using Nginx as webserver and MYSQL as database management system.
+Therefore this project is designed to build a flexible foundation for serving PHP websites and applications to the end user and visitors. However, using Nginx as webserver and MYSQL as database management system.
 
 
 
