@@ -204,3 +204,36 @@ First, connect to the MYSQL console using the **root** account:
 ![The image below shows the connect to MYSQL root](image/image/sudo_mysql.png)
 
 
+Thereafter, I have to exit MYSQL shell with the command bellow:
+ `Mysql> exit`
+
+![The image below shows how to exit Myqsl shell](image/image/mysql_exit.png)
+
+
+I have to test if the new user has the proper permissions by logging in to MYSQL console again, this time using the custom user credentials:
+
+`$ mysql -u example_user -p`
+
+![The image below shows the permission to MYSQL](image/image/mysql_show_database.png)
+
+
+Next, I will create a test table named **todo_list**. From the MYSQL console.
+
+
+To confirm that the data was successfully saved to my table, I have to run:
+`mysql> SELECT * FROM example_database.todo_list;`
+
+The command below is the output:
+
+![The image below shows the todo_list output](image/image/mysql_output.png)
+
+
+After confirming that I have a valid data in my test table, then, I can exit the MYSQL console:
+
+`mysql> exit`
+
+![The image below shows the mysql exit](image/image/mysql_exit2.png)
+
+
+
+
