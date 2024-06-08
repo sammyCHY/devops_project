@@ -149,3 +149,16 @@ However, this will tell Nginx to use the configuration next time it is reloaded.
 
 ![The image below shows nginx configuration](image/image/sudo_nginx-t.png) 
 
+
+Notice, If I want to disable default Nginx host that is currently configured to listen on port 80, then, I have to run this command bellow.
+
+`sudo unlink /etc/nginx/sites-enabled/default`
+
+If I have to reload Nginx, then I have to run this command:
+
+`$ sudo systemctl reload nginx`
+
+My new website is now active, but the web root/var/www/projectLEMP is still empty. I create an index.html file in this location so that I can test my new server block works as expected:
+
+![The image below shows the new website](image/image/http_lemp.png) 
+
