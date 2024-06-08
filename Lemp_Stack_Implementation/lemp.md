@@ -123,3 +123,27 @@ To install these 2 packages at once, I need to run the command bellow.
 
 In this guide, I will use **ProjectLEMP** as an example domain name.
 On Ubuntu 20.04, Nginx has one server block enabled by default and is configured to serve documents out of a directory at `/var/www/html`. for the your_domain website, leaving `/var/www/html` in place as the default directory to be served if a client request does not match any other sites.
+
+Am creating the root web directory for `Your_domain` as follows:
+
+`$ sudo mkdir /var/www/projectLEMP`
+
+Next is to assign ownership of the directory with the $USER environment variable, which will refernce my current system user:
+
+`$ sudo chown -R $USER:$USER /var/www/projectLEMP`
+
+Thereafter, I have to open new configuration file in Nginx's `sites-availabel` directory using preferred command-line editor. Here, I will use `nano` :
+
+`$ sudo nano /etc/nginx/sites-available/projectLemp`
+
+
+I have to activate configuration by linking to the config file from Nginx's `sites-enabled` directory:
+
+`$ sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`
+
+However, this will tell Nginx to use the configuration next time it is reloaded. I have to test my configuration for syntax errors by typing:
+
+`$ sudo nginx -t`
+
+![The image below shows nginx configuration](image/image/sudo_nginx-t.png) 
+
