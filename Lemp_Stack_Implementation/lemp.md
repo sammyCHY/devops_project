@@ -235,5 +235,12 @@ After confirming that I have a valid data in my test table, then, I can exit the
 ![The image below shows the mysql exit](image/image/mysql_exit2.png)
 
 
+I have saved and closed the file when done editing.
+
+To access the page in my web browser by visiting the domain name or public IP address configured on the created website, followed by  `/todo_list.php:`
+
+
+![The image below shows the domain name or public IP configured on the todo_list.php](image/image/http_todo_list_php.png)
+
 
 
