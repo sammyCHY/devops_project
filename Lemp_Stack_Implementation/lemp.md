@@ -128,6 +128,8 @@ Am creating the root web directory for `Your_domain` as follows:
 
 `$ sudo mkdir /var/www/projectLEMP`
 
+![The image below shows the root directory to domain](image/image/sudo_mkdir_var_wwww_projectlemp.png)
+
 Next is to assign ownership of the directory with the $USER environment variable, which will refernce my current system user:
 
 `$ sudo chown -R $USER:$USER /var/www/projectLEMP`
