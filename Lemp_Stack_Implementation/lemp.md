@@ -162,3 +162,22 @@ My new website is now active, but the web root/var/www/projectLEMP is still empt
 
 ![The image below shows the new website](image/image/http_lemp.png) 
 
+
+
+#  Testing PHP with Nginx
+
+Step 5 - Testing PHP with Nginx
+At this point LEMP stack is now completely installed and fully operational.
+I have to create a test PHP file in my document root. I will open a new file called `info.php` within my document root in my text editor: run the command bellow.
+
+`$ nano /var/www/projectLEMP/info.php`
+
+![The image below shows the valid PHP code](image/image/nano_var_www.png) 
+
+
+Bellow is the assessment of web browser by visiting the domain name or the public IP address to view the set up in the Nginx configuration file.
+
+
+![The image below shows the Nginx configuration](image/image/info_php.png)
+
+
