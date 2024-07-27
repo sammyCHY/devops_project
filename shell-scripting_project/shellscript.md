@@ -11,6 +11,5 @@ Example: Assigning a value to a variable:
 
 ![The image shows the value to variable](image/images/value.png)
 
-Example: retrieving value from valuable.
-`echo $name`
+Example: retrieving value from valuable.  `echo $name`
 ![The image shows the retrieving value](image/images/retrieving_value.png)
