@@ -60,5 +60,21 @@ Example: Output text to the terminal.
 
 ![The image shows output text to the terminal](image/images/output.png).
 
+Example: Out the result of a command into a file.
+
+`echo "hello world" > index.text`
+
+![The image shows out the result ofa command into a file](image/images/output-command-file.png).
+
+
+Example: Pass the content of a file as input to a command.
+
+`grep "pattern" < input.text`
+
+Example: Pass the result of a command as input to another command.
+
+`echo "hello world" | grep "pattern"`
+
+![The image shows the command as input to another command](image/images/command_input.png).
 
 
