@@ -44,5 +44,21 @@ Example: Using `$()` syntax for command substitution.
 
 `current_date=$(date +%y-%m-%d)`.
 
+# 4. Input and Output:
+Bash provides various ways to handle input and output. At this point *read command* to be used to accept **user input and output** text to the console using the *echo command*. Additionally, you can redirect input and output using operators like > *(output to a file), < (input from a file), and | (pipe the output of one command as input to another).
+
+Example: Accept user input.
+
+`echo "Enter your name:"`
+`read name`
+
+![The image shows user input](image/images/user_input.png).
+
+Example: Output text to the terminal.
+
+`echo "Hello world"`
+
+![The image shows output text to the terminal](image/images/output.png).
+
 
 
