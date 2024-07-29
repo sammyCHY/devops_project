@@ -18,9 +18,17 @@ Example: retrieving value from valuable.  `echo $name`
 # 2. Control Flow:
 Bash provides control flow statements like if-else, for loops, while loops and case statements to control the flow of execution in the script. These statements allows to make decisions, iterate over lists and execute different commands based on conditions. 
 
-Example: Using **if-else** to execute script based on a conditions.
+Example: Using *if-else* to execute script based on a conditions.
 
 ![The image shows the if-else to execute script](image/images/if-else.png)
 
+The piece of code prompt me to type a number and prints a statement stating the number is positive or negetive.
 
+Example: Iterating through a list using a *for loop*
+
+![The image shows Iterating through a list using a for loop](image/images/for_loop.png)
+
+
+
+![The image shows Iterating through a list using a for loop](image/images/for_loop2.png)
 
