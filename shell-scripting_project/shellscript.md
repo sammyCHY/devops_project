@@ -98,6 +98,18 @@ Bash allows you to define, manipulate and use functions to group related command
 
 - Step 3: Inside the file copy and paste the block of code below: 
 
+![The image shows the read name](image/images/display_greetings.png).
+
+A little description about the code block. The script prompt for your name. When I type my name, It displays the text *hello !* *Nice to meet you* . Also `#!/bin/bash` helps you specify the type of bash interpreter to be used to execute the script.
+
+- Step 4: Save the file.
+- Step 5: Run the command `sudo chmod +x user-input.sh` this makes the file executable.
+
+![The image shows the executable command](image/images/file_executable.png).
+
+- Step 6: Run the script using the command `./user-input.sh`
+
+![The image shows the command to run script](image/images/user_inputsh.png).
 
 
 
