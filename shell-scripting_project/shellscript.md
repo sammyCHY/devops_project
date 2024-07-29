@@ -32,3 +32,15 @@ Example: Iterating through a list using a *for loop*
 
 ![The image shows Iterating through a list using a for loop](image/images/for_loop2.png)
 
+
+# 3. Command Substitution:
+Command substitution allows to capture the out put of a command and use it as a value within the script. Backtick or the $()syntax for command substitution.
+
+Example: Using backtick for command substitution.
+current_date= `date +%y-%m-%d`
+Example: Using `$()` syntax for command substitution.
+
+`current_date=$(date +%y-%m-%d)`
+
+
+
