@@ -64,7 +64,7 @@ Example: Out the result of a command into a file.
 
 `echo "hello world" > index.text`
 
-![The image shows out the result ofa command into a file](image/images/output-command-file.png).
+![The image shows out the result of a command into a file](image/images/output-command-file.png).
 
 
 Example: Pass the content of a file as input to a command.
@@ -76,5 +76,28 @@ Example: Pass the result of a command as input to another command.
 `echo "hello world" | grep "pattern"`
 
 ![The image shows the command as input to another command](image/images/command_input.png).
+
+# 5. Functions:
+Bash allows you to define, manipulate and use functions to group related commands together. Functions provide a way to modularize your code and make it more reusable. You can define functions using the function keyword or simply by declaring the function name followed by parentheses.
+
+![The image shows the functions](image/images/functions.png).
+
+
+# Lets write our first Shell Script.
+
+- Step 1: On my terminal, I have to open a folder (repository) called *shell-scripting* using the     command  `mkdir shell-scripting`.
+
+![The image shows mkdir shell-scripting](image/images/shell_scripting.png).
+
+ This will hold all the script we will write in this lesson.
+
+- Step 2: Create a file called `user-input.sh` using the command `touch user-input.sh`.
+
+![The image shows the user-input.sh](image/images/input-usersh.png).
+
+
+- Step 3: Inside the file copy and paste the block of code below: 
+
+
 
 
