@@ -112,4 +112,16 @@ A little description about the code block. The script prompt for your name. When
 ![The image shows the command to run script](image/images/user_inputsh.png).
 
 
+# Directory Manipulation and Navigation:
+
+This script will display the current directory, create a new directory called "my_directory," change to that directory, create two files inside it, list the files, move back one level up, remove the "my_directory" and its contents, and finally list the files in the current directory again.
+
+### Proceed by following the steps bellow:
+
+- Step 1: Open a file named *navigating-linux-filesystem.sh*
+
+- Step 2: Paste the code block below into your file.
+
+
+
 
