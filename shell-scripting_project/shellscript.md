@@ -140,6 +140,31 @@ This script will display the current directory, create a new directory called "m
   ![The image shows the command to run the script](image/images/navigating_linux_filesystemsh.png).
 
 
+# File operations and Sorting:
+
+In this lesson, I will be writting a simple shell script that focuses on *file operations and sorting*.
+
+This script creates three files (file1.txt, file2.txt and file3.txt3), displays the files in their current order, sorts them alphabetically, saves the sorted files in sorted_files.txt. displays the sorted files, removes the original files, renames the sorted file to sorted_files_sorted_alphabetically.txt, and finally displays the contents of the final sorted files.
+
+Lets proceed using the steps below:
+
+- Step 1: Open the terminal and create a file called *sorting.sh* using the command `touch sorting.sh`.
+
+- Step 2: Copy and paste the code block below into the file.
+
+![The image shows the file operations and sorting](image/images/sorting_blocking1.png).
 
 
+
+![The image shows the file operations and sorting](image/images/sorting_block1.png).
+
+![The image shows the file operations and sorting](image/images/sorting_block2.png).
+
+- Step 3: Set execute permission on *sorting.sh* using this command `sudo chmod +x sorting.sh`
+
+![The image shows the execute permission](image/images/sudo-chmod-sorting.png).
+
+- Step 4: Run the script using the command `./sorting.sh`
+
+![The image shows the command to run script](image/images/sortingsh.png).
 
