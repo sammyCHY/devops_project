@@ -184,5 +184,11 @@ Lets proceed by following the steps below:
 
 ![The image shows the calculations code block](image/images/code-block-calculations1.png).
 
+- Step 3: Set execute permission on *calculations.sh* using the command: `sudo chmod +x calculations.sh`
+
+![The image shows the execute permission](image/images/code-block-calculations1.png).
+
+- Step 4: Run your script using this command: `./calculations.sh`
+
 
 
