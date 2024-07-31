@@ -186,9 +186,34 @@ Lets proceed by following the steps below:
 
 - Step 3: Set execute permission on *calculations.sh* using the command: `sudo chmod +x calculations.sh`
 
-![The image shows the execute permission](image/images/code-block-calculations1.png).
+![The image shows the execute permission](image/images/sudo-chmod-calculations.png).
 
 - Step 4: Run your script using this command: `./calculations.sh`
+
+![The image shows the command to run the script](image/images/sudo-chmod-calculations.png).
+
+
+# File Backup and Timestamping:
+
+This script defines the source directory and backup directory paths. It then creates a timestamp using the current date and time, and creates a backup directory with the timestanp appended to it's name. The script then copies all files from the source directory to the backup directory using the cp command with the -r option for recursive copying. Finally, it display a message indicating the completion of the backup process and shows the path of the backup directory with the timestamp.
+
+Lets proceed using the steps bellow:
+
+- Step 1: On your terminal open a file *backup.sh* using the command `touch backup.sh`.
+
+![The image shows an open file](image/images/touch_backupsh.png).
+
+- Step 2: Copy and paste the code block below into the file.
+
+![The image shows the code block of backup directory](image/images/code-block-backupsh.png).
+
+- Step 3: Set execute permission on *backup.sh* using command `sudo chmod +x backup.sh`.
+
+![The image shows the execute permission](image/images/sudo-chmod-backupsh.png).
+
+- Step 4: Run the script using the command: ./backup.sh
+
+
 
 
 
