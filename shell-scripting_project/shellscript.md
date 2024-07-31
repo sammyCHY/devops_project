@@ -205,7 +205,7 @@ Lets proceed using the steps bellow:
 
 - Step 2: Copy and paste the code block below into the file.
 
-![The image shows the code block of backup directory](image/images/code-block-backupsh.png).
+![The image shows the code block of backup directory](image/images/code-block_backupsh.png).
 
 - Step 3: Set execute permission on *backup.sh* using command `sudo chmod +x backup.sh`.
 
