@@ -120,7 +120,25 @@ This script will display the current directory, create a new directory called "m
 
 - Step 1: Open a file named *navigating-linux-filesystem.sh*
 
-- Step 2: Paste the code block below into your file.
+- Step 2: Paste the code block below into the file.
+
+  `#!/bin/bash`
+
+  ![The image shows the navigating-linux-filesystem](image/images/code_block.png).
+
+
+
+  ![The image shows the navigating-linux-filesystem](image/images/code_block2.png).
+
+
+  - Step 3: Run the command `sudo chmod +x navigating-linux-filesystem.sh` to set execute permission on the file.
+
+  ![The image shows the executing permission](image/images/sudo_chmod_filesystem.png).
+
+  - Step 4: Run the script using this command `./navigating-linux-filesystem.sh`
+
+  ![The image shows the command to run the script](image/images/navigating_linux_filesystemsh.png).
+
 
 
 
