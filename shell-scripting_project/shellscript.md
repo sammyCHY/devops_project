@@ -168,3 +168,21 @@ Lets proceed using the steps below:
 
 ![The image shows the command to run script](image/images/sortingsh.png).
 
+
+# Working with Numbers and Calculations:
+
+This script defines two variables num1 and num2 with numeric values, performs basic arithmatic operations (addition, subtraction, multiplication, division and modulus), and displays the results. It also performs more complex calculations such as raising num1 to the power of 2 and calculating the square root of nm2, and displays those results as well.
+
+Lets proceed by following the steps below:
+
+- Step 1: On my terminal, I have to create a file *calculations.sh* using the command `touch calculations.sh`
+
+- Step 2: Copy and paste the code block below:
+
+![The image shows the calculations code block](image/images/code-block-calculation.png).
+
+
+![The image shows the calculations code block](image/images/code-block-calculations1.png).
+
+
+
