@@ -92,6 +92,44 @@ The web server formats the data into HTML and sends it back to the user’s web 
 - User View:
 The user sees the list of products displayed in the web browser.
 
+The command below:
+
+`curl -Iv http://servername.com`
+
+In this example above, a machine that is trying to access a web site using web browser or simply `curl` command is a client and it sends HTTO requests to a web server (Apache,Nginx,IIs or any other) over the internet.
+
+If we extend this concept further and add a Database Server to our architecture, we can get some discription below.
+
+Client---Internet---Web_server---local_network---data_base (DB-Server)
+
+`$ curl -Iv www.google.com`
+
+![The image shows the response from remote server](image/images/CURL_IV.png)
+
+
+![The image shows the response from remote server](image/images/curl_iv2.png)
+
+
+
+# Implement a Client Server Architecture using MySQL Database Management System (DBMS).
+
+To demonstrate a basic client-server using MySQL RDBMS, the prompt below is the instruction.
+
+### 1. Create and configure two Linux-Based virtual servers (EC2 instances in AWS).
+
+- `server A name - MySQL Server`
+- `Server B name - MySQL Client`
+
+![The image shows the two virtual server](image/images/two-virtual-based-server.png)
+
+
+By default both of the EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using **local IP addresses**. I have to use `MySQL Server's` local IP address to connect from `MySQL Client`. *MySQL servers uses TCP port 3306 by default*, therefore, I have to open it by creating a new entry in **Inbound rules** in *MySQL server*  Security Groups. For extra security, I will not allow all IP addresses to reach *MySQL server* - allow access only to the specific local IP address of the *MySQL client*
+
+
+![The image shows the addition of IP the Inbound rule](image/images/inbound_rule.png)
+
+
+
 
 
 
