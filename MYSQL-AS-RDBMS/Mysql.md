@@ -104,10 +104,10 @@ Client---Internet---Web_server---local_network---data_base (DB-Server)
 
 `$ curl -Iv www.google.com`
 
-![The image shows the response from remote server](image/images/CURL_IV.png)
+![The image shows the response from remote server](Image/Images/CURL_IV.png)
 
 
-![The image shows the response from remote server](image/images/curl_iv2.png)
+![The image shows the response from remote server](Image/Images/curl_iv2.png)
 
 
 
@@ -120,13 +120,13 @@ To demonstrate a basic client-server using MySQL RDBMS, the prompt below is the 
 - `server A name - MySQL Server`
 - `Server B name - MySQL Client`
 
-![The image shows the two virtual server](image/images/two-virtual-based-server.png)
+![The image shows the two virtual server](Image/Images/two-virtual-based-server.png)
 
 
 By default both of the EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using **local IP addresses**. I have to use `MySQL Server's` local IP address to connect from `MySQL Client`. *MySQL servers uses TCP port 3306 by default*, therefore, I have to open it by creating a new entry in **Inbound rules** in *MySQL server*  Security Groups. For extra security, I will not allow all IP addresses to reach *MySQL server* - allow access only to the specific local IP address of the *MySQL client*
 
 
-![The image shows the addition of IP the Inbound rule](image/images/inbound_rule.png)
+![The image shows the addition of IP the Inbound rule](Image/Images/inbound_rule.png)
 
 
 To configure MySQL server to allow connections from remote hosts.
@@ -137,7 +137,7 @@ run the command below.
 
 **Replace** `127.0.0.1` to `0.0.0.0` like the image below
 
-![The image shows the MySQL server configuration](image/images/sudo_vi_config.png)
+![The image shows the MySQL server configuration](Image/Images/sudo_vi_config.png)
 
 
 `Show databases`
