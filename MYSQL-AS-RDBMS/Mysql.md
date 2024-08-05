@@ -129,6 +129,23 @@ By default both of the EC2 virtual servers are located in the same local virtual
 ![The image shows the addition of IP the Inbound rule](image/images/inbound_rule.png)
 
 
+To configure MySQL server to allow connections from remote hosts.
+
+run the command below.
+
+`sudo vi /etc/mysql.conf.d/mysql.cnf`
+
+**Replace** `127.0.0.1` to `0.0.0.0` like the image below
+
+![The image shows the MySQL server configuration](image/images/sudo_vi_config.png)
+
+
+`Show databases`
+
+Image below shows the fully functionally Mysql Client-server set up.
+
+![The image shows the functional mysql-client-server](image/images/show_database1.png)
+
 
 
 
