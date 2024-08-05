@@ -144,7 +144,7 @@ run the command below.
 
 Image below shows the fully functionally Mysql Client-server set up.
 
-![The image shows the functional mysql-client-server](image/images/show_database1.png)
+![The image shows the functional mysql-client-server](Image/Images/show_database1.png)
 
 
 
