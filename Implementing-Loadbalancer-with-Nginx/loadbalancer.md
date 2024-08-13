@@ -9,3 +9,11 @@
 - Next provision another EC2 instance running **Ubuntu 22.04**, this time, I will install *Nginx* and configure it to act as a load balancer distributing traffic across the webservers.
 
 ### Step 1: Provisioning EC2 instance.
+
+- Open AWS Management Console, click on EC2. Scroll down the page and click on Launch instance:
+
+Console
+
+- Under Name, provide a unique name for each webservers:
+
+![The image shows the lauch server](image/images/launch-instance.png)
