@@ -104,3 +104,62 @@ However, I have to start by configuring **Apache** webserver to serve content on
  ![The image shows the virtualhost port config](image/images/sudo-apache2-default-config.png)
 
 
+- 4. Close the file by first pressing the **esc** key on the keyboard then the command below:
+
+`:wqa!`
+
+- 5. Restart apache to load the configuration using the command below:
+
+`sudo systemctl restart apache2`
+
+- Creating a new html file:
+
+- 1. Open a new **index.html** file with the command below:
+
+`sudo vi index.html`
+
+- 2. Switch vi editor to insert mode and paste the html file below. Before pasting the html file, get the public IP of the EC2 instance  from AWS Management Console and replace the placeholder text for IP address in the html file. 
+
+![The image shows the html IP replace](image/images/html-ip-replace.png)
+
+
+- 3. Change file ownership of the index.html file with the command below:
+
+`sudo chown www-data ./index.html`
+
+- Overriding the Default html file of Apache Webserver:
+
+- 1. Replace the dafault html file with the new created html file using the command below:
+
+`sudo cp -f ./index.html /var/www/html/index.html`
+
+- 2. Restart the webserver to load the new configuraion using the command below :
+
+`sudo systemctl restart apache2`
+
+
+![The image shows the comand to restart apache](image/images/sudo-systemctl-restart-apache2.png)
+
+- 3. Exactly the page below suppose to display on the browser.
+
+![The image shows the webserver configuration display](image/images/welcome-ec2-instance.png)
+
+
+## Step 5:  Configuring Nginx
+ 
+ - Provisioning a new EC2 instance running ubuntu 22.04. Make sure port 80 is opened to accept traffic from anywhere. 
+
+ - Next ssh into the instance. Again refer to the previous steps to accomplish this project.
+
+ - Install Nginx into the instance using the command below:
+
+ `sudo apt update -y && sudo apt install nginx -y` 
+
+ - Verify that the Nginx is installed with the command below:
+
+
+ ![The image shows the installation and update of nginx](image/images/sudo-apt-update&sudo-apt-install-nginx1.png)
+
+
+
+ ![The image shows the installation and update of nginx](image/images/sudo-apt-update&sudo-apt-install-nginx2.png)
