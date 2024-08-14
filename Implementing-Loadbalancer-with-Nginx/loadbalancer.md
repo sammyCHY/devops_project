@@ -79,3 +79,28 @@ After provisioning both of our servers and have opened the necessary ports, Its 
 
 ![The image shows the apache status](image/images/sudo-systemctl-status-apache2.png)
 
+
+### Step 4: Configure Apache to server a page showing its public IP:
+
+However, I have to start by configuring **Apache** webserver to serve content on port 8000 instead of its default which is port 80. Then I will create a new index.html file. The file will contain code to display the public IP of the **EC2** instance. I will then override apache webserver's default html file with my new file.
+
+- Configuring Apache to Serve content on port 8000:
+
+ - 1. Using text editor (eg vi, nano) open the file /etc/apache2/ports.confi
+
+ **Copy Below Code**
+
+ `sudo vi /etc/apache2/ports.conf`
+
+ - 2. Add a new Listen directive for port 8000: First type **i** to switch the editor to insert mode. Then add the listen directive. Then save the file.
+
+ ![The image shows the apache file config](image/images/sudo-apache2-port-config.png) 
+
+
+ - 3. Next open the file /etc/apache2/sites-available/000-default.confi and change port 80 on the virtualhost to 8000 like the screenshot below:
+
+ `sudo vi /etc/apache2/sites-available/000-default.conf`
+
+ ![The image shows the virtualhost port config](image/images/sudo-apache2-default-config.png)
+
+
