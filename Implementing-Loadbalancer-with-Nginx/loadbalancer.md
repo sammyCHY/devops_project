@@ -181,3 +181,12 @@ However, I have to start by configuring **Apache** webserver to serve content on
 ![The image shows the load balancer configuration](image/images/nginx-configuration-loadbalancer.png)
 
 
+**Upstream backend_servers** defines a group of backend servers. The **server** lines inside the upstream block list the addresses and ports of the backend servers. **Proxy_pass** inside the **location** block sets up the load balancing, passing the requests to the backend servers. The **proxy_set_header** lines pass necessary headers to the backend servers to correctly handle the requests.
+
+- Testing the configuration with the command below:
+
+`sudo nginx -t`
+
+![The image shows the nginx loadbalancer config](image/images/sudo-nginx-t.png)
+
+
