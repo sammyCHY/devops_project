@@ -190,3 +190,14 @@ However, I have to start by configuring **Apache** webserver to serve content on
 ![The image shows the nginx loadbalancer config](image/images/sudo-nginx-t.png)
 
 
+- If there are no errors, restart Nginx to load the new configuration with the command below:
+
+`sudo systemctl restart ngix`
+
+![The image shows the command to restart nginx](image/images/sudo-systemctl-restart-nginx.png)
+
+
+- Paste the public IP address of Nginx load balancer, thesame webpages served by the webservers suppose to display.
+
+
+![The image shows the webpages displays](image/images/nginx-loadbalancer-webpage.png)
