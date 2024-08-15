@@ -163,3 +163,21 @@ However, I have to start by configuring **Apache** webserver to serve content on
 
 
  ![The image shows the installation and update of nginx](image/images/sudo-apt-update&sudo-apt-install-nginx2.png)
+
+ To verify that Nginx is installed with the command below:
+
+ `sudo systemctl status nginx` 
+
+ ![The image shows the status of the installed nginx](image/images/sudo-systemctl-status-nginx.png)
+
+
+ - Open Nginx configuration file with the command below:
+
+ `sudo vi /etc/nginx/conf.d/loadbalancer.conf`
+
+- Paste the configuration file below to configure nginx to act like a load balancer. A screenshot of an example config file is shown below: I have to edit the file and provide necessary information like the server IP address etc.
+
+
+![The image shows the load balancer configuration](image/images/nginx-configuration-loadbalancer.png)
+
+
