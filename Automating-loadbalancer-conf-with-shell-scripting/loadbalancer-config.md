@@ -68,3 +68,31 @@ Run the shell script using the command below.
 
 
 ![The image shows the running of the shell scripting](image/images/webserver6_exe.png)
+
+
+
+# The Second Webserver-2 Below.
+
+
+![The image shows the running of the shell scripting](image/images/webserver1a_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver2b_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver3c_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver4d_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver5e_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver6f_exe.png)
+
+
+# Deployment of Nginx as a Load Balancer using Shell script
+
+### Automate the Deployment of Nginx as a Load Balancer using Shell script.
+
