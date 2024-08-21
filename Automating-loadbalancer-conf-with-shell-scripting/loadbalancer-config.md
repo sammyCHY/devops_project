@@ -20,3 +20,51 @@ This course will give a great introduction to automation.
 `#!/bin/bash`
 
 ![The image shows the apache file automation](image/images/sudo-apt-install&update-apache2.png)
+
+- Follow the steps below to run the script:
+
+## Step 1: 
+Provision an EC2 instance running ubuntu 20.04. 
+
+## Step 2: 
+Open port 8000 to allow traffic from anywhere using the security group.
+
+## Step 3:
+Connect to the webserver via the terminal using SSH client.
+
+## Step 4: 
+Open a file, paste the script above and close the file using the command below:
+
+`sudo vi install.sh`
+
+To close the file type the **esc** key then **Shift +:wqa!**
+
+## Step 5:
+Change the permissions on the file to make an executable using the command below:
+
+`sudo chmod +x install.sh`
+
+![The image shows the executable file permission](image/images/apache-execute-file.png)
+
+
+## Step 6: 
+Run the shell script using the command below.
+
+`./install.sh PUBLIC_IP`
+
+![The image shows the running of the shell scripting](image/images/webserver1_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver2_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver3_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver4_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver5_exe.png)
+
+
+![The image shows the running of the shell scripting](image/images/webserver6_exe.png)
