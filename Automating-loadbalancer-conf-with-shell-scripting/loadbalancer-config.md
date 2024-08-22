@@ -107,22 +107,32 @@ All the steps followed in the **Implementing Load Balancer with Nginx** course h
 
  # Steps to Run the Shell Script.
 
-# Step 1:
+### Step 1:
 On the terminal, open a file nginx.sh using command below:
 
 `sudo vi nginx.sh`
 
-# Step 2: 
+### Step 2: 
 Copy and paste the script inside the file.
 
 
 ![The image shows the shell scripting file](image/images/second-secript.png)
 
 
-# Step 3: 
+### Step 3: 
 Close the file using the command below:
 
 `esc the shift + :wqa!`
 
+### Step 4:
+Change the file permission to make it an executable using the command below:
 
+`sudo chmod +x nginx.sh`
+
+![The image shows the permission to execute shell scripting](image/images/result.png)
+
+### Step 5:
+Run the script with the command below:
+
+`./nginx.sh PUBLIC_IP webserver-1 webserver-2`
 
