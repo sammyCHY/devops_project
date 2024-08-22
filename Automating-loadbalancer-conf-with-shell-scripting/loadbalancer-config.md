@@ -151,3 +151,18 @@ Run the script with the command below:
 
 
 ![The image shows the run script ](image/images/loadbalancer_exe4.png)
+
+
+# Verifying the Setup.
+
+## Screenshot for webservers
+
+
+![The image shows the webservers ](image/images/webserver-IP2a.png)
+
+
+![The image shows the webservers ](image/images/second.png)
+
+
+
+![The image shows the webservers ](image/images/webserver-IP2.png)
