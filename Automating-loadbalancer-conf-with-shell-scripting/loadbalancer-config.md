@@ -96,3 +96,33 @@ Run the shell script using the command below.
 
 ### Automate the Deployment of Nginx as a Load Balancer using Shell script.
 
+Having successfully deployed and configured two webservers, I will move on to the load balancer. As a prerequisite, I need to provision an **EC2** instance running ubuntu 22.04, open port 80 to anywhere using the security group and connect to the load balancer via the terminal.
+
+
+### Deploying and Configuring Nginx Load Balancer
+
+All the steps followed in the **Implementing Load Balancer with Nginx** course has been codified in the script below:
+
+ `#!/bin/bash`
+
+ # Steps to Run the Shell Script.
+
+# Step 1:
+On the terminal, open a file nginx.sh using command below:
+
+`sudo vi nginx.sh`
+
+# Step 2: 
+Copy and paste the script inside the file.
+
+
+![The image shows the shell scripting file](image/images/second-secript.png)
+
+
+# Step 3: 
+Close the file using the command below:
+
+`esc the shift + :wqa!`
+
+
+
