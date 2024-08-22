@@ -165,4 +165,4 @@ Run the script with the command below:
 
 
 
-![The image shows the webservers ](image/images/webserver-IP2.png)
+![The image shows the webservers ](image/images/websever-IP2.png)
