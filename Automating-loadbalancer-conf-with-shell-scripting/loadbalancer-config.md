@@ -136,3 +136,18 @@ Run the script with the command below:
 
 `./nginx.sh PUBLIC_IP webserver-1 webserver-2`
 
+![The image shows the run script ](image/images/loadbalancer_exe1.png)
+
+
+
+![The image shows the run script ](image/images/loadbalancer_exe2.png)
+
+
+
+
+![The image shows the run script ](image/images/loadbalancer_exe3.png)
+
+
+
+
+![The image shows the run script ](image/images/loadbalancer_exe4.png)
