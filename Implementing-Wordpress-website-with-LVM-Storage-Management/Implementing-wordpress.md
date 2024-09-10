@@ -55,8 +55,33 @@ The video on this link show how to Add EBS Volume to an EC2 Instance [click here
 
 2. Attach all three volumes one by one to the Web Server EC2 Instance.
 
-![The image shows the attached volume](image/images/attache-volume.png)
+![The image shows the attached volume](image/images/attached-volume.png)
 
 3. Open up the Linux terminal to begin configuration.
 
-4. I will have to use `lsblk` command to inspect what block devices are attached to the server. Notice names of the newly created devices. All devices in the Linux in /dev/ directory. Inspect it with `ls/dev/` and I have to make sure all 3 newly created block devices there- their names will likely
+4. I will have to use `lsblk` command to inspect what block devices are attached to the server. Notice names of the newly created devices. All devices in the Linux in /dev/ directory. Inspect it with `ls/dev/` and I have to make sure all 3 newly created block devices there- their names will likely be `xvdf`, `xvdg`, `xvdh`.
+
+![The image shows the 3 newly created block devices](image/images/lsblk-attached-volume.png)
+
+4. Use `df -h` command to see all mounts and free space on your server
+
+![The image shows the mounts partition server](image/images/df-h-mounted-point.png)
+
+5. Use `gdisk` utility to create a single partition on each of the 3 disks
+
+![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdf1.png)
+
+
+![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdf2.png)
+
+
+![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdg1.png)
+
+
+![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdg2.png)
+
+
+![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdh1.png)
+
+
+![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdh2.png)
