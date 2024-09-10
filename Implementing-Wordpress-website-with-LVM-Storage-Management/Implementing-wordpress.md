@@ -85,3 +85,9 @@ The video on this link show how to Add EBS Volume to an EC2 Instance [click here
 
 
 ![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdfh2.png)
+
+After the partition.
+
+5. Use `lsblk` utility to view the newly configured partition on each of the 3 disks.
+
+![The image shows the configured partition](image/images/lsblk-mounted.png)
