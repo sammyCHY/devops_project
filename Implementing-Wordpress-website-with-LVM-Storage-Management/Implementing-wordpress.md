@@ -122,4 +122,22 @@ After the partition.
 
 ![The image shows the created physical volume](image/images/sudo-pvs.png)
 
+9. Use `vgcreate` utility to add all 3 PVs to a volume group (VG). Name the VG **webdata-vg** 
 
+`sudo vgcreate webdata-vg /dev/xvdf1 /dev/xvdg1 /dev/xvdh1`
+
+10. Verify that the VG has been created successfully by running `sudo vgs`
+
+
+![The image shows the VG created running successfull](image/images/sudo-vgs.png)
+
+
+11. Use `lvcreate` utility to create 2 logical volumes. apps-lv (**Use half of the PV size**), and **logs-lv Use the remaining space of the PV size**. **NOTE**: *apps-lv* will be used to store data for the Website while, *logs-lv* will be used to store data for *logs*.
+
+`sudo lvcreate -n apps-lv -L 14g webdata-vg`
+
+`sudo lvcreate -n logs-lv -L 14g webdata-vg`
+
+12. Verify that the Logical volume has been created successfully by running `sudo lvs`
+
+![The image shows the logical volume created](image/images/sudo-lvs.png)
