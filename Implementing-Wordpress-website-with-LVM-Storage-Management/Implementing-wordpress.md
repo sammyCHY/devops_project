@@ -13,4 +13,13 @@ In this project I'm tasked to prepare storage infrastructure on two Linux server
 
 ### Project 6 consist of two parts:
 
-- 
+- Configure storage subsystem for web and Database servers based on Linux OS. The focus of this parts is to display a practical experience of working with disks, partitions and volumes in Linux.
+
+- Install Wordpress and connect it to a remote MySQL database server. This part of the project will solidify the learning of deploying Web and DB tiers of Web solution.
+
+### Three-tier Architecture.
+
+- The **Three-tier Architecture** is a client-server software architecture pattern that comprise of 3 separate layers.
+
+![The image shows the three tier architecture](image/images/three-tier-architecture.png)
+
