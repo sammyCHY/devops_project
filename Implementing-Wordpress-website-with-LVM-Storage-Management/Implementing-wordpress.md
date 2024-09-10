@@ -90,4 +90,19 @@ After the partition.
 
 5. Use `lsblk` utility to view the newly configured partition on each of the 3 disks.
 
+
+
 ![The image shows the configured partition](image/images/lsblk-mounted.png)
+
+
+6. Install  `lvm2` packaging using `sudo yum install lvm2`. Run `sudo lvmdiskscan` command to check for available partitions.
+
+
+![The image shows the lvm2 packaging](image/images/sudo-yum-install-lvm1.png)
+
+
+
+![The image shows the lvm2 packaging](image/images/sudo-yum-install-lvm2.png)
+
+
+![The image shows the lvm2 packaging](image/images/sudo-yum-install-lvm3.png)
