@@ -28,4 +28,30 @@ In this project I'm tasked to prepare storage infrastructure on two Linux server
 
 2. **Business Layer** (BL): This is the backend program that implements business logic. Application or Webserver.
 
-3. **Data Access or Management Layer** (DAL): This is the layer for computer data storage and data access. `#Database Server` 
+3. **Data Access or Management Layer** (DAL): This is the layer for computer data storage and data access. **Database Server** or File System Server such as ***FTP Server*** or ***NFS Server*** 
+
+### The 3-Tier Setup.
+
+1. A Laptop or PC to serve as a client.
+
+2. An EC2 Linux Server as a web server (This is where I will install WordPress)
+
+3. An EC2 Linux Server as a database (DB) server.
+
+The project will be carried out using *`RedHat`* **OS for this project**
+
+
+# Implementing LVM on Linux Servers (Web and Database Servers)
+
+Step 1. - Prepare a Web Server.
+
+1. Launch an EC2 instance that will serve as "Web Server". Create 3 volume in the same AZ as a web server EC2, each of 10 GiB.
+
+![The image shows the add of EBS Volume to an EC2 instance](image/images/volume-db.png)
+
+
+2. Attach all three volumes one by one to the Web Server EC2 Instance.
+
+![The image shows the attached volume](image/images/attache-volume.png)
+
+
