@@ -45,7 +45,10 @@ The project will be carried out using *`RedHat`* **OS for this project**
 
 Step 1. - Prepare a Web Server.
 
+![The image shows the server, the web-server and database server](image/images/web-server&database-server.png)
+
 1. Launch an EC2 instance that will serve as "Web Server". Create 3 volume in the same AZ as a web server EC2, each of 10 GiB.
+The video on this link show how to Add EBS Volume to an EC2 Instance [click here to watch the video](https://www.youtube.com/watch?v=HPXnXkBzIHw)
 
 ![The image shows the add of EBS Volume to an EC2 instance](image/images/volume-db.png)
 
@@ -54,4 +57,6 @@ Step 1. - Prepare a Web Server.
 
 ![The image shows the attached volume](image/images/attache-volume.png)
 
+3. Open up the Linux terminal to begin configuration.
 
+4. I will have to use `lsblk` command to inspect what block devices are attached to the server. Notice names of the newly created devices. All devices in the Linux in /dev/ directory. Inspect it with `ls/dev/` and I have to make sure all 3 newly created block devices there- their names will likely
