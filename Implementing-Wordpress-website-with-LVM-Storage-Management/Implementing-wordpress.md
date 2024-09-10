@@ -23,3 +23,9 @@ In this project I'm tasked to prepare storage infrastructure on two Linux server
 
 ![The image shows the three tier architecture](image/images/three-tier-architecture.png)
 
+
+1. **Presentation Layer** (PL): This is the user interface such as the client server or browser on a laptop.
+
+2. **Business Layer** (BL): This is the backend program that implements business logic. Application or Webserver.
+
+3. **Data Access or Management Layer** (DAL): This is the layer for computer data storage and data access. `#Database Server` 
