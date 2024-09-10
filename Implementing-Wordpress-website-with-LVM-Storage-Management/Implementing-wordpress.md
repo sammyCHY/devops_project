@@ -141,3 +141,26 @@ After the partition.
 12. Verify that the Logical volume has been created successfully by running `sudo lvs`
 
 ![The image shows the logical volume created](image/images/sudo-lvs.png)
+
+13. Verify the entire setup.
+
+`sudo vgdisplay -v #view complete setup - VG, pv, and LV`
+
+![The image shows the vgdisplay](image/images/sudo-lvs-vgs-pvs.png)
+
+
+14. Use `mkfs.ext4` to format the logical volumes with `ext4` filesystem
+
+`sudo mkfs -t ext4 /dev/webdata-vg/apps-lv`
+
+`sudo mkfs -t ext4 /dev/webdata-vg/logs-lv`
+
+![The image shows the formatting of logical volume](image/images/sudo-mkfs-ext4-apps-l.png)
+
+
+
+![The image shows the formatting of logical volume](image/images/sudo-mkfs-ext4-logs-l.png)
+
+
+15. Create **/var/www/html** directory to store website files
+
