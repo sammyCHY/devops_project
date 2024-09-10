@@ -84,4 +84,4 @@ The video on this link show how to Add EBS Volume to an EC2 Instance [click here
 ![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdh1.png)
 
 
-![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdh2.png)
+![The image shows the gdisk to create a partition](image/images/sudo-gdisk-dev-xvdh2)
