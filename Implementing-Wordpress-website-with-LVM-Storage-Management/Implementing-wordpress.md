@@ -106,3 +106,20 @@ After the partition.
 
 
 ![The image shows the lvm2 packaging](image/images/sudo-yum-install-lvm3.png)
+
+
+7. Use  `pvcreate` utility to mark each each of 3 disks as physical volumes (PVs) to be used by LVM
+
+`sudo pvcreate /dev/xvdf1`
+`sudo pvcreate /dev/xvdg1`
+`sudo pvcreate /dev/xvdh1`
+
+
+![The image shows the use pvcreate](image/images/pvcreate.png)
+
+
+8. Verify that the physical volume has been created successfully by running `sudo pvs`
+
+![The image shows the created physical volume](image/images/sudo-pvs.png)
+
+
