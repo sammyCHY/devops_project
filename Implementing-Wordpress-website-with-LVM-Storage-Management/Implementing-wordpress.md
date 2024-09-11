@@ -116,7 +116,9 @@ Run `sudo lvmdiskscan` command to check for available.
 7. Use  `pvcreate` utility to mark each each of 3 disks as physical volumes (PVs) to be used by LVM
 
 `sudo pvcreate /dev/xvdf1`
+
 `sudo pvcreate /dev/xvdg1`
+
 `sudo pvcreate /dev/xvdh1`
 
 
@@ -232,6 +234,7 @@ Update `/etc/fstab` in this format using UUID and leading and ending quotes shou
 22. Test the configuration and reload the daemon.
 
 `sudo mount -a`
+
 `sudo systemctldaemon-reload`
 
 ![The image shows the sudo mount -a](image/images/sudo-mount-a.png)
@@ -275,20 +278,29 @@ Launch a second RedHat EC2 instance that will have a role - 'DB Server' Repeat t
 3. Start Apache.
 
 `sudo systemctl enable httpd`
+
 `sudo systemctl start httpd`
 
-[The image shows the sudo systemctl enable, start and status of httpd](image/images/sudo-systemctl-start&status-httpd.png)
+![The image shows the sudo systemctl enable, start and status of httpd](image/images/sudo-systemctl-start&status-httpd.png)
 
 4. To install PHP and it's dependencies.
 
 `sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm`
+
 `sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm`
+
 `sudo yum module list php`
+
 `sudo yum module reset php`
+
 `sudo yum module enable php:remi-7.4`
+
 `sudo yum install php php-opcache php-gd php-curl php-mysqlnd`
+
 `sudo systemctl start php-fpm`
+
 `sudo systemctl enable php-fpm`
+
 `setsebool -P httpd_execmem 1`
 
 
@@ -324,11 +336,17 @@ Launch a second RedHat EC2 instance that will have a role - 'DB Server' Repeat t
 
 
 `mkdir wordpress`
+
 `cd   wordpress`
+
 `sudo wget http://wordpress.org/latest.tar.gz`
+
 `sudo tar xzvf latest.tar.gz`
+
 `sudo rm -rf latest.tar.gz`
+
 `cp wordpress/wp-config-sample.php wordpress/wp-config.php`
+
 `cp -R wordpress /var/www/html/`
 
 
