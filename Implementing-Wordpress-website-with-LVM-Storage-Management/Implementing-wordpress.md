@@ -164,3 +164,44 @@ After the partition.
 
 15. Create **/var/www/html** directory to store website files
 
+`sudo mkdir -p /var/www/html`
+
+
+![The image shows the creation html directory](image/images/sudo-mkdir-p-html.png)
+
+16. Create **/home/recovery/logs** to store backup of log data.
+
+`sudo mkdir -p /home/recovery/logs`
+
+![The image shows the recovery logs](image/images/sudo-mkdir-recovery-logs.png)
+
+
+17. Mount **/var/www/html** on **apps-lv** volume
+
+`sudo mount /dev/webdata-vg/apps-lv /var/www/html/`
+
+![The image shows the mounted webdata vg](image/images/sudo-mounted.png)
+
+
+18. Use **rsync** utility to backup all the files in the log directory **/var/log** into **/home/recovery/logs** (This is required before mounting the file system).
+
+
+`sudo rsync -av /var/log/. /home/recovery/logs/`
+
+![The image shows the recovery logs](image/images/sudo-rsync1.png)
+
+
+![The image shows the recovery logs](image/images/sudo-rsync2.png)
+
+
+19. Mount **/var/log** on **logs-lv** logical volume. (Note that all the existing data on /var/log will be deleted. That is why 15 above is very important).
+
+`sudo mount /dev/webdata-vg/logs-lv /var/log`
+
+
+![The image shows the mounted logs](image/images/sudo-mount-vg-webdata-logs.png)
+
+
+
+
+
