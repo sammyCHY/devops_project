@@ -379,12 +379,31 @@ Verify that the service is up and running by using `sudo systemctl status mysqld
 # Step 5 - Configure DB to work with WordPress
 
 `sudo mysql`
+
 `CREATE DATABASE wordpress;`
+
 `CREATE USER `myuser`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'mypass';`
+
 `GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';`
+
 `FLUSH PRIVILEGES;`
+
 `SHOW DATABASES;`
+
 `exit`
+
+# Step 6 - Cofigure WordPress to connect to remote database.
+**Hint:** I have to open MySQL port 3306 on DB Server EC2. For extra security, I , have allow access to the DB Server **ONLY** from the Web Server's IP address, so in the Inbound Rule configuration specify source as /32
+
+
+![The image shows the configure WordPress](image/images/inbound-rule.png)
+
+1. Install `MySQL` client and test that I have to connect from the Web Server to the DB server by using `mysql-client`
+
+`sudo yum install mysql`
+
+sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
+
 
 
 
