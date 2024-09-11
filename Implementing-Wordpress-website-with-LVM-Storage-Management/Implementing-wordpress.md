@@ -344,4 +344,58 @@ Launch a second RedHat EC2 instance that will have a role - 'DB Server' Repeat t
 
 
 
+![The image shows the cp wordpress to html ](image/images/sudo-cp-r-wordpress-config.png)
+
+
+7. Configure SELinux Policies.
+
+`sudo chown -R apache:apache /var/www/html/wordpress`
+`sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R`
+`sudo setsebool -P httpd_can_network_connect=1`
+
+![The image shows the sudo chown -R apache](image/images/sudo-chown-r-apache-apache-var-www-html.png)
+
+
+# Step 4 - Install MySQL on your DB Server EC2
+
+`sudo yum update`
+`sudo yum install mysql-server`
+
+![The image shows the installation of mysql-server](image/images/sudo-yum-install-mysql-server1.png)
+
+
+![The image shows the installation of mysql-server](image/images/sudo-yum-install-mysql-server2.png)
+
+
+Verify that the service is up and running by using `sudo systemctl status mysqld`, if it is not running, restart the service and enable it so it will be running even after reboot:
+
+`sudo systemctl restart mysqld`
+
+`sudo systemctl enable mysqld`
+
+![The image shows the systemctl restart & enable mysqld](image/images/sudo-systemctl-restart&enable-mysqld-db.png)
+
+
+# Step 5 - Configure DB to work with WordPress
+
+`sudo mysql`
+`CREATE DATABASE wordpress;`
+`CREATE USER `myuser`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'mypass';`
+`GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';`
+`FLUSH PRIVILEGES;`
+`SHOW DATABASES;`
+`exit`
+
+
+
+
+
+
+
+
+
+
+
+
+
 
