@@ -245,3 +245,103 @@ Update `/etc/fstab` in this format using UUID and leading and ending quotes shou
 
 ![The image shows the running setup by using df -h](image/images/sudo-systemctl-daemon-reload-df-h.png)
 
+
+
+# Installing WordPress and Configuring to use MySQL Database
+
+# Step 2 - Prepare the Database Server.
+
+Launch a second RedHat EC2 instance that will have a role - 'DB Server' Repeat the same steps as for the Web Server, but instead of `apps-lv` create `db-lv` and mount it to `/db` directory instead of `/var/www/html/`
+
+
+### Step3 - Install WordPress on  the Web Server EC2
+
+1. Update the repository.
+  
+  `sudo yum -y update`
+
+![The image shows the sudo yum -y update](image/images/sudo-yum-y-update2.png)
+
+
+
+![The image shows the sudo yum -y update](image/images/sudo-yum-y-update3.png)
+
+
+
+2. Install wget, Apache and it's dependencies.
+
+`sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json`
+
+3. Start Apache.
+
+`sudo systemctl enable httpd`
+`sudo systemctl start httpd`
+
+[The image shows the sudo systemctl enable, start and status of httpd](image/images/sudo-systemctl-start&status-httpd.png)
+
+4. To install PHP and it's dependencies.
+
+`sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm`
+`sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm`
+`sudo yum module list php`
+`sudo yum module reset php`
+`sudo yum module enable php:remi-7.4`
+`sudo yum install php php-opcache php-gd php-curl php-mysqlnd`
+`sudo systemctl start php-fpm`
+`sudo systemctl enable php-fpm`
+`setsebool -P httpd_execmem 1`
+
+
+![The image shows the fedoraproject](image/images/sudo-yum-install-fedoraproject1.png)
+
+
+![The image shows the fedoraproject](image/images/sudo-yum-install-fedoraproject2.png)
+
+
+![The image shows the install yum-utilis-remirepo](image/images/sudo-yum-install-remirepo1.png)
+
+
+![The image shows the install yum-utilis-remirepo](image/images/sudo-yum-install-remirepo2.png)
+
+
+
+![The image shows the yum module reset php](image/images/sudo-yum-module-reset-php1.png)
+
+
+
+![The image shows the yum module reset php](image/images/sudo-yum-module-reset-php2.png)
+
+
+
+![The image shows the systemctl start & enable php](image/images/sudo-systemctl-start&enable-php-fpm.png)
+
+
+5. Restart Apache.
+
+`sudo systemctl restart httpd`
+
+6. Download Wordpress and copy wordpress to `var/www/html`
+
+
+`mkdir wordpress`
+`cd   wordpress`
+`sudo wget http://wordpress.org/latest.tar.gz`
+`sudo tar xzvf latest.tar.gz`
+`sudo rm -rf latest.tar.gz`
+`cp wordpress/wp-config-sample.php wordpress/wp-config.php`
+`cp -R wordpress /var/www/html/`
+
+
+![The image shows the creation of mkdir & cd wordpress](image/images/mkdir-wordpress&cd-wordpress.png)
+
+
+
+![The image shows the yum module reset php](image/images/sudo-yum-module-reset-php2.png)
+
+
+
+![The image shows the wordpress installation](image/images/sudo-wget-wordpress.png)
+
+
+
+
