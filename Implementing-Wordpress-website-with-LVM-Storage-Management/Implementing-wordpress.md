@@ -404,17 +404,37 @@ Verify that the service is up and running by using `sudo systemctl status mysqld
 
 sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
 
+![The image shows the database](image/images/show-database.png)
+
+
+2. Verify if the it's successfully execute `SHOW DATABASES;` command and see a list of existing databases.
+
+3. Change permissions and configuration so Apache could use WordPress:
+
+4. Enable TCP port 80 in Inbound Rule configuration for the Web Server EC2 (enable from everywhere 0.0.0.0/0 or from the workstation's IP)
+
+5. Try to access the web-browser from the link to the wordpress `http://<Web-Server-Public-IP-Address>/wordpress/`
 
 
 
+![The image shows the hosted wordpress](image/images/wp-admin-wordpress.png)
 
 
+![The image shows the hosted wordpress](image/images/wp-admin-wordpress1.png)
 
 
+![The image shows the hosted wordpress](image/images/wp-admin-wordpress2.png)
+
+![The image shows the hosted wordpress](image/images/wp-admin-wordpress3.png)
 
 
+![The image shows the hosted wordpress](image/images/wp-admin-wordpress4.png)
 
 
+![The image shows the hosted wordpress](image/images/wp-admin-wordpress5.png)
 
 
+![The image shows the hosted wordpress](image/images/wp-admin-wordpress6.png)
 
+
+![The image shows the hosted wordpress](image/images/wp-admin-wordpress7.png)
