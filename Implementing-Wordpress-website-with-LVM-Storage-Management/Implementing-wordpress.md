@@ -108,6 +108,11 @@ After the partition.
 ![The image shows the lvm2 packaging](image/images/sudo-yum-install-lvm3.png)
 
 
+Run `sudo lvmdiskscan` command to check for available.
+
+![The image shows the lvmdiskscan](image/images/sudo-lvmdiskscan.png)
+
+
 7. Use  `pvcreate` utility to mark each each of 3 disks as physical volumes (PVs) to be used by LVM
 
 `sudo pvcreate /dev/xvdf1`
@@ -202,6 +207,41 @@ After the partition.
 ![The image shows the mounted logs](image/images/sudo-mount-vg-webdata-logs.png)
 
 
+20. Restore log files back into **/var/log** directory.
+
+`sudo rsync -av /home/recovery/logs/log/. /var/log`
 
 
+21. Update `/etc/fstab` file so that the mount configuration will persist after restart of the server.
+
+The UUID of the device will be used to update the `/etc/fstab` file;
+
+`sudo blkid`
+
+
+![The image shows the sudo vi ect fstab for mount configuration](image/images/sudo-blkid.png)
+
+
+sudo vi `/etc/fstab`
+
+Update `/etc/fstab` in this format using UUID and leading and ending quotes should be removed.
+
+![The image shows the update etc/fstab](image/images/sudo-vi-etc-fstab.png)
+
+
+22. Test the configuration and reload the daemon.
+
+`sudo mount -a`
+`sudo systemctldaemon-reload`
+
+![The image shows the sudo mount -a](image/images/sudo-mount-a.png)
+
+
+![The image shows the reload of the uuid configuration](image/images/sudo-systemctl-daemon-reload.png)
+
+
+23. Verify the setup by running `df -h`, output must look like this:
+
+
+![The image shows the running setup by using df -h](image/images/sudo-systemctl-daemon-reload-df-h.png)
 
