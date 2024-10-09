@@ -4,7 +4,7 @@
 
 # Project Overview:
 
-### Part 1: Azure Setup
+# Part 1: Azure Setup
 
 # 1. Create an Azure Account.
 
@@ -51,25 +51,53 @@
 ![The image shows account creation on microsoft-Azures](image/images/microsoft-azure.png).
 
 
+# 2.  Access Azure Portal
 
-This site was built using [GitHub Pages](https://pages.github.com/).
-
-
-
+Once logged in, navigate to the Azure Portal and explore the platform.
 
 
-
-
-
-2. # Access Azure Portal
-
-Once logged in, navigate to the Azure Portal.
 
 # Part 2:  Azure Virtual Machine
 
 3. Create a Resource Group
 
-Create a new resource group to organize resources
+- Navigate to Resource Groups:
+
+- In the left-hand menu, select Resource groups. If you don't see it, you can type "Resource groups" in the search bar at the top.
+
+- Create a New Resource Group:
+
+- Click Create at the top of the Resource Groups page.
+Provide Resource Group Information:
+
+- Subscription: Choose the Azure subscription in which the resource group will be created.
+
+- Resource Group Name: Enter a name for your resource group. The name should be unique within the subscription.
+
+- Region: Select a region (location) for the resource group. This is where the resources in the group will be stored and managed.
+
+- Review and Create:
+
+- Click Review + create to review your settings.
+
+- Once satisfied, click Create to create the resource group.
+After Creation:
+
+- Once the resource group is created, you can start adding resources such as virtual machines, storage accounts, databases, etc., to the resource group. You can also manage these resources together (start, stop, delete, etc.).
+
+- Resource groups are crucial for organizing resources and applying policies, permissions, and cost management.
+
+![The image shows the creation of resource group](image/images/resource-group.png).
+
+
+![The image shows the creation of resource group](image/images/create-resource-group.png).
+
+
+![The image shows the creation of resource group](image/images/resource-group-passed.png).
+
+
+![The image shows the creation of resource group](image/images/resource-group-created.png).
+
 
 Type in a **Resource Group** in a search box in a azure platform.
 
