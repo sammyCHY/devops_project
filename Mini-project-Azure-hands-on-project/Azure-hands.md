@@ -168,3 +168,59 @@ If everything is correct,
 
 
 ![The image shows the ssh linux vm to connect remotely](image/images/ssh-i-azure1.png).
+
+
+# Part 3: VM management.
+
+7. Start/stop VM
+
+- Practice starting and stopping the VM through the Azure Portal.
+
+![The image shows the virtual machine management ](image/images/virtual-machine-management.png).
+
+8. **Resize VM**
+
+- Changing the VMs size to a different configuration to understand Azure's flexibility.
+
+- Select the Virtual Machine:
+
+- Navigate to Virtual Machines from the left-hand menu.
+
+- Select the VM whose size you want to change.
+
+- Stop the VM (if needed):
+
+- It's usually necessary to stop the VM before resizing it.
+
+- Click Stop at the top of the VM overview page.
+
+- Resize the VM:
+
+- In the VM's navigation panel, under Settings, click Size.
+
+- You'll be presented with a list of available VM sizes based on your subscription, region, and the VM’s current configuration.
+
+- Select the new size you want to apply, then click Resize.
+
+- Restart the VM:
+
+- Once the VM is resized, click Start to bring the VM back online.
+
+- Verify the Changes:
+
+- Go to the VM's overview and confirm the new size is reflected in the Size field.
+
+- Things to Consider:
+
+- Downtime: Resizing requires stopping and restarting the VM, which causes downtime. Make sure to plan accordingly.
+
+- Disk Compatibility: Some VM sizes are only compatible with certain disk types (e.g., Standard vs. Premium SSD).
+
+- Cost: Changing to a larger VM size might increase your costs, so ensure that the new size aligns with your budget and performance needs.
+
+
+![The image shows the resize of virtual machine](image/images/virtual-machine-resize.png).
+
+
+
+![The image shows the resize of virtual machine](image/images/virtual-machine-resize2.png).
