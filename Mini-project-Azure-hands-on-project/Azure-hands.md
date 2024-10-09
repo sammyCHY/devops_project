@@ -157,7 +157,7 @@ If everything is correct,
 
 
 
-![The image shows the creation of virtual machine VMs](image/images/virtual-machine-running.png).
+![The image shows the creation of virtual machine VMs](image/images/Virtual-machine-running.png).
 
 
 # 5. Connect to VM
