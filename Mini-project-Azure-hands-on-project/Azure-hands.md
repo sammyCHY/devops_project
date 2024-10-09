@@ -106,3 +106,65 @@ Type in a **Resource Group** in a search box in a azure platform.
 - Create a Window or Linux VM of my choice.
 
 - Configure necessary settings like VM size, authenticatio (SSH for Linux, RDP for Windows), and Networking.
+
+## Navigate to Virtual Machines:
+
+- In the left-hand menu, click on Virtual Machines. If it's not visible, you can use the search bar at the top.
+
+- Click on Create:
+
+- At the top of the Virtual Machines page, click on + Create and select Azure Virtual Machine.
+
+- Configure Basic Settings:
+
+- Subscription: Choose your Azure subscription.
+
+- Resource Group: Select an existing resource group or create a new one.
+
+- Virtual Machine Name: Enter a name for your VM.
+
+- Region: Choose the region where you want the VM to be deployed.
+
+- Availability Options: Select if you want to use Availability Zones or sets for redundancy.
+
+- Image: Choose the operating system image for your VM (e.g., Windows Server, Ubuntu).
+
+- Size: Select the size of the VM based on CPU and memory requirements. You can click on See all sizes for more options.
+
+- Configure Administrator Account:
+
+- Authentication Type: Choose between password or SSH public key.
+
+- Username: Enter the username for the VM.
+Password/SSH Key: Provide a password or SSH public key for authentication.
+Configure Inbound Port Rules:
+
+- Select the ports you want to open for inbound traffic (e.g., SSH for Linux or RDP for Windows). You can choose Allow selected ports and select the desired protocol.
+
+- Review and Create:
+
+- Click Review + create to verify all settings. Azure will run a validation check.
+If everything is correct, 
+
+- click Create to deploy your VM.
+
+- Post-Deployment:
+
+- After a few minutes, your VM will be created. You can manage it through the Azure portal by starting, stopping, or configuring settings.
+
+
+![The image shows the creation of virtual machine VMs](image/images/virtual-machine-created.png).
+
+
+
+![The image shows the creation of virtual machine VMs](image/images/virtual-machine-running.png).
+
+
+# 5. Connect to VM
+
+- Use Remote Desktop Protocol (RDP) for Windows VM or SSH for Linux VM to connect remotely.
+
+![The image shows the ssh linux vm to connect remotely](image/images/ssh-i-azure.png).
+
+
+![The image shows the ssh linux vm to connect remotely](image/images/ssh-i-azure1.png).
