@@ -90,7 +90,7 @@ After Creation:
 ![The image shows the creation of resource group](image/images/resource-group.png).
 
 
-![The image shows the creation of resource group](image/images/create-resource-group.png).
+![The image shows the creation of resource group](image/images/Create-resource-group.png).
 
 
 ![The image shows the creation of resource group](image/images/resource-group-passed.png).
