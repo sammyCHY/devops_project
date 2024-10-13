@@ -17,7 +17,9 @@
 
 # Project Setup
 1. Two Separate Chrome browser profiles
+
 2. AWS Management Console Access: Using "John" the developer's IAM account, log into the AWS Management Console
+
 3. EC2 Instance Setup: Launch an EC2 instance that will host the main application, and associate it with an elastic IP.
 
 4. S3 Bucket Configuration: Using Mary the Data Analyst's IAM account, Created and configure an S3 bucket for storing application data, ensuring proper permissions and web hosting settings are in place. 
@@ -34,3 +36,4 @@
 
 1. In this console navigation, select elastic IP and click on allocate elastic IP in the top right.
 
+![The image shows the EC2 console navigation](Image/images/associate-elastic-ip.png)
