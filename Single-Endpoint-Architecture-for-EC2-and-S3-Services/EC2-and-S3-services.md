@@ -43,20 +43,20 @@
 ![The image shows the allocate elastic IP address](Image/images/allocate-elastic-ip.png)
 
 
-[The image shows the allocate elastic IP address](Image/images/allocate-elastic-ip2.png)
+![The image shows the allocate elastic IP address](Image/images/allocate-elastic-ip2.png)
 
 3. Click on Allocate
 
 4. Select the highlighted parts and click on associate elastic ip
 
 
-[The image shows the associate elastic IP address](Image/images/associate-elastic-ip.png)
+![The image shows the associate elastic IP address](Image/images/associate-elastic-ip.png)
 
 
 5. Select the resources type, the instance to alocate the elastic ip address and the private ip of the elastic ip.
 
 
-[The image shows the allocate elastic IP and the private ip of the elastic ip address](Image/images/allocate-ip.png)
+![The image shows the allocate elastic IP and the private ip of the elastic ip address](Image/images/allocate-ip.png)
 
 
 Creating S3 Bucket
@@ -65,7 +65,7 @@ Creating S3 Bucket
 
 2. Create a new bucket and give it a name of your choice.
 
-[The image shows the new bucket created](Image/images/allocate-elastic-ip2.png)
+![The image shows the new bucket created](Image/images/allocate-elastic-ip2.png)
 
 3. Create a new object inside the bucket.index.html file containing a simple content should be uploaded.
 
@@ -73,7 +73,7 @@ On the computer, I have to create an ***index.html*** file with the content ***W
 
 Upload the ***index.html*** on S3 bucket as shown in the image below;
 
-[The image shows the index.html on the bucket](Image/images/index.html.png)
+![The image shows the index.html on the bucket](Image/images/index.html.png)
 
 
 **Configuring S3 Bucket for Web Hosting**
@@ -84,4 +84,4 @@ Upload the ***index.html*** on S3 bucket as shown in the image below;
 
 2. Click on the properties tab and scroll down
 
-[The image shows the bucket configuration](Image/images/configuring-s3-bucket1.png)
+![The image shows the bucket configuration](Image/images/configuring-s3-bucket1.png)
