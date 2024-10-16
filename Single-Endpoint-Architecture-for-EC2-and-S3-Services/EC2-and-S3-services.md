@@ -85,3 +85,74 @@ Upload the ***index.html*** on S3 bucket as shown in the image below;
 2. Click on the properties tab and scroll down
 
 ![The image shows the bucket configuration](Image/images/configuring-s3-bucket1.png)
+
+3. Click on the edit as shown in the image below.
+
+4. Select the part highlighted in the image below. You can ignore the optional part
+
+![The image shows the static web site hosting in the bucket](Image/images/enable-website-hosting.png)
+
+5. I have successfully enabled website hosting for the bucket.
+
+**Configuring a Web Server as a Reverse Proxy**
+
+Now that the I have successsfully assigned an elastic ip to the instance, let's install nginx on it. But what is nginx? Nginx is a popular open-source web server, reverse proxy server, load balancer, and HTTP cache. It's known for its high performance, stability, simple configuration, and low resources consumption. Originally created to solve the "C10k problem" ( handling 10,000 simultaneous connections), Nginx has since gained widespread adoption and is used by many large-scale websites and web applications.
+
+1. On your EC2 instance, Install Nginx web server
+
+`sudo apt update -y && sudo apt install nginx -y`
+
+
+![The image shows the installation of nginx webserver](Image/images/sudo-apt-update-y&&sudo-apt-install-nginx-y1.png)
+
+
+![The image shows the installation of nginx webserver](Image/images/sudo-apt-update-y&&sudo-apt-install-nginx-y2.png)
+
+2. Configure the web server: Configure the web server to the s3 app directly and to forward request to the S3 bucket. Follow the steps below to configure the nginx
+
+- Create and edit a new file named ***mybucket***
+
+`sudo nano /etc/nginx/sites-available/mybucket`
+
+- Paste the configuration code snippet below in the file and replace the highlighted part with the S3 link
+
+![The image shows mybucket configuration](Image/images/configuration-snippet.png)
+
+Save and close the file.
+
+**Note:** I have to replace with the link above with the link generated after enabled static web hosting for the bucket.
+
+
+3. Note that by default, nginx keeps its configuration files in **/etc/nginx/sites-available** but it uses the file in the **/etc/nginx/sites-anabled/**. I need to create a symbolic link between sites-available and sites-enabled so that the new configuration file we created for our static websites in **sites-available** folder can be used by nginx in **sites-enabled** folder. Run the commands below to symbolic link between **sites-available/mybucket** configuration file to **site-enabled** directory
+
+
+`sudo ln -s /etc/nginx/site-available/mybucket /etc/nginx/sites-enabled`
+
+Remove the default configuration file in site-enabled using the command below
+
+`sudo rm /etc/nginx/sites-enabled/default`
+
+- Reload nginx using the command below.
+
+`sudo systemctl reload nginx`
+
+4. Make the index.html file public
+
+- Navigate to the **index.html** file, click on **Actions** and then click on **Make public using ACL**
+
+![The image shows index.html make public](Image/images/html-public.png)
+
+
+### Testing and Validation
+
+After setting up your EC2 instance, configuring the S3 bucket, and establishing the reverse proxy, the next critical phase is testing and validation. This step is essential to ensure that the setup works as intended and that both the EC2-hosted application and the S3 bucket content are accessible through the unifield access point I ve created.
+
+### Testing Steps:
+
+1. Direct Application Access:
+
+- Access the application hosted on the EC2 instance directly through the Elastic IP to confirm it's running as expected.
+
+- Verify that the application responds to requests and functions correctly without any reverse proxy interference.
+
+![The image shows the running html hosted application](Image/images/welcome-amazon.png)
