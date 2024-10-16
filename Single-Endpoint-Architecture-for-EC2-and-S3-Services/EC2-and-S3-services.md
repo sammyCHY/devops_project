@@ -37,3 +37,36 @@
 1. In this console navigation, select elastic IP and click on allocate elastic IP in the top right.
 
 ![The image shows the EC2 console navigation](Image/images/associate-elastic-ip.png)
+
+2. Select the highlighted part in the image below
+
+![The image shows the allocate elastic IP address](Image/images/allocate-elastic-ip.png)
+
+
+[The image shows the allocate elastic IP address](Image/images/allocate-elastic-ip2.png)
+
+3. Click on Allocate
+
+4. Select the highlighted parts and click on associate elastic ip
+
+
+[The image shows the associate elastic IP address](Image/images/associate-elastic-ip.png)
+
+
+5. Select the resources type, the instance to alocate the elastic ip address and the private ip of the elastic ip.
+
+
+[The image shows the allocate elastic IP and the private ip of the elastic ip address](Image/images/allocate-ip.png)
+
+
+Creating S3 Bucket
+
+1. Log in to the s3 console as any name eg Mary, Joseph, Emeka etc. 
+
+2. Create a new bucket and give it a name of your choice.
+
+[The image shows the new bucket created](Image/images/allocate-elastic-ip2.png)
+
+3. Create a new object inside the bucket.index.html file containing a simple content should be uploaded.
+
+On the computer, I have to create an ***index.html*** file with the content ***Welcome to Amazon S3***
