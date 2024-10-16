@@ -128,13 +128,19 @@ Save and close the file.
 
 `sudo ln -s /etc/nginx/site-available/mybucket /etc/nginx/sites-enabled`
 
+![The image shows the nginx configuration](Image/images/sudo-ln-s.png)
+
 Remove the default configuration file in site-enabled using the command below
 
 `sudo rm /etc/nginx/sites-enabled/default`
 
+![The image shows the remove of the default page of nginx](Image/images/sudo-rm-default.png)
+
 - Reload nginx using the command below.
 
 `sudo systemctl reload nginx`
+
+![The image shows the reload of nginx](Image/images/sudo-systemctl-reload-nginx.png)
 
 4. Make the index.html file public
 
