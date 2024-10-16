@@ -70,3 +70,18 @@ Creating S3 Bucket
 3. Create a new object inside the bucket.index.html file containing a simple content should be uploaded.
 
 On the computer, I have to create an ***index.html*** file with the content ***Welcome to Amazon S3***
+
+Upload the ***index.html*** on S3 bucket as shown in the image below;
+
+[The image shows the index.html on the bucket](Image/images/index.html.png)
+
+
+**Configuring S3 Bucket for Web Hosting**
+
+- Enable Static Website Hosting: In the S3 bucket settings, enable static website hosting. This makes the bucket content accessible via HTTP. 
+
+1. Click on the bucket name.
+
+2. Click on the properties tab and scroll down
+
+[The image shows the bucket configuration](Image/images/configuring-s3-bucket1.png)
