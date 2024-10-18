@@ -141,7 +141,21 @@ c) check the box "Users must creat a new password at next sign-in" if allowing u
 *******
 
 
+8. Select "Attach policy directly" and navigate to "Filter customer managed policies."
 
+a) Choose the policy I have created named "Policy_for_eric."
+
+b) Then I have to proceed by clicking "Next."
+
+Note- AWS Policies -
+
+- Manage Policies: Made by AWS, used by many.
+
+- Customer Managed Policies: You make and manage them.
+
+- Inline Policies: Made for one specific thing.
+
+For further details, please refer to [Policies and permissions in IAM in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
 
 
 
