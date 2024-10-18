@@ -157,6 +157,67 @@ Note- AWS Policies -
 
 For further details, please refer to [Policies and permissions in IAM in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
 
+9. Next, click on "Create User"
+
+***********
+
+10. Ensure to save these details securely for future reference.
+
+a) Click on "Return to user list"
+
+********
+
+- Eric's user has been successfully created, and the policy granting him full access to EC2 has been attached.
+
+### Now let's come to Part-2
+
+1. On the "User Group" section, enter a name for the group.
+
+a) click on "Create User Group"
+
+b) Then, proceed to the "Users" section.
+
+*********
+
+- This is the user I've created.
+
+- c) Now, let's proceed to the "Users" section
+
+******
+
+2. Now, let's create a user named Jack.
+
+*********
+
+3. In the "Permissions" options, select "Add user to group"
+
+a) Then, in the "User groups" section,
+
+b) choose the group you created named "development-team,"
+
+) Click "Next"
+
+
+*******
+
+4. Now, click on create user
+
+
+*******
+
+I need to repeat the same process for user Ade. Create user Ade and add him to the user-group "Development team"
+
+******
+
+******
+
+******
+
+5. Navigate to the "Policies" section and click on "Create Policy" to beging crafting a new policy
+
+*******
+
+6. Choose the two services, EC2 and S3,from the available options.
 
 
 
