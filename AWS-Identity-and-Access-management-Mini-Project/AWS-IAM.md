@@ -92,3 +92,58 @@ IAM, or Identity and Access Management. Think of it as the gatekeeper for AWS re
 
 3. In the second part, I will create a group and add two more users, Jack, and Ade, to that group, Afterward, I will create a policy for granting full access to EC2 and S3, and attach it to the group.
 
+# Part-1
+
+1. Navigate to the AWS Management Console.
+
+a) use the search bar to locate the Identity and Access Management (IAM) service.)
+
+************
+
+2. Now, on the IAM dashboard, navigate to the left sidebar and click on "policies."
+
+a) From there, search for "EC2" and select "AmazonEC2Access" from the list of policies.
+b) Proceed by clicking on "Create policy" to initiate the policy creation process.
+
+****************
+
+3. Now, select all EC2 actions.
+
+**********
+
+
+4. Tick "All resources" and click "Next"
+
+
+*********
+
+
+5. Now click on create policy.
+
+**************
+
+This is the policy I have created.
+
+*********
+
+6. Now, proceed to the "Users" section, and select the option to "Create User"
+
+**********
+
+7. Enterthe desired username for the user.
+
+a) Then select the option "Provide user access to the AWS Management Console" if access to the web-based console interface is required.
+
+b) Proceed to set up a password for the user.
+
+c) check the box "Users must creat a new password at next sign-in" if allowing users to change their password upon first sign-in is preferred.
+
+*******
+
+
+
+
+
+
+
+
