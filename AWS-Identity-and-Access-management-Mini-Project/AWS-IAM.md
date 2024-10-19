@@ -200,41 +200,44 @@ a) Then, in the "User groups" section,
 
 b) choose the group you created named "development-team,"
 
-) Click "Next"
+c) Click "Next"
 
 
-*******
+![The image shows the add user to group](image/images/add-user-to-group.png)
 
 4. Now, click on create user
 
 
-*******
+![The image shows the create user jack](image/images/review-and-create-new-user.png)
 
 I need to repeat the same process for user Ade. Create user Ade and add him to the user-group "Development team"
 
-******
+![The image shows the user Ade to add to user group to development team](image/images/ade-user.png)
 
-******
+![The image shows the ade create permission](image/images/ade-user-set-permission.png)
 
-******
+![The image shows the ade review and create](image/images/ade-review-and-create.png)
 
 5. Navigate to the "Policies" section and click on "Create Policy" to beging crafting a new policy
 
-*******
+![The image shows the create policy](image/images/create-policy.png)
 
 6. Choose the two services, EC2 and S3,from the available options.
 
 
-********
+![The image shows the services](image/images/services-ec2.png)
+
+
+![The image shows the services](image/images/services-s3.png)
 
 7. Enter the desired policy name and proceed to click on the "Create Policy" button.
 
-*******
+![The image shows the create policy](image/images/create-policy-ec2-s3.png)
 
 8. Navigate to the "Users group" section and select the "Development-team" group
 
 
-********
+![The image shows the user group and the development team group ](image/images/user-group-development-team.png)
 
 9. Proceed to the "Permissions" section and add the necessary permissions.
 
