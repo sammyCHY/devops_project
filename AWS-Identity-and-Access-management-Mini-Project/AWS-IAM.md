@@ -139,8 +139,7 @@ b) Proceed to set up a password for the user.
 
 c) check the box "Users must creat a new password at next sign-in" if allowing users to change their password upon first sign-in is preferred.
 
-*******
-
+![The image shows the creation of eric-user](image/images/user-eric.png)
 
 8. Select "Attach policy directly" and navigate to "Filter customer managed policies."
 
@@ -160,13 +159,13 @@ For further details, please refer to [Policies and permissions in IAM in IAM](ht
 
 9. Next, click on "Create User"
 
-***********
+![The image shows the create user-eric](image/images/create-user.png)
 
 10. Ensure to save these details securely for future reference.
 
 a) Click on "Return to user list"
 
-********
+![The image shows the return to user list](image/images/return-to-user-list.png)
 
 - Eric's user has been successfully created, and the policy granting him full access to EC2 has been attached.
 
@@ -178,7 +177,12 @@ a) click on "Create User Group"
 
 b) Then, proceed to the "Users" section.
 
-*********
+![The image shows the user group](image/images/user-group1.png)
+
+
+
+![The image shows the user group](image/images/user-group2.png)
+
 
 - This is the user I've created.
 
