@@ -242,12 +242,12 @@ I need to repeat the same process for user Ade. Create user Ade and add him to t
 9. Proceed to the "Permissions" section and add the necessary permissions.
 
 
-**********
+![The image shows the permissions](image/images/development-team-permission.png)
 
 10. Click on attach policy
 
 
-*******
+![The image shows the click on attach policy](image/images/attach-policy.png)
 
 
 11. Select "customer managed policy" as the policy type
@@ -256,11 +256,11 @@ a) Then choose the "development-policy" earlier created.
 
 b) Click "Attach policy"
 
-********
+![The image shows the  attach policy](image/images/Attach-permission-policy-to-development-team.png)
 
 The policy is now attached to the group, granting full permission to ec2 and s3 for the group's users.
 
-************
+![The image shows the permission to ec2 and s3](image/images/final-full-permission-to-ec2&s3.png)
 
 
 # Project reflection
