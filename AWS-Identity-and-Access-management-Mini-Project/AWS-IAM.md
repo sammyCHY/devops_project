@@ -98,38 +98,38 @@ IAM, or Identity and Access Management. Think of it as the gatekeeper for AWS re
 
 a) use the search bar to locate the Identity and Access Management (IAM) service.)
 
-![The image shows the aws management console](Image/images/aws-management-console.png)
+![The image shows the aws management console](image/images/aws-management-console.png)
 
 2. Now, on the IAM dashboard, navigate to the left sidebar and click on "policies."
 
 a) From there, search for "EC2" and select "AmazonEC2Access" from the list of policies.
 b) Proceed by clicking on "Create policy" to initiate the policy creation process.
 
-![The image shows the amazon EC2 access ](Image/images/amazone-ec2-fullaccess.png)
+![The image shows the amazon EC2 access ](image/images/amazone-ec2-fullaccess.png)
 
 3. Now, select all EC2 actions.
 
-![The image shows the all EC2 action](Image/images/all-ec2-action.png)
+![The image shows the all EC2 action](image/images/all-ec2-action.png)
 
 
 4. Tick "All resources" and click "Next"
 
 
-![The image shows the all resources](Image/images/all-resources.png)
+![The image shows the all resources](image/images/all-resources.png)
 
 
 5. Now click on create policy.
 
-![The image shows the policy created](Image/images/policy-created.png)
+![The image shows the policy created](image/images/policy-created.png)
 
 
 This is the policy I have created.
 
-![The image shows the policy I have created](Image/images/policy-created-eric.png)
+![The image shows the policy I have created](image/images/policy-created-eric.png)
 
 6. Now, proceed to the "Users" section, and select the option to "Create User"
 
-![The image shows how the user creation section](Image/images/users-section.png)
+![The image shows how the user creation section](image/images/users-section.png)
 
 7. Enterthe desired username for the user.
 
