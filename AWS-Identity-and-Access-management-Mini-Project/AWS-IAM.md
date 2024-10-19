@@ -188,11 +188,11 @@ b) Then, proceed to the "Users" section.
 
 - c) Now, let's proceed to the "Users" section
 
-******
+![The image shows the user section](image/images/users-section-development-team.png)
 
 2. Now, let's create a user named Jack.
 
-*********
+![The image shows the user named jack](image/images/create-user-jack.png)
 
 3. In the "Permissions" options, select "Add user to group"
 
