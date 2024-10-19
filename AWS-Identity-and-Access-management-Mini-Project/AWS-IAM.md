@@ -220,5 +220,48 @@ I need to repeat the same process for user Ade. Create user Ade and add him to t
 6. Choose the two services, EC2 and S3,from the available options.
 
 
+********
 
+7. Enter the desired policy name and proceed to click on the "Create Policy" button.
+
+*******
+
+8. Navigate to the "Users group" section and select the "Development-team" group
+
+
+********
+
+9. Proceed to the "Permissions" section and add the necessary permissions.
+
+
+**********
+
+10. Click on attach policy
+
+
+*******
+
+
+11. Select "customer managed policy" as the policy type
+
+a) Then choose the "development-policy" earlier created.
+
+b) Click "Attach policy"
+
+********
+
+The policy is now attached to the group, granting full permission to ec2 and s3 for the group's users.
+
+************
+
+
+# Project reflection
+
+- Understanding IAM: IAM serves as the security foundation for AWS resources, controlling access and permissions.
+
+- Security Importance: IAM ensures data protection, compliance, and prevents unauthorized access.
+
+- Policy Creation: Participants learned to craft IAM policies to regulate resources access effectively.
+
+- Practical Application: Hands-on exercises equipped participants to set up IAM users, groups, and roles, enhancing their real-world IAM implementation skills.
 
