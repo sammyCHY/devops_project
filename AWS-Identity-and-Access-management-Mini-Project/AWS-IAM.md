@@ -105,7 +105,7 @@ a) use the search bar to locate the Identity and Access Management (IAM) service
 a) From there, search for "EC2" and select "AmazonEC2Access" from the list of policies.
 b) Proceed by clicking on "Create policy" to initiate the policy creation process.
 
-![The image shows the amazon EC2 access ](image/images/amazone-ec2-fullaccess.png)
+![The image shows the amazon EC2 access ](image/images/amazone-c2-fullaccess.png)
 
 3. Now, select all EC2 actions.
 
