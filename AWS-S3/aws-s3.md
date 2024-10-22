@@ -23,7 +23,7 @@ By the end of this project, the experience of executing the project wll make me 
 
 # What is Amazon S3?
 
-******
+![The image shows the amazon s3 symbol](image/images/amazon-s3.png)
 
 - Amazon S3, or Simple Storage Service, is like a big digital warehouse where anyone can store all kinds of data. It's part of Amazon Web Services (AWS), which is a collection of cloud computing services.
 
@@ -87,6 +87,9 @@ Think of buckets as folder where I can store my files.Each bucket has a unique n
 ### Objects:
 
 Objects are the individual files I store in S3, like photos, videos, documents, or any other type of data. Each object has a unique key (file name) and can range in size from a few bytes to terabytes.
+
+
+![The image shows the objects of s3](image/images/.png)
 
 ### Keys: 
 
@@ -158,6 +161,43 @@ Plus, it's easy to turn on and manage, giving me someone peace of mind knowing t
 a) Search for "S3"
 
 
+![The image shows the search bar of s3 on aws console ](image/images/search-for-s3.png)
+
+2. After clicking on S3 in the search results, I'II be directed to the S3 page.
+
+a) From there, locate and click on the "Create bucket" button.
+
+
+![The image shows the create bucket](image/images/create-bucket.png)
+
+
+3. Let's proceed with creating a new bucket. Please provide a unique name for the bucket,ensuring it's distinct from any existing bucket names
+
+a) Select "ACL Disabled" for object ownership.
+
+b) Ensure to check the "Block all public access" option.
+
+c) Additionally, leave Bucket Versioning disabled.
+
+d) Proceed with the default settings.
+
+e) Once done, click on the "Create bucket" button to finalize the creation process.
+
+
+![The image shows the bucket name](image/images/bucket-name.png)
+
+
+![The image shows the ACLs of the bucket](image/images/ACLa-disabled.png)
+
+
+![The image shows the create bucket](image/images/create-bucket.png)
+
+![The image shows the disabled versioning bucket](image/images/bucket-versioning-disabled.png)
+
+![The image shows the default settings on the s3 bucket](image/images/default-encryption.png)
+
+
+![The image shows the create bucket](image/images/create-bucket-final.png)
 
 
 
