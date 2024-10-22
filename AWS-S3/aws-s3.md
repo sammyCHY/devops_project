@@ -216,7 +216,33 @@ For further details on naming conventions, Please refer to the documentation
 
 [bucket naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html )
 
+My bucket has been successfully created, and currently, there are no objects stored within it.
+
+![The image shows the bucket created](image/images/bucket-created.png)
+ 
+## Now, Let's move on to the second part, where I'll upload an object into the bucket name: "my-first-s3-bucket-7742".
 
 
+1. Let me create a file on my laptop with some data. I will write "welcome to AWS world" and save the file
+
+![The image shows the AWS world](image/images/aws-world.png)
 
 
+2. Next, click on the "Upload" button.
+
+
+![The image shows the upload of a file](image/images/upload-button.png)
+
+
+3. Click on "Add file" and select the already created file.
+
+a) Once selected click open.
+
+ ![The image shows the add and upload of a file](image/images/add-file.png)
+
+4. Then, I will have to seeing the file being added.
+
+a) Finally, click "Upload" to complete the process.
+
+
+![The image shows the uploaded file in the bucket](image/images/uploaded-file.png)
