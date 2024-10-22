@@ -199,11 +199,22 @@ e) Once done, click on the "Create bucket" button to finalize the creation proce
 
 ![The image shows the create bucket](image/images/create-bucket-final.png)
 
+**Note -** or Access Control List, is like a set of rules that decides who can access the stuff in Amazon s3. I can use ACL to grant access to the bucket and files for specific AWS accounts or predefined groups of users. It's a way to control who gets to see or mess with the data in the cloud.
 
 
+![The image shows the ACL flow](image/images/ACL-flows.png)
 
 
+ Note If anyone encounter this kind of error message below, then, consider changing the name and then proceed again.
 
+ 
+![The image shows the bucket name error](image/images/bucket-already-exist.png)
+
+![The image shows the bucket name error ](image/images/bucket-already-exist2.png)
+
+For further details on naming conventions, Please refer to the documentation 
+
+[bucket naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html )
 
 
 
