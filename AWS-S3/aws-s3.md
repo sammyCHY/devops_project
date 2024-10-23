@@ -301,5 +301,19 @@ a) Then click on "save changes"
 ![The image shows the unchecked blocked all public access](image/images/unchecked-block-all-public-access.png)
 
 
+![The image shows the colum to confirm the unchecked](image/images/confirm.png)
+
+b) Now, Tpe "confirm" and click on "Confirm".
+
+By taking this action, I will be allowing my file to be publicly accessible.
+This confirmation step ensures that I will be aware of the implications of making my file public.
+
+
+![The image shows the block of all public access final](image/images/block-all-public-access-final.png)
+
+
+
+
+
 
 
