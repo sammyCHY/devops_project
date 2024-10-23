@@ -246,3 +246,60 @@ a) Finally, click "Upload" to complete the process.
 
 
 ![The image shows the uploaded file in the bucket](image/images/uploaded-file.png)
+
+
+![The image shows the uploaded file in the bucket successful](image/images/upload-successful.png)
+
+Congratulations! You have successfully uploaded your object (file) to the S3 bucket (folder).
+
+### Let's move on to the next step, which involves enabling versioning.
+
+1. In the bucket's Properties section on the right side, you will notice that bucket versioning is currently diabled.
+
+
+![The image shows the enabled](image/images/enabled-versioning.png)
+
+So now, I will enable it.
+
+2. Click on edit.
+
+![The image shows the enabled versioning edit](image/images/enabled-versioning-edit.png)
+
+3. Select "Enabled"
+
+a) Then click on "save changes" to enable versioning for the bucket.
+
+![The image shows the enable versioning bucket](image/images/bucket-versioning-enabled.png)
+
+
+4. Now, If I modify the content of the file and upload it again, I will create a new version of the file
+
+ 
+ ![The image shows the modify](image/images/modify-file.png)
+
+
+a) By clicking on "Show versions" I will be able to see all the versions of the file I ve' uploaded.
+
+ ![The image shows the show versions](image/images/show-versioning.png)
+
+b) Now, whenever I make changes to the file and upload it again to the same bucket, it will continue creating versions of that file for future reference.
+
+
+**If I want to view the content of both versions, let's proceed to our steps, which involves setting permissions**
+
+1. Now, in the permissions section of the bucket, I will notice that "Block all public access" is enabled.
+ 
+a) Click on the "Edit" to make changes.
+
+![The image shows the permission section of the bucket](image/images/permission-section-of -the-bucket.png)
+
+2. Now, uncheck the "Block all public access" option.
+
+a) Then click on "save changes"
+
+
+![The image shows the unchecked blocked all public access](image/images/unchecked-block-all-public-access.png)
+
+
+
+
