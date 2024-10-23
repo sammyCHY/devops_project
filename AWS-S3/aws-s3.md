@@ -406,4 +406,82 @@ c) Paste the policy I've created using the Policy Generator.
 
 ![The image shows the paste of the policy generator](image/images/paste-policy-generator.png)
 
+8. Now, click on this version of your file.
+
+![The image shows the version file](image/images/version-file.png)
+
+
+9. Click on the object URL
+
+
+![The image shows the object url](image/images/object-url.png)
+
+
+Here, You will see the previous data
+
+![The image shows the previous data](image/images/previous-data.png)
+
+
+If we click to the latest version
+
+![The image shows the latest version](image/images/latest-version.png)
+
+
+And click on the object URL
+
+![The image shows the object url](image/images/object-url2.png)
+
+You will get the latest data.
+
+![The image shows the latest data](image/images/latest-data.png)
+
+
+**Now, let's proceed to the next step, which involves creating lifecycle policies**.
+
+1. For this, navigate to the management section of the bucket.
+
+a) click on "Add lifecycle rule".
+
+
+![The image shows the lifecycle rule](image/images/bucket-management-lifecycle-rule.png)
+
+
+2. Give the specifications, and click to create rule.
+
+
+![The image shows the give the specification and create lifecyle rule](image/images/create-lifecycle-rule.png)
+
+
+![The image shows the lifecyle rule action](image/images/lifecycle-rule-action.png)
+
+
+Now the lifecycle policy is being created succesfully.
+
+![The image shows the lifecyle policy created successfully](image/images/life-cycle-policy-created-successfully.png)
+
+
+This rule is setup to automatically move file from one type of storage to another in my Amazon S3 bucket. Specifically, it moves files to a storage type called Standard-IA after they've been sitting in my bucket for 30 days. This helps me sve money because standard-IA storage is cheaper than the default storage option. So, if I have files that I don't access very often but still want to keep, This rule helps me save costs by storing them in a cheaper storage class after a certain period of time.
+
+
+For more information about storage classes, I can go through Amazon S3 storage classes. And about storage lifecycle, I can go through Managing your storage lifecycle.
+
+
+# Project Reflection:
+
+- Participants have gained hands-on experience with Amazon S3, a core service of AWS.
+
+- They have Managed S3buckets and objects, learning key concepts like versioning, permissions Management, and lifecycle policies.
+
+- Through practical tasks, participants developed a solid understanding of S3 features.
+
+- They learned to optimize storage costs and ensure data relaibility and accessibility using AWS features.
+
+- I have learned to optimize storage costs and ensure data relaibility and accessibility using AWS features.
+
+- This project equipped participants with valuable skills applicable to real-world scenarios.
+
+
+
+
+
 
