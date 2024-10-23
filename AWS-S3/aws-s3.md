@@ -89,7 +89,7 @@ Think of buckets as folder where I can store my files.Each bucket has a unique n
 Objects are the individual files I store in S3, like photos, videos, documents, or any other type of data. Each object has a unique key (file name) and can range in size from a few bytes to terabytes.
 
 
-![The image shows the objects of s3](image/images/.png)
+![The image shows the objects of s3](image/images/objects.png)
 
 ### Keys: 
 
