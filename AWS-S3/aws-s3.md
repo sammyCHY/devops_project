@@ -187,7 +187,7 @@ e) Once done, click on the "Create bucket" button to finalize the creation proce
 ![The image shows the bucket name](image/images/bucket-name.png)
 
 
-![The image shows the ACLs of the bucket](image/images/ACLa-disabled.png)
+![The image shows the ACLs of the bucket](image/images/ACLs-disabled.png)
 
 
 ![The image shows the create bucket](image/images/create-bucket.png)
