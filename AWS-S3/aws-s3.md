@@ -312,8 +312,98 @@ This confirmation step ensures that I will be aware of the implications of makin
 ![The image shows the block of all public access final](image/images/block-all-public-access-final.png)
 
 
+3. Now, I need to create a bucket policy to specify the actions I want the public to be able to perform on my file. Click on "Edit"
 
 
+![The image shows the bucket policy](image/images/bucket-policy.png)
 
+
+4. Now, click on the "Policy generator"
+
+![The image shows the edit bucket policy](image/images/edit-bucket-policy.png)
+
+5. Now, select the "Type of policy" as "S3 Bucket Policy"
+
+a) Set the "Effect" to "Allow"
+
+b) Specify the "Principal" as "*" which means all users.
+
+c) Choose the action "Get object" and "Get object version"
+
+d) In the field of Amazon Resource Name (ARN), type the ARN of your bucket and add by "/*" after the ARN. Then,
+
+e) Click on Add "statement".
+
+**So Actual ARN is -**
+
+arn:aws:s3:::my-first-s3-bucket-7742
+
+**And we need to add**
+
+
+arn:aws:s3:::my-first-s3-bucket-7742/*
+
+
+![The image shows the aws policy generator](image/images/aws-policy-generator.png)
+
+
+f) Copy the ARN from here.
+
+
+![The image shows the copy of ARN](image/images/copy-ARN.png)
+
+
+**Note -** ARN stands for Amazon Resources Name. It's like a unique address for every resource in AWS, such as bucket in S3. Just like your home address tells people where I live, an ARN tells AWS where a specific resource is located. It helps AWS know exactly which resource I would be referring to when I will be setting up permissions or policies.
+
+6. Now click on "generate policy"
+
+![The image shows to generate policy](image/images/get-object&get-object-version.png)
+
+
+![The image shows to generate policy](image/images/get-object&get-object-version1.png)
+
+
+![The image shows to generate policy](image/images/get-object&get-object-version2.png)
+
+
+a) Now, copy this and click on "close"
+
+![The image shows to generate jason policy file](image/images/policy-jason-document.png)
+
+
+![The image shows to generate jason policy file](image/images/policy-jason-document1.png)
+
+
+- "***Id:"Policy1729680772300"***: This line specifies the unique identifier for the policy. The ID is used for reference and be helpful for managing policies within AWS.
+
+- "***Version":"2012-10-17":*** This line indicate the version of the policy language being used. In this case, It's using version "2012-10-17" of the policy language.
+
+- ***"Statement":[...]:*** This line begins the definition of the policy's statements. Policies can have multiple statements, each defining a set of permissions.
+
+ - ***"Sid":"Stmt1729680602683"***: This line assigns a unique identifier to the statement. Similar to the policy ID, the statement Id is used for reference and management purposes.
+
+- ***"Action":["s3:GetObject","s3:GetObjectVersion"]***: This line specifies the actions allowed by this policy. In this case, it allows the s3:GetObject and s3:GetObjectVersion actions, which are used to retrieved objects and object versions from an S3 bucket.
+
+
+***"Effect":"Allow"***: This lines specifies the effect of the statement, which can be either "Allow" or "Deny" Here, it indicates that the actions specified in the Action field are allowed.
+
+
+***"Resource":"arn:aws:s3:::my-first-s3-bucket-7742/"***: This line specifies the AWS resources to which the policy applies. I n this case, it applies to all objects (/) within the S3 bucket named my-first-s3-bucket-7742. The ARN (Amazon Resources Name) uniquely identifies the resources.
+
+
+***"Principal": "*":*** This line specifies the entity to which the policy applies. The * Wildcard means that the policy applies to all users and roles (i.e., any principal) in the AWS account.
+
+
+![The image shows the policy json document close ](image/images/policy-json-close.png)
+
+
+b) Navigate to the bucket policy tab.
+
+c) Paste the policy I've created using the Policy Generator.
+
+7. Click on "Save changes"
+
+
+![The image shows the paste of the policy generator](image/images/paste-policy-generator.png)
 
 
