@@ -303,13 +303,12 @@ a) Then click on "save changes"
 
 ![The image shows the colum to confirm the unchecked](image/images/confirm.png)
 
-b) Now, Tpe "confirm" and click on "Confirm".
+b) Now, Type "confirm" and click on "Confirm".
 
 By taking this action, I will be allowing my file to be publicly accessible.
 This confirmation step ensures that I will be aware of the implications of making my file public.
 
-
-![The image shows the block of all public access final](image/images/block-all-public-access-final.png)
+![The image shows the block of all public access final](image/images/block-all-public-access.final.png)
 
 
 3. Now, I need to create a bucket policy to specify the actions I want the public to be able to perform on my file. Click on "Edit"
