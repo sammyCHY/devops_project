@@ -451,7 +451,7 @@ a) click on "Add lifecycle rule".
 ![The image shows the give the specification and create lifecyle rule](image/images/create-lifecycle-rule.png)
 
 
-![The image shows the lifecyle rule action](image/images/lifecycle-rule-action.png)
+![The image shows the lifecyle rule action](image/images/life-cycle-rule-action.png)
 
 
 Now the lifecycle policy is being created succesfully.
