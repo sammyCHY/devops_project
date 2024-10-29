@@ -380,3 +380,122 @@ Your NAT Gateway is being created successfully.
 10. Then, click on the "route table ID" -In our case - 1"rtb-************
 
 ![The image shows the route table ID](image/images/route-table-id-private-subnet.png)
+
+11. Proceed to the "Routes" section, then click on "Edit routes"
+
+
+[The image shows the Routes "edit routes"](image/images/route-tables-edit-route.png)
+
+
+12. Then click on "Add routes"
+
+
+[The image shows the add routes](image/images/add-routes.png)
+
+a) Select Destination as 0.0.0.0/0
+
+b) In the "Target" field choose "NAT Gateway"
+
+c) Then select the NAT Gateway already created.
+
+d) Finally, save the changes.
+
+[The image shows the choose the NAT gateway save changes](image/images/choose-nat-gateway-save-changes.png)
+
+Now, 13. On the subnet association section, click on edit subnet association.
+
+
+[The image shows the edit subnet association](image/images/edit-subnet-association2.png)
+
+a) Choose the private subnet and click on "Save associations".
+
+
+[The image shows the private subnet and save changes](image/images/edit-subnet-save-association.png)
+
+Now, the subnet has been successfully attached with the route table.
+
+[The image shows the subnet successfull attached with the route table](image/images/subnet-successfull-attached-to-route-table.png)
+
+
+[The image shows the aws vpc nat gateway internet ](image/images/aws-nat-gateway-internet-diagram.png)
+
+
+**Different between Internet Gateway and NAT Gateway Internet Gateway:**
+
+Think of it like a door to the internet for the subnet. When I attached the Internet Gateway to a subnet, it allows the resources in that subnet (like EC2 instances) to reach out to the internet and also allows internet traffic to reach those resources.It's like having a door both to enter and exit the subnet.
+
+
+**NAT Gateway:**
+
+Imagine it as a one-way street sign for the subnet's traffic. When attached a NAT Gateway to a subnet, it lets the resources in that subnet (like EC2 instances) access the internet, but it doesn't allow incoming traffic from the internet to reach those resources. It's like the resources can go out to the internet, but the internet traffic can't directly come in.
+
+
+[The image shows the aws vpc internet diagram](image/images/aws-vpc-internet-diagram.png)
+
+
+Now, let's proceed further and come to our next part that involves Establishing VPC Peering Connections. For this let's first understand some terms-
+
+**Note -** An Ec2 instances is a virtual server in AWS that anyone can use to run applications. It offers flexible computing power and can be easily scaled up or down. EC2 instances are widely used for hosting websites, running software, and processing data in the cloud.
+
+# What is VPC Peering?
+
+VPC peering is like connecting two virtual offices in the cloud so the can talk to each other directly. Just imagine two neighboring offices sharing files and chatting without going through a middleman.
+
+- By default, EC2 instances in different VPCs cannot communicate with each other.
+
+- To enable communication between EC2 instances in different VPCs, I can set up VPC peering, VPN connections, or AWS Direct Connect.
+
+- VPC Peering establishes a direct network connection between the VPCs, allowing EC2 instances in one VPC to communicate with EC2 instances in the other VPC.
+
+
+# Why do we need VPC Peering?
+
+I need VPC Peering when we want different parts of our cloud network (VPCs) to work together smoothly. Maybe I have one VPC for my development team and another for the marketing team, and I want them to share data securely. That's where VPC peering comes in handy- it lets these VPCs communicate directly, making things easier for everyone.
+
+Additionally, there are some key points that I should be aware of.
+
+- Two VPCs cannot connect to each other. I need to set up VPC Peering or use a VPN or Direct Coonect to establish connectivity.
+
+- Subnets within the same VPC can communicate with each other by default. AWS sets up route tables to allow communication within the same VPC.
+
+- EC2 instances in the same subnet can communicate with each other by default, assuming they have proper security group rules allowing the desired traffic.
+
+- EC2 instances in different subnets within the same VPC can also communicate  with other by default, as long as their associated route tables are configured to allow traffic between subnets
+
+## Now come to the practical part,
+
+# Part-6
+
+1. Let's begin by creating two VPCs in the same region
+Alternatively, I may choose a different region if needed.
+
+
+[The image shows the creation of two VPC](image/images/vpc-settings.png)
+
+[The image shows the creation of two VPC](image/images/vpc-settings2.png)
+
+2. Navigate to the "Peering Connections" option on the left sidebar.
+
+a) Upon clicking, You will be directed to the VPC Peering Page.
+
+b) From there, proceed to click on the "Create Peering Connection" button.
+
+
+[The image shows the creation of peering connection](image/images/create-peering-connection.png)
+
+
+3. Now, provide a name for the VPC Peering connection.
+
+a) select the requester VPC
+
+b) Choose the account "My account" since the VPCs are in our own AWS account.
+
+c) Ensure to use the same region, This Region (ap-southeast-1)," as the VPCs were created in the same region.
+
+d) Next, select the accepter VPC
+
+e) Proceed by clicking on the "Create Peering Connection" button.
+
+
+![The image shows the create peering connection](image/images/peering-connection-setting-accepter-requester.png)
+
