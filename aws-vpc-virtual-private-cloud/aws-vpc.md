@@ -343,3 +343,40 @@ The route table has now been configured to route traffic to the Internet Gateway
 
 
 ![The image shows the "create NAT Gateway"](image/images/NAT-gateway.png)
+
+2. mention the name of the NAT Gateway.
+
+![The image shows the "create NAT Gateway"](image/images/NAT-gateway.png)
+
+3. Now, choose the private subnet
+
+![The image shows the NAT Gateway private subnet](image/images/NAT-gateway-private-subnet.png)
+
+4. Now select the connectivity type as private.
+
+![The image shows the  NAT Gateway private subnet connectivity"](image/images/nat-gateway-settings.png)
+
+
+5. Then click on Create NAT Gateway.
+
+
+![The image shows the "create  NAT Gateway"](image/images/nat-gateway-settings1.png)
+
+
+Your NAT Gateway is being created successfully.
+
+![The image shows the creation of  NAT Gateway successfully"](image/images/nat-gateway-successfully-created.png)
+
+6. select the NAT Gateway.
+
+7. Then navigate to the "Details" tab.
+
+8. From there, locate the subnet ID and click on it.
+
+![The image shows the NAT Gateway subnet ID](image/images/nat-gateway-subnet-id.png)
+
+9. In the subnet page, navigate to the "Route Table" section.
+
+10. Then, click on the "route table ID" -In our case - 1"rtb-************
+
+![The image shows the route table ID](image/images/route-table-id-private-subnet.png)
