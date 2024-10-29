@@ -247,6 +247,99 @@ a) Upon clicking, then, you will be directed to the Internet Gateway Page.
 
 b) From there, proceed to click on the "Create Internet Gateway" button.
 
-
 ![The image shows the creation of internet gateway](image/images/internet-geteways.png)
 
+2. Specify the name of the Internet Gateway
+
+a) proceed by clicking on the "Create Internet Gateway" button.
+
+![The image shows the "create internet gateway"](image/images/create-internet-gateway.png)
+
+Now, the Internet gateway is been created successfully.
+
+
+![The image shows the "create internet gateway"](image/images/internet-gateway-created-successfully.png)
+
+
+Now, you will notice that it is currently detached, indicating that it is not associated with any VPC. To enable internet connectivity, I have to attach the internet Gateway to the VPC I have previously created.
+
+
+![The image shows the create internet gateway currently detached](image/images/internet-gateway-detached.png)
+
+
+![The image shows the create internet gateway currently detached](image/images/internet-gateway-detached-vpc.png)
+
+- Now, attach it to the VPC
+
+
+![The image shows the create attach vpc](image/images/attach-internet-gateway-igw.png)
+
+
+![The image shows the internet gateway attached](image/images/vpc-gateway-attached.png)
+
+
+![The image shows the internet gateway diagram structure](image/images/aws-vpc-internate-gateway.png)
+
+
+- Now, let's come to the next part which is Enabling Internet Connectivity with the Internet Gateway by setting up Routing tables.
+
+# Part -4
+
+1. Proceed to the "Route Tables" option located on the left sidebar.
+
+a) Once there, click on the "Create route table" button
+
+![The image shows the "create route table"](image/images/create-route-table.png)
+
+2. Enter the name of the route table and select the VPC you previously created.
+
+a) Finally, click on the "Create route table" button to proceed.
+
+![The image shows the "create route table"](image/images/create-route-table2.png)
+
+
+b) Next, click on Subnet associations, "followed by "Edit subnet associations" to associate the subnet with the route table, I will associate the public subnet with this route table. 
+
+![The image shows the "subnets association"](image/images/edit-subnet-association2.png)
+
+
+3. Choose the public subnet and click on save association.
+
+![The image shows the public subnet association](image/images/edit-subnet-association.png)
+
+
+4. Navigate to "Routes and then click on "Edit routes".
+
+![The image shows the edit-routes](image/images/edit-route-final1.png)
+
+
+5. Click on add route.
+
+![The image shows the add routes](image/images/add-routes.png)
+
+
+6. Select "Destination" as "0.0.0.0/0," indicating that every IPV4 address can access this subnet.
+
+7. In the "Target" field, choose "Internet Gateway", and then select the Internet Gateway I have created. Finally, save the changes
+
+
+![The image shows the edit routes](image/images/edit-route2.png)
+
+
+The route table has now been configured to route traffic to the Internet Gateway,allowing connectivity to the Internet. Sice only the subnet named "my-public-subnet-1" is associated with the route table, only resources within that subnet can access the internet.
+
+![The image shows the route table configured](image/images/routes-destination.png)
+
+
+
+![The image shows the aws vpc internet gateway diagram](image/images/routes-destination.png)
+
+
+- Now, let's come to the next part which is Enabling Outbound Internet Access through NAT Gateway,(bt attaching NAT Gateway to the subnet and attaching the route table).
+
+# Part-5
+
+1. Navigate to the "NAT Gateways" section, then click on "Create NAT Gateway"
+
+
+![The image shows the "create NAT Gateway"](image/images/NAT-gateway.png)
