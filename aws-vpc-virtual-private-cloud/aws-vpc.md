@@ -178,4 +178,75 @@ Now let's come to the practical part,
 
 a) Enter "VPC" Upon locating the relevant result, proceed to click on it, directing me to the Virtual Private Cloud (VPC) page.
 
+![The image shows the virtual private cloud](image/images/vpc-page.png)
+
+2. Please navigate to the "Create VPC" option and click on it.
+
+![The image shows the create VPC](image/images/create-vpc.png)
+
+3. Please select the "VPC only" option, specify the IPv4 CIDR block, and proceed by clicking on the "Create VPC" button.
+
+![The image shows the VPC only](image/images/vpc-only.png)
+
+**Note-** If you encounter an error message stating that the CIDR block size must be between "/16" and "/28" when creating a VPC, it indicates that your provided CIDR block falls outside of this recommended range. Adjusting the CIDR block to fall within the specified range should resolve the issue.
+
+This is the VPC I have created.
+
+![The image shows the VPC created](image/images/vpc-created3c.png)
+
+I am done with part 1 now, Let's move to part2 which is Configuring Subnets within the VPC,
+
+**Part-2**
+
+1. Navigate to the "Subnets" option lacated on the left sidebar.
+
+a) Upon clicking, I will be directed to the "Subnets" page.
+
+b) From there,proceed to click on the "Create subnet" button.
+
+![The image shows the creation of subnets](image/images/subnets.png)
+
+2. Please, select the ID of the VPC that I have created in the previous step (part1)
+
+![The image shows the creation of vpc ip previous](image/images/vpc-ip-previous.png)
+
+3. Now enter the subnet name, and specify the IPV4 CIDR for the subnet.
+
+a) Choose the availability zone
+
+b) And specify the IPV4 for the subnet.
+
+c) To create another subnet, click on the "Add subnet" button
+
+![The image shows the IPV4 CIDR subnet ](image/images/subnet-name.png)
+
+d) Repeat the same steps for the secound subnet
+
+e) ensuring to specify the subnet name, choose the availability zone, and provide the IPV4 CIDR.
+
+f) Once completed, click on the "Create" button to create the subnet.
+
+To maintain consistency with our intention of creating both a public and a private subnet, ensure that the naming convention reflects this distincton appropriately.
+
+![The image shows the IPV4 CIDR subnet ](image/images/subnet-name2.png)
+
+
+![The image shows the AWS VPC Internet diagram](image/images/aws-vpc-internet.png)
+
+Here, the subnets is being created.
+
+![The image shows the public private subnet created](image/images/public-private-subnet-created.png)
+
+- With the creation of subnets, the second part of the task is now completed. Let's proceed to the next part, which involves creating on Internet Gateway and attaching it to VPC.
+
+# Part-3
+
+1. Navigate to the "Internet Gateway"option on the left sidebar.
+
+a) Upon clicking, then, you will be directed to the Internet Gateway Page.
+
+b) From there, proceed to click on the "Create Internet Gateway" button.
+
+
+![The image shows the creation of internet gateway](image/images/internet-geteways.png)
 
