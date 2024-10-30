@@ -350,7 +350,7 @@ The route table has now been configured to route traffic to the Internet Gateway
 
 3. Now, choose the private subnet
 
-![The image shows the NAT Gateway private subnet](image/images/NAT-gateway-private-subnet.png)
+![The image shows the NAT Gateway private subnet](image/images/NAT-gateway-private-subnet.JPG)
 
 4. Now select the connectivity type as private.
 
