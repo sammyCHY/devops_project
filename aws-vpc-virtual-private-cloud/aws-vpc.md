@@ -384,13 +384,13 @@ Your NAT Gateway is being created successfully.
 11. Proceed to the "Routes" section, then click on "Edit routes"
 
 
-[The image shows the Routes "edit routes"](image/images/route-tables-edit-route.png)
+![The image shows the Routes "edit routes"](image/images/route-tables-edit-route.png)
 
 
 12. Then click on "Add routes"
 
 
-[The image shows the add routes](image/images/add-routes.png)
+![The image shows the add routes](image/images/add-routes.png)
 
 a) Select Destination as 0.0.0.0/0
 
@@ -400,24 +400,24 @@ c) Then select the NAT Gateway already created.
 
 d) Finally, save the changes.
 
-[The image shows the choose the NAT gateway save changes](image/images/choose-nat-gateway-save-changes.png)
+![The image shows the choose the NAT gateway save changes](image/images/choose-nat-gateway-save-changes.png)
 
 Now, 13. On the subnet association section, click on edit subnet association.
 
 
-[The image shows the edit subnet association](image/images/edit-subnet-association2.png)
+![The image shows the edit subnet association](image/images/edit-subnet-association2.png)
 
 a) Choose the private subnet and click on "Save associations".
 
 
-[The image shows the private subnet and save changes](image/images/edit-subnet-save-association.png)
+![The image shows the private subnet and save changes](image/images/edit-subnet-save-association.png)
 
 Now, the subnet has been successfully attached with the route table.
 
-[The image shows the subnet successfull attached with the route table](image/images/subnet-successfull-attached-to-route-table.png)
+![The image shows the subnet successfull attached with the route table](image/images/subnet-successfull-attached-to-route-table.png)
 
 
-[The image shows the aws vpc nat gateway internet ](image/images/aws-nat-gateway-internet-diagram.png)
+![The image shows the aws vpc nat gateway internet ](image/images/aws-nat-gateway-internet-diagram.png)
 
 
 **Different between Internet Gateway and NAT Gateway Internet Gateway:**
@@ -430,7 +430,7 @@ Think of it like a door to the internet for the subnet. When I attached the Inte
 Imagine it as a one-way street sign for the subnet's traffic. When attached a NAT Gateway to a subnet, it lets the resources in that subnet (like EC2 instances) access the internet, but it doesn't allow incoming traffic from the internet to reach those resources. It's like the resources can go out to the internet, but the internet traffic can't directly come in.
 
 
-[The image shows the aws vpc internet diagram](image/images/aws-vpc-internet-diagram.png)
+![The image shows the aws vpc internet diagram](image/images/aws-vpc-internet-diagram.png)
 
 
 Now, let's proceed further and come to our next part that involves Establishing VPC Peering Connections. For this let's first understand some terms-
@@ -470,9 +470,9 @@ Additionally, there are some key points that I should be aware of.
 Alternatively, I may choose a different region if needed.
 
 
-[The image shows the creation of two VPC](image/images/vpc-settings.png)
+![The image shows the creation of two VPC](image/images/vpc-settings.png)
 
-[The image shows the creation of two VPC](image/images/vpc-settings2.png)
+![The image shows the creation of two VPC](image/images/vpc-settings2.png)
 
 2. Navigate to the "Peering Connections" option on the left sidebar.
 
@@ -481,7 +481,7 @@ a) Upon clicking, You will be directed to the VPC Peering Page.
 b) From there, proceed to click on the "Create Peering Connection" button.
 
 
-[The image shows the creation of peering connection](image/images/create-peering-connection.png)
+![The image shows the creation of peering connection](image/images/create-peering-connection.png)
 
 
 3. Now, provide a name for the VPC Peering connection.
@@ -499,3 +499,101 @@ e) Proceed by clicking on the "Create Peering Connection" button.
 
 ![The image shows the create peering connection](image/images/peering-connection-setting-accepter-requester.png)
 
+Then you 'll see this,
+
+![The image shows the vpc peering](image/images/my-1st-vpc-peering.png)
+
+
+4. In the peering Connection page, locate the "Actions" option on the right side.
+
+a) Click on it, then select "Accept Request"
+
+
+![The image shows the vpc peering accept request](image/images/my-1st-vpc-peering2.png)
+
+
+b) Click on Accept request.
+
+![The image shows the accept vpc peering request](image/images/accept-vpc-connection-peering-request.png)
+
+
+5. Now, click on Main route table ID of the accepter VPC
+
+![The image shows the accepter vpc peering request](image/images/accepter-vpc.png)
+
+
+6. Choose the route table.
+
+a) then navigate to the "Routes" section
+
+b) Click on "Edit route".
+
+
+![The image shows the Edit route](image/images/route-tables-edit-route.png)
+
+c) Click on add route.
+
+![The image shows the add route](image/images/edit-route.png)
+
+7. Go to the VPC page
+
+a) select the requester VPC.
+
+b) in the details tab, you'll find the IPV4 CIDR. (in this case-192.168.0.0./16)
+
+c) Copy this CIDR and paste it in the "Destination" field when adding a route.
+
+
+![The image shows the CIDR IPV4 destination](image/images/ipv4-cidr-destination.png)
+
+d) In the target, choose VPC Peering and then choose the peering connection I have created. Click on save changes.
+
+
+![The image shows the vpc peering, edit routes](image/images/edit-route-peering-connection.png)
+
+
+8. Now, copy the IPV4 CIDR of the accepter VPC (in this case-172.16.0.0/16)
+
+![The image shows the CIDR IPV4 accepter VPC](image/images/ipv4-cidr-accepter-vpc.png)
+
+9. Now, click on Main route table ID of the requester VPC.
+
+![The image shows the main route table ID of the requester VPC](image/images/main-route-table-id.png)
+
+
+10. Choose the route table, then navigate to the "Routes" section Click on "Edit route"
+
+
+![The image shows the route table "edit route"](image/images/routes-section-edit-route.png)
+
+
+11. Click on add route.
+
+a) paste the CIDR in the "Destination" field.
+
+b) In the target, choose VPC peering
+
+c) Then choose the peering connection I have created.
+
+
+The connection has been successfully established. Now, resources in the accepter VPC can connect to resources in the requester VPC, and vice versa.
+
+
+![The image shows the vpc1 and vpc2](image/images/vpc1-vpc2.png)
+
+VPC Peering allows direct communication between two VPCs using private IP addresses. Region compatibility VPC peering can be set up between VPCs in the same AWS region or different regions and the same AWS account or different AWS accounts.
+
+For more reference, then go through the [Create a VPC Peering connection](https://docs.aws.amazon.com/vpc/latest/peering/create-vpc-peering-connection.html#same-account-same-region)
+
+**CIDR bLOCKS:** The CIDR blocks of the VPCs involves in the peering connection should not overlap or conflict with wach other. Each VPC must have a unique CIDR block.
+
+**IP Addressing:** Resources in one VPC can communicate with resources in the peered VPC using their private IP addresses.
+
+
+**Security Groups and NACLs:** Ensure proper configuration of security Groups and Network Access Control Lists (NACLs) to allow traffic between peered VPCs.
+
+
+**Direct Communication:** Resources in one VPC can directly communicate with resources in the peered VPC without requiring internet access.
+
+
+**Transitive Traffic:** Traffic cannot flow through a VPC peering connection to reach other VPCs not directly peered.
