@@ -450,11 +450,11 @@ VPC peering is like connecting two virtual offices in the cloud so the can talk 
 
 # Why do we need VPC Peering?
 
-I need VPC Peering when we want different parts of our cloud network (VPCs) to work together smoothly. Maybe I have one VPC for my development team and another for the marketing team, and I want them to share data securely. That's where VPC peering comes in handy- it lets these VPCs communicate directly, making things easier for everyone.
+I need VPC Peering when I want different parts of my cloud network (VPCs) to work together smoothly. Maybe I have one VPC for my development team and another for the marketing team, and I want them to share data securely. That's where VPC peering comes in handy- it lets these VPCs communicate directly, making things easier for everyone.
 
 Additionally, there are some key points that I should be aware of.
 
-- Two VPCs cannot connect to each other. I need to set up VPC Peering or use a VPN or Direct Coonect to establish connectivity.
+- Two VPCs cannot connect to each other. I need to set up VPC Peering or use a VPN or Direct Connect to establish connectivity.
 
 - Subnets within the same VPC can communicate with each other by default. AWS sets up route tables to allow communication within the same VPC.
 
@@ -617,7 +617,7 @@ When I will backing up data from an EC2 instance to an S3 bucket, it usually goe
 ![The image shows the backing up data from EC2 to S3](image/images/problem-aws-cloud.png)
 
 
-To avoid this risk, we can use something called VPC endpoints. These endpoint make a private connection between the VPC and S3, so the data doesn't have to go over the internet. This way, even sensitive data stays safe from hackers and other threats.
+To avoid this risk, I can use something called VPC endpoints. These endpoint make a private connection between the VPC and S3, so the data doesn't have to go over the internet. This way, even sensitive data stays safe from hackers and other threats.
 
 ![The image shows the vpc endpoint to S3](image/images/vpc-endpoint.png)
 
@@ -631,7 +631,7 @@ To avoid this risk, we can use something called VPC endpoints. These endpoint ma
 
 - Developed a deeper understanding of network architecture and cloud networking concepts through hands-on experimentation.
 
-- Recognized the important of network securit measures, such as NAT gateway and VPC end points, in ensuring secure communication within cloud environments.
+- Recognized the important of network security measures, such as NAT gateway and VPC end points, in ensuring secure communication within cloud environments.
 
 - Overall, the project offered valuable perspectives on the fundamentals of cloud networking and practical experience in deploying VPC infrastructure on AWS.
 
