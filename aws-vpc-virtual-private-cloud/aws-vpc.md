@@ -597,3 +597,41 @@ For more reference, then go through the [Create a VPC Peering connection](https:
 
 
 **Transitive Traffic:** Traffic cannot flow through a VPC peering connection to reach other VPCs not directly peered.
+
+
+**Routing:** Update route tables in both VPCs to allow traffic to flow through the peering connection. Each VPCs route table must contain a route entry for the CIDR block of the peer VPC, pointing to the peering connection.
+
+**Limitations:** There are limits on the number of VPC peering connections that can be established per VPC, as well as limitations on the number of route entries per route table.
+
+Now, let's understand some more terms,
+
+# What is VPC endpoint?
+
+Think of a VPC endpoint like a dedicated,secure tunnel between the house (VPC) and a library (AWS service). Instead of going through the bustling streets (Public internet), I have a direct pathway from the home to the library. This pathway ensures that only me and authorized users can access the library's resources, like books or documents, without exposing them to outside risks. It's a private, efficient way to access what I need, keeping your data safe from prying eyes on the internet.
+
+Let's understand the problem I were facing,
+
+When I will backing up data from an EC2 instance to an S3 bucket, it usually goes over the internet, whether the instance is in a public or private subnet. But if the data is sensitive, that means it's risky because hackers could try to get it while it's traveling over the internet.
+
+
+![The image shows the backing up data from EC2 to S3](image/images/problem-aws-cloud.png)
+
+
+To avoid this risk, we can use something called VPC endpoints. These endpoint make a private connection between the VPC and S3, so the data doesn't have to go over the internet. This way, even sensitive data stays safe from hackers and other threats.
+
+![The image shows the vpc endpoint to S3](image/images/vpc-endpoint.png)
+
+**Project Reflection:**
+
+- Successfully completed the project tasks related to setting up VPC infrastructure and configuring network components.
+
+- Gained practical experience in navigating AWS management console and configuring VPC resources.
+
+- Encountered challenges such as CIDR block size limitations and learned how to troubleshoot and resolve them effectively.
+
+- Developed a deeper understanding of network architecture and cloud networking concepts through hands-on experimentation.
+
+- Recognized the important of network securit measures, such as NAT gateway and VPC end points, in ensuring secure communication within cloud environments.
+
+- Overall, the project offered valuable perspectives on the fundamentals of cloud networking and practical experience in deploying VPC infrastructure on AWS.
+
