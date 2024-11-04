@@ -168,7 +168,7 @@ Now let's come to the practical part,
 
 4. Enabling Internet Connectivity with the Internet Gateway by setting up Routing tables.
 
-5. EnablinG Outbound Internet Access through NAT Gateway
+5. Enabling Outbound Internet Access through NAT Gateway
 
 6. Estimating VPC peering Connections
 
