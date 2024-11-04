@@ -99,5 +99,33 @@ this practical will be in Two parts-
 
 # Security group
 
-- 
+- Initially I will examine the configuration of inbound and outbound rules for security groups.
+
+- Create a security group allowing HTTP for all traffic and attach it to the instance.
+
+# Explore various scenarios:
+
+- Implement inbound traffic rules for HTTP and SSH protocols and allow outbound traffic for all.
+
+- Configure inbound rules for HTTP with no outbound rules.
+
+- Remove both inbound and outbound rules.
+
+- Have no inbound rules but configure outbound rules for all traffic.
+
+# NACL
+
+- Examine the default settings for both inbound and outbound rules in NACL configuration.
+
+- Modify the inbound rules to permit traffic from any IPv4 CIDR on all ports.
+
+- Adjust the outbound rules to allow traffic to all CIDRs.
+
+# Part -1
+
+Just a quick reminder about the subnets we configured in our VPC in the [Previous Project](./AWS VPC mini project.md). In the public subnet, we've created an EC2 instance that is running, hosting our website. Now, let's take a moment to see if we can access the website using its public IP address.
+
+- So this EC2 instances host our website.
+
+
 
