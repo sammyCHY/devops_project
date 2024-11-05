@@ -127,5 +127,23 @@ Just a quick reminder about the subnets we configured in our VPC in the [Previou
 
 - So this EC2 instances host our website.
 
+![The image shows the ec2 instance for hosting website](image/images/ec2-instance.png)
 
+
+[The image shows the ec2 instance for hosting website](image/images/ec2-instance2.png)
+
+Here's the security group configuration for the instance. In the inbound rules, only IPv4 SSH traffic on port 22 is permitted to access this instance.
+
+[The image shows the security group configuration](image/images/security-group-id.png)
+
+
+[The image shows the inbound rule](image/images/inbound-rule.png)
+
+For the outbound rule, I will notice that all IPv4 traffic with any protocol on any port number is allowed, meaning this instance has unrestricted access to anywhere on the internet.
+
+[The image shows the outbound rule](image/images/outbound-rules.png)
+
+Now, let's test accessibility to the website using the public IP address assigned to this instance.
+
+Here, let's retrieve the public IP address.
 
