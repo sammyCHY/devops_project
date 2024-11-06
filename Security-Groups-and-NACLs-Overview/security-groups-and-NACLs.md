@@ -359,3 +359,28 @@ c) Choose destination.
 d) Choose CIDR.
 
 e) click on "save rules"
+
+
+![The image shows the edit outbound rule add](image/images/edit-outbound-rule-add.png)
+
+
+![The image shows the edit outbound rule add](image/images/edit-outbound-rule-add1.png)
+
+
+![The image shows the edit outbound rule add](image/images/inbound-rule1.png)
+
+
+Now, let's see if we can access the website,
+
+![The image shows the website access](image/images/access-website.png)
+
+
+So, we are able to see it.
+
+But if you look here, you will be able to go to the outside world from the instance. I 'm using here.
+
+
+![The image shows the aws](image/images/aws.png)
+
+
+
