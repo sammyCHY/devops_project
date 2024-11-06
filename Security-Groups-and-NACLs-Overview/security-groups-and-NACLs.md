@@ -257,3 +257,31 @@ This setup allows the HTTP and SSH protocols to access the instance.
 
 
 ![The image shows the ssh, http protocol access instance](image/images/ssh-http-protocols-access-instance.png)
+
+
+The outbound rule permits all traffic to exit the instance.
+
+![The image shows the outbound permit](image/images/outbound-permit.png)
+
+
+Through this rule, we're able to access the website.
+
+********
+
+
+6. Let's see how removing the outbound rule affects the instances's connectivity. Means now, no one can go outside to this instance.
+
+
+a) Go to outbound tab.
+
+b) Click on "edit outbound rules".
+
+
+![The image shows the edit of outbound rules](image/images/edit-outbound.png)
+
+
+c) Click on "Delete."
+
+d) Click on "Save rules."
+
+
