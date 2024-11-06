@@ -285,3 +285,77 @@ c) Click on "Delete."
 d) Click on "Save rules."
 
 
+![The image shows the edit of outbound rules](image/images/edit-outbound-rule.png)
+
+Now that I ve removed the outbound rule, let's take a look at how it appears in the configuration.
+
+![The image shows the edit of outbound rules delete](image/images/outbound-rule-delete.png)
+
+
+After making this change, let's test whether we can still access the website.
+
+*********
+
+
+So, even through I ve removed the outbound rule that allows all traffic from the instance to the outside world, I can still access the website. Acording to the logic we discussed, when a user accesses the instance, the inbound rule permits HTTP protocol traffic to enter. However, when the instance sends data to the user's browser to display the website, the outbound rule should prevent it. Yet, I re still able to view the website. why might that be?
+
+Secure groups are stateful, which means they automatically allow return traffic initiated by the instances to which they are attached. So, even though we removed the outbound rule, the security group allows the return traffic necessary for displaying the website, hence I can still access it.
+
+Let's explore the scenario,
+
+If I delete both the inbound and outbound rules, essentially, I will be closing all access to and from the instance. This means no traffic can come into the instance, and the instance cannot send any traffic out. So, If I attempt to access the website from a browser or any other client, it will fail because there are no rules permitting traffic to reach the instance. Similarly, the instance won't be able to communicate with any external services or websites because all outboud traffic is also blocked.
+
+
+7. I will be able to delete the inbound rule in the same way I have deleted the outbound rule.
+
+a) Go to outbound tab.
+
+b) Click on edit inboud rule
+
+
+![The image shows the edit of inbound rules](image/images/edit-inbound-rule.png)
+
+
+c) Click on delete,
+
+d) Click on "Save rule".
+
+![The image shows the edit of inbound rules delete](image/images/edit-inbound-rule-delete.png)
+
+
+Currently, let's have a look at how our inbound and outbound rules are configured.
+
+
+![The image shows the edit of inbound rules saved](image/images/edit-inbound-rule-saved.png)
+
+
+![The image shows the edit of outbound rules saved](image/images/edit-outbound-rule-saved.png)
+
+
+Now, as both the inbound and outbound rules deleted, there's no way for traffic to enter or leave the instance. This means that any attempt to access the website from a browser or any other client will fail because there are no rules permitting traffic to reach the instance, In this state, the instance is essentially isolated from both incoming and outgoing traffic.
+
+So I can't access the website now.
+
+
+![The image shows the no access website](image/images/no-access-website.png)
+
+
+In the next scenario,
+
+I will add a rule specifically allowing HTTP tarffic in the outbound rules. This change will enable the instance to initate outgoing connections over HTTP.
+
+8. Click on edit outbound rule in the outbound tab,
+
+
+![The image shows the outbound tab](image/images/outbound-tab.png)
+
+
+a) Click on "add rule"
+
+b) Choose type.
+
+c) Choose destination.
+
+d) Choose CIDR.
+
+e) click on "save rules"
