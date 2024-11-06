@@ -216,3 +216,44 @@ c) Choose "security".
 
 
 ![The image shows the security group attached](image/images/security-group-attach.png)
+
+
+d) Click, on "Change group security"
+
+![The image shows the change in security group](image/images/change-group-security.png)
+
+
+4. Choose the security group created.
+
+![The image shows the choose the security group created](image/images/security-group-associated.jpg)
+
+a) Click, on add security group.
+
+![The image shows the add on security group](image/images/add-security-group&save.png)
+
+b) I can see that the security is being added, Click on "Save".
+
+**Note -** The security group named "Launch Wizard" I see is the default security group automatically attached when creating the instance. I can also edit this security group if needed.
+
+
+![The image shows the add on security group](image/images/add-security-group&save.png)
+
+5. Now, it is being attached successfully,
+
+a) If I again copy the public IP address,
+
+
+![The image shows the copy of the public IP address](image/images/public-ip-address.png)
+
+
+b) And write http://3.149.23.98 in chrome, I will be able to see the data of my website. 
+
+
+***********
+
+Currently, let's take a look at how my inbound and outbound rules are configured.
+
+This setup allows the HTTP and SSH protocols to access the instance.
+
+
+![The image shows the ssh, http protocol access instance](image/images/ssh-http-protocols-access-instance.png)
