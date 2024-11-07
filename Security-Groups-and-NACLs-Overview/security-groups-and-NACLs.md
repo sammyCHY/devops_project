@@ -465,3 +465,41 @@ d) Then click on "Save changes."
 Currently, this NACL is not associated with any of the subnets in the VPC
 
 ![The image shows the  NACL not associated with subnets](image/images/NACL-non-associated-subnets.png)
+
+
+8. Let's associate it.
+
+a) Select your NACL.
+
+b) Click on "Actions."
+
+c) Choose "Edit subnet association"
+
+![The image shows the  association of NACLs subnets](image/images/edit-subnet-association-ACL.png)
+
+d) Then select my public subnet, as my instance resides in the public subnet.
+
+
+![The image shows the  association of NACLs subnets](image/images/edit-subnet-association-ACL1.png)
+
+
+Once selected, you'll see it listed under "Selected subnets"
+
+e) Finally, click on "Save changes".
+
+
+
+![The image shows the  association of NACLs subnets](image/images/edit-subnet-association-ACL2.png)
+
+I have successfully associated my public subnet to this NACL
+
+
+![The image shows the first NACL created](image/images/my-first-NACL-created.png)
+
+
+As soon as I have attached this NACL to my public subnet, and then I will try to access the website again by typing the URL http://3.147.69.181/, I have noticed that I'm unable to see the website.
+
+![The image shows the website http creation](image/images/website-http.png)
+
+
+Although I ve been permitted all traffic in the inbound rule of my NACL, I'm still unable to access the website. This raises the question: why isn't the website visible despite these permissions?
