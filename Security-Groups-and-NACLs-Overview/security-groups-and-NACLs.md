@@ -383,4 +383,85 @@ But if you look here, you will be able to go to the outside world from the insta
 ![The image shows the aws](image/images/aws.png)
 
 
+**Note-** curl is a command-line tool that fetches data from a URL.
 
+As a result, the instances will be able to fetch data from external sources or communicate with other HTTP- based services on the internet. This adjustment ensures that while incoming connections to the instance may still be restricted, the instance itself can actively communicate over HTTP to external services.
+
+Part- 2
+
+Let's come to NACL,
+
+1. First navigate to the search bar and search for VPC.
+
+a) Then click on VPC.
+
+
+![The image shows the vpc](image/images/vpc.png)
+
+
+2. Navigate to the Network ACLs in the left sidebar.
+
+a) Click on "Create Network ACLs".
+
+
+![The image shows the Network ACLs](image/images/create-network-ACLs.png)
+
+
+3. Now, I have to provide a name for my Network ACL,
+
+a) Choose the VPC I have created in the [Previous session](./AWS VPC mini project.md) for the practical on VPC creation,
+
+b) Then click on "Create network ACL."
+
+![The image shows the Network ACLs](image/images/create-network-ACL.png)
+
+4. After selecting the network I have created,
+
+a) navigate to the "Inbound" tab
+
+By default, you will notice that it's denying all traffic from all ports.
+
+![The image shows the Network ACLs](image/images/network-ACLS-outbound-rule.png)
+
+Similarly, If you look at the outbound rules, you will observe that it's denying all outbound traffic on all ports by default.
+
+b) Select the NACL.
+
+c) And navigate to the "Outbound" tab
+
+![The image shows the edit inbound rule tab](image/images/network-ACL-outbound.png)
+
+
+5. To make changes.
+
+a) select the NACL,
+
+b) Go to the "Inbound" tab
+
+c) And click on "Edit inbound rules".
+
+
+![The image shows the edit inbound rule tab](image/images/network-ACL-inbound.png)
+
+
+6. Now, click on add new rule.
+
+![The image shows the add new rule](image/images/NACL-add-new-rule.png)
+
+7. Now, choose the rule number.
+
+a) Specify the type.
+
+b) Select the source
+
+c) And determine whether to allow or deny the traffic.
+
+d) Then click on "Save changes."
+
+
+![The image shows the edit inbound rule ACL](image/images/edit-inbound-rule-ACL.png)
+
+
+Currently, this NACL is not associated with any of the subnets in the VPC
+
+![The image shows the  NACL not associated with subnets](image/images/NACL-non-associated-subnets.png)
