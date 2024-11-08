@@ -130,28 +130,28 @@ Just a quick reminder about the subnets we configured in our VPC in the [Previou
 ![The image shows the ec2 instance for hosting website](image/images/ec2-instance.png)
 
 
-[The image shows the ec2 instance for hosting website](image/images/ec2-instance2.png)
+![The image shows the ec2 instance for hosting website](image/images/ec2-instance2.png)
 
 Here's the security group configuration for the instance. In the inbound rules, only IPv4 SSH traffic on port 22 is permitted to access this instance.
 
-[The image shows the security group configuration](image/images/security-group-id.png)
+![The image shows the security group configuration](image/images/security-group-id.png)
 
 
-[The image shows the inbound rule](image/images/inbound-rule.png)
+![The image shows the inbound rule](image/images/inbound-rule.png)
 
 For the outbound rule, I will notice that all IPv4 traffic with any protocol on any port number is allowed, meaning this instance has unrestricted access to anywhere on the internet.
 
-[The image shows the outbound rule](image/images/outbound-rules.png)
+![The image shows the outbound rule](image/images/outbound-rules.png)
 
 Now, let's test accessibility to the website using the public IP address assigned to this instance.
 
 Here, let's retrieve the public IP address.
 
-[The image shows the retrieve of public ip](image/images/retrieve-public-ip.png)
+![The image shows the retrieve of public ip](image/images/retrieve-public-ip.png)
 
 If you enter "http:// 18.226.159.99" into my chrome browser, and hit enter, I will notice that the page doesn't load; it keeps attempting to connect. And finally it will show this page. After some time, I will likely see a page indicating that the site can't be reached. 
 
-[The image shows the httd chrome browser](image/images/http-chrome-site.png)
+![The image shows the httd chrome browser](image/images/http-chrome-site.png)
 
 This is because of the security group, because we haven't defined HTTP Protocol in the security group so whenever the outside world is trying to go inside my instance and trying to get the data, security group is restricting it and that's why we are unable to see the data.
 
@@ -162,7 +162,7 @@ To resolve this issue, we can create a new security group that allows HTTP (Port
 a) Then click on "Create Security Group".
 
 
-[The image shows the creation of security group](image/images/create-security-group.png)
+![The image shows the creation of security group](image/images/create-security-group.png)
 
 
 2. Provide a name and description for the new security group.
@@ -170,7 +170,7 @@ a) Then click on "Create Security Group".
 a) I have to ensure to select my VPC during the creation process.
 
 
-[The image shows the creation of security group](image/images/create-security-group1.png)
+![The image shows the creation of security group](image/images/create-security-group1.png)
 
 b) Click on add rule.
 
