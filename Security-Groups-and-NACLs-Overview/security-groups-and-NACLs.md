@@ -289,7 +289,7 @@ d) Click on "Save rules."
 
 Now that I ve removed the outbound rule, let's take a look at how it appears in the configuration.
 
-![The image shows the edit of outbound rules delete](image/images/outbound-rule-delete.png)
+![The image shows the edit of outbound rules delete](image/images/oubound-rule-delete.png)
 
 
 After making this change, let's test whether we can still access the website.
