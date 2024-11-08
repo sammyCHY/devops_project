@@ -503,3 +503,84 @@ As soon as I have attached this NACL to my public subnet, and then I will try to
 
 
 Although I ve been permitted all traffic in the inbound rule of my NACL, I'm still unable to access the website. This raises the question: why isn't the website visible despite these permissions?
+
+
+The reason why I was unable to access the website despite permitting inbound traffic in the NACL is because NACLs are stateless. They don't automatically allow return traffic. As a result, I must explicitly configure rules for both inbound and outbound traffic.
+
+Even though the inbound rule allows all traffic into the subnet, the outbound rules are still denying all traffic.
+
+
+You can see.
+
+![The image shows the network ACLs of inbound](image/images/Network-ACLs-inbound-rules.png)
+
+
+![The image shows the network ACLs of outbound](image/images/Network-ACLs-outbound-rules.png)
+
+
+![The image shows the aws vpc diagram](image/images/aws-vpc-diagram.png)
+
+Not able to see website because I'm able to go inside of the subnet because of the inbound rule (allow all) but any traffic from subnet is not allowed to go outside due to the outbound rule (deny all).
+
+9. If we allow outbound traffic as well,
+
+a) Choose you NACL.
+
+b) Go to outbound tab.
+
+c) Click on "Edit outbound rules."
+
+
+![The image shows the aws network acls edit outbound](image/images/network-acls-edit-outbound.png)
+
+d) click on "Add rule"
+
+
+![The image shows the network acl add rule](image/images/network-acl-add-rule.png)
+
+
+e) Duplicate the process I followed for creating the inbound rules to establish the outbound rules in a sismilar manner.
+
+
+![The image shows the edit outbound rule duplicate](image/images/edit-outbound-rule-duplicate.png)
+
+
+You have successfully created the rules.
+
+
+![The image shows the network acl inbound-rule-created](image/images/network-acl-add-rule-created.png)
+
+
+Upon revisiting the website,I should now be able to access it without any issues.
+
+************
+
+Now, let's see one more interesting scenario,
+
+In this scenario:
+
+Security Group: Allows inbound traffic for HTTP and SSH protocols and permits all outbound traffic.
+
+Network ACL: Denies all inbound traffic. Let's observe the outcome of this configuration.
+
+**Security group,**
+
+Configuring it,
+
+
+![The image shows the edit inbound rule save rule](image/images/edit-inbound-rule-save-rule.png)
+
+
+![The image shows the my first security group](image/images/my-first-security-group.png)
+
+
+![The image shows the edit outbound rule ](image/images/edit-outbound-rule-final.png)
+
+
+![The image shows the edit outbound rule ](image/images/my-first-security-group-outbound.png)
+
+
+**NACL,**
+
+Let's remove it so
+
