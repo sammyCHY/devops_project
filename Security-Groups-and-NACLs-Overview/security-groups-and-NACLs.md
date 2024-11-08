@@ -582,5 +582,74 @@ Configuring it,
 
 **NACL,**
 
-Let's remove it so
+Let's remove it so by default it be denied all traffic.
+
+
+![The image shows the removal of NACL default](image/images/NACL-remove-default.png)
+
+
+
+![The image shows the removal of NACL default successfull](image/images/NACL-remove-default-successful.png)
+
+
+Additionally, the outbound rule will be removed, defaulting to deny all traffic by default.
+
+
+![The image shows the removal of NACL default outbound](image/images/NACL-remove-default-outbound.png)
+
+
+
+![The image shows the removal of NACL default outbound](image/images/NACL-remove-default-successful-outbound.png)
+
+
+Now, let's try to access the website,
+
+
+![The image shows the removal of NACL default outbound](image/images/NACL-remove-default-successful-outbound.png)
+
+
+So, I was unable to access the website. why? Even if I have allowed inbound traffic for HTTP in security group.
+
+Imagine, when been at the entrance of a building, and there's a security guard checking everyone who wants to come in. That security guard is like the NACL. They have a list of rules (like "no backpacks allowed" or "no food or drinks inside"), and they check each person against these rules as they enter.
+
+Once you're inside the building, there's another layer of security at each room's door. These are like the Security Groups. Each room has its own rules, like "only employees allowed" or "no pets." These rules are specifically to each room, just like Security Groups are specific to each EC2 instance.
+
+So, the traffic first goes through the NACL (the security guard at the entrance), and if it passes those rules, it then goes through security Group (the security check at each room's door). If it doesn't meet any of the rules along the way, it's denied entry.
+
+
+The reason I can't see the website is because the NACL has denied inbound traffic. This prevent traffic from reaching the security group, much like a security guard not allowing entry to another room if access to the building is denied. Similarly, if someone can't enter a building, they can't access any rooms inside without first gaining entry to the building.
+
+**Let's have a look on some scenarios and their outcomes,**
+
+- NACL allows all inbound and outbound traffic, Security Group denies all inbound and outbound traffic: Outcomes: Website access will be blocked because the Security Group denies all traffic, overriding the NACL's allowance.
+
+- NACL denies all inbound and outbound traffic, Security Group allows all inbound and outbound traffic: Outcome: website access will be blocked because the NACL denies all traffic, regardless of the Security Group's allowances.
+
+- NACL allows HTTP inbound traffic, outbound traffic is denied, Security Group allows inbound traffic and denies outbound traffic: Outcome: Website access will be allowed because the Security Group allows HTTP inbound traffic, regardless of the NACL's allowances. However, if the website requires outbound traffic to function properly, it won't work due to the Security Group's denial of outbound traffic.
+
+NACL allows all inbound and outbound traffic, Security Group allows all inbound and outbound traffic: Outcome: Website access will be allowed, as both NACL and Security Group allow all traffic.
+
+- NACL allows all inbound and outbound traffic, Security Group allows all inbound and outbound traffic: Outcome: website access will be allowed, as both NACL and Security Group allow all traffic.
+
+NACL denies all inbound and outbound traffic, Security Group allows HTTP inbound traffic and denies outbound traffic: Outcome: website access will eb blocked because the NACL denies all traffic, regardless of the Security Group's allowances.
+
+**Project Reflection:**
+
+- Successfully configured Security Groups and NACLs to control inbound and outbound traffic in AWS.
+
+- Identified to difference between Security Group and NACLs and their respective roles in network security.
+
+
+Explored various scenarios to understand how Security Groups and NACLs interact and impact network traffic.
+
+- Learned valuable troubleshooting techniques for diagnosing and resolving network connectivity issues in AWS.
+
+- Overall, gained practical experience and confidence in managing network security within AWS environments.
+
+
+
+
+
+
+
 
