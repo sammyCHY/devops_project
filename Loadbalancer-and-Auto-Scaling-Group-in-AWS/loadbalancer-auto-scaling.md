@@ -110,4 +110,36 @@ Once the ALB decides which server should handle the request, it sends the reques
 **Note-** The OSI model is a framework used to understand how different network protocols interact. It has seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application. Each layer has a specific role, like how data is transmitted, routed, and presented to users. The Application Load Balancer (Layer 7), allowing it to make decisions based on the content of the data.  
 
 
+![The image shows the application loadbalancer](image/images/users.png)
 
+Lets take a look at a few terms that will help me grasp Auto Scaling Groups easily.
+
+**Scaling:** Scaling refers to adjusting the size of something to meet changing needs. In the context of technology, like with websites or apps, scaling means adding more resources, like with websites or apps, scaling means adding more resources, like servers, when there's lots of demand, and removing them when demand goes down. It's like having more waiters in a restaurant during busy times and fewer when it's quiet, so customers don't have to wait too long to be served.
+
+**Scaling Out:** When things get busy, scaling out means adding more helpers to handle the work. It's like calling in extra staff at a restaurant when there's a rush of customers. This helps keep things running smoothly and prevents long waits. So scaling Out refers to increase the number of instances in response to increase demand or workload.
+
+
+![The image shows the scaling out](image/images/scaling-out.png)
+
+
+**Scaling In:** On quieter days, scaling in means sending some of the extra helpers home. It's like letting staff go home early when the restaurant isn't as busy. This saves money and makes sure I will not be paying for more help than I need. So Scaling In refers to decreasing the number of instances when the demand or workload decreases.
+
+![The image shows the scaling in](image/images/scaling-in.png)
+
+**Auto Scaling:** Auto scaling means automatically adjusting the number of servers or resources based on changing demands or workload. It's like having a smart system that adds more waiters to a restaurants when it gets busy and sends them home when it's quiet, without needing someone to do it manually. This helps ensure that websites or apps can handle varying levels of traffic efficiency and cost-effectively.
+
+# What is an Auto-Scaling group in AWS?
+
+Think of an Auto Scaling Group in AWS like a team of workers ready to help out when things get busy.I tell AWS how many workers I needed at different times, and it automatically adds or removes them based on how much work there is. So, If my website suddenly gets lots of visitors, AWS will quickly add more servers to handle the traffic. and when things calm down, it will send some servers home to save money. It's like having a flexible workforce that grows and shrinks with my needs, ensuring my website stays up and running smoothly with minimal effort on my part.
+
+- Let's move on to the practical aspect. I will split it into two parts. 
+
+Part 1 will cover setting up the Application Load Balancer.
+
+part 2 
+
+Will focus on configuring the Auto Scaling Group.
+
+# Part - 1
+
+We have created some EC2 instances,
