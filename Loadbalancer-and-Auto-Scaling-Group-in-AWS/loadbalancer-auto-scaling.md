@@ -143,3 +143,11 @@ Will focus on configuring the Auto Scaling Group.
 # Part - 1
 
 We have created some EC2 instances,
+
+
+![The image shows the three ec2 instances](image/images/ec2-instances.png)
+
+
+And these instances contain some website having the below content,
+
+
