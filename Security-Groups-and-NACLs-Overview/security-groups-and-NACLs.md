@@ -542,7 +542,7 @@ d) click on "Add rule"
 e) Duplicate the process I followed for creating the inbound rules to establish the outbound rules in a sismilar manner.
 
 
-![The image shows the edit outbound rule duplicate](image/images/edit-outbound-rule-dublicate.png)
+![The image shows the edit outbound rule duplicate](image/images/edit-outbound-rule-dulicate.png)
 
 
 You have successfully created the rules.
