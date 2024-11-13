@@ -151,3 +151,72 @@ We have created some EC2 instances,
 And these instances contain some website having the below content,
 
 
+![The image shows the targer instance html](image/images/index-html-instance1.png)
+
+![The image shows the targer instance html](image/images/index-html-instance2.png)
+
+![The image shows the targer instance html](image/images/index-html-instance3.png)
+
+
+In a real-world scenario, all targets would typically have the same data. But here we've added different data to each of the three target instances to show how the load balancer connects to all of them.
+
+After that,
+
+A- Creating Target groups -
+
+1. First, navigate to the AWS console.
+
+a) Then, locate the EC2 service by using the search function.
+
+b) Then click on "EC2".
+
+
+![The image shows the ec2 service](image/images/ec2-service.png)
+
+
+2. Now, scroll down untill I locate the Target groups. Click on it.
+
+a) Then select the option to create a new target group.
+
+
+![The image shows the target group](image/images/target-group.png)
+
+3. Choose instances as a target type.
+
+
+![The image shows the creating target group](image/images/creating-target-group.png)
+
+4. Now, I have to provide a name for my target group.
+
+a) Set the protocol to HTTP
+
+b) Choose port no. as 80
+
+c) Select "IPv4" as the IP address type.
+
+d) Next, I have to select the VPC that I ve [perviously created project](./AWS VPC mini project.md) in my projects from the available options. 
+
+
+![The image shows the creating target group for alb](image/images/target-group-for-alb.png)
+
+e) Keep all settings at their default values and proceed by clicking on the "Next" button.
+
+![The image shows the creating target group created](image/images/creating-target-group-next.png)
+
+
+5. Now, I have to choose the instances I've created to serve as targets for the application load balancer.
+
+
+![The image shows the registar target group created](image/images/registar-target.png)
+
+a) Now, I have to click on "includes as pending below".
+
+b) Now, click on "create target group."
+
+
+![The image shows the create target group](image/images/create-target-group1.png)
+
+My target group is been successfully created.
+
+
+
