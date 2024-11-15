@@ -313,3 +313,33 @@ To troubleshoot, follow these steps:
 
 
 ![The image shows the copy public ip address of instance](image/images/copy-ip-address-instances.png)
+
+
+3. Open Command Prompt and type:
+
+`ping <public IP of instance>`
+
+
+![The image shows the ping and IP on the terminal](image/images/ping1.png)
+
+
+![The image shows the ping and IP on the terminal](image/images/ping2.png)
+
+
+It appears thats I'm currently unable to establish a connection to the instance using its public IP address. If I will be able to successfully connect to the instances via their public IP addresses, it confirms that there's connectivity to them. In that case, if the intances are still marked as unhealthy in the load balancer, I may need to investigate further to determine the root cause of the issue.
+
+Let's see some of the thing I need to keep in mind,
+
+**Security Group Configuration:** Make sure that the security groups associated with my instances allow inbound traffic from the Application Load Balancer (ALB) on the necessary ports. Check that the security group rules are correctly configured to allow traffic from the ALB's security group.
+
+**Network ACL Configuration:** If a network ACL (NACL) is attached to the subnet where my target instances are running, review the inbound and outbound traffic rules of the NACL. Ensure that the NACL is not blocking traffic from the ALB or from the internet to the instances.
+
+**Web Server Configuration:** Verify that my web server is configured correctly on my instances. Check that the web server is listening on the correct port and is serving the correct content. Ensure that there are no misconfigurations or errors in the web server configuration files.
+
+**Firewall Rules:** Check if there are any firewall rules or ip tables rules on the instances that may be blocking incoming tarffic. Review the firewall settings to ensure that they alow traffic from the ALB and from the internet.
+
+**Health Check Configuration:** Review the health check settings for the target group. Ensure that the health check path and protocol are configured correctly to match the cnfiguration of the web server. Check that the health check endpoint is accessible and returning the expected response.
+
+**Instance Status:** Verify the status of my instances in the EC2 dashboard. Ensure that the instances are running and reacheable within my VPC. If there are any issues with the instances themselves, troubleshoot and resolve the accordingly.
+
+If I re seeing this type of output, it indicates that the connectivity has been established.
