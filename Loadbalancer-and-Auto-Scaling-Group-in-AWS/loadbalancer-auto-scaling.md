@@ -219,4 +219,97 @@ b) Now, click on "create target group."
 My target group is been successfully created.
 
 
+![The image shows the create target group successfully](image/images/target-group-successfully-created.png)
 
+
+B - Creating Load balancer
+
+1. On EC2 page, scroll down until I locate the Load Balancer service. Click on it.
+
+a) Then select the option to create a new load balancer
+
+
+![The image shows the create load balancer](image/images/new-load-balancer.png)
+
+2. After selecting to create a new load balancer, proceed by choosing the "Create" option specifically for the Application Load Balancer.
+
+
+![The image shows the selection of load balancer type](image/images/load-balancer-type.png)
+
+3. Enter the name for my load balancer, ensuring it reflect it's purpose cleraly.
+
+a) Then, select "Internet-facing" as the scheme.
+
+b) Choose "IPv4" as the IP address type
+
+![The image shows the creation of load balancer](image/images/my-first-load-balancer.png)
+
+
+c) Select the VPC I have already created in the [previous project](./AWS VPC mini project.md).
+
+![The image shows the network mapping of load balancer](image/images/network-mapping.png)
+
+
+d) Select the AZ and choose the public subnet there.
+
+As in our [Previous VPC project](./AWS VPC mini project.md), we have created only one public subnet but here while creating load balancer, I will need at least two public subnet in different AZ's, so now I'm aware of how to create subnet and how to do subnet association for route table, so first do that by right clicking on the table where I'M currently are and open a duplicate tab and then on that duplicate tab first create the subnet and attach the route table with that subnet in which I have provided the way on how to connect to internet gateway and then process with this load balance part on the previous tab.
+
+**Note:** My subnet will not be considered as public subnet until I associate the route table which I have given the path for internet gateway so I have to make sure to do that part.
+
+
+![The image shows the network mapping of load balancer](image/images/network-mapping-public.png)
+
+a) For now, use the default or already created security group as it is.
+
+![The image shows the  security group of load balancer](image/images/security-group.png)
+
+
+b) Select the target group I have created just before in part -1.
+
+
+![The image shows the listeners and routing](image/images/listeners-routing.png)
+
+
+c) Now leave everything as it is and click on create load balancer.
+
+
+![The image shows the final creation fo load balancer](image/images/create-load-balancer-final.png)
+
+
+If you get something like this below.
+
+![The image shows the error in creatin load balaner](image/images/basic-configuration.png)
+
+
+Just use a smaller name
+
+![The image shows the error in creatin load balaner](image/images/basic-configuration2.png)
+
+My application load balancer has been created successfully.
+
+
+![The image shows the creation of application load balaner](image/images/application-load-balancer-created-successfully.png)
+
+**Note:** If I encounter a message indicating "0 healthy targets" and "0 unhealthy targets, " it likely means that my targets have not been properly attached to the target group. Ensure that the attachement process has been completed successfully to resolve the issue.
+
+
+![The image shows the selection target group healthy and unhealthy](image/images/my-target-group-healthy.png)
+
+After creating the ALB (Application Load Balancer), go to target groups section and check the healthy of the instances.
+
+
+![The image shows thetarget group status check](image/images/my-target-group-status-check.png)
+
+Note: If you notice that all instances are marked as unhealthy or if any individual instance is deemed unhealthy, It's essential to first verify connectivity. I can do this by attempting to ping the instances to confirm network reachability.
+
+To troubleshoot, follow these steps:
+
+1. Search for "Command prompt" on my laptop
+
+
+![The image shows the command prompt on the search box](image/images/command-prompt.png)
+
+2. Copy the public IP addresses of the instances
+
+
+![The image shows the copy public ip address of instance](image/images/copy-ip-address-instances.png)
