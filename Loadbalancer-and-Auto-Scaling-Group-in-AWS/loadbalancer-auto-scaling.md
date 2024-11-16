@@ -343,3 +343,66 @@ Let's see some of the thing I need to keep in mind,
 **Instance Status:** Verify the status of my instances in the EC2 dashboard. Ensure that the instances are running and reacheable within my VPC. If there are any issues with the instances themselves, troubleshoot and resolve the accordingly.
 
 If I re seeing this type of output, it indicates that the connectivity has been established.
+
+
+
+****************
+
+
+Currently, our actual output indicates that all our instances are healthy.
+
+![The image shows the registered targets](image/images/registered-targets.png)
+
+Now,
+
+4. From the Load Balancer page, copy the DNS of the load balancer.
+
+5. Paste it into a new tab within your Chrome browser.
+
+![Alt text](./Gif/Load balancer and Autoscailing group mini project gif/ibvideo.gif)
+
+Here, you'll observe that the load balancer is evenly distributing the workload across all three instances.
+
+Now, let's come to our next part.
+
+
+**Part -2**
+
+A- Creating Auto Scaling group.
+
+1. Go to the search bar on the AWS console and search for "Auto Scaling Group". You'll find it there.
+
+a) click on it.
+
+
+![The image shows the click auto scaling group](image/images/auto-scaling-group.png)
+
+Alternatively, I can scroll down on the EC2 page and navigate to the Auto Scaling Group in the Auto Scaling section. Once there, click on the "Auto scaling Groups" link to proceed.
+
+
+![The image shows the amazon auto scaling group](image/images/amazon-auto-scaling-group.png)
+
+
+3. Click on "create a launch template"
+
+![The image shows the choose launch template](image/images/choose-launch-template.png)
+
+Now, I will be navigated to the new tab where I will have to launch a template.
+
+4. Choose a name for the launch template.
+
+a) In the "Quick Start" section of the AWS Management Console, select the "Amazon Linux AMI" option.
+
+![The image shows the create launch template](image/images/create-launch-template.png)
+
+This will provide you with a pre-configured Amazon Machine Image (AMI) for launching instances based on the Amazon Linux operating system.
+
+b) Choose the instance type as "t2 micro."
+
+
+![The image shows the create launch template](image/images/launch-template-content.png)
+
+
+c) Now, Choose the "create new pair" option in the key pair section
+
+
