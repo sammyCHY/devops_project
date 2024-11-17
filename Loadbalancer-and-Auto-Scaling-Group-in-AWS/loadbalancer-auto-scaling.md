@@ -541,3 +541,118 @@ d) I have to select public subnets for both availability zones.
 
 e) In the default routing configuraton, I have the option to create a new target group.
 
+
+![The image shows the setting of listener and routing](image/images/listener-routing.png)
+
+
+f) I have to provide name for target group.
+
+g) Click on Next
+
+
+![The image shows the next to set a target group](image/images/next.png)
+
+
+10. In this section, I can specify my desired capacity for instances created by the Auto Scaling Group.
+
+
+
+![The image shows the configuration of group size and scaling](image/images/configure-group-size-and-scaling.png)
+
+
+a) Also specify the minimium and maximium capacity as per my requirements.
+
+
+![The image shows the scaling](image/images/scaling.png)
+
+
+**Note-**
+
+**Desired Capacity:** This is like deciding how many chairs I want to set up for a party before my guests arrive. It's the number of instances I want my Auto Scaling Group (ASG) to maintain at all times, based on my expected workload.
+
+**Minimium Capacity:** Think of this as the lowest number of chairs I absolutely need to have available, no matter what. It's the minimium number of instances that my ASG will always keep running, even if there's very little traffic or workload.
+
+**Maximum Capacity:** This is like setting a limit on how many chairs I can have at my party, even if more people show up unexpectedly. It's the maximium number of instances that my ASG can scale up to in response to increased traffic or workload.
+
+So, in simpler terms, the desired capacity is what I aim for, the minimum capacity is the lowest I will accept, and the maximum capacity is the most I'm willing to have, even if things get busy.
+
+
+b) Now, proceed by clicking on "Next"
+
+![The image shows the scaling](image/images/scaling-next.png)
+
+
+11. Click on "Next" once more to proceed further.
+
+
+![The image shows the scaling](image/images/auto-scaling-next.png)
+
+
+12.  Tags can be added by clicking on add tags.
+
+
+![The image shows the tags can be added on auto scaling group](image/images/auto-scaling-tags.png)
+
+a) Choose the desired key and value for the tag.
+
+b) Then proceed by clicking on "Next."
+
+
+
+![The image shows the tags can be added on auto scaling group](image/images/auto-scaling-add-tags.png)
+
+
+13. I have to review the settings I have configured for the Auto Scaling Group, and once satisfied click on "Create Auto Scaling Group".
+
+
+![The image shows the creation of the auto scaling group](image/images/create-auto-scaling-group.png)
+
+
+Auto Scaling group is been configured successfully.
+
+![The image shows the creation of the auto scaling group](image/images/ auto-scaling-group-configured.png)
+
+
+14. Click on "new-asg"
+
+
+15. Navigate to the "Instance Management" section.
+
+
+![The image shows the auto scaling group of instance management](image/images/auto-scaling-group-instance-management.png)
+
+
+Here, I will observe that the Auto Scaling Group has successfully created instances according to the desired capacity I have specified, which in this case is 2.
+
+16. If I navigate to the Load Balancer section in the EC2 page, I will notice that my load balacer has also been created.
+
+
+
+![The image shows the load balancer created](image/images/load-balancer-created.png)
+
+
+Note- In Case If it doesn't appear immediately, try refreshing the page by clicking on the top square-shaped icon. Click on it.
+
+The two instances were created by the Auto Scaling Group. Since the desired capacity was set to 2, the Auto Scaling Group. instantiated two instances accordingly. Regarding scaling, the Auto Scaling Group is configured to scale in until there are one instances remaining; it won't decrease the count below this threshold. Similarly, it can scale out to a maximium of four instances based on the load; however, it won't exceed this limit. Now if I want to see the website, I can again use the Load balancer DNS.
+
+************
+
+
+Lets observe the behaviour when one of the instances created by the Auto Scaling Group (ASG) is deleted.
+
+As depicted in the GIF provided, the ASG will automatically launch a new instance to maintain the desired state. This demonstrates the dynamic nature of ASG, which adjusts the number of instances based on the configured capacity settings.
+
+
+**Project Reflection:**
+
+- Explored the significance of High Availability and Scalability in cloud infrastructure.
+
+- Learned about Load Balancers and their role in distributing incoming traffic to ensure optimal performance and reliability.
+
+- Understood the concept of Auto Scaling Groups and hoe they dynamically adjust the number of instances based on workload.
+
+- Gained practical experience in setting up an Application Load Balancer and configuring Auto Scaling Groups in AWS.
+
+- Developed troubleshooting skills to address issues related to connectivity, security groups, and instance health.
+
+- Enhanced understanding of cloud networking concepts and their practical application in deploying scalable and reliable web applications.
