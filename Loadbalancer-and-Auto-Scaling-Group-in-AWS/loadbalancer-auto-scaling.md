@@ -406,3 +406,138 @@ b) Choose the instance type as "t2 micro."
 c) Now, Choose the "create new pair" option in the key pair section
 
 
+![The image shows the amazon machine image](image/images/amazon-machine-image.png)
+
+d) Provide a name for the key pair.e) Click on "Create key pair."
+
+![The image shows the creation the key pair](image/images/create-key-pair.png)
+
+I have successfully created and added the key pair to the launch template. Although, I have already existing key, I don't need to create new key.
+
+
+f) In the network settings, select the public subnet that I have created in [Previous project](./AWS VPC mini project.md) for launching your instance.
+
+
+g) When configuring security groups, I have two options: I can either use a pre-existing security group or create a new one.
+
+
+![The image shows the creation of the key pair](image/images/key-pair.png)
+
+**Note:** Ensure that the security group being used allows inbound and outbound traffic for all types of traffic for the CIDR 0.0.0.0/0.
+
+h) Now, Click on "Advanced Network Configuration."
+
+
+![The image shows the network setting](image/images/network-setting.png)
+
+i) Select the "Enable" option for auto-assigning public IP addresses.
+
+j) And choose the security group that has an inbound and outbound rule allowing all traffic.
+
+
+![The image shows the advanced network configuration](image/images/advanced-network-configuration.png)
+
+
+k) Now Go to advanced settings.
+
+![The image shows the ebs volume](image/images/ebs-volume.png)
+
+l) In the user data section, include the following code.  
+
+![The image shows the advanced details user data](image/images/advanced-user-data.png)
+
+
+![The image shows the bash code](image/images/bash-code.png)
+
+
+**Explanation of the user data script**
+
+#!/bin/bash: This line specifies that the script should be executed using the Bash shell.
+
+*yum update -y:* Updates the package repository and installs any available updates.
+
+yum install -y httpd: Installs the Apache web server (HTTPD) package.
+
+**service httpd start:** Starts the Apache web server.
+
+*Chkconfig httpd on:* Configures Apache to start automatically upon instance boot.
+
+- chkconfig: This command manages which services start automatically at different runlevels.
+
+- httpd: This refers to the Apache HTTP server service.
+
+- on: This option enables the service to start at boot time.
+
+**echo"**
+
+...
+
+" > /var/www/html/index.html: Creates a basic HTML file with a welcome message and saves it as index.html in the default web root directory (/var/www/html).
+
+m) Now, click on "Craete launch template."
+
+
+![The image shows the creation of launch templates](image/images/create-launch-template.png)
+
+I have successfully created the launch template,
+
+Now, return to my previous tab containing the Auto Scaling Group settings.
+
+
+![The image shows the launch of templates](image/images/launch-template.png)
+
+
+5. Now, provide a name for the Auto Scaling Group.
+
+a) Select the launch template that was created earlier.
+
+
+![The image shows the launch of templates](image/images/choose-launch-template2.png)
+
+
+6. Now, click on the "Next"
+
+
+![The image shows the launch of templates](image/images/launch-template-next.png)
+
+
+7. Choose the required instances attributes.
+
+
+![The image shows the required instance attribute](image/images/required-instance-attribute.png)
+
+8. Select the VPC that was created in the [Previous project](./AWS VPC mini project.md).
+
+a) Select the Availability zones.
+
+b) Click on "Next"
+
+![The image shows the network settings](image/images/network.png)
+
+9. Now, choose the option to "Attach to a new load balancer"
+
+![The image shows the configuration of advanced option](image/images/configured-advanced-options.png)
+
+a) Select the load balancer type as "Application Load Balancer,"
+
+b) Provide a name for the load balancer.
+
+c) choose "Internet-facing" for the load balancer scheme. Ensure to review the VPC ID before proceeding.
+
+
+![The image shows the attache of the load balancer](image/images/attach-new-load-balancer.png)
+
+d) I have to select public subnets for both availability zones.
+
+
+![The image shows the network mapping in different subnet](image/images/network-mapping.png)
+
+
+**Note -**
+
+*Region:* Think of a region as a big area, like a country or state, where cloud services are available. Each region has multiple data centers, and they're located in different parts of the world. Foe example, there might be a region in the United State, another in Europe, and so on.
+
+**Availability Zone (AZ):** Within each region, there are separate buildings or facilities called availability zones. I can think of these as neighborhoods within the region. Each availability zone is isolated from the others, so if something goes wrong in one zone, it doesn't affect the others. This adds an extra layer of resilience and reliability to the cloud infrastructure. For more info I can go through *AWS Regions and Zones*
+
+e) In the default routing configuraton, I have the option to create a new target group.
+
