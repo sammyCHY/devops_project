@@ -227,3 +227,47 @@ I have already created an EC2 instance with an Amazon Linux.
 
 After connecting to the instance, execute the following commands: 
 
+`sudo yum update -y`
+
+`sudo yum install wget -y`
+
+`wget --version`
+
+`sudo wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm`
+
+
+![The image shows the instance created for rds connectivity](image/images/sudo-wget-https.png)
+
+
+`sudo yum localinstall mysql57-community-release-el7-11.noarch.rpm`
+
+
+![The image shows the sudo yum localinstall](image/images/sudo-yum-localinstall.png)
+
+
+![The image shows the sudo yum localinstall](image/images/sudo-yum-localinstall2.png)
+
+
+**Note-**Whenever prompted, please input "yes" or "no," and type "y" for "yes."
+
+`rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022`
+
+`sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022`
+
+
+systemctl start mysqld.service systemctl enable mysql.service
+
+systemctl status mysqld.service
+
+![The image shows the sudo rpm](image/images/sudo-rpm.png)
+
+`sudo yum install mysql`
+ 
+![The image shows the sudo yum install mysql client](image/images/sudo-yum-install-mysql1.png)
+
+![The image shows the sudo yum install mysql client](image/images/sudo-yum-install-mysql2.png)
+
+
+![The image shows the sudo yum install mysql client](image/images/sudo-yum-install-mysql3.png)
+
+
