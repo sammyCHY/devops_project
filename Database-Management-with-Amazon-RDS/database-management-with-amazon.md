@@ -167,5 +167,63 @@ m) Then, I have to choose pre-created security group in the "Existing VPC securi
 
 ![The image shows the storage](image/images/db-subnet-group.png)
 
+**Note-** Ensure that my security group attached to database permits inbound traffic on port 3306.
 
+If the security group is not configured, set it up by selecting the attached security group and add an inbound rule for MySQL/Aurora on port 3306, allowing traffic from the 0.0.0.0/0 CIDR range.
+
+n) I can choose any of the availability zones. Here, I have selected "us-east-2a"
+
+
+
+![The image shows the availability zone configuration](image/images/availability-zone.png)
+
+
+I can leave the other settings as default.
+
+
+![The image shows the tags](image/images/tags.png)
+
+o) Proceed by selecting the optional labeled "Create database" to initiate the creation process.
+
+![The image shows the the creation of the database](image/images/create-database-final.png)
+
+Typically,creating a database takes some time. To monitor the progress, I can refresh the page periodically by clicking on the refresh button in the designated section as indicated in the image below.
+
+
+![The image shows the databases created](image/images/databases-created.png)
+
+Now, I can observe that the database is available for use, when creating the db, it will first show creating then click refresh sign after some few minutes of creation then, you will "Available"
+
+
+**Please note:** If I encounter an error of this nature, attempt to change the password and then proceed with the next steps.
+
+when creating the rds db and password error is encountered then try to change the password and proceed.
+
+For more clarity about Naming constraints I can go through the Naming constraints in Amazon RDS
+
+[Naming constraints in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html)
+
+4. Proceed by clicking on my database, labeled "my-rds-database."
+
+
+![The image shows the my rds database](image/images/my-rds-database.png)
+
+
+5. Now scroll down and on the right side, I will find an endpoint. Copy this endpoint.
+
+
+![The image shows the end point and port connection link](image/images/endpoint&port.png)
+
+Keep this endpoint along with the username and password in a safe place for future reference.
+
+
+![The image shows the endpoint link, username and password](image/images/endpoint-link.png)
+
+I have already created an EC2 instance with an Amazon Linux.
+
+
+![The image shows the instance created for rds connectivity](image/images/instance-for-rds.png)
+
+
+After connecting to the instance, execute the following commands: 
 
