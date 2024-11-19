@@ -89,4 +89,83 @@ Let's come to the practical part,
 a) Input "RDS" to locate the RDS service. Once found, click on the RDS option to proceed.
 
 
+![The image shows the RDS](image/images/rds.png)
+
+2. Navigate to the left sidebar and select the "Databases" section.
+
+a) Click on "Create Database" to proceed.
+
+
+![The image shows the RDS databases](image/images/rds-databases.png)
+
+3. Select "Standard create" as the database creation method.
+
+
+![The image shows the creation of database](image/images/create-database.png)
+
+
+a) Choose the MYSQL engine.
+
+
+![The image shows the selection of database](image/images/mysql.png)
+
+
+**Note-** MySQ, PostgreSQL, Amazon Aurora etc. are like digital assistants for organizing my data. They help me store and manage information in a organized way, kind of like keeping my files neat and tidy in a virtual filing cabinet. You can create different categories for my data, like lists of names or numbers, and easily find what I need when I need it.
+
+These tools are called relational database management systems (RDBMS). They're like special software that makes it easy to work with structured data, meaning data that's organized into tables with rows and columns. With RDBMS, I can create databases, defines how my data should look, search for specific information, and make sure everything stays organized and secure. It's like having a super-powered organizer for my digital information.
+
+b) Select the latest engine version or any preferred version.
+
+c) Choose a free tier template.
+
+
+![The image shows the engine version](image/images/engine-version.png)
+
+d) Then, specify the DB instance name.
+
+Settings
+
+![The image shows the DB instance identifier](image/images/db-instance-identifier.png)
+
+
+e) Select a master username for my database.
+
+f) Choose "Credentials management" as "Self-managed."
+
+g) Enter the master password for the database and confirm it by re-entering it in the "Confirm master password" field.
+
+
+![The image shows the credential settings](image/images/credential-setting.png)
+
+**Note-** Ensure to record the username and password I entered somewhere safe, like a text editor such as Notepad. Forgetting these credentials could result in being unable to access the database I've created.
+
+h) Choose DB instance class as db.t3.micro.
+
+
+![The image shows the instance configuration](image/images/instance-configuration.png)
+
+
+i) Please maintain the default settings for the other configurations.
+
+
+![The image shows the storage](image/images/storage.png)
+
+
+j) Choose the VPC I have created in the [Previous project](./AWS VPC mini project.md)
+
+
+![The image shows the  vpc compute resource connectivity](image/images/compute-resource-connectivity.png)
+
+k) Select "Public access" as "yes"
+
+**Note -** While it's generally not recommended to keep my database public, for the purpose of this practical exercise, I will be configuring it as public.
+
+i) Select the option "VPC security group (firewall)" as "Choose existing".
+
+m) Then, I have to choose pre-created security group in the "Existing VPC security groups" section.
+
+
+![The image shows the storage](image/images/db-subnet-group.png)
+
+
 
