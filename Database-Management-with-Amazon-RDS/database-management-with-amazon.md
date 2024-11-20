@@ -271,3 +271,43 @@ systemctl status mysqld.service
 ![The image shows the sudo yum install mysql client](image/images/sudo-yum-install-mysql3.png)
 
 
+**Please note** that you can press "q" to quit here after running the status command.
+
+Now, for connecting my RDS to ec2 instance,
+
+**mysql -h [Endpoint] -p [Port] -u [Username] -p[Password]**
+
+In this process, I'm executing commands tailored to our specific database configuration. I have to ensure that I adjust the values to align with my database setup.
+
+` mysql -h myrdsdatabase-1.c1ow86siau2t.us-east-2.rds.amazonaws.com -P 3306 -u admin -p`
+
+**Note:** Ensure that you follow the write up above to get to the database of the rds
+
+![The image shows the mysql database rds](image/images/database-rds1.png)
+
+![The image shows the mysql database rds](image/images/database-rds2.png)
+
+If you want to review all databases, run:
+
+`show databases;`
+
+`use mysql;`
+
+`show tables;`
+
+
+![The image shows the "show databases;"](image/images/show-databases.png)
+
+
+![The image shows the "use mysql;"](image/images/use-mysql.png)
+
+
+![The image shows the "show tables;"](image/images/show-tables1.png)
+
+
+![The image shows the "show tables;"](image/images/show-tables2.png)
+
+
+![The image shows the "show tables;"](image/images/show-tables3.png)
+
+
