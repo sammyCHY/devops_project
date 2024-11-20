@@ -76,6 +76,83 @@ subtotal: 100 Points
 
 # Capstone Project: Wordpress Site on AWS
 
+### Project Scanario
 
-Project Scanario
+A small to medium-sized digital marketing agency, "DigitalBoost", wants to enhance its online presence by creating a high-performance **Wordpress-based** website for their clients. The agency nedds a scalable, secure, and cost-effective solution that can handle increasing traffic and seamlessly integrated with their existing infrastructure. My task as an AWS Solutions Architect is to design and implement a wordpress solution using various AWS services, such as Networking, compute, Object Storage, and Databases.
+
+## Pre-requisite
+
+- Knowledge of TechOps Essentials
+
+- Completion of Core 2 Courses and Mini projects
+
+The project overview with necessary architecture have been provided as my help "DigitalBoost" with her wordpress-Based website. Kindly follow the instructions below to complete this Capstone Project. Also, necessary scripts have been provided here [here]
+
+(https://github.com/dareyio/script-2)
+
+## Project Deliverables
+
+ - Detailed documentation for each component setup.
+
+  - Explanation of security measures implemented.
+
+  - Demonstration:
+
+  - Live demonstartion of the WordPress site.
+
+  - Showcase auto-scaling by simulating increased traffic.
+
+![The image shows the project overview](image/images/project-overview.png)
+
+### Objective:
+
+I have to create a Virtual Private Cloud (VPC) to isolate and secure the wordpress infrastructure.
+
+- Steps:
+
+ - Define IP address range for the VPC.
+
+1. Choose an IP Range:
+
+**Select a private IP range based on the RFC 1918 standard:**
+
+- 10.0.0.0 – 10.255.255.255 (10.0.0.0/8)
+- 172.16.0.0 – 172.31.255.255 (172.16.0.0/12)
+- 192.168.0.0 – 192.168.255.255 (192.168.0.0/16)
+
+**Determine the Size of the CIDR Block:**
+
+**The size depends on the number of IP addresses needed. For example:**
+
+- /16 provides ~65,000 IPs.
+- /24 provides 256 IPs.
+- /28 provides 16 IPs.
+- AWS allows VPC CIDR blocks ranging from /16 to /28.
+- Assign the CIDR Block:
+
+During VPC creation in the AWS Management Console assign a CIDR block (e.g., 12.0.0.0/16). whichis exactly what I assign for my VPC
+
+![The image shows the search for vpc in aws console](image/images/search-vpc-wordpress.png)
+
+ 
+ ![The image shows the select VPC](image/images/select-vpc.png)
+
+
+![The image shows the create VPC](image/images/create-vpc.png)
+
+
+![The image shows the create VPC](image/images/create-vpc1.png)
+
+
+![The image shows the creation of the VPC wordpress created](image/images/my-vpc-wordpress-create.png)
+
+
+
+
+
+
+ - Create VPC with public and private subnets.
+
+  - Configure route tables for each subnets.
+
 
