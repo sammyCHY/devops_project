@@ -260,3 +260,56 @@ Create a Public Route Table:
 
 ![The image shows the edit of route table to nat gateway](image/images/public&private-rt-created.png)
 
+# 2. Public and Private Subnet with NAT Gateway
+
+**NAT GATEWAY ARCHITECTURE**
+
+![The image shows the nat gateway architecure](image/images/nat-gateway-architecture.png)
+
+
+# Objective:
+
+Implement a secure network architecture with public and private subnets. Use a NAT Gateway for Private subnet internet access.
+
+### Steps:
+
+- Set up public subnet for resources
+ accessible from the internet.
+
+ - Create private subnet for resources with no direct internet access.
+
+ - Configure a NAT Gateway for private subnet internet access.
+
+ ![The image shows the nat gateway created](image/images/nat-gateway-created.png)
+
+ 3. AWS MyQSL RDS Setup
+
+ SECURITY GROUP ARCHITECTURE
+
+ ![The image shows the security group architecture](image/images/security-group-architecture.png)
+
+### Objective:
+Deploy a managed MySQL database using Amazon RDS for wordpress data storage
+
+### Steps:
+
+- Create an Amazon RDS instance with Mysql engine.
+
+![The image shows the RDB instance with MySQL engine](image/images/rdb-wordpress-created1.png)
+
+
+![The image shows the RDB instance with MySQL engine](image/images/rdb-wordpress-created2.png)
+
+- Configure security groups for RDS instance.
+
+
+![The image shows the RDS instance security group](image/images/rds-security-group.png)
+
+
+![The image shows the RDS instance security group](image/images/rds-security-group-created.png)
+
+
+![The image shows the RDS instance security group](image/images/rds-security-group-created2.png)
+
+- Connect Wordpress to the RDS database.
+
