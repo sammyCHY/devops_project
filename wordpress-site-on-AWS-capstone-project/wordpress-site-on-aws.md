@@ -146,7 +146,6 @@ During VPC creation in the AWS Management Console assign a CIDR block (e.g., 12.
 
 ![The image shows the creation of the VPC wordpress created](image/images/my-vpc-wordpress-create.png)
 
-
  - Create VPC with public and private subnets.
 
 ### Create two subnets:
@@ -192,7 +191,10 @@ During VPC creation in the AWS Management Console assign a CIDR block (e.g., 12.
 # Configure route tables for each subnets.
 
 ### 1. Configure the Route Table for the Public Subnet
+
 Create a Public Route Table:
+
+![The image shows the creation of route tables](image/images/route-tables.png)
 
 - Go to the VPC Dashboard.
 - Select Route Tables.
@@ -200,33 +202,46 @@ Create a Public Route Table:
 - Name: PublicRouteTable.
 - VPC: Select your VPC (MyVPC).
 - Click Create.
-- Add a Route for Internet Access:
 
+![The image shows the creation of public route tables](image/images/public-rt-created.png)
+
+- Add a Route for Internet Access:
 - Select the newly created PublicRouteTable.
 - Click Routes and then Edit Routes.
+
+![The image shows the edit of public route tables](image/images/edit-rt-routs.png)
+
 - Add a route:
 - Destination: 0.0.0.0/0 (matches all IPv4 traffic).
 - Target: Select the Internet Gateway (MyIGW) created earlier.
 - Save changes.
 - Associate the Route Table with the Public Subnet:
-
 - Click Subnet Associations in the PublicRouteTable settings.
 - Click Edit Subnet Associations.
 - Select the public subnet (PublicSubnet) and save.
 
+![The image shows the edit of public route tables subnets association](image/images/public-rt-subnets-association.png)
+
+
+![The image shows the edit of public route tables subnets association](image/images/public-rt-subnets-association2.png)
+
 ### 2. Configure the Route Table for the Private Subnet
   Create a Private Route Table:
-
 - Go to Route Tables.
 - Click Create Route Table.
 - Name: PrivateRouteTable.
+
+![The image shows the creation of private route table](image/images/create-private-rt.png)
+
 - VPC: Select your VPC (MyVPC).
 - Click Create.
 - Add a Route for NAT Gateway Access:
-
 - Select the newly created PrivateRouteTable.
 - Click Routes and then Edit Routes.
 - Add a route:
+
+![The image shows the edit of route table to nat gateway](image/images/edit-private-rt-nat-gateway.png)
+
 - Destination: 0.0.0.0/0 (matches all IPv4 traffic).
 - Target: Select the NAT Gateway (MyNATGateway) created earlier.
 - Save changes.
@@ -234,5 +249,14 @@ Create a Public Route Table:
 ### 3. Associate the Route Table with the Private Subnet:
 
 - Click Subnet Associations in the PrivateRouteTable settings.
+
+![The image shows the edit of route table to nat gateway](image/images/private-rt-created&association.png)
+
 - Click Edit Subnet Associations.
 - Select the private subnet (PrivateSubnet) and save.
+
+![The image shows the edit of route table to nat gateway](image/images/private-rt-subnet-association.png)
+
+
+![The image shows the edit of route table to nat gateway](image/images/public&private-rt-created.png)
+
