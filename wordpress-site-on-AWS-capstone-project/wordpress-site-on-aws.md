@@ -147,12 +147,92 @@ During VPC creation in the AWS Management Console assign a CIDR block (e.g., 12.
 ![The image shows the creation of the VPC wordpress created](image/images/my-vpc-wordpress-create.png)
 
 
-
-
-
-
  - Create VPC with public and private subnets.
 
-  - Configure route tables for each subnets.
+### Create two subnets:
+
+- Public Subnet:
+- Name: PublicSubnet
+- VPC: MyVPC
+- Availability Zone: Choose one (e.g., us-east-2a)
+- IPv4 CIDR block: 12.0.1.0/24
+- Private Subnet:
+- Name: PrivateSubnet
+- VPC: MyVPC
+- Availability Zone: Choose one (e.g., us-east-2a)
+- IPv4 CIDR block: 12.0.2.0/24
+
+![The image shows the subnets creation](image/images/subnets.png)
 
 
+![The image shows the subnets creation](image/images/public&private-subnet1.png)
+
+
+![The image shows the subnets creation](image/images/public&private-subnet2.png)
+
+
+![The image shows the subnets creation](image/images/public&private-subnets-created.png)
+
+## Before Creating the public and private subnets, I have to first create Internet gateway and attach to my vpc.
+
+- Create an Internet Gateway (IGW)
+- Go to the Internet Gateways section.
+- Click Create Internet Gateway.
+- Name it MyIGW and attach it to the VPC (MyVPC).
+
+![The image shows the internet gateway](image/images/internet-gateway.png)
+
+
+![The image shows the internet gateway](image/images/create-internet-gateway.png)
+
+
+
+![The image shows the internet gateway](image/images/internet-gateway-created&attached.png)
+
+# Configure route tables for each subnets.
+
+### 1. Configure the Route Table for the Public Subnet
+Create a Public Route Table:
+
+- Go to the VPC Dashboard.
+- Select Route Tables.
+- Click Create Route Table.
+- Name: PublicRouteTable.
+- VPC: Select your VPC (MyVPC).
+- Click Create.
+- Add a Route for Internet Access:
+
+- Select the newly created PublicRouteTable.
+- Click Routes and then Edit Routes.
+- Add a route:
+- Destination: 0.0.0.0/0 (matches all IPv4 traffic).
+- Target: Select the Internet Gateway (MyIGW) created earlier.
+- Save changes.
+- Associate the Route Table with the Public Subnet:
+
+- Click Subnet Associations in the PublicRouteTable settings.
+- Click Edit Subnet Associations.
+- Select the public subnet (PublicSubnet) and save.
+
+### 2. Configure the Route Table for the Private Subnet
+  Create a Private Route Table:
+
+- Go to Route Tables.
+- Click Create Route Table.
+- Name: PrivateRouteTable.
+- VPC: Select your VPC (MyVPC).
+- Click Create.
+- Add a Route for NAT Gateway Access:
+
+- Select the newly created PrivateRouteTable.
+- Click Routes and then Edit Routes.
+- Add a route:
+- Destination: 0.0.0.0/0 (matches all IPv4 traffic).
+- Target: Select the NAT Gateway (MyNATGateway) created earlier.
+- Save changes.
+
+### 3. Associate the Route Table with the Private Subnet:
+
+- Click Subnet Associations in the PrivateRouteTable settings.
+- Click Edit Subnet Associations.
+- Select the private subnet (PrivateSubnet) and save.
