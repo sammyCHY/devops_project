@@ -393,3 +393,92 @@ Test the file system by creating a file:
 sudo touch /mnt/efs/test-file
 
 Ensure the Security Group attached to your EC2 instances and EFS allows inbound traffic on port 2049 for NFS.
+
+
+# 5. Application Load Balancer
+
+**Objective:**
+Set up an Application Load Balancer to distribute incoming traffic among multiple instances, ensuring high availability and fault tolerance.
+
+Steps:
+
+- Create an Application Load Balancer.
+
+![The image shows the creation of application loadbalancer](image/images/loadbalancer-created.png)
+
+
+- Configure listener rules for routing traffic to instances.
+
+
+- Integrate Load Balancer with Auto Scaling group.
+
+![The image shows the auto scaling group](image/images/auto-scaling-group.png)
+
+
+![The image shows the auto scaling group](image/images/auto-scaling-group2.png)
+
+
+6. Auto Scaling Group
+
+**Objective**
+
+Implement Auto Scaling to automatically adjust the number of instances based on traffic load.
+
+Steps:
+
+- Create an Auto Scaling group.
+
+
+![The image shows the auto scaling group](image/images/aws-auto-scaling.png)
+
+
+![The image shows the auto scaling group](image/images/aws-auto-scaling1.png)
+
+
+- Define Scaling policies based on matrics like CPU utilization.
+
+
+- Configure launch configurations for instances.
+
+
+![The image shows the auto scaling group](image/images/auto-scaling-working.png)
+
+
+# 6. Amazon RDS Setup
+
+Objective:
+
+Deploy a managed MySQL database using Amazon RDS for WordPress data storage.
+
+Steps:
+Create a Security Group for the RDS instance allowing inbound traffic on MySQL port 3306 from the WordPress EC2 instances.
+
+Launch the MySQL RDS Instance with appropriate configuration, such as storage and instance class.
+
+
+# 7. Connecting WordPress to RDS
+
+Steps:
+Rename the default wp-config-sample.php to wp-config.php.
+
+![The image shows the auto scaling group](image/images/php-config2.png)
+
+Edit the wp-config.php file with the database details from the RDS instance (DB name, username, password, and host).
+
+Save the file and restart the web service.
+
+`sudo systemctl restart httpd`
+
+After the whole configuration, I have to copy the DNS of my created loadbalancer to the web-browser to access the user page of the wordpress.
+
+
+![The image shows the user page of the wordpress](image/images/wordpress11.png)
+
+
+![The image shows the user page of the wordpress](image/images/wordpress-final.png)
+
+
+![The image shows the user page of the wordpress](image/images/wordpress-final2.png)
+
+
+![The image shows the user page of the wordpress](image/images/wordpress-final3.png)
