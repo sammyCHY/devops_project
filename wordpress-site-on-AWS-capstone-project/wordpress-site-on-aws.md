@@ -313,3 +313,83 @@ Deploy a managed MySQL database using Amazon RDS for wordpress data storage
 
 - Connect Wordpress to the RDS database.
 
+
+4. EFS Setup for WordPress Files
+
+- Objective:
+Utilize Amazon Elastic File System (EFS) to store WordPress files for scalable and shared access.
+
+- Steps:
+
+- Create an EFS file system.
+
+Creating an Amazon Elastic File System (EFS) in AWS involves a series of steps in the AWS Management Console, AWS CLI, or AWS SDK. Here’s a step-by-step guide to create an EFS file system using the AWS Management Console:
+
+
+- Step 1: Navigate to the Amazon EFS Console
+
+Search for "EFS" in the "AWS Management Console" search bar and select Elastic File System.
+
+- Step 2: Create a New File System
+Click on Create file system.
+
+Provide the following details:
+
+Name (optional): Assign a name to the file system for easy identification.
+VPC: Select the Virtual Private Cloud (VPC) where you want to create the file system.
+
+![The image shows the availability zone of the EFS](image/images/my-efs-file-system1.png)
+
+- Step 3: Configure Network Settings
+Availability and Durability:
+
+Regional: Ensures that the file system is available in all Availability Zones (AZs) within the region.
+
+![The image shows the availability zone of the EFS](image/images/my-efs-file-system2.png)
+
+
+### Mount Targets:
+
+Select the subnets in the AZs where you want to create mount targets.
+Ensure that the Security Groups attached to the mount targets allow NFS traffic (port 2049) from EC2 instances.
+
+
+- Step 4: Set Performance and Storage Settings
+Performance Mode:
+Choose between:
+General Purpose (default): Ideal for latency-sensitive applications.
+Configure policies to transition infrequently accessed files to the Infrequent Access (IA) storage class to reduce costs.
+
+- Step 5: Review and Create
+Review your settings and click Create.
+The new file system will be created and listed in the EFS dashboard.
+
+![The image shows the creation of the EFS](image/images/amazon-efs.png)
+
+- Step 6: Mount the EFS File System to EC2 Instances
+Install NFS Utilities on your EC2 instances:
+sudo yum install -y nfs-utils  # For Amazon Linux/Red Hat
+
+Mount the File System:
+Copy the mount command from the EFS console:
+Go to the EFS File System > Access Points or File System details.
+Run the mount command on your EC2 instance:
+
+`sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-051a511a7fb5d868c.efs.us-east-2.amazonaws.com:/ /var/www/html`
+
+Ensure the /mnt/efs directory exists:
+sudo mkdir -p /var/www/html
+
+
+- Step 7: Verify the Mount
+Use the df -h command to confirm the EFS is mounted:
+
+`df -h`
+
+You should see the EFS file system listed.
+
+Test the file system by creating a file:
+
+sudo touch /mnt/efs/test-file
+
+Ensure the Security Group attached to your EC2 instances and EFS allows inbound traffic on port 2049 for NFS.
