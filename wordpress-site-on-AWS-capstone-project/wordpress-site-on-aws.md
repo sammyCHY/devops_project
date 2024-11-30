@@ -285,11 +285,11 @@ Implement a secure network architecture with public and private subnets. Use a N
 
  ![The image shows the nat gateway created](image/images/nat-gateway-created.png)
 
- 3. AWS MyQSL RDS Setup
+ 3. AWS MySQL RDS Setup
 
  SECURITY GROUP ARCHITECTURE
 
- ![The image shows the security group architecture](image/images/security-group-architecture.png)
+ ![The image shows the security group architecture](image/images/security-group-architecure.png)
 
 ### Objective:
 Deploy a managed MySQL database using Amazon RDS for wordpress data storage
