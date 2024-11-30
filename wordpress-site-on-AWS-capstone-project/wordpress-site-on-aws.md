@@ -144,7 +144,10 @@ During VPC creation in the AWS Management Console assign a CIDR block (e.g., 12.
 ![The image shows the create VPC](image/images/create-vpc1.png)
 
 
-![The image shows the creation of the VPC wordpress created](image/images/my-vpc-wordpress-create.png)
+![The image shows the creation of the VPC wordpress created](image/images/my-vpc-wordpress-created.png)
+
+![The image shows the creation of the VPC wordpress created](image/images/my-vpc-wordpress-created1.png)
+
 
  - Create VPC with public and private subnets.
 
