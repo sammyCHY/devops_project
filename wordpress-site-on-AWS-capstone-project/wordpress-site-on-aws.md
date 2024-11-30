@@ -298,21 +298,21 @@ Deploy a managed MySQL database using Amazon RDS for wordpress data storage
 
 - Create an Amazon RDS instance with Mysql engine.
 
-![The image shows the RDB instance with MySQL engine](image/images/rdb-wordpress-created1.png)
+ ![The image shows the RDB instance with MySQL engine](image/images/rdb-wordpress-created1.png)
 
 
-![The image shows the RDB instance with MySQL engine](image/images/rdb-wordpress-created2.png)
+ ![The image shows the RDB instance with MySQL engine](image/images/rdb-wordpress-created2.png)
 
 - Configure security groups for RDS instance.
 
 
-![The image shows the RDS instance security group](image/images/rds-security-group.png)
+ ![The image shows the RDS instance security group](image/images/rds-security-group.png)
 
 
-![The image shows the RDS instance security group](image/images/rds-security-group-created.png)
+ ![The image shows the RDS instance security group](image/images/rds-security-group-created.png)
 
 
-![The image shows the RDS instance security group](image/images/rds-security-group-created2.png)
+ ![The image shows the RDS instance security group](image/images/rds-security-group-created2.png)
 
 - Connect Wordpress to the RDS database.
 
