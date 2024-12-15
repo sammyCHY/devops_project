@@ -4,7 +4,55 @@ Following the requirement detailed in the project, the initial step in crafting 
 
 1. **Create an IAM Role:** Begin by establishing an IAM role that encapsulates the permissions required for the operations our script will perform.
 
-*****************
+1. ### Navigate to the IAM Console
+
+- Log in to the AWS Management Console.
+- Go to the IAM (Identity and Access Management) service.
+
+![The image shows the IAM role created](image/images/IAM-dashboard-role.png)
+
+2. ### Create the Role
+
+1. ***Start the Role Creation:***
+
+- In the IAM dashboard, click Roles on the sidebar and then click Create role.
+Choose Trusted Entity:
+
+![The image shows the selection and creation of the role](image/images/create-role.png)
+
+2. ### Choose Trusted Entity:
+
+- Select the trusted entity that will assume the role.
+
+![The image shows the selection of the trusted entity for the role](image/images/create-role1.png)
+
+- For AWS services like Lambda or EC2, choose AWS Service.
+
+- For cross-account access, select Another AWS Account.
+
+- For external applications, choose Web Identity.
+
+3. Select a Use Case:
+
+- For example, if this role is for EC2 instances, select EC2 and click Next.
+
+![The image shows the selection of the trusted entity for the role](image/images/create-role1.png)
+
+3. ### Attach Policies for Permissions.
+
+- Add Policies:
+Attach the necessary policies to define the permissions for the role.
+
+
+For example, attach AmazonS3FullAccess if the role needs full access to S3.
+
+![The image shows the policy permissions attached role](image/images/roles-add-permission.png)
+
+
+![The image shows the policy permissions attached role](image/images/IAM-role-created.png)
+
+![The image shows the policy permissions attached role](image/images/role-created.png)
+
 
 2. **Create an IAM Policy:** Design an IAM policy granting full access to both EC2 and S3 services. This policy ensures our script has then necessary permissions to manage these resources.
 
@@ -26,5 +74,5 @@ After setting up my AWS account and creating the necessary IAM user and permissi
 
 ***On Linux***
 
-1. 
+1. Download the AWS CLI 
 
