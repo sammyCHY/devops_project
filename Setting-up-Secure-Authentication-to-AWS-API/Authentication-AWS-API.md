@@ -151,6 +151,9 @@ Instantiate an IAM user named automation_user. This user will serve as the prima
 
 ![The image shows the user name "automation_user" in IAM console](image/images/create-user2.png)
 
+
+![The image shows the user tags description](image/images/access-key-tag.png)
+
 - Set permission
 
 ![The image shows the set permission](image/images/user-set-permission.png)
@@ -159,6 +162,7 @@ Instantiate an IAM user named automation_user. This user will serve as the prima
 
 ![The image shows the user review and create](image/images/user-review-and-create.png)
 
+
 - Under Select AWS access type:
 
 Choose Access key - Programmatic access. This option generates credentials (Access Key ID and Secret Access Key) for the user, which your script will use.
@@ -166,13 +170,65 @@ Choose Access key - Programmatic access. This option generates credentials (Acce
 Click Next: Permissions.
 
 
+4. # Assign the User to the IAM Role: 
+Link the automation_user to the previously created IAM role to inherit its permissions. This step is vital for enabling the necessary access levels for our automation tasks.
 
-4. **Assign the User to the IAM Role:** Link the automation_user to the previously created IAM role to inherit its permissions. This step is vital for enabling the necessary access levels for our automation tasks.
+Update the Trust Policy of the IAM Role
+Ensure the IAM role's trust policy allows the automation_user to assume the role.
+
+- Go to the IAM Roles section in the AWS - - - Management Console.
+
+- Choose the IAM role you created.
+
+- Click on "Trust relationships" > "Edit trust policy".
+
+- Update the trust policy to allow automation_user to assume the role:
+json
+
+![The image shows the role user updated](image/images/role-user-updated.png)
 
 
-5. **Attach the IAM Policy to the User:** Ensure that the automation_user is explicitly granted the permissions defined in our IAM policy by attaching the policy directly to the user. This attachment solidifies the user's access to EC2 and S3 resources.
+![The image shows the role user updated](image/images/roles-user-access-linked.png)
 
-6. **Create Programmatic Access Credentials:** Generate programmatic access credentials- specifically, an **access key ID** and a **secret access key** for **automation_user**. These credentials are indispensable for authenticating our script with the AWS API through the Linux terminal, allowing it to create and manage cloud resources programmatically.
+5. # Attach the IAM Policy to the User:
+Ensure that the automation_user is explicitly granted the permissions defined in our IAM policy by attaching the policy directly to the user. This attachment solidifies the user's access to EC2 and S3 resources.
+
+Log in to the AWS Management Console.
+
+Navigate to IAM:
+Go to Services > IAM.
+
+Access the User:
+In the IAM dashboard, click on Users in the left menu.
+Select the automation_user from the list.
+
+Attach the Policy:
+On the user's summary page, go to the Permissions tab.
+Click on Add permissions.
+Select Attach policies directly.
+
+Search for and attach either:
+AmazonEC2FullAccess (for EC2 full access)
+AmazonS3FullAccess (for S3 full access)
+Alternatively, attach a custom policy if you created one earlier.
+
+Review and Confirm:
+After selecting the policies, click on Next and then Add permissions to finalize.
+
+6. # Create Programmatic Access Credentials:
+ 
+ Generate programmatic access credentials- specifically, an **access key ID** and a **secret access key** for **automation_user**. These credentials are indispensable for authenticating our script with the AWS API through the Linux terminal, allowing it to create and manage cloud resources programmatically.
+
+![The image shows the user access key](image/images/create-user-access-key.png)
+
+
+![The image shows the user access key](image/images/user-access-key1.png)
+
+
+![The image shows the user access key](image/images/user-access-key-created.png)
+
+
+![The image shows the user access key](image/images/user-access-key-created1.png)
 
 
 ***Installing and Configuring the AWS CLI***
@@ -256,7 +312,11 @@ To verify that my AWS CLI is configured correctly and can communicate with AWS s
 
 This command queries the EC2 service for a list of all regions and formats the output as a table. which makes it easy to read. You will recieve a list of regions.
 
-***************
+ ![The image shows the command queries the EC2 service](image/images/user-configuration1.png)
+
+
+ ![The image shows the command queries the EC2 service](image/images/user-configuration2.png)
+
 
 Now I'm ready to begin developing my shell script.
 
