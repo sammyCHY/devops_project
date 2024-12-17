@@ -111,6 +111,162 @@ fi
 sudo chmod +x aws_cloud_manager.sh
 ```
 
+- Without running the script, can you explain what code is doing?
+
+If I execute this as it is, the execution should go into the else block just because there is no ***$ENVIRONMENT*** variable set.
+
+What if I type this below on my terminal
+
+```
+export ENVIRONMENT=production
+```
+Then run the script again. You should get an output that says;
+
+```
+Running script for Production Environment...
+```
+
+********************
+
+Now, I can see how environment variables can be usd to dynamically apply logic in the script based on the requirement I'm trying to satisfy.
+
+The **export** command is used to set key and values for environment variables.
+
+I can also set the variable directly within the script. For example if the script was like this.
 
 
+```
+#!/bin/bash
 
+# Initialize environment variable
+ENVIRONMENT="testing"
+
+# Checking and acting on the environment variable
+if [ "$ENVIRONMENT" == "local" ]; then
+  echo "Running script for Local Environment..."
+  # Commands for local environment
+elif [ "$ENVIRONMENT" == "testing" ]; then
+  echo "Running script for Testing Environment..."
+  # Commands for testing environment
+elif [ "$ENVIRONMENT" == "production" ]; then
+  echo "Running script for Production Environment..."
+  # Commands for production environment
+else
+  echo "No environment specified or recognized."
+  exit 2
+fi
+```
+Running this version of the script would mean everything you run it. It will consider the logic for testing environment. Because the value has been "hard coded" in the script, and that is no longer dynamic.
+
+The best to do this would be to use command line arguments.
+
+**Positional parameters in shell scripting**
+
+As we've learned, hard-coding values directly into scripts is considered poor practice. Instead, we aim for flexibility by allowing scripts to accept input dynamically. This is where positional parameters come in - a capability in shell scripting that enables passing arguments to scripts at runtime, and then replaces the argument with the parameter inside the script.
+
+- The argument passed to the script is the value that is provided at runtime.
+
+As in the case of the below where the argument is "testing", and it is also the value to the variable within the script.
+
+```
+./aws_cloud_manager.sh testing
+```
+
+- Inside the script we will have this;
+
+```
+ENVIRONMENT=$1
+```
+
+`$1` is the positional parameter which will be replaced by the argument passed to the script.
+
+Because it is possible to pass multiple parameters to a script, dollar sign `$` is used to prefix the position of the argument passed to the script. Imagine if another variable witin the script is called ***NUMBER_OF_INSTANCES*** that determines how many EC2 instances get provisioned, then calling the script might look like;
+
+```
+./aws_cloud_manager.sh testing 5
+```
+ The positional parameters inside the script would then look like.
+
+```
+ENVIRONMENT=$1
+NUMBER_OF_INSTANCES=$2
+```
+
+- Each positional parameter within the script corresponds to a specific argument passed to the script, and each parameter has a position represented by an index number.
+
+In the case of
+
+```
+./aws_cloud_manager.sh testing 5
+```
+We have two positional parameters.
+
+
+**************
+
+
+Notice that the script itself is in position "0"
+
+**Condition to check the number of arguments**
+
+
+Creating shell script to meet specific requirements is one aspect of development, but ensuring their cleanliness and freedom from bugs is equally crucial. Integrating logical checks periodically to validate data is considered a best practice in script development.
+
+
+A prime example of this is verifying the number of arguments passed to the script, ensuring that the script recieves the correct input required for its execution, and providing clear guidance to users in case of incorrect usage.
+
+Below code ensures that when the script is executed, exactly 1 argument is passed to it, otherwise it fails with an exit code of 1 and an shows a message telling the user how to use the script.
+
+
+```
+# Checking the number of arguments
+if [ "$#" -ne 0 ]; then
+    echo "Usage: $0 <environment>"
+    exit 1
+fi
+```
+
+- "$#" is a special variable that holds the number of arguments passed to the script.
+
+- "-ne" means "Not equal"
+
+- "$0" represent the positional parameters of 0, which is the script itself
+
+Hence, if number of arguments is not equal to "1", then show the echo message.
+
+An updated script would look like this;
+
+
+```
+#!/bin/bash
+
+# Checking the number of arguments
+if [ "$#" -ne 0 ]; then
+    echo "Usage: $0 <environment>"
+    exit 1
+fi
+
+# Accessing the first argument
+ENVIRONMENT=$1
+
+# Acting based on the argument value
+if [ "$ENVIRONMENT" == "local" ]; then
+  echo "Running script for Local Environment..."
+elif [ "$ENVIRONMENT" == "testing" ]; then
+  echo "Running script for Testing Environment..."
+elif [ "$ENVIRONMENT" == "production" ]; then
+  echo "Running script for Production Environment..."
+else
+  echo "Invalid environment specified. Please use 'local', 'testing', or 'production'."
+  exit 2
+fi
+```
+
+
+********************
+
+**************
+
+Your task
+
+I have to summerise all my learning in this mini project into a paragraph and submit.
