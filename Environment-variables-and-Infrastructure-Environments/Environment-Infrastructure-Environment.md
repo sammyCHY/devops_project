@@ -107,6 +107,10 @@ fi
 
 - Give it the relevant permission to execute on my local terminal
 
+```
+sudo chmod +x aws_cloud_manager.sh
+```
+
 
 
 
