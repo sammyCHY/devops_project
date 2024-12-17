@@ -85,7 +85,7 @@ Lets begin by creating environment variable to determine if the script is runnin
 
 - Put the code below into the file.
 
-```
+(```
 #!/bin/bash
 
 # Checking and acting on the environment variable
@@ -101,8 +101,8 @@ echo "Running script for Production Environment..."
 else
 echo "No environment specified or recognized."
 exit 2
-fi
-,
+fi)
+
 
 - Give it the relevant permission to execute on my local terminal
 
