@@ -102,6 +102,10 @@ else
 echo "No environment specified or recognized."
 exit 2
 fi
+,
+
+- Give it the relevant permission to execute on my local terminal
+
 
 
 
