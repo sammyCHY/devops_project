@@ -85,7 +85,7 @@ Lets begin by creating environment variable to determine if the script is runnin
 
 - Put the code below into the file.
 
-(```
+```(
 #!/bin/bash
 
 # Checking and acting on the environment variable
