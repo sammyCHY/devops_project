@@ -105,6 +105,12 @@ fi
 ```
 
 
+
+![The image shows the representation of local environment](image/images/script.png)
+
+
+![The image shows the representation of local environment](image/images/no-environment-specified.png)
+
 - Give it the relevant permission to execute on my local terminal
 
 ```
@@ -125,9 +131,8 @@ Then run the script again. You should get an output that says;
 ```
 Running script for Production Environment...
 ```
-
-********************
-
+![The image shows the representation of local environment](image/images/no-environment-specified.png)
+ 
 Now, I can see how environment variables can be usd to dynamically apply logic in the script based on the requirement I'm trying to satisfy.
 
 The **export** command is used to set key and values for environment variables.
@@ -201,8 +206,7 @@ In the case of
 ```
 We have two positional parameters.
 
-
-**************
+![The image shows the two positional parameters](image/images/parameters.png)
 
 
 Notice that the script itself is in position "0"
@@ -261,11 +265,21 @@ else
   exit 2
 fi
 ```
+![The image shows the checking number of argument](image/images/environment-script.png)
 
 
-********************
+![The image shows the checking number of argument](image/images/environment-cli.png)
 
-**************
+
+![The image shows the checking number of argument](image/images/variable-testing.png)
+
+![The image shows the checking number of argument](image/images/variable-testing2.png)
+
+![The image shows the checking number of argument](image/images/final-testing.png)
+
+
+![The image shows the checking number of argument](image/images/production-environment.png)
+
 
 Your task
 
