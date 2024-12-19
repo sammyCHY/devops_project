@@ -68,3 +68,65 @@ else
 fi
 ```
 
+![The image shows the code without the function](image/images/check_num_args.png)
+
+```
+#!/bin/bash
+
+check_num_of_args() \{
+# Checking the number of arguments
+if [ "$#" -ne 0 ]; then
+    echo "Usage: $0 <environment>"
+    exit 1
+fi
+\}
+
+# Accessing the first argument
+ENVIRONMENT=$1
+
+# Acting based on the argument value
+if [ "$ENVIRONMENT" == "local" ]; then
+  echo "Running script for Local Environment..."
+elif [ "$ENVIRONMENT" == "testing" ]; then
+  echo "Running script for Testing Environment..."
+elif [ "$ENVIRONMENT" == "production" ]; then
+  echo "Running script for Production Environment..."
+else
+  echo "Invalid environment specified. Please use 'local', 'testing', or 'production'."
+  exit 2
+fi
+```
+
+When a function is defined in a shell script, it remains inactive unitl it is invoked or called within the script. To execute the code within the function, I must place a call to the function in a relevant part of my script.
+
+It's crucial to cionsider the order in which the interpreter evaluates each line of code. Placing the function where it logically fits within the flow of my script ensures that it is available and ready to be executed when needed. This organization helps maintain the readability and coherence of my script, making it easier to understand and debug.
+
+```
+#!/bin/bash
+
+# Environment variables
+ENVIRONMENT=$1
+
+check_num_of_args() \{
+# Checking the number of arguments
+if [ "$#" -ne 0 ]; then
+    echo "Usage: $0 <environment>"
+    exit 1
+fi
+\}
+
+check_num_of_args()
+
+# Acting based on the argument value
+if [ "$ENVIRONMENT" == "local" ]; then
+  echo "Running script for Local Environment..."
+elif [ "$ENVIRONMENT" == "testing" ]; then
+  echo "Running script for Testing Environment..."
+elif [ "$ENVIRONMENT" == "production" ]; then
+  echo "Running script for Production Environment..."
+else
+  echo "Invalid environment specified. Please use 'local', 'testing', or 'production'."
+  exit 2
+fi
+```
+
