@@ -277,10 +277,6 @@ fi
 
 ![The image shows the checking number of argument](image/images/final-testing.png)
 
-
-![The image shows the checking number of argument](image/images/production-environment.png)
-
-
-Your task
+### My task
 
 I have to summerise all my learning in this mini project into a paragraph and submit.
