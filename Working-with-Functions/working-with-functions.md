@@ -193,7 +193,7 @@ check_aws_cli() \{
 ```
 Lets break down this section of the code;
 
-- if ! command -v aws &> /dev/null;then: This line contains an if statement. Here's the breakdown:
+- if !command -v aws &> /dev/null;then: This line contains an if statement. Here's the breakdown:
 
 - !: This is the logical negation operator. It reverses the result of a command, so ! command means "if Not".
 
@@ -204,7 +204,7 @@ which aws
 ```
 Hence, the "command -v" utility also return the same thing that the ***"which"*** command returns. with the "!" operator, we are saying that if the path for "aws" does not exist, then return 1
 
-- &> /dev/null: This part redirects both standard output (stdout) and standard error (stderr) to /dev/null, a special device file that discards all output. This effectively suppresses any output from the command -v command. [Watch this video to fully understand redirectio](https://www.youtube.com/watch?v=IysKGrfHnKo&list=PLtPuNR8I4TvkwU7Zu0l0G_uwtSUXLckvh)
+- &> /dev/null: This part redirects both standard output (stdout) and standard error (stderr) to /dev/null, a special device file that discards all output. This effectively suppresses any output from the command -v command. [Watch this video to fully understand redirection](https://www.youtube.com/watch?v=IysKGrfHnKo&list=PLtPuNR8I4TvkwU7Zu0l0G_uwtSUXLckvh)
 
 - then: Then keyword indicates the beginning of the code block to execute if the condition in the if statement is true.
 
