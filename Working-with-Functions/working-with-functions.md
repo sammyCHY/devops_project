@@ -257,5 +257,79 @@ output = json
 region = us-west-2
 output = json
 ```
+A profile will enable me to easily switch between different AWS configurations. If you set an environment variable by running the command **export AWS_PROFILE=testing** - this will pick up the configuration from both file and authrnticate me to the testing environment.
 
+**AWS Profile** The AWS_PROFILE environment variable allows users to specify which profile to use from their AWS confiq and credentials files. If AWS_PROFILE is not set, the default profile is used.
 
+Here is what the function would look like;
+
+```
+#!/bin/bash
+
+# Function to check if AWS profile is set
+check_aws_profile() \{
+    if [ -z "$AWS_PROFILE" ]; then
+        echo "AWS profile environment variable is not set."
+        return 1
+    fi
+\}
+
+```
+The **-z** flag is used to test if the value of the string variable (in this case, the value stored in the $AWS_PROFILE variable) has zero lenght, meaning it is empty or null.
+
+Our shell script will now look like this.
+
+```
+#!/bin/bash
+
+# Environment variables
+ENVIRONMENT=$1
+
+check_num_of_args() \{
+# Checking the number of arguments
+if [ "$#" -ne 0 ]; then
+    echo "Usage: $0 <environment>"
+    exit 1
+fi
+\}
+
+activate_infra_environment() \{
+# Acting based on the argument value
+if [ "$ENVIRONMENT" == "local" ]; then
+  echo "Running script for Local Environment..."
+elif [ "$ENVIRONMENT" == "testing" ]; then
+  echo "Running script for Testing Environment..."
+elif [ "$ENVIRONMENT" == "production" ]; then
+  echo "Running script for Production Environment..."
+else
+  echo "Invalid environment specified. Please use 'local', 'testing', or 'production'."
+  exit 2
+fi
+\}
+
+# Function to check if AWS CLI is installed
+check_aws_cli() \{
+    if ! command -v aws &> /dev/null; then
+        echo "AWS CLI is not installed. Please install it before proceeding."
+        return 1
+    fi
+\}
+
+# Function to check if AWS profile is set
+check_aws_profile() \{
+    if [ -z "$AWS_PROFILE" ]; then
+        echo "AWS profile environment variable is not set."
+        return 1
+    fi
+\}
+
+check_num_of_args
+activate_infra_environment
+check_aws_cli
+check_aws_profile
+```
+Congratulations for reaching this milestone.
+
+### Your task
+
+Summarise all your learning in this mini project into a paragraph and submit.
