@@ -27,7 +27,7 @@ function_name() \{
 \}
 ```
 
-![The image shows the function structure](image/images/function_name1)
+![The image shows the function structure](image/images/function_name1.png)
 
 Here's a breakdown of the syntax:
 
