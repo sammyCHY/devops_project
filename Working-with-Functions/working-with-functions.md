@@ -99,7 +99,7 @@ fi
 
 When a function is defined in a shell script, it remains inactive unitl it is invoked or called within the script. To execute the code within the function, I must place a call to the function in a relevant part of my script.
 
-It's crucial to cionsider the order in which the interpreter evaluates each line of code. Placing the function where it logically fits within the flow of my script ensures that it is available and ready to be executed when needed. This organization helps maintain the readability and coherence of my script, making it easier to understand and debug.
+It's crucial to consider the order in which the interpreter evaluates each line of code. Placing the function where it logically fits within the flow of my script ensures that it is available and ready to be executed when needed. This organization helps maintain the readability and coherence of my script, making it easier to understand and debug.
 
 Lets see what that would now look like;
 
@@ -275,7 +275,7 @@ check_aws_profile() \{
 \}
 
 ```
-The **-z** flag is used to test if the value of the string variable (in this case, the value stored in the $AWS_PROFILE variable) has zero lenght, meaning it is empty or null.
+The **-z** flag is used to test if the value of the string variable (in this case, the value stored in the $AWS_PROFILE variable) has zero length, meaning it is empty or null.
 
 Our shell script will now look like this.
 
