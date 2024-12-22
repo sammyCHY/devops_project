@@ -212,12 +212,13 @@ echo "$\{departments[3]\}"
         fi
     done
 ```
+
 - This line marks the end of the create_s3_buckets function definition.
 
 ```
  \}
 ```
-The complete script till stage will now look like this.
+- The complete script till stage will now look like this.
 
 ```
 #!/bin/bash
