@@ -220,6 +220,7 @@ echo "$\{departments[3]\}"
 ```
 - The complete script till stage will now look like this.
 
+
 ```
 #!/bin/bash
 
@@ -315,6 +316,8 @@ check_aws_profile
 create_ec2_instances
 create_s3_buckets
 ```
+
+
 Congratulations for reaching this milestone.
 
 **Your task**
