@@ -145,13 +145,15 @@ create_s3_buckets() \{
 # Define a company name as prefix
 company="datawise"
 ```
+
 - This is where we define a variable that is an array. An array named **departments** is declared, containing the names of differents. Each department name will be used to construct the name of an S3 bucket.
 
 ```
   # Array of department names
   departments=("Marketing" "Sales" "HR" "Operations" "Media")
 ```
-- This line initiates a loop that iterates over each element in the departments array. For each iteration, the value of the current departments name is stored in the variable
+
+- This line initiates a loop that iterates over each element in the departments array. For each iteration, the value of the current department name is stored in the variable
 **department**
 
 ```
@@ -159,27 +161,34 @@ for department in "$\{departments[@]\}"; do
 ```
 
 ```
-    The syntax $\{departments[@]\} in Bash refers to all elements in the array departments.
+The syntax $\{departments[@]\} in Bash refers to all elements in the array departments.
 
-    [@]: This is an index or slice syntax specific to arrays in Bash. It signifies that we want to access all elements of the array.
+[@]: This is an index or slice syntax specific to arrays in Bash. It signifies that we want to access all elements of the array.
 
-    If you were interested in accessing a single element from the array, you would still use the syntax $departments[index]\}, where index is the position of the element you want to access. Remember that array indexing in Bash starts from 0.
+If you were interested in accessing a single element from the array, you would still use the syntax $departments[index]\}, where index is the position of the element you want to access. Remember that array indexing in Bash starts from 0.
     ```
-    An example is;
+
+An example is;
 
  ```
- departments=("Marketing" "Sales" "HR" "Operations" "Media")
+departments=("Marketing" "Sales" "HR" "Operations" "Media")
 
 # Accessing the fourth element (Operations) from the array
+
 echo "$\{departments[3]\}"
-```
-Output:
-
-```
-Operations
-```
-- Within the loop, we construct the name of the S3 bucket using the company prefix, the current **department** name, and the sufix ***"-Data-Bucket".***
+ ```
 
 
+ Output:
 
+ ```
+ Operations
+ ```
+- Within the loop, we construct the name of the S3 bucket using the company prefix, the current **department** name, and the sufix ***"-Data-Bucket".***This ensures that each bucket name is unique.
+
+ ```
+ bucket_name="$\{company\}-$\{department\}-Data-Bucket"
+ ```
+
+- Using the AWS CLI (aws s3api), we create an S3 bucket with the specified name from the variable ($bucket_name), in the specified AWS region (Your-region). Make sure to replace **"Your-region"**
 
