@@ -129,6 +129,22 @@ create_s3_buckets() \{
 # Call the function to create S3 buckets for different departments
 create_s3_buckets
 ```
+
 Lets break down each part of the code.
+
+- This lines begins the definition of a shell function named **create_s3_buckets.**
+
+```
+# Function to create S3 buckets for different departments
+create_s3_buckets() \{
+```
+
+- Here, I define a variable named company and assign it the value "datawise". This varaible will serve as the prefix for all S3 bucket names, ensuring their uniqueness. You should replace ***datawise*** with any other company name of my choice or any other unique identifier. This is because S3 buckets **Must** be unique globally.
+
+```
+# Define a company name as prefix
+company="datawise"
+```
+
 
 
