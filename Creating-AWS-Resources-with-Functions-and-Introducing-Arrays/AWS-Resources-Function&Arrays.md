@@ -14,10 +14,15 @@ To programmatically create EC2 instances, you must use the [official documentati
 
 From the Available Commands, you will be able to interact with AWS Programmatically.
 
-*********
+
+![The image shows how to create instance via AWS CLI](image/images/AWS-CLI-command.png)
+
 If you search for **run-instances** on the page with **Control F** on the key board, click on it and it will take you to the datailed documentation on the sub-command to create EC2 instances.
 
-*********
+![The image shows the create instance via AWS CLI](image/images/run-instances.png)
+
+
+![The image shows the create instance via AWS CLI](image/images/run-instances-final.png)
 
 Here is an ecample of how you would create EC2 instances using the command line.
 
@@ -34,7 +39,7 @@ Note: Make sure you have a key pair created in my aws console. The you can repla
 
 On the same page, if you search for one of the arguments, you will be able to read more about how to pass different arguments to the cli.
 
-********
+![The image shows how key pair is created](image/images/mykeypair.png)
 
 For the command to work: A keypair must already exist. You must create a keypair from the console. To create a new key pair.
 
@@ -42,7 +47,7 @@ For the command to work: A keypair must already exist. You must create a keypair
 
 2. Follow the image below to create a key pair
 
-********
+![The image shows to create key pair](image/images/2024-12-22 03-47-07.mp4)
 
 Now, lets update the shell script and create a function that will be responsible for creating EC2 instances.
 
@@ -100,5 +105,30 @@ An array is a versatile data structure that allows you to store multiple values 
 
 Below is what the function would look like.
 
+```
+# Function to create S3 buckets for different departments
+create_s3_buckets() \{
+    # Define a company name as prefix
+    company="datawise"
+    # Array of department names
+    departments=("Marketing" "Sales" "HR" "Operations" "Media")
+    
+    # Loop through the array and create S3 buckets for each department
+    for department in "$\{departments[@]\}"; do
+        bucket_name="$\{company\}-$\{department\}-Data-Bucket"
+        # Create S3 bucket using AWS CLI
+        aws s3api create-bucket --bucket "$bucket_name" --region your-region
+        if [ $? -eq 0 ]; then
+            echo "S3 bucket '$bucket_name' created successfully."
+        else
+            echo "Failed to create S3 bucket '$bucket_name'."
+        fi
+    done
+\}
+
+# Call the function to create S3 buckets for different departments
+create_s3_buckets
+```
+Lets break down each part of the code.
 
 
