@@ -186,7 +186,7 @@ echo "$\{departments[3]\}"
  Operations
  ```
 
-- Within the loop, we construct the name of the S3 bucket using the company prefix, the current **department** name, and the sufix ***"-Data-Bucket".***This ensures that each bucket name is unique.
+- Within the loop, we construct the name of the S3 bucket using the company prefix, the current **department** name, and the sufix ***"Data-Bucket".*** This ensures that each bucket name is unique.
 
  ```
  bucket_name="$\{company\}-$\{department\}-Data-Bucket"
