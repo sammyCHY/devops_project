@@ -12,12 +12,12 @@ These functions will streamline the process of resources creation and enable us 
 
 To programmatically create EC2 instances, you must use the [official documentation](https://docs.aws.amazon.com/cli/latest/reference/ec2/) to understand how to use the [`aws cli` to create instances](https://docs.aws.amazon.com/cli/latest/reference/ec2/)
 
-From the Available Commands, you will be able to interact with AWS Programmatically.
+From the Available Commands, I will be able to interact with AWS Programmatically.
 
 
 ![The image shows how to create instance via AWS CLI](image/images/AWS-CLI-command.png)
 
-If you search for **run-instances** on the page with **Control F** on the key board, click on it and it will take you to the datailed documentation on the sub-command to create EC2 instances.
+If you search for **run-instances** on the page with **Control F** on the key board, click on it and it will take you to the detailed documentation on the sub-command to create EC2 instances.
 
 ![The image shows the create instance via AWS CLI](image/images/run-instances.png)
 
@@ -35,7 +35,7 @@ Here is an example of how I would create EC2 instances using the command line.
         --region eu-west-2
 ```
 
-Note: Make sure you have a key pair created in my aws console. The you can replace the `mykeypair` with my key pair name.
+Note: I have to make sure to have a key pair created in my aws console. Then I can replace the `mykeypair` with my key pair name.
 
 On the same page, if you search for one of the arguments, you will be able to read more about how to pass different arguments to the cli.
 
@@ -47,10 +47,9 @@ For the command to work: A keypair must already exist. You must create a keypair
 
 2. Follow the image below to create a key pair
 
-Now, lets update the shell script and create a function that will be responsible for creating EC2 instances.
-
 ![ the video shows the creation of the key pair](image/images/chrome_tgH90UZGmO.gif)
 
+Now, lets update the shell script and create a function that will be responsible for creating EC2 instances.
 
 ```
 #!/bin/bash
@@ -94,7 +93,9 @@ create_ec2_instances
 
 Before dividing into creating S3 buckets, It's beneficial to brush up on AWS S3 bucket concepts. If you need a quick refresher, [consider watching this informative video](https://www.youtube.com/watch?v=e6w9LwZJFIA&pp=ygURd2hhdCBpcyBzMyBidWNrZXQ%3D)
 
-The [AWS CLI reference for S3 can be found here.](https://docs.aws.amazon.com/cli/latest/reference/s3api/) We will be using it in the script.
+The [AWS CLI reference for S3 can be found here.](https://docs.aws.amazon.com/cli/latest/reference/s3api/) 
+
+We will be using it in the script.
 
 In this section, our objective is to create five distict S3 buckets, each designated for storing data related to Marketing, Sales, HR, Operations, and Media.
 
@@ -140,7 +141,7 @@ Lets break down each part of the code.
 create_s3_buckets() \{
 ```
 
-- Here, I define a variable named company and assign it the value "datawise". This varaible will serve as the prefix for all S3 bucket names, ensuring their uniqueness. You should replace ***datawise*** with any other company name of my choice or any other unique identifier. This is because S3 buckets **Must** be unique globally.
+- Here, I define a variable named company and assign it the value "datawise". This variable will serve as the prefix for all S3 bucket names, ensuring their uniqueness. I should replace ***datawise*** with any other company name of my choice or any other unique identifier. This is because S3 buckets **Must** be unique globally.
 
 ```
 # Define a company name as prefix
