@@ -47,7 +47,7 @@ For the command to work: A keypair must already exist. You must create a keypair
 
 2. Follow the image below to create a key pair
 
-![The image shows to create key pair]("C:\Users\DONKAMS\Pictures\Screenshots\images\2024-12-22 03-47-07.mp4")
+![The image shows to create key pair](C:\Users\DONKAMS\Pictures\Screenshots\images\2024-12-22 03-47-07.mp4)
 
 Now, lets update the shell script and create a function that will be responsible for creating EC2 instances.
 
