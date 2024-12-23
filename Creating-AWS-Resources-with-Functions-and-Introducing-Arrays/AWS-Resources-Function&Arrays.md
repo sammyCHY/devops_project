@@ -24,7 +24,7 @@ If you search for **run-instances** on the page with **Control F** on the key bo
 
 ![The image shows the create instance via AWS CLI](image/images/run-instances-final.png)
 
-Here is an ecample of how you would create EC2 instances using the command line.
+Here is an example of how I would create EC2 instances using the command line.
 
 ```
     aws ec2 run-instances \
@@ -46,8 +46,6 @@ For the command to work: A keypair must already exist. You must create a keypair
 1. Navigate to the AWS EC2 console
 
 2. Follow the image below to create a key pair
-
-![The image shows to create key pair](C:\Users\DONKAMS\Pictures\Screenshots\image\images\2024-12-22 03-47-07.mp4)
 
 Now, lets update the shell script and create a function that will be responsible for creating EC2 instances.
 
@@ -166,7 +164,7 @@ The syntax $\{departments[@]\} in Bash refers to all elements in the array depar
 [@]: This is an index or slice syntax specific to arrays in Bash. It signifies that we want to access all elements of the array.
 
 If you were interested in accessing a single element from the array, you would still use the syntax $departments[index]\}, where index is the position of the element you want to access. Remember that array indexing in Bash starts from 0.
-    ```
+```
 
 An example is;
 
@@ -184,6 +182,7 @@ echo "$\{departments[3]\}"
  ```
  Operations
  ```
+
 - Within the loop, we construct the name of the S3 bucket using the company prefix, the current **department** name, and the sufix ***"-Data-Bucket".***This ensures that each bucket name is unique.
 
  ```
@@ -315,6 +314,7 @@ check_aws_cli
 check_aws_profile
 create_ec2_instances
 create_s3_buckets
+
 ```
 
 
