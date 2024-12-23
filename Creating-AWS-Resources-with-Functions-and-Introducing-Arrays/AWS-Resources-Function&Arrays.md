@@ -49,7 +49,7 @@ For the command to work: A keypair must already exist. You must create a keypair
 
 Now, lets update the shell script and create a function that will be responsible for creating EC2 instances.
 
-![ the video shows the creation of the key pair](C:\Users\DONKAMS\Pictures\Screenshots\images\chrome_tgH90UZGmO.gif)
+![ the video shows the creation of the key pair](image/images/chrome_tgH90UZGmO.gif)
 
 
 ```
