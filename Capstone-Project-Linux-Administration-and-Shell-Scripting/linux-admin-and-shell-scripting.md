@@ -175,3 +175,99 @@ echo "Script execution completed successfully."
  ![The image shows the creation of the access key and aws cli configuration](image/images/create-user-security-access5.png)
 
  ![The image shows the creation of the access key and aws cli configuration](image/images/create-user-security-access-cli-configured.png)
+
+
+ 2. **Save the Script:**
+ - Save the script to a file, e.g., `aws_cloud_managers.sh`.
+
+![The image shows the script file creation](image/images/aws_cloud_managers.sh.png)
+
+ 3. Make the Script Executable:
+
+- Run the following command to make the script executable
+
+`sudo chmod +x aws_cloud_managers.sh`
+
+4. Run the Script:
+
+- Execute the script:
+`./aws_cloud_managers.sh`
+
+![The image shows the running of executable permissions](image/images/aws_cloud_managers_executable.png)
+
+
+2. # Define IAM user Names Array:
+To define an **IAM user names array** in a shell script, I can use a Bash array to store the names of the users. Below is the procedures:
+
+Defining the IAM User Names Array.
+
+```
+IAM_USERS=("user1" "user2" "user3" "user4" "user5")
+```
+- Syntax Explanation:
+
+- IAM_USERS: The name of the array variable.
+
+- `=("user1" "user2" "user3" "user4" "user5")`: The array elements, which are the IAM user names.
+
+### Accessing Array Elements
+
+- Iterate Through the Array: To loop through the user names in the array:
+
+```
+for USER in "${IAM_USERS[@]}"
+do
+    echo "Creating IAM user: $USER"
+done
+```
+
+- `${IAM_USERS[@]}` Expand to all elements of the array.
+- `$USER`: Holds each element of the array during each iteration.
+
+- **Access Individual Elements:** To access a specific element in the array (e.g.,the first user):
+
+`echo "First user: ${IAM_USERS[0]}"`
+
+### Full Example:
+
+Here's an example script where the array is used to create IAM users:
+
+```
+ #!/bin/bash
+
+# Define the IAM User Names Array
+IAM_USERS=("user1" "user2" "user3" "user4" "user5")
+
+# Loop Through the Array and Create IAM Users
+for USER in "${IAM_USERS[@]}"
+do
+    echo "Creating IAM user: $USER"
+    
+    # AWS CLI command to create IAM user
+    aws iam create-user --user-name "$USER"
+    
+    # Check if the user was created successfully
+    if [ $? -eq 0 ]; then
+        echo "Successfully created IAM user: $USER"
+    else
+        echo "Failed to create IAM user: $USER"
+    fi
+done
+
+echo "IAM user creation process completed."
+
+```
+![The image shows the array been used to create IAM users](image/images/array-created-iam-users1.png)
+
+
+![The image shows the array been used to create IAM users](image/images/array-created-iam-users2.png)
+
+
+![The image shows the array been used to create IAM users](image/images/array-created-iam-users3.png)
+
+- Store the names of the five IAM users in an array for easy iteration during user creation.
+
+![The image shows the list of the five users in array](image/images/names-five-iam-users1.png)
+
+![The image shows the list of the five users in array](image/images/names-five-iam-users2.png)
+
