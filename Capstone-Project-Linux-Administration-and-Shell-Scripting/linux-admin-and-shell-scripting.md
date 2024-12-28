@@ -271,3 +271,113 @@ echo "IAM user creation process completed."
 
 ![The image shows the list of the five users in array](image/images/names-five-iam-users2.png)
 
+
+3. # Create IAM Users: 
+
+- Iterate through the IAM user names array and create IAM users for each employee using AWS CLI commands.
+
+
+4. Create IAM Group:
+
+- Define a function to create an IAM 
+group named "admin" using the AWS CLI.
+
+```
+Create IAM Group
+
+  Write a function in the script to create the IAM group:
+
+   create_group() { GROUP_NAME="admin"
+   aws iam create-group --group-name
+   "$GROUP_NAME"
+   echo "Created group: $GROUP_NAME"
+   }
+   create_group.
+   ```
+
+  1. Overview of `create_group` Function
+
+  The `create_group()` function:
+
+- Defines a group name ( GROUP_NAME ).
+- Uses the AWS CLI to create an IAM group.
+- Provides feedback to the user if the group was created successfully or if there was an error.
+
+2. Step-by-Step Implementation
+
+Step1: Full Script Structure
+
+Create a file called `manage_iam_group.sh`:
+
+Bellow are the content to run the script:
+
+```
+#!/bin/bash
+
+# Function to create an IAM group
+create_group() {
+    GROUP_NAME="admin"  # Set the group name
+
+    echo "Attempting to create IAM group: $GROUP_NAME"
+
+    # AWS CLI command to create the group
+    aws iam create-group --group-name "$GROUP_NAME"
+
+    # Check if the command was successful
+    if [ $? -eq 0 ]; then
+        echo "Successfully created IAM group: $GROUP_NAME"
+    else
+        echo "Failed to create IAM group: $GROUP_NAME"
+    fi
+}
+
+# Main script execution
+create_group  # Call the function to create the group
+```
+
+Step 2: Make the Script Executable.
+
+`chmod +x manage_iam_group.sh`
+
+Step 3: Execute the Script
+
+Run the script:
+
+`./manage_iam_group.sh`
+
+The command bellow is to modify the script to check if the group already exists before attempting to create it. This way, you avoid errors and redundant group creation.
+
+```
+#!/bin/bash
+
+# Function to create an IAM group
+create_group() {
+    GROUP_NAME="admin"  # Set the group name
+
+    echo "Checking if group '$GROUP_NAME' already exists..."
+
+    # Check if the group exists
+    aws iam get-group --group-name "$GROUP_NAME" > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        echo "Group '$GROUP_NAME' already exists. No action taken."
+        return
+    fi
+
+    echo "Attempting to create IAM group: $GROUP_NAME"
+
+    # AWS CLI command to create the group
+    aws iam create-group --group-name "$GROUP_NAME"
+
+    # Check if the command was successful
+    if [ $? -eq 0 ]; then
+        echo "Successfully created IAM group: $GROUP_NAME"
+    else
+        echo "Failed to create IAM group: $GROUP_NAME"
+    fi
+}
+
+# Main script execution
+create_group  # Call the function to create the group
+```
+
+![The image shows the creation of the IAM group called development team](image/images/manage-iam-group-development-team.png)
