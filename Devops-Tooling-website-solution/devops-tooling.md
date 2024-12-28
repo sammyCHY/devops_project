@@ -32,5 +32,5 @@ In this project I will implement a solution that consists of following component
 2. Webserver Linux: Red Hat Enterprise Linux 8
 3. Database Server: Ubuntu 20.04 + MySQL
 4. Storage Server: Red Hat Enterprise Linux 8 + NFS Server
-5. Programming Language: PHP
+5. Programming Language:
 6. Code Repository: **GitHub**
