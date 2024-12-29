@@ -473,10 +473,56 @@ If you need to detach the policy later, use the following command:
 aws iam detach-group-policy --group-name admin --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
 ```
 
-6. Assign Users to Group:
+# 6. Assign Users to Group:
 
 - Iterate through the array of IAM user names and assign each user to the "admin" group using AWS CLI commands.
 
+## Step 1: Complete the Script
+Here's the full script with the `assign_users_to_group` function, assuming the IAM users array ( IAM_USERS ) is already defined:
+
+```
+#!/bin/bash
+
+# Array of IAM users
+IAM_USERS=("user1" "user2" "user3" "user4" "user5")
+
+# Function to assign users to a group
+assign_users_to_group() {
+    GROUP_NAME="admin"  # Define the group name
+    echo "Assigning users to the group: $GROUP_NAME"
+
+    # Loop through the IAM_USERS array and add each user to the group
+    for USER in "${IAM_USERS[@]}"
+    do
+        aws iam add-user-to-group --user-name "$USER" --group-name "$GROUP_NAME" >/dev/null 2>&1
+        if [ $? -eq 0 ]; then
+            echo "Added user $USER to group $GROUP_NAME"
+        else
+            echo "Failed to add user $USER to group $GROUP_NAME"
+        fi
+    done
+}
+
+# Main script execution
+assign_users_to_group  # Call the function
+```
+
+## Step 2: Save the Script
+
+1. Open the shell editor (e.g., `nano`):
+
+```
+nano assign_users_to_group.sh
+```
+2. Paste the script above into the file.
+
+The Image below is the script pasted in the nano file editor.
+
+![The image shows the assigning of users to group "development_team"](image/images/assign-users-to-group-script.png)
+
+The Image below is the expected output.
+
+![The image shows the assigning of users to group "development_team"](image/images/user-to-group-development-run.png)
 
 # Pre-requisite
 
