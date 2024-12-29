@@ -527,3 +527,9 @@ The Image below is the expected output.
 # Pre-requisite
 
 - Completion of Linux foundations with shell Scripting mini projects.
+
+# Project Deliverables:
+
+1. Comprehensive documentation detailing my entire thought process in developing the script.
+
+2. Link to the script used for remote execution.
