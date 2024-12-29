@@ -446,6 +446,8 @@ attach_policy_to_group  # Call the function
 ```
 ./attach_policy.sh
 ```
+![The image shows the creation of the administrative policy attached to the group](image/images/administratoraccess-policy.png)
+
 ### Error Handling
 If the script fails to attach the policy, ensure the following:
 
@@ -474,7 +476,6 @@ aws iam detach-group-policy --group-name admin --policy-arn arn:aws:iam::aws:pol
 6. Assign Users to Group:
 
 - Iterate through the array of IAM user names and assign each user to the "admin" group using AWS CLI commands.
-
 
 
 # Pre-requisite
