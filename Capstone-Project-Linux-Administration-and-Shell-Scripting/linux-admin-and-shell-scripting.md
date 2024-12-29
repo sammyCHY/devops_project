@@ -12,7 +12,7 @@ In this capsone project, I will extend my shell scripting capabilities by creati
 
 **Objectives:**
 
-1. **Script Enhancement:** refers to improving or extending an existing script to add new functionality, make it more efficient, or tailor it to meet additional requirements. In this context of my project, script enhancement involves modifying the provided script to include new capabilities for AWS Identity and Access Management (IAM) tasks.
+# 1. **Script Enhancement:** refers to improving or extending an existing script to add new functionality, make it more efficient, or tailor it to meet additional requirements. In this context of my project, script enhancement involves modifying the provided script to include new capabilities for AWS Identity and Access Management (IAM) tasks.
 
 # Components of Script Enhancement:
 
@@ -196,7 +196,7 @@ echo "Script execution completed successfully."
 ![The image shows the running of executable permissions](image/images/aws_cloud_managers_executable.png)
 
 
-2. # Define IAM user Names Array:
+# 2. Define IAM user Names Array:
 To define an **IAM user names array** in a shell script, I can use a Bash array to store the names of the users. Below is the procedures:
 
 Defining the IAM User Names Array.
@@ -272,12 +272,12 @@ echo "IAM user creation process completed."
 ![The image shows the list of the five users in array](image/images/names-five-iam-users2.png)
 
 
-3. # Create IAM Users: 
+# 3. Create IAM Users: 
 
 - Iterate through the IAM user names array and create IAM users for each employee using AWS CLI commands.
 
 
-4. Create IAM Group:
+# 4. Create IAM Group:
 
 - Define a function to create an IAM 
 group named "admin" using the AWS CLI.
@@ -381,3 +381,102 @@ create_group  # Call the function to create the group
 ```
 
 ![The image shows the creation of the IAM group called development team](image/images/manage-iam-group-development-team.png)
+
+# 5. Attach Administrative Policy to Group:
+
+- Attach an AWS-managed administrative policy (e.g., "AdministratorAccess") to the "admin" group to grant administrative privileges.
+
+```
+ Attach Administrative Policy to the Group
+
+    Attach the AdministratorAccess policy to the group:
+
+attach_policy_to_group() {
+    GROUP_NAME="admin"
+    POLICY_ARN="arn:aws:iam::aws:policy/AdministratorAccess"
+    aws iam attach-group-policy --group-name "$GROUP_NAME" --policy-arn "$POLICY_ARN"
+    echo "Attached AdministratorAccess policy to group: $GROUP_NAME"
+}
+attach_policy_to_group. 
+```
+
+Attaching an administrative policy, such as `AdministratorAccess` to a group involves using the AWS CLI to bind the policy ARN to the group. Let's break down the process step-by-step with a script and its execution.
+
+# Step 1. Save the Script
+
+Open the shell editor (e.g., `nano, vi,vim`):
+
+```
+nano attach_policy.sh
+```
+2. Paste the script bellow into the file.
+
+3. Save and exit the editor (e.g., Press `ctrl+0`, `Enter`, and `ctrl+x` in `nano`).
+
+
+Here's the script to attach the `AdministratorAccess` policy to the `admin` `development-team`group:
+
+```
+#!/bin/bash
+
+# Function to attach an administrative policy to a group
+attach_policy_to_group() {
+    GROUP_NAME="admin"  # Define the group name
+    POLICY_ARN="arn:aws:iam::aws:policy/AdministratorAccess"  # ARN for AdministratorAccess policy
+
+    echo "Attaching AdministratorAccess policy to group: $GROUP_NAME"
+
+    # AWS CLI command to attach the policy to the group
+    aws iam attach-group-policy --group-name "$GROUP_NAME" --policy-arn "$POLICY_ARN"
+
+    # Check if the command was successful
+    if [ $? -eq 0 ]; then
+        echo "Successfully attached policy: $POLICY_ARN to group: $GROUP_NAME"
+    else
+        echo "Failed to attach policy to group: $GROUP_NAME"
+    fi
+}
+
+# Main script execution
+attach_policy_to_group  # Call the function
+```
+
+4. Run the script to attach the policy:
+
+```
+./attach_policy.sh
+```
+### Error Handling
+If the script fails to attach the policy, ensure the following:
+
+1. IAM Permissions: IAM user must have permission to attach policies to groups. The required permission is `iam:AttachGroupPolicy`.
+
+2. Policy ARN Accuracy: Verify the policy ARN is correct:
+
+```
+aws iam list-policies --query 'Policies[?PolicyName==`AdministratorAccess`].Arn'
+```
+
+3. Group Existence: Ensure the group `admin`, `development-team` exists:
+
+```
+aws iam list-groups
+```
+
+The command to removing a policy.
+
+If you need to detach the policy later, use the following command:
+
+```
+aws iam detach-group-policy --group-name admin --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+```
+
+6. Assign Users to Group:
+
+- Iterate through the array of IAM user names and assign each user to the "admin" group using AWS CLI commands.
+
+
+
+# Pre-requisite
+
+- Completion of Linux foundations with shell Scripting mini projects.
