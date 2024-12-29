@@ -12,7 +12,7 @@ In this capsone project, I will extend my shell scripting capabilities by creati
 
 **Objectives:**
 
-# 1. **Script Enhancement:** refers to improving or extending an existing script to add new functionality, make it more efficient, or tailor it to meet additional requirements. In this context of my project, script enhancement involves modifying the provided script to include new capabilities for AWS Identity and Access Management (IAM) tasks.
+ 1. **Script Enhancement:** refers to improving or extending an existing script to add new functionality, make it more efficient, or tailor it to meet additional requirements. In this context of my project, script enhancement involves modifying the provided script to include new capabilities for AWS Identity and Access Management (IAM) tasks.
 
 # Components of Script Enhancement:
 
