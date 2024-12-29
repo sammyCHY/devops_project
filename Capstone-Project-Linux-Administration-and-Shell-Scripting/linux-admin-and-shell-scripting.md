@@ -193,7 +193,7 @@ echo "Script execution completed successfully."
 - Execute the script:
 `./aws_cloud_managers.sh`
 
-![The image shows the running of executable permissions](image/images/aws_cloud_managers_executable.png)
+![The image shows the running of executable permissions](image/images/aws_cloud_managers-executable.png)
 
 
 # 2. Define IAM user Names Array:
