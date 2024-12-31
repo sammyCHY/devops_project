@@ -94,7 +94,7 @@ sudo apt-get update
 
 This a Linux command that refreshes the package list on a Debain-based system, ensuring the latest software information is available for installation.
 
-```ll/ubuntu/
+``` 
 sudo apt-get install ca-certificates curl gnupg
 ```
 ![The image shows the command that refresh package list](image/images/sudo-apt-get-install-ca-certificates-curl-gnupg1.png)
@@ -110,6 +110,17 @@ sudo install -m 0755 -d /etc/apt/keyrings
 ```
 
 ![The image shows the certificate authorities](image/images/sudo-install-keyrings.png)
+
+After, this stage, I need to import Docker's GPG key to my system.
+
+Add the missing GPG key:
+
+```
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+![The image shows the import the GPG Docker](image/images/sudo-mkdir-GPG-key.png)
 
 The command above creates a directory (/etc/apt/keyrings) with specific permissions (0755) for storing keyring files, which are used for docker's authentication.
 
@@ -236,7 +247,7 @@ Sets read permissions for all users on the Docker GPG key file within the APT ke
 ```
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | 
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 ![The image shows the adding of repository to APT sources](image/images/add-repository-to-apt-source.png)
@@ -249,3 +260,102 @@ sudo apt-get update
 ```
 ![The image shows the sudo apt get update](image/images/sudo-aptget-update.png)
 
+- Install latest version of docker
+
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+![The image shows the installation of docker container plugin](image/images/docker-latest-version1.png)
+
+
+![The image shows the installation of docker container plugin](image/images/docker-latest-version2.png)
+
+- Verify that docker has been successfully installed.
+
+```
+sudo systemctl status docker
+```
+
+![The image shows the status of Docker status](image/images/sudo-systemctl-status-docker.png)
+
+By default, after installing docker, it can only be run by root user or using `sudo` command. To run the docker command without sudo execute the command below
+
+```
+sudo usermod -aG docker ubuntu
+```
+After executing the command above, we can run docker command without using superuser priviledges
+
+Running the "Hello World" Container
+
+Using the `docker run` Command.
+
+The `docker run` command is the entry point to execute containers in Docker. It allows me to create and start a container based on a specified Docker image. The most straightforward example is the "Hello World" container, a minimalistic container that prints a greeting message when executed.
+
+```
+# Run the "Hello World" container
+docker run hello-world
+```
+
+![The image shows the status of Docker status](image/images/docker-run-hello-world.png)
+
+When the command is executed, Docker performs the following steps:
+
+1. Pulls Image (if not available locally): Docker checks if the `hello-world`image is available locally. If not, it automatically pulls it from the Docker Hub, a centralized repository for Docker images.
+
+2. Creates a Container: Docker creates a container base on the "hello-world" image. This container is an instance of the image, with its own isolated filesystem and runtime environment.
+
+3. Start the Container: The container is started, and it executes the predefined command in the `hello-world` image, which prints a friendly message.
+
+**Understanding the Docker Image and Container Lifecycle**
+
+- Docker Image: A Docker image is a lightweight, standalone, and executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, and system tools. Images are immutable, meaning they cannot be modified once created, Changes result in the creation of a new image.
+
+- Container Lifecycle: Containers are running instances of Docker images.
+
+  - They have a lifecycle: `create, start, stop, and delete.`
+
+  - Once a container is created from an image, it can be started, stopped, and restarted.
+
+  **Verifying the Successful Execution**
+    You can check if the images is now in your local environment with Example Output:
+
+    ```
+    docker images
+    ```
+   ![The image shows the Docker images ](image/images/sudo-docker-image.png) 
+
+Incase if issues is encountered, I have to make sure that Docker is properly installed and that my user has the necessary permissions to run Docker commands.
+
+This simple "Hello World" example serves as a basic introduction to running containers with Docker. It helps verify that my Docker environment is set up correctly and provides insight into the image and container lifecycle. As I progress in this course, I will explore more complex scenarios and leverage Docker for building, deploying, and managing diverse applications.
+
+**Basic Docker Commands**
+
+**Docker Run**
+
+The `docker run` command is fundamental for executing containers. It creates and starts a container based on a specified image.
+
+```
+# Run a container based on the "nginx" image
+docker run hello-world
+```
+This example pulls the "nginx" from Docker Hub (if not available locally locally) and starts a container using that image.
+
+Docker PS
+
+The `docker ps` command displays a list of running containers. This is usefull for monitoring active containers and obtaining information such as container IDs,names, and status.
+
+```
+# List running containers
+docker ps
+```
+To view all containers, including those that have stopped, add the `-a` option:
+
+```
+# List all containers (running and stopped)
+docker ps -a
+```
+
+ ![The image shows the list of running and stopped Docker container ](image/images/sudo-docker-ps-a.png) 
+
+
+ 
