@@ -357,5 +357,47 @@ docker ps -a
 
  ![The image shows the list of running and stopped Docker container ](image/images/sudo-docker-ps-a.png) 
 
+**Docker Stop**
 
- 
+The `docker stop` command halts a running container.
+
+```
+# Stop a running container (replace CONTAINER_ID with the actual container ID)
+docker stop CONTAINER_ID
+```
+
+**Docker Pull**
+The `docker pull` command downloads a Docker image from a registry, such as Docker Hub, to my local machine.
+
+```
+# Pull the latest version of the "ubuntu" image from Docker Hub
+docker pull ubuntu
+```
+
+**Docker Push**
+
+The `docker push` command uploads a local Docker image to a registry, making it available for others to pull.
+
+```
+# Push a local image to Docker Hub
+docker push your-username/image-name
+```
+Ensure I've logged in to Docker Hub using `docker login` before pushing images.
+
+Docker Images
+
+The `docker images` commands lists all locally available Docker images.
+
+```
+# List all local Docker images
+docker images
+```
+
+**Docker RMI**
+The `docker rmi` command removes one or more images from the local machine.
+
+```
+# Remove a Docker image (replace IMAGE_ID with the actual image ID)
+docker rmi IMAGE_ID
+```
+These basic Docker commands provide a foundation for working with containers. Understanding how to run, list,stop, pull, push, and manage Docker images is crucial for effective containerization and orchestration. As I delve deeper into Docker, I will discover additional commands and features that enhance my ability to develop, deploy and maintain containerized applications.
