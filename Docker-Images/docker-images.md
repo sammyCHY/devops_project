@@ -71,3 +71,12 @@ EXPOSE 80
 
 # No need for CMD as NGINX image comes with a default CMD to start the server
 ```
+
+Explanation of the code snippet above.
+
+1. **FROM nginx:latest:** Specifies the official NGINX base image from Docker Hub.
+
+2. WORKDIR /usr/share/nginx/html/:Specifies the 
+working directory in the container.
+
+3. Copy index.html /usr/share/nginx/html/: Copies the local `index.html` file to the NGINX default public directory, which is where NGINX serves static content from.
