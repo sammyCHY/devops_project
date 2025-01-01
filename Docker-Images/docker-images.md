@@ -56,6 +56,18 @@ To create a Dockerfile, use a text editor of your choice, such as vim or nano. S
 
 Here's a simple example of a Dockerfile for a html file: Let's create an image with using a dockerfile. Paste the code snippet below in a file named `dockerfile` This example assumes you have a basic HTML file named `index.html` in the same directory as my Dockerfile.
 
+
+![The Image shows the Dockerfile](image/images/mkdir-docker-file.png)
+
+![The Image shows the index.html file](image/images/index-htmlfile1.png)
+
+![The Image shows the index.html file](image/images/index-htmlfile2.png)
+
+![The Image shows the dockerfile](image/images/sudo-nano-dockerfile1.png)
+
+![The Image shows the dockerfile](image/images/sudo-nano-dockerfile2.png)
+
+
 ```
 # Use the official NGINX base image
 FROM nginx:latest
@@ -80,3 +92,34 @@ Explanation of the code snippet above.
 working directory in the container.
 
 3. Copy index.html /usr/share/nginx/html/: Copies the local `index.html` file to the NGINX default public directory, which is where NGINX serves static content from.
+
+4. EXPOSE 80: Informs Docker that the NGINX server will use port 80. This is a documentation feature and doesn't actually publish the port.
+
+5. CMD: NGINX images come with a default CMD to start the server, so there's no need to specify it explicity.
+
+HTML file named `index.html`in the same directory as your dockerfile.
+
+![The Image shows the HTML file named index.html in the same directory](image/images/dockerfile&index-html-directory.png)
+
+```
+echo "Welcome to Darey.io" >> index.html
+```
+![The Image shows the index.html](image/images/echo-index-html.png)
+
+To build an image from this Dockerfile, navigate to the directory containing the file and run:
+
+```
+docker build -t dockerfile .
+```
+
+![The Image shows the docker build -t dockerfile](image/images/sudo-docker-build-dockerfile.png)
+
+![The Image shows the docker images](image/images/docker-images.png)
+
+To run a container based on the custom NGINX image we created with a dockerfile, run the command.
+
+```
+docker run -p 8080:80 dockerfile
+```
+
+![The Image shows the docker file](image/images/sudo-run-dockerfile.png)
