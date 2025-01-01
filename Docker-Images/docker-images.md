@@ -123,3 +123,49 @@ docker run -p 8080:80 dockerfile
 ```
 
 ![The Image shows the docker file](image/images/sudo-run-dockerfile.png)
+
+Running the command above will create a container that listens on port 8080 using the nginx image I have created earlier.So I need to create a new rule in security group of EC2 instance.
+
+Let's recall the hands-on project I did in the advanced techops curriculum. Now let's add new rules to the security group
+
+i. On the EC2 instance, click on the security tab
+
+![The Image shows the EC2 Instance security](image/images/ec2-instance-security-tab.png)
+
+
+ii. Click on edit inbound rules to add new rules. This will allow incoming traffic to instance associated with the security group. Our aim is to allow incoming traffic on port 8080
+
+![The Image shows the EC2 Instance security](image/images/inbound-rule-security-group.png)
+
+
+iii. Click on `Add rule`to add a new rule.
+
+![The Image shows the add rule on security group](image/images/security-group-add-rule.png)
+
+Let see the list of available containers.
+
+```
+docker ps -a
+```
+
+![The Image shows the list of available containers](image/images/docker-ps-a.png)
+
+The image above show our container is not running yet. I can start it with the command below
+
+```
+docker start CONTAINER_ID
+```
+
+ ![The Image shows the start of container](image/images/docker-start-container_id1.png)
+
+ ![The Image shows the start of container](image/images/docker-ps-a1.png)
+
+
+Now that I have started my container, I will access the content on our web browser with
+
+http://publicip_address:8080
+
+
+![The Image shows the start of container via web browser](image/images/start-container-web-browser.png)
+
+
