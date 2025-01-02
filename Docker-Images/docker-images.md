@@ -169,3 +169,80 @@ http://publicip_address:8080
 ![The Image shows the start of container via web browser](image/images/start-container-web-browser.png)
 
 
+**Pushing Docker Images To Docker Hub**
+
+Let's recall my git project, where I push changes made on my local computer to a remote repository (github) so everyone can track the changes I made and also collaborate on it. Now that I have created a docker images on my computer, I need to think about how to reuse this image in the future or how do people in other region make use of this image and possibly collaborate on it. This is where [Docker Hub](https://hub.docker.com/) comes in. Let's go ahead and push my image to docker hub
+
+i. Create an account on [Docker Hub](https://hub.docker.com/) incase none is created.
+
+ii. Create a repository on docker hub
+
+![The Image shows the created repository on a docker hub](image/images/my-docker-account1.png)
+
+
+![The Image shows the created repository on a docker hub](image/images/my-docker-account2.png)
+
+
+iii. Tag Your Docker Image Before Pushing, ensure that my Docker image is appropriately tagged. I typically tag my Image with my Docker Hub username and the repository name. 
+
+```
+docker tag <your-image-name> <your-dockerhub-username>/<your-repository-name>:<tag>
+```
+
+![The Image shows the docker tag](image/images/docker-tag.png)
+
+
+iv. Login to Docker hub.
+
+```
+docker login -u <your-docker-hub-username>
+```
+
+Running the command above will prompt you for a password. Authenticate using your docker hub password.
+
+![The Image shows the docker login via CLI](image/images/docker-login.png)
+
+v. Push my image to docker hub
+
+```
+docker push <your-dockerhub-username>/<your-repository-name>:<tag>
+```
+
+![The Image shows the docker push](image/images/docker-push.png)
+
+
+vi. Verify the image is in my docker hub repository
+
+![The Image shows the docker hub repository tag](image/images/docker-hub-repository-tag.png)
+
+Now anyone can make use of the image I have on my docker rub repository
+
+**Side Hustle Task: Dockerize a Basic Web Static Page**
+
+1. Lauch an instance and create a Dockerfile:
+
+- Launch an ubuntu EC2 instance and connect to it.
+- Create a dockerfile, in the file;
+- Use the official nginx images as the base.
+- Copy the web static page file (e.g. a html file) to the appropriate location within the container.
+- Expose the port my web application runs (e.g.,80)
+
+2. **Build the Docker Image**
+   - Navigate to the directory conataining my Dockerfile if not there.
+   - Build the image using the dockerfile
+
+3. **Run the Docker Container:**
+   - Once the image is build, run a container  using the build image.
+
+4. **Verify in Browser:**
+   - Open a web browser and navigate to `http://public-ip:8080` (or the port I specified in the `docker run` command). 
+   
+   - Confirm that my web application is running successfully.
+
+### Tips:
+
+   - Ensure my web static page is accessible on the specified port within the container.
+
+   - Use clear and concise names for my Docker image and container.
+
+   - Provide comments in my Dockerfile to explain each step for better understanding.
