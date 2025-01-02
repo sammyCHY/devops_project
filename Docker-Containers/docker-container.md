@@ -20,7 +20,7 @@ The image above shows that the container is created but not running. I can start
 ```
 docker start CONTAINER_ID
 ```
-![The image show the docker start container_id](image/images/docker-run-container_id)
+![The image show the docker start container_id](image/images/docker-start-container_id)
 
 ### Launching Containers with Different Options
 
@@ -65,4 +65,39 @@ docker restart container_name
 ```
 docker rm container_name
 ```
+
+This deletes the container, but keep in mind that the associated image remains on my system.
+
+In this module, I've learned the basics of working with Docker containers-launching them, customizing their behavior, managing their lifecycle, and removing them. Understanding these fundamentals is crucial for effectively using Docker in my development and deployment workflows.
+
+Side Hustle Task: Docker Container Operations
+
+### 1. Start a container and Run a Simple Command:
+
+- Use an official Ubuntu image to start a container. If I don't have the image, I can pull it from docker hub
+
+- Run a simple command within the container, such as displaying the system information.
+
+### 2. Stop the Container and Verify Its Status
+- Stop the running container
+
+- Verify that the container is stopped
+
+- Note the status column to confirm the container's status.
+
+3. Restart the Container and Observer Changes:
+
+- Restart the stopped container
+
+- Verify the container's status again to ensure it's running.
+
+- Observe any changes of differences in the container's behavior after the restart.
+
+
+### 4. Remove the Container:
+
+- Stop the running container (if it's still running)
+- Remove the container
+- Verify that the container is removed 
+- Confirm that the container is no longer listed.
 
