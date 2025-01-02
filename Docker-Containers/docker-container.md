@@ -20,7 +20,7 @@ The image above shows that the container is created but not running. I can start
 ```
 docker start CONTAINER_ID
 ```
-![The image show the docker start container_id](image/images/docker-start-container_id)
+![The image show the docker start container_id](image/images/docker-start-container_id.png)
 
 ### Launching Containers with Different Options
 
