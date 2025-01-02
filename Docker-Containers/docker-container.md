@@ -2,13 +2,13 @@
 ### Docker Containers for Beginners
 ### Introduction to Docker Containers
 
-Docker containers are lightweight, portable, and excutable units that encapsulate an application and its dependencies. In the previous step, I worked a little with docker container. I would dive deep into the basics of working with Docker containers, from launching a running containers to managing their lifecycle.
+Docker containers are lightweight, portable, and executable units that encapsulate an application and its dependencies. In the previous step, I worked a little with docker container. I would dive deep into the basics of working with Docker containers, from launching a running containers to managing their lifecycle.
 
 ### Running Containers.
 
 To run a container, I have to use the `docker run` command followed by the name of the image I want to use.
 
-Reacall that I pulled an ubuntu image from the official ubuntu repository on docker hub. Let's create a container from the ubuntu image. This command launches a container based on the Ubuntu image.
+Recall that I pulled an ubuntu image from the official ubuntu repository on docker hub. Let's create a container from the ubuntu image. This command launches a container based on the Ubuntu image.
 
 ```
 docker run ubuntu
@@ -37,7 +37,7 @@ By default, containers run in the foreground, and the terminal is attached to th
  ```
  docker run -d ubuntu
 ```
-This command starts a container in te background, allowing me to continue using the terminal.
+This command starts a container in the background, allowing me to continue using the terminal.
 
 # Starting, Stopping, and Restarting Containers
 
