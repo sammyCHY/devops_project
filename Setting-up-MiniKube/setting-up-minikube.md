@@ -116,4 +116,88 @@ minikube start --driver=docker
 For Linux users, let's install minikube
 
 i. Launch a terminal with administrative access
-ii. I need to install docker as a driver for minikube and also for minikube to pull base images for the kebernetes cluster
+ii. I need to install docker as a driver for minikube and also for minikube to pull base images for the kebernetes cluster.
+
+```
+sudo apt-get update
+```
+![The image shows the update of the installed app](image/images/sudo-apt-get-update.png)
+
+This is a Linux command that refreshes the package list on a Debian-based system, ensuring the latest software information is available for installation.
+
+```
+sudo apt-get install ca-certificates curl gnupg
+```
+
+![The image shows the installation of essential packages](image/images/sudo-apt-get-install-ca-certificate.png)
+
+This is a Linux command that installs essential packages including certificate authorities, a data transfer tool (curl), and the GNU Privacy Guard for secure communication and package verification.
+
+```
+sudo install -m 0755 -d /etc/apt/keyrings
+```
+![The image shows the creation of directory](image/images/sudo-install-keyrings.png)
+
+The command above creates a directory (/etc/apt/keyrings) with specific permissions (0755) for storing keyring files, which are used for docker's authentication.
+
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+![The image shows the docker GPG key](image/images/download-docker-key.png)
+
+This downloads the Docker GPG key using `curl`
+
+```
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+![The image shows the permission user on the Docker](image/images/sudo-chmod-docker.png)
+
+Set read permission for all users on the Docker GPG key file within the APT keyring directory.
+
+### Let's add the repository to Apt sources
+
+```
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+![The image shows the apt sources of the repository](image/images/add-repository.png)
+
+The "echo" command creates a Docker APT repository configuration entry for the Ubuntu system, incorporating the system architecture and Docker GPG key, and then "sudo tee /etc/apt/sources.list.d/docker.list> /dev/null" writes this configuration to the "/etc/apt/sources.list.d/docker.list" file.
+
+```
+sudo apt-get update
+```
+![The image shows the update of the installed packages](image/images/sudo-apt-get-update2.png)
+
+- Install latest version of docker
+
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+![The image shows the latest version of docker](image/images/docker-latest-version.png)
+
+![The image shows the update of the installed packages](image/images/docker-latest-version1.png)
+
+- Verify that docker has been successfully installed.
+
+```
+sudo systemctl status docker
+```
+![The image shows the status of the installed docker](image/images/sudo-systemctl-status-docker.png)
+
+
+iii. Install minikube
+
+```
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+```
+
+![The image shows the installation of minikube](image/images/install-minikube.png)
+
+
