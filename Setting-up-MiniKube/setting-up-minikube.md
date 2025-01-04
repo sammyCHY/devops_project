@@ -66,7 +66,7 @@ To install minikube on windows, we need to use [chocolatey](https://chocolatey.o
 
 i. Go to the windows search bar and launch a terminal with administrative access
 
-![The Video shows how to launch a terminal with administrative access](image/images/epicpen_oAuhoRgvUg.gif)
+![The Video shows how to launch a terminal with administrative access](image/images/epicpen_Y6LmnfkJ1E.GIF)
 
 If `choco` is not already installed, then follow the steps to install it:
 
