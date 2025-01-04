@@ -95,3 +95,25 @@ choco install minikube
 
 ![The image shows the installation of choko minikube](image/images/choco-install-minikube1.png)
 
+- **Note:** If I don't have [chocolatey](https://chocolatey.org/). install, follow the [official documentation](https://chocolatey.org/) to install it.
+
+iii. Minikube needs docker as a driver and also to pull it's base image, therefore I need to install docker desktop for windows.
+
+![The image shows the installation of docker desktop for window](image/images/docker-installed.png)
+
+Go to [docker desktop](https://docs.docker.com/desktop/setup/install/windows-install/) official documentation to install it if not installed
+
+iv. Run the command below to start minikube using docker as the driver.
+
+```
+minikube start --driver=docker
+```
+
+![The image shows the minikube start driver docker](image/images/minikube-start-driver-docker.png)
+
+## Installing Minikube on Linux
+
+For Linux users, let's install minikube
+
+i. Launch a terminal with administrative access
+ii. I need to install docker as a driver for minikube and also for minikube to pull base images for the kebernetes cluster
