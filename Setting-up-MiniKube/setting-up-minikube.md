@@ -200,4 +200,59 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest
 
 ![The image shows the installation of minikube](image/images/install-minikube.png)
 
+If there was an error during the time of running the command above, then, I have to reach out to the technical support.
+
+
+```
+sudo dpkg -i minikube_latest_amd64.deb
+```
+
+![The image shows the installation of minikube binary](image/images/minikube-binary.png)
+
+- The command above downloads minikube's binary and install minikube using dpkg
+
+![The image shows the downloads of minikubes binary and install minikube using dpkg](image/images/downloads-install- minikubes-binary-dpkg.png)
+
+iv. Start minikube
+
+```
+minikube start --driver=docker 
+```
+![The image shows the start driver docker](image/images/minikube-start-driver-docker1.png)
+
+v. Kubectl is the command-line interface (CLI) tool for interacting with and managing kubernetes clusters, allowing users to deploy, inspect, and manage applications within the Kubernetes environment. Let's install kubectl.
+
+```
+sudo snap install kubectl --classic
+```
+
+- This will download the kubernetes command line (kubectl) tool to interact with kubernetes cluster.
+
+![The image shows the downloads of kubernetes CLI](image/images/sudo-snap-install-kubectl.png)
+
+
+Installing Minikube on Mac
+
+For mac users, let's install minikube
+
+i. Launch a terminal with adminstrative access
+
+ii. Install minikube
+
+```
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+```
+
+```
+sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+```
+The command above downloads minikube's binary and install minikube.
+
+iv. Just like windows and linux, I need docker desktop as a driver for minikube. To install docker desktop for mac go to [docker desktop](https://docs.docker.com/desktop/setup/install/mac-install/) official documentation to install it if not installed.
+
+v. Run the command below to start minikube using virtualbox as the driver
+
+```
+minikube start --driver=docker
+```
 
