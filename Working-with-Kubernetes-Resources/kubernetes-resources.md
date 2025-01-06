@@ -164,6 +164,8 @@ i. Create a new folder `my-nginx-yaml`
 
 ii. Create a new file `nginx-deployment.yaml` and paste the content below.
 
+![The Image shows the folder and file creation](image/images/creating-yaml-folder&file.png)
+
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -186,6 +188,9 @@ spec:
         - containerPort: 80
 
 ```
+
+![The Image shows the YAML file](image/images/nginx-deployment-yaml-file.png)
+
 
 The provided YAML snippet defines a Kubernetes Deploment for deploying an instance of instance of the Nginx web server. Let's break down the key components:
 
@@ -235,6 +240,9 @@ spec:
 
 ```
 
+![The Image shows the nginx service yaml](image/images/nginx-service-yaml.png)
+
+
 The provided YAML snippet defines a Kubernetes Service for exposing the Nginx application to the external world. Let's break down the key components:
 
 - **apiVersion:v1:** Specifies the Kubernetes API version for the object being created, in this case, a Service.
@@ -270,7 +278,8 @@ kubectl apply -f nginx-deployment.yaml
 kubectl apply -f nginx-service.yaml
 ```
 
-************
+ ![The Image shows the nginx deploy & service file deployment in the kubernetes cluster](image/images/kubectl-apply-nginx-deployment&service-yaml.png)
+
 
 v. Verify my deployment
 
@@ -281,7 +290,7 @@ kubectl get services
 ```
 
 
-**********
+![The Image shows the deployments check ](image/images/kubectl-get-deployments&services.png)
 
 
 vi. Access my deployment on my web browser
@@ -292,8 +301,8 @@ minikube service my-nginx-service --url
 
 Follow the IP address to access my application on the web browser.
 
-
-*********
+![The Image shows the access application on the browser](image/images/minikube-service-my-nginx-service.png)
+ 
 
 Welcome to Darey.io
 
