@@ -264,3 +264,38 @@ iv. Run the command below for the development on the cluster
 
 
 
+```
+kubectl apply -f nginx-deployment.yaml
+
+kubectl apply -f nginx-service.yaml
+```
+
+************
+
+v. Verify my deployment
+
+```
+kubectl get deployments
+
+kubectl get services
+```
+
+
+**********
+
+
+vi. Access my deployment on my web browser
+
+```
+minikube service my-nginx-service --url
+```
+
+Follow the IP address to access my application on the web browser.
+
+
+*********
+
+Welcome to Darey.io
+
+
+
