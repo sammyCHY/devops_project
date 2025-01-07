@@ -13,7 +13,7 @@ Networking refers to the mechanisms and configurations that allow communication 
 - **Network Policies:** Kubernetes Network Policies define rules for controlling the communication between pods. These policies allow administrators to specify how pods can communicate with each other, enhancing security within the cluster.
 
 
-- **Container Network Interface (CNI):** Kubernetes relies on Container Network Interfaces to implement networking solutions. CNIs provide a standardized interface for networking plugins to intergrate with Kubernetes, allowing for flexibility and choice in networking implementations.
+- **Container Network Interface (CNI):** Kubernetes relies on Container Network Interfaces to implement networking solutions. CNIs provide a standardized interface for networking plugins to integrate with Kubernetes, allowing for flexibility and choice in networking implementations.
 
 Let's get our hands on pod networking in Kubernetes by deploying a pod with multiple conatainers, showcasing how they share the same network namespace and can communicate with each other using `localhost`. Here's a step-by-step guide using Kubernetes and `kubectl`:  
 
@@ -43,7 +43,7 @@ spec:
 
 ## Explanation of the yaml snippet above
 
-- apiVersion:v1: Specifies the Kubernetes API version for the abject being created, in this case, a Pod.
+- **apiVersion:v1:** Specifies the Kubernetes API version for the abject being created, in this case, a Pod.
 
 - **Kind:Pod:** Defines the type of Kubernetes resources being created, which is a Pod. Pods are the smallest deployable units in Kubernetes and can host one or more containers.
 
