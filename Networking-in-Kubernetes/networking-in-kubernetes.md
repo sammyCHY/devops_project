@@ -19,6 +19,9 @@ Let's get our hands on pod networking in Kubernetes by deploying a pod with mult
 
 1. Create a Multi-Conatainer Pod YAML file(e.g.,`multi-container-pod.yaml`): and paste the snippet below
 
+![The Image shows the multi container deployment](image/images/mkdir-multi-container-pod.png)
+
+
 ```
 apiVersion: v1
 kind: Pod
@@ -35,6 +38,8 @@ spec:
       - '-c'
       - 'mkdir -p /usr/share/nginx/html && while true; do echo "Hello from Container 2" >> /usr/share/nginx/html/index.html; sleep 10; done'
 ```
+
+![The Image shows the multi container pod yaml file](image/images/multi-container-pod-yaml-file.png)
 
 ## Explanation of the yaml snippet above
 
@@ -63,6 +68,8 @@ The Pod has two containers - one running the Nginx web server and another runnin
 kubectl apply -f multi-container-pod.yaml
 ```
 
+![The Image shows the multi container pod configuration](image/images/multi-container-pod-created.png)
+
 3. Check pod status and Logs:
 
 ```
@@ -73,12 +80,16 @@ kubectl logs multi-container-pod -c container-2
 
 I will observe that both containers are running within the same pod, and they share the same network namespace. The Nginx container serves its default page, and the BusyBox container continuously updates the HTML file.
 
+![The image shows the container running pod](image/images/html-file.png)
+
 
 4. **Access Nginx from BusyBox Container:**
 
 ``` 
 kubectl exec -it multi-container-pod -c container-2 -- /bin/sh
 ```
+
+![The image shows the access from busybox container](image/images/final.png)
 
 Now, within the BusyBox container, you can use tools like curl or wget to access http://localhost and see the Nginx page.
 
