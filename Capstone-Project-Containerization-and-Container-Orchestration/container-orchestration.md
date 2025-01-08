@@ -134,6 +134,14 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ![The Image shows the creation of Dockerfile, index.html file, css file](image/images/ls-directory.png)
 
+To build an image from this Dockerfile, navigate to the directory containing the file and run:
+
+```
+docker build -t dockerfile .
+```
+
+![The Image shows the docker build -t "Dockerfile"](image/images/my-project-sudo-docker-build-t-dockerfile.png)
+
 
 # Task 5: Push to Docker Hub
 
@@ -148,3 +156,43 @@ Step 1: Create a Docker Hub Account
 ![The Image shows the creation of Docker-hub account](image/images/docker-hub-account.png)
 
 - Push my Docker image to Docker Hub.
+
+![The Image shows the Docker images](image/images/docker-images.png)
+
+To run a container based on the custom NGINX image we created with a dockerfile, run the command.
+
+```
+docker run -p 8080:80 dockerfile
+```
+
+![The Image shows the docker run -p 8080:80 dockerfile](image/images/docker-run-p.png)
+
+
+- Create a repository in a "Docker Hub"
+
+![The Image shows the repository on a docker hub ](image/images/docker-hub-repository.png)
+
+
+![The Image shows the repository on a docker hub ](image/images/docker-hub-repository1.png)
+
+- Tag Your Docker Image Before Pushing, ensure that my Docker image is appropriately tagged. I typically tag my Image with my Docker Hub username and the repository name.
+
+```
+docker tag <your-image-name> <your-dockerhub-username>/<your-repository-name>:<tag>
+```
+
+![The Image shows the docker tag](image/images/docker-tag-dockerfile.png)
+ 
+
+- Docker login
+
+![The Image shows the docker login](image/images/docker-login.png)
+
+- Push my image to docker hub
+
+
+```
+docker push <your-dockerhub-username>/<your-repository-name>:<tag>
+```
+
+![The Image shows the docker pushed images](image/images/docker-pushed-images.png)
