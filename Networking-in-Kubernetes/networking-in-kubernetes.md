@@ -15,7 +15,7 @@ Networking refers to the mechanisms and configurations that allow communication 
 
 - **Container Network Interface (CNI):** Kubernetes relies on Container Network Interfaces to implement networking solutions. CNIs provide a standardized interface for networking plugins to integrate with Kubernetes, allowing for flexibility and choice in networking implementations.
 
-Let's get our hands on pod networking in Kubernetes by deploying a pod with multiple conatainers, showcasing how they share the same network namespace and can communicate with each other using `localhost`. Here's a step-by-step guide using Kubernetes and `kubectl`:  
+Let's get our hands on pod networking in Kubernetes by deploying a pod with multiple containers, showcasing how they share the same network namespace and can communicate with each other using `localhost`. Here's a step-by-step guide using Kubernetes and `kubectl`:  
 
 1. Create a Multi-Conatainer Pod YAML file(e.g.,`multi-container-pod.yaml`): and paste the snippet below
 
