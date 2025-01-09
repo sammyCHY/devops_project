@@ -196,3 +196,204 @@ docker push <your-dockerhub-username>/<your-repository-name>:<tag>
 ```
 
 ![The Image shows the docker pushed images](image/images/docker-pushed-images.png)
+
+
+# Task 6: Set up a Kind Kubernetes Cluster
+
+## step 1: Ensuring Prerequisites are Met.
+
+1. Docker:
+   
+   - Install Docker on my system.
+   - Verify Docker is installed and running:
+
+   ```
+   docker --version
+   ```
+   ![The Image shows the docker version](image/images/docker-version.png)
+
+2. Kubectl:
+
+   - Install the Kunernetes CLI (`kubectl`):
+
+
+- Install Kind (Kubernetes in Docker).
+   
+  - `Install kubectl instructions`.
+
+- Verify installation:
+
+  ```
+  kubectl version --client
+  ```
+
+![The Image shows the kubectl version client](image/images/kubectl-version-client.png)
+
+
+## Step 2: Install Kind (Kubernetes in Docker)
+
+ 1. Install Using curl (Linux and macOS)
+  
+   - Download kind:
+
+   ![The Image shows the install kind "Kubernetes in Docker"](image/images/download-kind.png)
+
+
+   - Make it executable:
+
+   ```
+   chmod +x ./kind
+   ```
+   
+   ![The Image shows the "kind" to be executable](image/images/chmod-kind.png)
+
+
+- Move it to a directory in my system Path:
+
+![The Image shows the move the kind to directory](image/images/sudo-mv-kind.png)
+
+2. ## Install Using Package Manager
+
+
+3. Verify Installation
+
+- Run the following command to confirm installation:
+
+```
+kind version
+```
+
+![The Image shows the  kind --version](image/images/kind-version.png)
+
+
+- Create a Kind Cluster.
+
+Step 3: Create a Kind Kubernetes Cluster
+
+1. Create a Basic Cluster
+
+To create a basic Kubernetes cluster, run:
+
+```
+kind create cluster --name my-kind-cluster
+```
+
+![The Image shows the  basic kubernetes cluster](image/images/my-kind-cluster.png)
+
+
+# Task 7: Deploy to Kubernetes
+
+### Step 1: Prepare my Kubernetes Environment
+
+1. Ensure Prerequisites are met:
+
+  - Kubernetes cluster is up and running (e.g.,Mininkube AWS EKS,ETC.)
+
+  - `Kubectl` CLI is installed and configured to connect to my cluster.
+
+```
+kubectl version --client
+kubectl get nodes
+```
+
+![The Image shows the kubectl get nodes](image/images/kubectl-get-nodes.png)
+
+- Create a Kubernetes Deployment YAML file specifying the image and desired replicas.
+
+## Step 1: Create the Kubernetes Deployment YAML File
+
+1. Open the text editor or IDE  and create a new file named `deployment.yaml`
+
+2. Define the deployment configuration. Here's an example YAML file:
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-project
+  labels:
+    app: my-project
+spec:
+  replicas: 3  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: my-project
+  template:
+    metadata:
+      labels:
+        app: my-project
+    spec:
+      containers:
+      - name: my-project
+        image: sammylin6525/my-project:1.0 # Replace with your Docker image
+        ports:
+        - containerPort: 80
+```
+
+
+![The Image shows the deployment configuration of the yaml file](image/images/deployment-yaml.png)
+
+- Save the file as `deployment.yaml`
+
+
+The provided YAML snippet defines a Kubernetes Deployment for deploying an instance of instance of the Nginx web server. Let's break down the key components:
+
+- **apiVersion: apps/v1:** Specifies the Kubernetes API version for the object being created, in this case, a Deployment in the "apps" group.
+
+- **Kind: Deployment:** Defines the type of Kubernetes resources being created, which is a Deployment. Deployments are used to manage the deployment and scaling of applications.
+
+metadata: Contains metadata for the Deploment, including the name of the Deployment, which is set to "my-project"
+
+- **Spec:** Describes the desired state of the Deployment.
+
+- **replicas: 1:** Specifies that the desired number of replicas (instances) of the Pods controlled by this Deployment is 1.
+
+- **Selector:** Defines how the Deployment selects which Pods to manage. In this case, it uses the label "app:my-project" to match pods.
+
+- **Template:** Specifies the template for creating new Pods.
+
+- **metadata:** Contains labels for the Pods, and in this case, the label is set to "app:my-project."
+
+- **Spec:** Describes the Pod specification.
+
+- **Containers:** Defines the containers within the Pod.
+
+- **Name:** my-project: Sets the name of the container to "my-project."
+
+- **image: sammylin6525/my-project:1.0:** Specifies the Docker image to be used to the my-project container. The image is "sammylin6525/my-project" with version "1.0."
+
+**Note that the image can be replaced**
+
+- **Ports:** Specifies the port mapping for the container, and in this case, it exposes port 80.
+
+
+- Apply the deployment to my cluster.
+
+# Step 2: Apply the Deployment YAML File
+
+- Apply the file to the Kubernetes cluster using the following command:
+
+```
+kubectl apply -f deployment.yaml
+```
+
+![The Image shows the application of kubernetes cluster](image/images/kubectl-apply-deployment.png)
+
+
+- Verify that the deployment is created:
+
+```
+kubectl get deployments
+```
+
+![The Image shows to verify if the deployment is created ](image/images/kubectl-get-deployments.png)
+
+- Check the pods created by the deployment:
+
+```
+kubectl get pods
+```
+
+![The Image shows to the pods created by the deployment](image/images/kubectl-get-pods.png)
+
+
