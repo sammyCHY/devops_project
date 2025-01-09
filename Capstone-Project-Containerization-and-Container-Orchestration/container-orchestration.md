@@ -397,3 +397,9 @@ kubectl get pods
 ![The Image shows to the pods created by the deployment](image/images/kubectl-get-pods.png)
 
 
+
+# Task 8: Create a Service (ClusterIP)
+
+- Create a Kubernetes Service YAML file specifying the type as ClusterIP.
+
+- Apply the service to my cluster.
