@@ -461,8 +461,98 @@ The provided YAML snippet defines a Kubernetes Service for exposing "my-project"
 
 - **type: NodePort:** Sets the type of the Service to NodePort. This means that the service will be accessible externally on each Node's IP address at a static port, which will be automatically assigned unless specifies.
 
+- Save the file as `service.yaml`
+
+### - Create a Kubernetes Service YAML file specifying the type as ClusterIP.
 
 
-- Create a Kubernetes Service YAML file specifying the type as ClusterIP.
+### Step 3: Apply the Service YAML File
+
+- Navigate to the directory containing `service.yaml`
+
+- Apply the YAML file:
+
+```
+kubectl apply -f service.yaml
+```
+![The Image shows to the service.yaml configuration](image/images/kubectl-apply-service-yaml.png)
+
 
 - Apply the service to my cluster.
+
+- Verify the service has been created
+
+![The Image shows to verify the creation of the service](image/images/kubectl-get-svc.png)
+
+ Check Service Details
+
+ The detailed Information about the service can be viewed using:
+
+```
+kubectl describe svc my-project
+```
+
+![The Image shows to detailed information about the service](image/images/kubectl-describe-svc-my-project.png)
+
+
+# Task 9: Access the Application
+
+### - Port-forward to the service to access the application locally.
+
+### - Open my browser and visit the specified port to view my simple frontend application.
+
+
+- Access the Application via Port-Forwarding
+
+To Access my application locally by forwarding a port to my Kubernetes Service, follow these step-by-step instructions:
+
+- 1. List all service in my cluster:
+
+```
+kubectl get svc
+```
+
+![The Image shows the list of service in my cluster](image/images/kubectl-get-svc1.png)
+
+## Step 2: Port Forward to the Service
+
+1. Use the `kubectl port-forward` command to forward a local port to the service:
+
+```
+kubectl port-forward svc/my-project 8080:80
+```
+
+Explanation:
+
+- `svc/my-project`: The service to which you're port-forwarding.
+
+- `8080`: The local port on your machine (you can choose any available port).
+
+- `80`: The port exposed by the service within the cluster.
+
+2. Once the command runs successfully, I have to see output like:
+
+
+`Forwarding from 127.0.0.1:8080 -> 80`
+
+
+![The Image shows the port forward to the service](image/images/kubectl-port-forward.png)
+
+
+Step 3: Access the Application in my web browser
+
+1. Open my browser and go to:
+
+```
+http://localhost:8080
+```
+
+2. The simple frontend application should display.
+
+
+![The Image shows the frontend application browser](image/images/frontend-application-browser.png)
+
+
+
+ 
+
