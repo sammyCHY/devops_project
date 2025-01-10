@@ -400,6 +400,69 @@ kubectl get pods
 
 # Task 8: Create a Service (ClusterIP)
 
+### Step 1: Understand the Purpose of a ClusterIP Service.
+
+A ClusterIP Service exposes the application to other resources **within the cluster.**This is a default service type and does not allow external access.It is used for internal communication between Pods or Deployments.
+
+
+## Step 2: Create a ClusterIP Service YAML File
+
+1. Open a text editor or IDE
+
+2. Create a file named `service.yaml`.
+
+3. Add the following configuration:
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-project
+  labels:
+    app: my-project
+spec:
+  type: ClusterIP
+  selector:
+    app: my-project
+  ports:
+    - protocol: TCP
+      port: 80        # The port for the service within the cluster
+      targetPort: 80  # The port on the Pod where the application runs
+
+```
+
+![The Image shows to the service.yaml configuration](image/images/nano-service-yaml1.png)
+
+
+![The Image shows to the service.yaml configuration](image/images/service-yaml.png)
+
+
+The provided YAML snippet defines a Kubernetes Service for exposing "my-project" application to the external world. Let's break down the key components:
+
+- **apiVersion:v1:** Specifies the Kubernetes API version for the object being created, in this case, a Service.
+
+- **Kind: Service:** Defines the type of Kubernetes resources being created, which is a Service. Services provide a stable endpoint for accessing a set of Pods.
+
+- **metadata:** Contains metadata for the Service, including the name of the Service, which is set to "my-project."
+
+- **spec:** Describes the desired state of the Service.
+
+- **Selector:** Specifies the labels used to select which Pods the Service will route traffic to. In this case, it selects Pods with the label "app:my-project."
+
+- **Ports:** Specifies the ports configuration for the service.
+
+- **Protocol: TCP:** Specifies the transport layer protocol, which is TCP in this case.
+
+
+- **Port:80:** Defines the port on which the Service will be exposed.
+
+- **TargetPort: 80:** Specifies the port on the Pods to which the traffic will be forwarded.
+
+
+- **type: NodePort:** Sets the type of the Service to NodePort. This means that the service will be accessible externally on each Node's IP address at a static port, which will be automatically assigned unless specifies.
+
+
+
 - Create a Kubernetes Service YAML file specifying the type as ClusterIP.
 
 - Apply the service to my cluster.
