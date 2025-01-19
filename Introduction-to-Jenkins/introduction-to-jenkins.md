@@ -58,3 +58,96 @@ By the end of this Project, learners should have;
 ## Getting Started With Jenkins
 
 Now that I have an idea what Jenkins, let's dive in to installing Jenkins
+
+### Update Package Repositories
+
+
+```
+sudo apt update
+```
+![The Image shows the platform update by using sudo apt update](image/images/sudo-apt-update1.png)
+
+
+![The Image shows the platform update by using sudo apt update](image/images/sudo-apt-update1.png)
+
+Install JDK
+
+
+```
+sudo apt install default-jdk-headless
+```
+
+![The Image shows the default jdk headless](image/images/sudo-apt-install-default-jdk-headless1.png)
+
+
+### *Install Jenkins*
+
+```
+  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
+![The Image shows the Installation of Jenkins](image/images/wget1.png)
+
+![The Image shows the Installation of Jenkins](image/images/wget2.png)
+
+![The Image shows the Installation of Jenkins](image/images/wget3.png)
+
+The command installs Jenkins. It involves importing the Jenkins GPG key for package verification, adding the Jenkins repository to the system's sources, updating packages lists, and finally, installing Jenkins through the package manager (apt-get).
+
+## Check if jenkins has been installed, and it is up and running.
+
+```
+sudo systemctl status jenkins
+```
+![The Image shows the Installation status of the Jenkins](image/images/sudo-systemctl-status-jenkins.png)
+
+**On my Jenkins instance, create ne inbound rules for port 8080 in the security group**
+
+By default, jenkins listens on port 8080, I will need create an inbound rule for this in the security group of my jenkins instance.
+
+![The Image shows the ](image/images/security-inbound-rule.png)
+
+**Set up Jenkins On The Web Console**
+
+i.Input my Jenkins Instance ip address on my web browser i.e.
+http://public_ip_address:8080
+
+ii. On my Jenkins instance, check
+"/var/lib/jenkins/secrets/initialAdminPassword" to know my password.
+
+![The Image shows the Unlock Jenkins](image/images/unlock-jenkins.png)
+
+
+![The Image shows the Unlock Jenkins access](image/images/jenkins-log-access.png)
+
+
+iii. Installed suggested plugins
+
+
+![The Image shows the installed Jenkins Plugins](image/images/install-plugins-jenkins.png)
+
+
+iv. Create a user account
+
+
+![The Image shows the installed Jenkins Plugins](image/images/jenkins-login-details.png)
+
+
+![The Image shows the installed Jenkins Plugins](image/images/jenkins-login-details1.png)
+
+
+![The Image shows the installed Jenkins configuration](image/images/instance-configuration.png)
+
+
+![The Image shows the Jenkins configuration is ready](image/images/jenkins-is-ready.png)
+
+
+v. Log in to jenkins console.
+
+
