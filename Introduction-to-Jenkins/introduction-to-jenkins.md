@@ -151,3 +151,4 @@ iv. Create a user account
 v. Log in to jenkins console.
 
 
+![The Image shows the Jenkins console](image/images/jenkins-console.png)
