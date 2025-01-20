@@ -57,3 +57,8 @@ iii. Create a github webhook using jenkins ip address and port
 
 
 ![The Image shows the configure webhook using jenkins ip address and port](image/images/jenkins-webhook.png)
+
+
+Now, go ahead and make some changes in any file in my GitHub repository (e.g. README.MD file) and push the changes to the master branch.
+
+You will see that a new build has been launched automatically (by webhook).
