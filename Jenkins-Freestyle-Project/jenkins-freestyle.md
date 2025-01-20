@@ -41,5 +41,19 @@ I have successfully connected jenkins with my github repository (jenkins-scm)
 
 Configuring Build Trigger
 
+AS an engineer, I need to be able to automate things and make our work easier in possible ways. I have connected `jenkins` to `jenkins-scm`, but I cannot run a new build with clicking on `Build Now`. To eliminate this, I need to configure a build trigger to our jenkins job. With this, jenkins will run a new build anytime a change is made to our github repository.
 
 
+i. Click "Configure" my job and addd this configurations
+
+
+ii. Click on build trigger to configure triggering the job from GitHub webhook.  
+
+
+![The Image shows the configure jenkins build trigger](image/images/jenkins-configure-build-trigger.png)
+
+
+iii. Create a github webhook using jenkins ip address and port
+
+
+![The Image shows the configure webhook using jenkins ip address and port](image/images/jenkins-webhook.png)
