@@ -15,7 +15,6 @@ i. From the dashboard menu on the left side, click on new item.
 
 ii. Create a pipeline job and name it "My pipeline job"
 
-
 ![The Image shows the creation of "My pipeline job"](image/images/my-pipeline-job.png)
 
 
@@ -102,7 +101,7 @@ stage('Connect To Github') \{
 \}
 ```
 
-- This stage checks out the source code from a GitHub repository (`https://github.com/..../...).
+- This stage checks out the source code from a GitHub repository (`https://github.com/sammyCHY/jenkins-scm.git).
 
 - It specifies that the pipeline should use the `main` branch.
 
@@ -147,14 +146,27 @@ Pipeline
 
 Definition
 
-```
+Pipeline script
 
-*********
-
-```
-
+![The Image shows the jenkins pipeline script](image/images/jenkins-pipeline-script.png)
 
 The stage 1 of the script connects jenkins to github repository. To generate syntax for my github repository, follow the steps below.
 
 
 i. Click on the pipeline syntax
+
+![The Image shows the pipeline syntax](image/images/pipeline-syntax.png)
+
+
+ii. Select the drop down to search for **`checkout: Check out from version control`**
+
+
+### Overview
+
+This **Snippet Generator**will help you learn the pipeline script code which can be used to define various steps. Pick a step you are interested in from the list, configure it, click **Generate Pipeline Script** and you will see a pipeline script statement that would call the step with that configuration. You may copy and paste the whole statement that would call the step with that configuration. You may copy and paste the whole statement into my script, or pick up just the options you care about. (Most parameters are optional and can be omitted in your script, leaving them at default values.)
+
+
+Steps
+
+Sample Step
+
