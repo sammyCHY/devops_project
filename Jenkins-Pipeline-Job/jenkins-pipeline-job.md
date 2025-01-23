@@ -170,3 +170,119 @@ Steps
 
 Sample Step
 
+![The Image shows the version control](image/images/version-control.png)
+
+
+iii. Paste your repository url and make sure your branch is "main"
+
+
+![The Image shows the url repository main](image/images/url-repository-main.png)
+
+
+iv. Generate your pipeline script.
+
+
+![The Image shows the generation](image/images/generate-pipeline-script.png)
+
+
+Now you can replace the generated script for connect jenkins with github.
+
+
+### Installing Docker
+
+
+Before jenkins can run docker commands, we need to install docker on the same instance jenkins was installed. From our shell scripting knownledge, let's install docker with shell script.
+
+i. Create a file named docker.sh
+
+![The Image shows the creation of dockerfile](image/images/creation-dockerfile.png)
+
+ii. Open the file and paste the script below
+
+
+```
+sudo apt-get update -y
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo systemctl status docker
+```
+
+iii. Save and close the file.
+
+
+iv. Make the file executable
+
+```
+chmod u+x docker.sh
+```
+![The Image shows the docker executable file](image/images/docker.sh-executable-file.png)
+
+*************
+v. Execute the file
+
+```
+./docker.sh
+```
+
+![The Image shows the docker file been executed](image/images/executable-dockerfile1.png)
+
+![The Image shows the docker file been executed](image/images/executable-dockerfile2.png)
+
+![The Image shows the docker file been executed](image/images/executable-dockerfile3.png)
+
+![The Image shows the docker file been executed](image/images/executable-dockerfile4.png)
+
+![The Image shows the docker file been executed](image/images/executable-dockerfile5.png)
+
+![The Image shows the docker file been executed](image/images/executable-dockerfile6.png)
+
+
+
+I have successfully installed docker.
+
+Now that I have docker installed on the same instance with Jenkins, I need to create a dockerfile before I can run my pipeline script. As I know. I cannot build a docker image without a dockerfile. Let's recall the dockerfile. I used to build a docker image in my docker foundations. In the main branch on `jenkins-scm`,
+
+
+i. Create a new file named `dockerfile`
+
+![The Image shows the docker file created](image/images/dockerfile-created.png)
+
+
+ii. Paste the code snippet below in the file
+
+
+```
+# Use the official NGINX base image
+FROM nginx:latest
+
+# Set the working directory in the container
+WORKDIR  /usr/share/nginx/html/
+
+# Copy the local HTML file to the NGINX default public directory
+COPY index.html /usr/share/nginx/html/
+
+# Expose port 80 to allow external access
+EXPOSE 80
+```
+
+iii. Create an `index.html`file and paste the content below
+
+```
+Congratulations, You have successfully run your first pipeline code.
+```
+
+![The Image shows the index.html file](image/images/index-htmlfile.png)
+
+
+Pushing these files `dockerfile` and `index.html` will trigger jenkins to automatically run new build for my pipeline
+
