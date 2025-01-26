@@ -41,31 +41,31 @@ A jenkins pipeline script refers to a script that defines and orchestrate the st
 Let's write our pipeline script
 
 ```
-pipeline \{
+pipeline {
     agent any
 
-    stages \{
-        stage('Connect To Github') \{
-            steps \{
+    stages {
+        stage('Connect To Github') {
+            steps {
                     checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sammyCHY/jenkins-scm.git']])
-            \}
-        \}
-        stage('Build Docker Image') \{
-            steps \{
-                script \{
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
                     sh 'docker build -t dockerfile .'
-                \}
-            \}
-        \}
-        stage('Run Docker Container') \{
-            steps \{
-                script \{
+                }
+            }
+        }
+        stage('Run Docker Container') {
+            steps {
+                script {
                     sh 'docker run -itd -p 8081:80 dockerfile'
-                \}
-            \}
-        \}
-    \}
-\}
+                }
+            }
+        }
+    }
+}
 ```
 
 **Explanation of the script above**
@@ -286,3 +286,20 @@ Congratulations, You have successfully run your first pipeline code.
 
 Pushing these files `dockerfile` and `index.html` will trigger jenkins to automatically run new build for my pipeline
 
+![The Image shows the dockerfile and html file](image/images/dockerfile&htmlfile.png)
+
+
+To access the content of `index.html` on my web browser, I need to first edit inbound rules and open the port that is mapped the container to (8081)
+
+
+![The Image shows the editing of the security inbound rule to port 8081](image/images/inbound-rule.png)
+
+I can now access the content of index.html on my web browser
+
+```
+http://jenkins-ip-address:8081
+```
+
+![The Image shows the jenkins server IP displays index.html page on a web browser](image/images/jenkins-index-html-web-browser.png)
+
+ 
