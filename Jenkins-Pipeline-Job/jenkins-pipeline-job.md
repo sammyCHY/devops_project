@@ -163,7 +163,7 @@ ii. Select the drop down to search for **`checkout: Check out from version contr
 
 ### Overview
 
-This **Snippet Generator** will help you learn the pipeline script code which can be used to define various steps. Pick a step you are interested in from the list, configure it, click **Generate Pipeline Script** and you will see a pipeline script statement that would call the step with that configuration. You may copy and paste the whole statement that would call the step with that configuration. You may copy and paste the whole statement into my script, or pick up just the options you care about. (Most parameters are optional and can be omitted in your script, leaving them at default values.)
+This **Snippet Generator** will help you learn the pipeline script code which can be used to define various steps. Pick a step you are interested in from the list, configure it, click **Generate Pipeline Script** and you will see a pipeline script statement that would call the step with that configuration. You may copy and paste the whole statement that would call the step with that configuration. You may copy and paste the whole statement into my script, or pick up just the options you care about. (Most parameters are optional and can be omitted in my script, leaving them at default values.)
 
 
 Steps
