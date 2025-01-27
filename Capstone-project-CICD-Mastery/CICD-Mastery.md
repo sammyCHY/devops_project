@@ -111,7 +111,92 @@ sudo systemctl status jenkins
 
 # Set up necessary Plugins (Git, Docker, etc.).
 
-- Configure Jenkins with required security measures.
+Setting up necessary plugings like Git, Docker, and others in Jenkins is crucial for integrating version control, containerization, and other tolls into my CI/CD Pipelins. Here's a step-by-step guide to set up these plugins:
+
+**step 1: Access Jenkins Plugin Manager**
+  
+1. Login in to the Jenkins server at      
+`http://<my_server_ip>:8080`
+
+![The Image shows the login into Jenkins](image/images/unlock-jenkins-by-adminpassword.png)
+
+- Run the command command below to generate adminpassword to access jenkins platform.
+
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+![The Image shows the adminpassword to Jenkins](image/images/sudo-cat-jenkins-adminpassword.png)
 
 
-### Instruction for Jenkins:
+![The Image shows the login into Jenkins](image/images/unlock-jenkins-by-adminpassword2.png)
+
+
+![The Image shows the next page to select the plugins installations](image/images/customize-jenkins.png)
+
+
+After the Selection of the customized page to install all the plugins, then the next page is to configure the user name and password to access the Jenkins platform.
+
+![The Image shows the configuration of username name and password](image/images/getting-started-admin-user.png)
+
+
+Next is access into the Jenkins Platform.
+
+![The Image shows the Jenkins platform created](image/images/jenkins-ready.png)
+
+
+2. Navigate to the **Manage Jenkins -> Manage Plugins**. 
+
+![The Image shows how to navigate to create jenkins plugins](image/images/manage-jenkins-plugins.png)
+
+- Follow the Image description below to install all the recommended Jenkins Plugins (Git, Docker Pipeline.)
+
+
+![The Image shows the selection of available plugins](image/images/available-plugins.png)
+
+
+![The Image shows the selection of available plugins](image/images/available-plugins.png)
+
+
+After, selecting the installation of Git plugins then, repeat thesame procedure to install "Docker-Pipeline".
+
+![The Image shows of the docker pipeline plugins](image/images/Docker-pipeline-plugins1.png)
+
+![The Image shows of the docker pipeline plugins](image/images/Docker-pipeline-plugins-installed.png)
+
+
+# Configure Jenkins with required security measures.
+
+On my Jenkins instance, I need to create a new rules for port 8080 in the security group
+
+- By default, Jenkins listens on port 8080, I need to create an inbound rule for this in the security group of my Jenkins instance
+
+![The Image shows the  inbound security rule of the Jenkins instance](image/images/inbound-security-rule.png)
+
+  ### Instruction for Jenkins:
+
+  - Document the steps for Jenkins installation.
+
+  - Details the plugin installation and configuration.
+
+  - Outline security measures applied to the Jenkins server.
+
+
+  ***********************
+
+2. **Source Code Management Repository Integration**
+
+  **Objective:** Connect Jenkins to the version control system for source code management.
+
+  **Steps:**
+
+  - Integrate Jenkins with the source code management repository (e,g., GitHub, Bitbucket).
+
+  - Configure webhooks for automatic triggering of Jenkins builds.
+
+
+  **Instructions for Jenkins:**
+
+  - Document the integration steps with the version control system.
+
+  - Provide instructions for setting up webhooks. 
+
