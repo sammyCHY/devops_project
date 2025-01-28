@@ -183,18 +183,102 @@ On my Jenkins instance, I need to create a new rules for port 8080 in the securi
 
   ***********************
 
-2. **Source Code Management Repository Integration**
+2. # Source Code Management Repository Integration**
 
   **Objective:** Connect Jenkins to the version control system for source code management.
 
   **Steps:**
 
-  - Integrate Jenkins with the source code management repository (e,g., GitHub, Bitbucket).
+  ### Integrate Jenkins with the source code management repository (e,g., GitHub, Bitbucket).
 
-  - Configure webhooks for automatic triggering of Jenkins builds.
+    Integrating Jenkins with a source management (SCM) repository like GitHub or Bitbucket is essential for automating builds, tests, and deployments.
+
+**Step 1: Install the Necessary Plugins**
+    1. Navigate to Manage Jenkins -> Manage Plugins.
+
+    2. Install the following plugins based on my SCM:
+
+        - Git Plugin: For general Git repository integration
+
+        - GitHub Integration Plugin: For GitHub-specific features (webhooks, build triggers, etc.).
+
+**Step 2: Set Up Credentials**
+
+  Jenkins requires credentials to connect to my repository.
+
+  1. Generate Access Credentials:
+  
+      - GitHub:
+
+        1. Go to your GitHub account settings -> **Developers Settings -> Personal Access Tokens**.
+
+The procedure to carry out the settings above.
+
+![The Image shows the Github account settings to connect jenkins to version control](image/images/github-account-settings.png)
 
 
-  **Instructions for Jenkins:**
+![The Image shows the Github account settings to connect jenkins to version control](image/images/developer-settings.png)
+
+
+![The Image shows the Github account settings to connect jenkins to version control](image/images/generate-new-token.png)
+
+
+![The Image shows the Github account settings to connect jenkins to version control](image/images/generate-new-token-classic-final.png)
+
+The token named and created after the step below.
+
+![The Image shows the Github account settings to connect jenkins to version control](image/images/my-token-created1.png)
+
+![The Image shows the Github account settings to connect jenkins to version control](image/images/my-token-created2.png)
+
+![The Image shows the Github account settings to connect jenkins to version control](image/images/my-token-created3.png)
+
+![The Image shows the Github account settings to connect jenkins to version control](image/images/my-token-created4.png)
+
+![The Image shows token created ](image/images/token-generated.png)
+
+
+2. **Add Credentials in Jenkins:**
+
+    1. Navigate to **Manage Jenkins -> Manage Credentials**.
+
+![The Image shows to create Jenkins management credentials ](image/images/source-code-management-jenkins-credential1.png)
+
+
+![The Image shows to create Jenkins management credentials ](image/images/source-code-management-jenkins-credential2.png)
+
+
+    2. Select the appropriate scope (Global or folder-specific).
+
+![The Image shows to create Jenkins management credentials ](image/images/source-code-management-jenkins-credential3.png)
+
+    3. Add a new credential:
+
+        - **Kind:** Choose either "Username with password" or "Secret Text" (use "Secret Text" for tokens).
+
+        - ID: Enter a recognizable ID for later use.
+
+        - Description: Provide details for easy identification.
+
+     In the Jenkens platform, I have to create my first build job.
+
+     From the dashboard menu on the left side, click on the new item
+
+     ![The Image shows the first build on the Jenkins](mage/images/my-first-job.png)  
+
+### Connecting Jenkins To Our Source Code Management
+
+Now that I have created my first project on Jenkins , let me connect Jenkins with github.
+
+
+![The Image shows the connection of Jenkins to GitHub ](image/images/connect-jenkins-with-github.png)
+
+Save the configuration and "build now" to connect jenkins to my repository.
+
+### Configure webhooks for automatic triggering of Jenkins builds.
+
+
+**Instructions for Jenkins:**
 
   - Document the integration steps with the version control system.
 
