@@ -356,7 +356,66 @@ ii. Create a freestyle project and name it "my-second-job"
 
 - Create a Jenkins Pipeline script to run a web application.
 
+### Writing Jenkins Pipeline Script
+
+A Jenkins pipeline script refers to a script that defines and orchestrates the steps and stages of a continuous integration and continuous delivery (CI/CD) Pipeline. Jenkins Pipelines can be defined using either declarative or scripted syntax. Declarative syntax is a more structured and concise way to define pipelines. It uses a domain-specific language to describe the pipeline stages, steps, and other configurations while scripted syntax provides more flexibility and is suitable for complex scripting requirements.
+
+Below is my pipeline script.
+
+```
+pipeline {
+    agent any
+
+    stages {
+        stage('Connect To Github') {
+            steps {
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sammyCHY/jenkins-scm.git']])
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh 'docker build -t dockerfile .'
+                }
+            }
+        }
+        stage('Run Docker Container') {
+            steps {
+                script {
+                    sh 'docker run -itd --name nginx -p 8081:80 dockerfile'
+                }
+            }
+        }
+    }
+}
+```
 
 **Instructions for Jenkins:**
 
 - Provide the Pipeline script to run a web application.
+
+
+**********************
+
+# 5. Docker Image Creation and Registry Push
+
+**Objective:** Automate the creation of Docker images for web application and push them to a container registry such as docker hub.
+
+Steps:
+
+- Configure Jenkins to build Docker Images.
+
+- Run a container using the built docker image
+
+- Access the web application on my web browser
+
+- Push Docker Images to a container registry.
+
+
+# Instruction for Jenkins:
+
+- Document Docker image creation within Jenkins.
+
+- Explain the process for running a container
+
+- Explain the setup for pushing images to a registry.
