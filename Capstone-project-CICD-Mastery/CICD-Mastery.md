@@ -271,11 +271,44 @@ The token named and created after the step below.
 Now that I have created my first project on Jenkins , let me connect Jenkins with github.
 
 
-![The Image shows the connection of Jenkins to GitHub ](image/images/connect-jenkins-with-github.png)
+![The Image shows the connection of Jenkins to GitHub](image/images/connect-jenkins-with-github.png)
 
 Save the configuration and "build now" to connect jenkins to my repository.
 
+![The Image shows the result of the first job in Jenkins build and connect to GitHub](image/images/build-connect-jenkins-github-repo1.png)
+
+
+![The Image shows the result of the first job in Jenkins build and connect to GitHub](image/images/build-connect-jenkins-github-repo2.png)
+
+
+![The Image shows the result of the first job in Jenkins build and connect to GitHub](image/images/build-connect-jenkins-github-repo3.png)
+ 
+
 ### Configure webhooks for automatic triggering of Jenkins builds.
+
+Webhooks allow Jenkins to automatically start a build whenever changes are pushed to a source code repository.
+
+  1. Enable Webhook Triggering in Jenkins
+
+  Before setting up webhooks, ensure Jenkins is configured to accept webhook requests.
+
+### Configuring Build Trigger
+
+As an angineer, I nee to be able to able to automate things and make our work easier in possible ways. I have connected `jenkins` to `jenkins-scm`, but I cannot run a new build with clicking on `Build Now`. To eliminate this, I need to configure a build trigger to `my jenkins first job`. with this, jenkins will run a new build anytime a change is made to my github repository.
+
+Follow the instruction below to accomplish the task.
+
+i. Click "Configure" my job and add this configurations
+
+ii. Click on build trigger to configure triggering the job from GitHub webhook.
+
+![The Image shows the creation Jenkins build trigger](image/images/build-trigger.png)
+
+
+iii. Create a github webhook using jenkins ip address and port
+
+
+![The Image shows the github webhook connect with jenkins ip](image/images/github-webhook-connect-with-jenkins-ip.png)
 
 
 **Instructions for Jenkins:**
@@ -284,3 +317,16 @@ Save the configuration and "build now" to connect jenkins to my repository.
 
   - Provide instructions for setting up webhooks. 
 
+  ********************************************
+
+  # 3. Jenkins Freestyle Jobs for Build and Unit Tests
+
+  **Objective:** Create Jenkins Freestyle jobs for building a web application and running unit tests.
+
+  **Steps:** 
+
+  - Set up a Freestyle job for building the application.
+
+  **Instructions for Jenkins:**
+
+  - Document the configuration of Freestyle jobs.
