@@ -327,6 +327,36 @@ iii. Create a github webhook using jenkins ip address and port
 
   - Set up a Freestyle job for building the application.
 
-  **Instructions for Jenkins:**
 
-  - Document the configuration of Freestyle jobs.
+### Creating a Freestyle Project
+
+**Let's create my first build job**
+
+i. From the dashboard menu on the left side, click on new item
+
+![The Image shows the creating Freestyle Project](image/images/creating-freestyle-project.png)
+
+
+ii. Create a freestyle project and name it "my-second-job"
+
+![The Image shows the creating Freestyle Project](image/images/freestyle-project.png)
+
+ **Instructions for Jenkins:**
+
+- Document the configuration of Freestyle jobs.
+
+********************************************
+
+# 4.Jenkins Pipeline for Web Application**
+
+**Objective:** Develop a Jenkins Pipeline for running a web application.
+
+
+**Steps:**
+
+- Create a Jenkins Pipeline script to run a web application.
+
+
+**Instructions for Jenkins:**
+
+- Provide the Pipeline script to run a web application.
