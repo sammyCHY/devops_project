@@ -470,21 +470,121 @@ stage('Run Docker Container') {
 
 Steps:
 
-- Configure Jenkins to build Docker Images.
+# 1.Configure Jenkins to build Docker Images.
+
+    Jenkins can automate the process of building and deploying Docker images. 
+
+    The steps bellow will setup Jenkins for building Docker images.
+
+    Pre-requisites
+
+**Ensure that the following in the list below is installed and configured.**
+
+-       Jenkins installed and running
+
+![The Image shows the step of the pipeline job](image/images/my-pipeline-first-new-job.png)
+
+ 
+![The image shows the github hook trigger selected](image/images/configure-trigger.png)
+
+
+![The image shows the pipeline script](image/images/pipeline-script.png)
+
+
+-       Docker installed on the Jenkins Server
+
+![The image shows the docker running on the jenkins server](image/images/view-docker-installation.png)
+
+-       Jenkins user has permission to run Docker commands
+
+Jenkins may not have permission to use Docker by default, therefore, I need to add the `Jenkins` user to the `docker` group.
+
+The command below needs to be run on the Jenkins Server.
+
+`sudo usermod -aG docker jenkins`
+
+`sudo systemctl restart docker`
+
+`sudo systemctl restart jenkins`
+
+To verify `Jenkins` can run Docker.
+
+`sudo -u jenkins docker ps`
+
+![The image shows the Jenkins user permissions to run docker](image/images/jenkins-user-permissions-to-run-docker.png)
+
+
+-       Required Plugings installed (git, Pipeline, and Docker Pipeline)
+
+
+# 2. Run a container using the built docker image
+
+**Installing Docker**
+
+    Before jenkins can run docker commands, I need to install docker on the same instance jenkins was installed. 
+
+i. Create a file named docker.sh
+
+ii. Open the file and paste the script below
+
+```
+sudo apt-get update -y
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo systemctl status docker
+```
+
+![The image shows the dockerfile script](image/images/dockersh-file.png)
+
+iii. Save and cloe the file
+
+iv. Make the file executable
+
+```
+sudo chmod u+x docker.sh
+```
+
+v. Execute the file
+
+```
+sudo ./docker.sh
+```
+
+ I have successfully installed docker.
+
+
+# 3. Access the web application on my web browser
 
 
 
-- Run a container using the built docker image
 
-- Access the web application on my web browser
 
-- Push Docker Images to a container registry.
+
+
+# 4. Push Docker Images to a container registry.
+
+
+
+
+
+
+
 
 
 # Instruction for Jenkins:
 
-- Document Docker image creation within Jenkins.
+  - Document Docker image creation within Jenkins.
 
-- Explain the process for running a container
+  - Explain the process for running a container
 
-- Explain the setup for pushing images to a registry.
+  - Explain the setup for pushing images to a registry.
