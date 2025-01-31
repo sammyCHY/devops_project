@@ -565,20 +565,57 @@ sudo ./docker.sh
 
 # 3. Access the web application on my web browser
 
+How to access the web application on my web browser after the installation of the docker image in the Jenkins serever.
+
+Now that I have docker installed on the same instance with jenkins, I need to create a `dockerfile` and also index.html file before I can run pipeline script. As I know, I cannot build a docker image without a dockerfile.
+
+![The Image shows the dockerfile](image/images/dockerfile.png)
+
+The Image below show the index.html file for a sample of web application.
+
+
+![The Image shows the dindex.html file](image/images/index.htmlfile.png)
+
+
+The created files both `Dockerfile` and `index.html` file on a local source code management(scm) platform.
+
+![The Image shows the index.html file](image/images/dockerfile&htmlfile.png)
+
+After pushing the files `Dockerfile` and `index.html` will trigger jenkins to automatically run new build for the Pipeline
+
+Below is the build and the build output by clicking Console Output in a Jenkins Console.
+
+![The Image shows the build trigger](image/images/final-build1.png)
+
+
+![The Image shows the build output on a Jenkins console](image/images/build-console-output1.png)
+
+
+![The Image shows the build output on a Jenkins console](image/images/build-console-output2.png)
+
+
+![The Image shows the build output on a Jenkins console](image/images/build-console-output3.png)
 
 
 
+![The Image shows the build output on a Jenkins console](image/images/build-console-output4.png)
 
 
+
+![The Image shows the build output on a Jenkins console](image/images/pipeline-overview.png)
 
 # 4. Push Docker Images to a container registry.
 
+To access the content of `index.html` on my web browser, I need to firest edit inbound rules and open the port I mapped my container to (8081). form the security group.
+
+I can now access the content of index.html on my web browser.
+
+```
+http://jenkins-ip-address:8081
+```
 
 
-
-
-
-
+![The Image shows the build output on a Jenkins console](image/images/web-application.png)
 
 
 # Instruction for Jenkins:
