@@ -73,3 +73,101 @@ This course will help me understand and implement these practices, making my sof
 
 ## Lesson Details:
 
+1. Definition and Benefits of CI/CD:
+
+    - Continuous Integration (CI) is the practice of merging all developers working copies to a shared mainline several times a day.
+
+    - Continuous Deployment (CD) is the process of releasing software changes to production automatically and reliably.
+
+    - **Benefits:** Faster release rate, improved developer productivity, better code quality, and enhanced customer satisfaction.
+
+
+2. Overview of the CI/CD Pipeline:
+    
+
+    - **CI Pipeline** typically includes steps like version control, code integration, automated testing, and building the application.
+
+    - **CD Pipeline** involves steps like deploying the application to a staging or production environment, and post-deployment monitoring.
+
+    - **Tools:** Version control systems (e.g., Git), CI/CD platforms (e.g., GitHub Actions), testing frameworks, and deployment tools.
+
+## Lesson Details:
+
+- **GitHub Actions:** A CI/CD Platform integrated into GitHub, automating the build, test, and deployment pipelines of your software directly within my GitHub repository.
+
+- **Documentation Reference:** Explore the [GitHub Actions Documentation](https://docs.github.com/en/actions) for in-depth understanding.
+
+### Key Concepts and Terminology:
+
+### 1. Workflow:
+
+-   **Definition:** A configurable automated process made up of one or more jobs. Workflows are defined by a YAML file in your repository.
+
+- **Example:** A workflow to test and deploy a Node.js application upon a Git Push.
+
+- **Documentation:** Learn more about workflows in the [GitHub Docs on Workflows](https://docs.github.com/en/actions/writing-workflows)
+
+
+### 2. Event:
+
+-   **Definition:** A specific activity that triggers a workflow. Events include activities like push, pull request, issue creation, or even a scheduled time.
+
+-   **Example:** A `Push` event triggers a workflow that runs tests every time code is pushed to any branch in a repository.
+
+-   **Documentation:** Review different types of events in the [Events that trigger workflows section](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)
+
+
+### 3. Job:
+
+-   Definition: A set of steps in a workflow that are executed on the same runner. Jobs can run sequentially or in parallel.
+
+- **Example:** A job that  runs on your application.
+
+- Documentation: Understand jobs in detail in the [GitHub Docs on Jobs](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does)
+
+
+### 4. Step:
+
+-   **Definition:** An individual task that can run commands within a job. Steps can run scripts or actions.
+
+-   **Example:** A step in a job to install dependencies (`npm install`).
+
+-   **Documentation:** Learn about steps in the [Steps section of GitHub Docs](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps)
+
+
+5. Action:
+
+-   **Definition:** Standalone commands combined into steps to create a job. Actions can be written by you or provided by the GitHub community.
+
+-   **Example:** Using `actions/checkout` to check out your repository code.
+
+
+-   Documentation: Explore GitHub Actions in the [Marketplace](https://github.com/marketplace?type=actions) and learn how to create your own in the [Creating actions guide](https://docs.github.com/en/actions/sharing-automations)  
+
+
+
+### 6. Runner:
+
+-   **Definition:** A server that runs your workflows when they're triggered. Runners can be hosted by GitHub or self-hosted.
+
+-   Example: A GitHub-hosted runner that uses Ubuntu.
+
+-   **Documentation:** Delve into runners in the [GitHub Docs on](https://docs.github.com/en/actions/using-github-hosted-runners)
+
+
+## Additional Resources:
+
+-   **GitHub Learning Lab:** Interactive courses to learn GitHub Actions. visit [GitHub Learning Lab](https://lab.github.com/courses)
+
+-   **GitHub Actions Quickstart:** For a hands-on introduction, check out the [Quickstart for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart)
+
+
+-   **Community Forums:** Engage with the GitHub community for questions and discussions at [GitHub Community Forums.](https://github.com/orgs/community/discussions/)
+
+
+
+
+
+
+ 
+
