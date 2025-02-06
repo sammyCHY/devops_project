@@ -25,3 +25,51 @@ This course will help me understand and implement these practices, making my sof
     - Understanding of version control concepts.
     - Familiarity with basic Git operations like clone, commit, push, and pull.
     - A GitHub account and knowledge of repository management on GitHub.
+
+2. Understanding of Basic Programming Concepts:
+
+    - Fundamental programming knowledge, preferably in JavaScript, as the example project uses Node.js.
+
+    - Basic understanding of how web applications work.
+
+3. Familiarity with Node.js and npm:
+
+    - Basic knowledge of Node.js and npm (Node package manager).
+
+    - Ability to set up a simple Node.js project and install dependencies using npm.
+
+4. Text Editor or IDE:
+
+    - A text editor or Integrated Development Environment (IDE) like visual studio Code, Atom, Sublime Text or any preferred editor for writing and editing code.
+
+
+5. Local Development Environment:
+
+    - Node.js and npm installed on the local machine.
+
+    - Access to the command line or terminal.
+
+
+6. Internet Connection:
+
+    - Stable Internet connection to access GitHub and potentially other online resources or documentation.
+
+7. Basic Understanding of CI/CD Concepts (Optional but Helpful):
+
+    - General awareness of Continuous Integration and Continuous Deployment concepts.
+
+    - This can be part of the learning in the course, but prior knowledge is beneficial.
+
+
+
+### Lesson 1: Understanding Continuous Integration and Continuous Deployment
+
+## Objectives:
+
+1. Define CI/CD and understand its benefits.
+
+2. Get familiar with the CI/CD Pipeline.
+
+
+## Lesson Details:
+
