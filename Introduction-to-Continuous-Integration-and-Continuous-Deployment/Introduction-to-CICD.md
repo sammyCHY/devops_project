@@ -166,6 +166,50 @@ This course will help me understand and implement these practices, making my sof
 
 
 
+# Practical Implementation
+
+### Setting Up the Project:
+
+1. Initialize a GitHub Repository:
+
+    - Create a new repository on GitHub.
+
+![The Image shows the creation of new repository](image/images/new-repository-Github.png)
+
+
+    - Clone it to your local machine.
+
+![The Image shows the cloning to the local machine](image/images/git-clone-repository.png)
+
+2. Create a Simple Node.js Application:
+
+    - Initialize a Node.js Project (`npm init`).
+
+**Install Node.js and npm**
+
+Before starting, ensure that **Node.js** and **Npm** are installed in my server but before then use the command below to check:
+
+    - Create a simple server using Express.js to serve a static web page.
+
+    - Add your code to the repository and push it to GitHub.
+
+```
+// Example: index.js
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
+```
+
+
+
 
 
 
