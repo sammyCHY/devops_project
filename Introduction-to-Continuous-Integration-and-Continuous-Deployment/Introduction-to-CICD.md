@@ -187,11 +187,89 @@ This course will help me understand and implement these practices, making my sof
 
 **Install Node.js and npm**
 
-Before starting, ensure that **Node.js** and **Npm** are installed in my server but before then use the command below to check:
+Before starting, I have to ensure that **Node.js** and **Npm** are installed in my server before by using  the command below to check:
 
-    - Create a simple server using Express.js to serve a static web page.
+`node -v`
+`npm -v`
 
-    - Add your code to the repository and push it to GitHub.
+If they are not installed, I have to download and install Node.js from [Node.js Official Website](https://nodejs.org/en) or using another alternative site that has [Snap package Node.js](https://snapcraft.io/node)
+
+![The Image shows the installation of node.js using snap package manager](image/images/node-js-installation.png)
+    
+
+`nvm` stands for **Node Version Manager**. It is a tool that allows to easily manage and switch between between multiple versions of Node.js on my machine. This is particularly useful when working on different projects that require different versions of Node.js.   
+
+Key Features of `nvm`
+
+1. **Install Multiple Node.js Versions:**
+
+    - You can install multiple versions of Node.js and switch between them as needed.
+
+2. **Switch Between Node.js Versions:**
+
+    - Easily switch between installed versions of Node.js for different projects.
+
+3. **Set a Default Node.js Version:**
+
+    - Set default version of Node.js to use globally.
+
+4. **Uninstall Node.js Versions:**
+
+    - Remove versions of Node.js that you no longer need.
+
+[the Image shows the `nvm` link for installation](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+
+Once you have access to the site the scroll down to `Installing and Updating` and copy either of the two command below and run it on the terminal linked to your Linux Ubuntu.
+
+![The Image shows the link to deploy nvm in the server or system](image/images/install-nvm1.png)
+
+
+![The Image shows the site channel to deploy nvm in the server or system via Github link](image/images/install-nvm2.png)
+
+
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`
+
+
+`wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`
+
+Below are the installation of the `nvm` on the terminal.
+
+![The Image shows the nvm deployment](image/images/nvm.png)
+
+After the Installation you have to restart the terminal or exit and reload.
+If you want to re-open a new terminal you can use a shortcut keys command like:
+
+`ctrl+sht+t`
+
+After re-opening of the new terminal then, re-enter the `nvm` on the terminal.
+
+![The Image shows the installed nvm](image/images/nvm-installed1.png)
+
+![The Image shows the installed nvm](image/images/nvm-installed2.png)
+
+![The Image shows the installed nvm](image/images/nvm-installed3.png)
+
+![The Image shows the installed nvm](image/images/nvm-installed4.png)
+
+![The Image shows the installed nvm](image/images/nvm-installed5.png)
+
+ 
+- Create a simple server using Express.js to serve a static web page.
+
+Below are the steps to create a simple server using "Express.js"
+
+**Step1: Set Up a Project:**
+
+-   Create a new directory for your project:
+
+```
+mkdir express-server
+cd express-server
+```
+
+- Add your code to the repository and push it to GitHub.
+
+The code below is the snippet to be added and push to the Github.
 
 ```
 // Example: index.js
@@ -207,6 +285,104 @@ app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
 ```
+ ![The image of express.js snipet scripet](image/images/express-js.png)
+
+
+ 3. Writing Your First GitHub Action Workflow:
+
+    Create a `.github/workflows` directory in your repository.
+
+    - Add a workflow file (e.g., `node.js.yml`).
+
+```
+# Example: .github/workflows/node.js.yml
+
+# Name of the workflow
+name: Node.js CI
+
+# Specifies when the workflow should be triggered
+on:
+# Triggers the workflow on 'push' events to the 'main' branch
+push:
+    branches: [ main ]
+# Also triggers the workflow on 'pull_request' events targeting the 'main' branch
+pull_request:
+    branches: [ main ]
+
+# Defines the jobs that the workflow will execute
+jobs:
+# Job identifier, can be any name (here it's 'build')
+build:
+    # Specifies the type of virtual host environment (runner) to use
+    runs-on: ubuntu-latest
+
+    # Strategy for running the jobs - this section is useful for testing across multiple environments
+    strategy:
+    # A matrix build strategy to test against multiple versions of Node.js
+    matrix:
+        node-version: [14.x, 16.x]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
+    uses: actions/checkout@v2
+
+    - # Sets up the specified version of Node.js
+    name: Use Node.js $\{\{ matrix.node-version \}\}
+    uses: actions/setup-node@v1
+    with:
+        node-version: $\{\{ matrix.node-version \}\}
+
+    - # Installs node modules as specified in the project's package-lock.json
+    run: npm ci
+
+    - # This command will only run if a build script is defined in the package.json
+    run: npm run build --if-present
+
+    - # Runs tests as defined in the project's package.json
+    run: npm test
+```
+
+Explanation:
+
+1. `name`: This simply names your workflow. It's what appears on GitHub when the workflow is running.
+
+2. `on`: This section defines when the workflow is triggered. Here, it's set to activate on push and pull request events to the main branch.
+
+3. `jobs` Jobs are a set of steps that execute on the same runner. In this example, there's one job named `build`
+
+4. `runs-on` Defines the type of machine to run the job on. Here, it's using the latest Ubuntu virtual machine.
+
+5. `Strategy.matrix`: This allows you to run the job on multiple versions of Node.js, ensuring compatibility.
+
+6. `Steps`: A sequence of tasks executed as part of the job.
+
+    - `actions/checkout@v2`: Checks out your repository under `$GITHUB_WORKSPACE`.
+
+    - `actions/setup-node@v1`: Sets up the Node.js environment.
+
+    - `npm ci`: Installs dependencies defined in `package-lock.json`.
+
+    - `npm run build --if-present`: Runs the build script from `package.json` if it's present.
+
+    - `npm test`: Runs tests specified in `package.json`.
+
+
+This workflow is a basic example for a Node.js project, demonstrating how to automate testing across different Node.js versions and ensuring that your code integrates and works as expected in a clean environment.
+
+4. Testing and Deployment:
+
+    - Add automated tests for your application.
+
+    - Create a workflow for deployment (e.g., to a cloud service like Heroku or AWS).
+
+
+5. Experiment and Learn:
+
+
+    - Modify workflows to see how changes affect the CI/CD process. 
+
+    - Try adding different types of tests (unit tests, integration tests).
 
 
 
