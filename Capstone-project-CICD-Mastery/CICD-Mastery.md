@@ -626,4 +626,4 @@ http://jenkins-ip-address:8081
 
   - Explain the setup for pushing images to a registry.
 
-   working towards success
+   
