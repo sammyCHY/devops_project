@@ -181,21 +181,34 @@ This course will help me understand and implement these practices, making my sof
 
 ![The Image shows the cloning to the local machine](image/images/git-clone-repository.png)
 
-2. Create a Simple Node.js Application:
+# 2. Create a Simple Node.js Application:
 
     - Initialize a Node.js Project (`npm init`).
 
 **Install Node.js and npm**
 
-Before starting, I have to ensure that **Node.js** and **Npm** are installed in my server before by using  the command below to check:
+Before starting, I have to ensure that **Node.js** and **Npm**[node package manager] are installed in my server or my local computer before proceeding with other installation but before then, use the command below to check the status of the `node.js and npm` in the local computer of the server.
 
 `node -v`
 `npm -v`
 
 If they are not installed, I have to download and install Node.js from [Node.js Official Website](https://nodejs.org/en) or using another alternative site that has [Snap package Node.js](https://snapcraft.io/node)
 
+For Windows you use this site [node.js window installation](https://nodejs.org/en/download/)
+
+[Download]("C:\Users\DONKAMS\Downloads\node-v22.14.0-x64.msi")
+
+[Steps to install npm and node.js in the window](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
+
+
 ![The Image shows the installation of node.js using snap package manager](image/images/node-js-installation.png)
     
+After the window installation of `npm` then restart the terminal or the system and then initialize `npm` by running `npm init`in the terminal, immidiately you run the command `package.json` will be installed automatically.
+
+![The Image shows the package.json installed](image/images/package-json.png)
+
+
+ ### Bellow is the practice to install `npm` and `node.js` in the server
 
 `nvm` stands for **Node Version Manager**. It is a tool that allows to easily manage and switch between between multiple versions of Node.js on my machine. This is particularly useful when working on different projects that require different versions of Node.js.   
 
@@ -288,62 +301,79 @@ app.listen(port, () => {
  ![The image of express.js snipet scripet](image/images/express-js.png)
 
 
- 3. Writing Your First GitHub Action Workflow:
+# 3. Writing Your First GitHub Action Workflow:
 
-    Create a `.github/workflows` directory in your repository.
+### Create a `.github/workflows` directory in your repository.
 
-    - Add a workflow file (e.g., `node.js.yml`).
+Below are the steps to follow:
+
+1. Navigate to your Repository.
+
+    - Go to your repository on GitHub or open it in your local development environment.
+
+    - Click on the action in the upper interface.
+
+![The Image shows the selection of github workflow](image/images/git-workflow1.png)
+
+2. Create the `.github`Directory.
+
+    - Click on the "set up a workflow yourself"
+
+![The Image shows the selection of github action workflow](image/images/git-workflow2.png)
+
+
+### Add a workflow file (e.g., `nodejs.yml`).
 
 ```
-# Example: .github/workflows/node.js.yml
-
-# Name of the workflow
 name: Node.js CI
-
-# Specifies when the workflow should be triggered
+ 
 on:
-# Triggers the workflow on 'push' events to the 'main' branch
-push:
-    branches: [ main ]
-# Also triggers the workflow on 'pull_request' events targeting the 'main' branch
-pull_request:
-    branches: [ main ]
-
-# Defines the jobs that the workflow will execute
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+ 
 jobs:
-# Job identifier, can be any name (here it's 'build')
-build:
-    # Specifies the type of virtual host environment (runner) to use
+  build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: express-server
 
-    # Strategy for running the jobs - this section is useful for testing across multiple environments
     strategy:
-    # A matrix build strategy to test against multiple versions of Node.js
-    matrix:
-        node-version: [14.x, 16.x]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+      matrix:
+        node-version: [18.x, 20.x] # Updated Node.js versions
+ 
     steps:
-    - # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
-    uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Updated to v4
+ 
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4 # Updated to v4
+        with:
+          node-version: ${{ matrix.node-version }}
+ 
+      - name: Initialize package.json
+        run: npm init -y
+ 
+      - name: Install dependencies
+        run: npm install
+ 
+      - name: Build project (if applicable)
+        run: npm run build --if-present
+ 
+      - name: Run tests
+        run: npm test
 
-    - # Sets up the specified version of Node.js
-    name: Use Node.js $\{\{ matrix.node-version \}\}
-    uses: actions/setup-node@v1
-    with:
-        node-version: $\{\{ matrix.node-version \}\}
-
-    - # Installs node modules as specified in the project's package-lock.json
-    run: npm ci
-
-    - # This command will only run if a build script is defined in the package.json
-    run: npm run build --if-present
-
-    - # Runs tests as defined in the project's package.json
-    run: npm test
 ```
 
-Explanation:
+![The Image shows the workflow file](image/images/node-js-yaml.png)
+
+
+![The Image shows the workflow file](image/images/node-js-workflow-build-successful.png)
+
+
+### Explanation:
 
 1. `name`: This simply names your workflow. It's what appears on GitHub when the workflow is running.
 
