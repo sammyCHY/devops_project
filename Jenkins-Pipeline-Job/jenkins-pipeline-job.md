@@ -84,9 +84,9 @@ Specifies that the pipeline can run on any available agent (an agent can either 
 - **Stages:**
 
 ```
-stages \{
+stages {
    // Stages go here
-\}
+}
 ```
 
 Defines the various stages of the pipeline, each representing a phase in the software delivery process.
@@ -94,11 +94,11 @@ Defines the various stages of the pipeline, each representing a phase in the sof
 - **Stage 1: Connect To Github:**
 
 ```
-stage('Connect To Github') \{
-   steps \{
+stage('Connect To Github') {
+   steps {
       checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sammyCHY/jenkins-scm.git']])
-   \}
-\}
+   }
+}
 ```
 
 - This stage checks out the source code from a GitHub repository (`https://github.com/sammyCHY/jenkins-scm.git).
@@ -108,13 +108,13 @@ stage('Connect To Github') \{
 - Stage 2: Build Docker Image:
 
 ```
-stage('Build Docker Image') \{
-   steps \{
-      script \{
+stage('Build Docker Image') {
+   steps {
+      script {
          sh 'docker build -t dockerfile .'
-      \}
-   \}
-\}
+      }
+   }
+}
 ```
 
 - This stage builds a Docker image named 'dockerfile' using the source code obtained from the GitHub repository.
@@ -124,13 +124,13 @@ stage('Build Docker Image') \{
 - Stage 3: Run Docker Container:
 
 ```
-stage('Run Docker Container') \{
-   steps \{
-      script \{
+stage('Run Docker Container') {
+   steps {
+      script {
          sh 'docker run -itd --name nginx -p 8081:80 dockerfile'
-      \}
-   \}
-\}
+      }
+   }
+}
 ```
 
 - This stage runs a Docker container named 'nginx' in detached mode (`-itd`).
@@ -191,7 +191,7 @@ Now you can replace the generated script for connect jenkins with github.
 ### Installing Docker
 
 
-Before jenkins can run docker commands, we need to install docker on the same instance jenkins was installed. From our shell scripting knownledge, let's install docker with shell script.
+Before jenkins can run docker commands, we need to install docker on the same instance jenkins was installed. From our shell scripting knowledge, let's install docker with shell script.
 
 i. Create a file named docker.sh
 
