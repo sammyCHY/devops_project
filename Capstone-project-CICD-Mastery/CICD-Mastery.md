@@ -4,7 +4,7 @@
 
 **Project Scenario**
 
-A technology consulting firm, is adopting a cloud architecture for it's software applications. As a DevOps Engineer,my task is to design and implement a robust CI/CD pipeline using Jenkins to automate the deployment of a web application. The goal is to achieve continous integration, continous deployment, and ensure the scalability and reliability of the applications.
+A technology consulting firm, is adopting a cloud architecture for it's software applications. As a DevOps Engineer,my task is to design and implement a robust CI/CD pipeline using Jenkins to automate the deployment of a web application. The goal is to achieve continuous integration, continuous deployment, and ensure the scalability and reliability of the applications.
 
 ### Pre-requisite
 
@@ -111,7 +111,7 @@ sudo systemctl status jenkins
 
 # Set up necessary Plugins (Git, Docker, etc.).
 
-Setting up necessary plugings like Git, Docker, and others in Jenkins is crucial for integrating version control, containerization, and other tolls into my CI/CD Pipelins. Here's a step-by-step guide to set up these plugins:
+Setting up necessary plugins like Git, Docker, and others in Jenkins is crucial for integrating version control, containerization, and other tolls into my CI/CD Pipelines. Here's a step-by-step guide to set up these plugins:
 
 **step 1: Access Jenkins Plugin Manager**
   
@@ -157,7 +157,7 @@ Next is access into the Jenkins Platform.
 ![The Image shows the selection of available plugins](image/images/available-plugins.png)
 
 
-After, selecting the installation of Git plugins then, repeat thesame procedure to install "Docker-Pipeline".
+After, selecting the installation of Git plugins then, repeat the same procedure to install "Docker-Pipeline".
 
 ![The Image shows of the docker pipeline plugins](image/images/Docker-pipeline-plugins1.png)
 
@@ -260,7 +260,7 @@ The token named and created after the step below.
 
         - Description: Provide details for easy identification.
 
-     In the Jenkens platform, I have to create my first build job.
+     In the Jenkins platform, I have to create my first build job.
 
      From the dashboard menu on the left side, click on the new item
 
@@ -294,7 +294,7 @@ Webhooks allow Jenkins to automatically start a build whenever changes are pushe
 
 ### Configuring Build Trigger
 
-As an angineer, I nee to be able to able to automate things and make our work easier in possible ways. I have connected `jenkins` to `jenkins-scm`, but I cannot run a new build with clicking on `Build Now`. To eliminate this, I need to configure a build trigger to `my jenkins first job`. with this, jenkins will run a new build anytime a change is made to my github repository.
+As an Engineer, I nee to be able to able to automate things and make our work easier in possible ways. I have connected `jenkins` to `jenkins-scm`, but I cannot run a new build with clicking on `Build Now`. To eliminate this, I need to configure a build trigger to `my jenkins first job`. with this, jenkins will run a new build anytime a change is made to my github repository.
 
 Follow the instruction below to accomplish the task.
 
@@ -391,7 +391,7 @@ pipeline {
 ```
 **Explanation of the script above**
 
-The provided Jenkins Pipeline script defines a series of tages for a continuous integration and continuous delivery (CI/CD) process. Let's break down each stage:
+The provided Jenkins Pipeline script defines a series of tags for a continuous integration and continuous delivery (CI/CD) process. Let's break down each stage:
 
 Agent configuration:
 
@@ -565,7 +565,7 @@ sudo ./docker.sh
 
 # 3. Access the web application on my web browser
 
-How to access the web application on my web browser after the installation of the docker image in the Jenkins serever.
+How to access the web application on my web browser after the installation of the docker image in the Jenkins server.
 
 Now that I have docker installed on the same instance with jenkins, I need to create a `dockerfile` and also index.html file before I can run pipeline script. As I know, I cannot build a docker image without a dockerfile.
 
@@ -574,7 +574,7 @@ Now that I have docker installed on the same instance with jenkins, I need to cr
 The Image below show the index.html file for a sample of web application.
 
 
-![The Image shows the dindex.html file](image/images/index.htmlfile.png)
+![The Image shows the index.html file](image/images/index.htmlfile.png)
 
 
 The created files both `Dockerfile` and `index.html` file on a local source code management(scm) platform.
@@ -606,7 +606,7 @@ Below is the build and the build output by clicking Console Output in a Jenkins 
 
 # 4. Push Docker Images to a container registry.
 
-To access the content of `index.html` on my web browser, I need to firest edit inbound rules and open the port I mapped my container to (8081). form the security group.
+To access the content of `index.html` on my web browser, I need to first edit inbound rules and open the port I mapped my container to (8081). form the security group.
 
 I can now access the content of index.html on my web browser.
 
