@@ -80,9 +80,9 @@ Step 1: Server Preparation
 
       1. Add Jenkins Repository: Get the Jenkins repo on the official site.
 ```
-sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+sudo wget -O /usr/share/keyring/jenkins-keyring.asc \
 https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+echo "deb [signed-by=/usr/share/keyring/jenkins-keyring.asc]" \
 https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
 /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
@@ -120,7 +120,7 @@ Setting up necessary plugins like Git, Docker, and others in Jenkins is crucial 
 
 ![The Image shows the login into Jenkins](image/images/unlock-jenkins-by-adminpassword.png)
 
-- Run the command command below to generate adminpassword to access jenkins platform.
+- Run the command command below to generate "admin password" to access jenkins platform.
 
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
@@ -514,7 +514,7 @@ To verify `Jenkins` can run Docker.
 ![The image shows the Jenkins user permissions to run docker](image/images/jenkins-user-permissions-to-run-docker.png)
 
 
--       Required Plugings installed (git, Pipeline, and Docker Pipeline)
+-       Required Plugins installed (git, Pipeline, and Docker Pipeline)
 
 
 # 2. Run a container using the built docker image
@@ -546,7 +546,7 @@ sudo systemctl status docker
 
 ![The image shows the dockerfile script](image/images/dockersh-file.png)
 
-iii. Save and cloe the file
+iii. Save and clone the file
 
 iv. Make the file executable
 

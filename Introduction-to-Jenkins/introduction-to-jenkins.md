@@ -1,6 +1,6 @@
 # Introduction to Jenkins
 
-# Introduction To CICD
+# Introduction To CI/CD
 
 Continuous Integration and Continuous Delivery (CI/CD) is a set of best practices and methodologies that revolutionize the software development lifecycle by enhancing efficiency, reliability, and speed. CI/CD represents a seamless integration of automation and collaboration throughout the development process, aiming to deliver high-quality software consistently and rapidly. In the realm of CI, developers regularly integrated their code changes into a shared repository, triggering automated builds and tests to detect integration issues early. On the other hand, CD encompasses both Continuous Delivery and Continuous Deployment, ensuring that software is always in a deployable state and automating the deployment process for swift and reliable releases. The CI/CD pipeline fosters a culture of continuous improvement, allowing development, allowing development teams to iterate quickly, reduce manual interventions, and deliver software with confidence.
 
@@ -26,7 +26,7 @@ By the end of this Project, learners should have;
 
 # Project Highlight
 
-- Introduction to CICD
+- Introduction to CI/CD
 
 - What is Jenkins
 
