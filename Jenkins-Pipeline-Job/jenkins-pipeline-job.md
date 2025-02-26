@@ -157,6 +157,36 @@ i. Click on the pipeline syntax
 
 ![The Image shows the pipeline syntax](image/images/pipeline-syntax.png)
 
+This Image above has to be reviewed and replaced with the dockerfile name but the link below is the correct snippet code for the script.
+
+```
+pipeline {
+    agent any
+
+    stages {
+        stage('Connect To Github') {
+            steps {
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sammyCHY/jenkins-scm.git']])
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh 'docker build -t dockerfile .'
+                }
+            }
+        }
+        stage('Run Docker Container') {
+            steps {
+                script {
+                    sh 'docker run -itd --name nginx -p 8081:80 dockerfile'
+                }
+            }
+        }
+    }
+}
+```
+
 
 ii. Select the drop down to search for **`checkout: Check out from version control`**
 
@@ -287,6 +317,72 @@ Congratulations, You have successfully run your first pipeline code.
 Pushing these files `dockerfile` and `index.html` will trigger jenkins to automatically run new build for my pipeline
 
 ![The Image shows the dockerfile and html file](image/images/dockerfile&htmlfile.png)
+
+When you push and start getting some errors like in the image below.
+
+![The Image show the error when pushing jenkinsfile](image/images/resolve.png)
+
+
+Approach the error with some certain measures below:
+
+The error message indicates that the script is unable to connect to the Docker daemon due to a permission issue:
+"ERROR: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock"
+
+Solution Steps:
+1. Check if Docker is Running
+Run the following command to check if Docker is running:
+
+``` 
+sudo systemctl status docker
+```
+
+```
+sudo systemctl start docker
+```
+
+2. Run the Command as Root
+ sudo docker build -t dockerfile .
+
+
+
+3. Add Your User to the Docker Group
+If you don’t want to use sudo every time, add your user to the docker group:
+
+
+```
+sudo usermod -aG docker $USER
+```
+
+Then, log out and log back in (or restart your machine) for the changes to take effect.
+
+
+4. Check Docker Group Permissions
+Ensure that /var/run/docker.sock has the correct permissions:
+
+ls -la /var/run/docker.sock
+If the group is not set to docker, change it with:
+
+`sudo chown root:docker /var/run/docker.sock`
+
+`sudo chmod 666 /var/run/docker.sock`
+
+
+5. Restart Jenkins (If Running in Jenkins)
+If you’re running this inside a Jenkins pipeline, ensure that Jenkins has permissions to access Docker:
+ 
+`sudo usermod -aG docker jenkins`
+
+`sudo systemctl restart jenkins`
+
+After the whole process, the result below is the console output result.
+
+![The Image show the console output result](image/images/console-output1.png)
+
+
+![The Image show the console output result](image/images/console-output2.png)
+
+
+![The Image show the console output result](image/images/console-output3.png)
 
 
 To access the content of `index.html` on my web browser, I need to first edit inbound rules and open the port that is mapped the container to (8081)
