@@ -4,7 +4,7 @@
 
 **Project Scenario**
 
-A technology consulting firm, is adopting a cloud architecture for it's software applications. As a DevOps Engineer,my task is to design and implement a robust CI/CD pipeline using Jenkins to automate the deployment of a web application. The goal is to achieve continuous integration, continuous deployment, and ensure the scalability and reliability of the applications.
+A technology consulting firm, is adopting a cloud architecture for it's software applications. As a DevOps Engineer, my task is to design and implement a robust CI/CD pipeline using Jenkins to automate the deployment of a web application. The goal is to achieve continuous integration, continuous deployment, and ensure the scalability and reliability of the applications.
 
 ### Pre-requisite
 
@@ -294,7 +294,7 @@ Webhooks allow Jenkins to automatically start a build whenever changes are pushe
 
 ### Configuring Build Trigger
 
-As an Engineer, I nee to be able to able to automate things and make our work easier in possible ways. I have connected `jenkins` to `jenkins-scm`, but I cannot run a new build with clicking on `Build Now`. To eliminate this, I need to configure a build trigger to `my jenkins first job`. with this, jenkins will run a new build anytime a change is made to my github repository.
+As an Engineer, I need to be able to able to automate things and make our work easier in possible ways. I have connected `jenkins` to `jenkins-scm`, but I cannot run a new build with clicking on `Build Now`. To eliminate this, I need to configure a build trigger to `my jenkins first job`. with this, jenkins will run a new build anytime a change is made to my github repository.
 
 Follow the instruction below to accomplish the task.
 

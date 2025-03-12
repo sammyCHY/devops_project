@@ -4,7 +4,7 @@
 
 ### Introduction to Docker Images
 
-Docker images are the building blocks of containers. They are lightweight, portable, and self-sufficient packages that contain everything neede to run a software application, including the code, runtime, libraries, and system tools. Images are created from a set of instructions known as a Dockerfile, which specifies the environment and configuration for the application.
+Docker images are the building blocks of containers. They are lightweight, portable, and self-sufficient packages that contain everything needed to run a software application, including the code, runtime, libraries, and system tools. Images are created from a set of instructions known as a Dockerfile, which specifies the environment and configuration for the application.
 
 ### Pulling Images for Docker Hub
 
@@ -46,7 +46,7 @@ As we move in this course, I will get to know the images to work with containers
 
 ### Dockerfile
 
-A Dockerfile is a paintext configuration file that contains a set of instructions for building a Docker image. It serves as a blueprint for creating a reproducible and consistent environment for my application. Dockerfiles are fundamental to the containerization process, allowing me to define the steps to assembe an image that encapsulates my application and its dependencies.
+A Dockerfile is a plaintext configuration file that contains a set of instructions for building a Docker image. It serves as a blueprint for creating a reproducible and consistent environment for my application. Dockerfile are fundamental to the containerization process, allowing me to define the steps to assemble an image that encapsulates my application and its dependencies.
 
 ### Creating a Dockerfile.
 
@@ -95,7 +95,7 @@ working directory in the container.
 
 4. EXPOSE 80: Informs Docker that the NGINX server will use port 80. This is a documentation feature and doesn't actually publish the port.
 
-5. CMD: NGINX images come with a default CMD to start the server, so there's no need to specify it explicity.
+5. CMD: NGINX images come with a default CMD to start the server, so there's no need to specify it explicitly.
 
 HTML file named `index.html`in the same directory as your dockerfile.
 
@@ -126,7 +126,7 @@ docker run -p 8080:80 dockerfile
 
 Running the command above will create a container that listens on port 8080 using the nginx image I have created earlier.So I need to create a new rule in security group of EC2 instance.
 
-Let's recall the hands-on project I did in the advanced techops curriculum. Now let's add new rules to the security group
+Let's recall the hands-on project I did in the advanced Techops curriculum. Now let's add new rules to the security group
 
 i. On the EC2 instance, click on the security tab
 
@@ -219,7 +219,7 @@ Now anyone can make use of the image I have on my docker rub repository
 
 **Side Hustle Task: Dockerize a Basic Web Static Page**
 
-1. Lauch an instance and create a Dockerfile:
+1. Launch an instance and create a Dockerfile:
 
 - Launch an ubuntu EC2 instance and connect to it.
 - Create a dockerfile, in the file;
@@ -228,7 +228,7 @@ Now anyone can make use of the image I have on my docker rub repository
 - Expose the port my web application runs (e.g.,80)
 
 2. **Build the Docker Image**
-   - Navigate to the directory conataining my Dockerfile if not there.
+   - Navigate to the directory containing my Dockerfile if not there.
    - Build the image using the dockerfile
 
 3. **Run the Docker Container:**
