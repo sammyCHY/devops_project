@@ -18,7 +18,7 @@ For an example, Imagine you're a chef in a busy restaurant. Every dish you prepa
 This course will help me understand and implement these practices, making my software development process more efficient and error-free, much like a well-orchestrated kitchen. Whether you're working on personal projects, contributing to open source, or building enterprise-level applications, mastering CI/CD with GitHub Actions will be an invaluable skill in my development toolkit.
 
 
-### Pre-requistes
+### Pre-requisites
 
 1. Basic knowledge of Git and GitHub:
 
@@ -203,7 +203,7 @@ For Windows you use this site [node.js window installation](https://nodejs.org/e
 
 ![The Image shows the installation of node.js using snap package manager](image/images/node-js-installation.png)
     
-After the window installation of `npm` then restart the terminal or the system and then initialize `npm` by running `npm init`in the terminal, immidiately you run the command `package.json` will be installed automatically.
+After the window installation of `npm` then restart the terminal or the system and then initialize `npm` by running `npm init`in the terminal, immediately you run the command `package.json` will be installed automatically.
 
 ![The Image shows the package.json installed](image/images/package-json.png)
 
@@ -298,7 +298,7 @@ app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
 ```
- ![The image of express.js snipet scripet](image/images/express-js.png)
+ ![The image of express.js snippet](image/images/express-js.png)
 
 
 # 3. Writing Your First GitHub Action Workflow:
