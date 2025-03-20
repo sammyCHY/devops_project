@@ -5,7 +5,7 @@ The Project will involve setting up a simple web application (e.g., a Node.js ap
 
 # Introduction to GitHub Actions and CI/CD Course Project
 
-Introduction course on GitHub Actions and Continous Integration/Continuous Deployment (CI/CD). This course is designed to provide and hands-on-learning experience, guiding me through the essentials of automating software development processes using GitHub Actions. Whether a developer, a student, or someone curious about CI/CD practices, this course will equip you with the practical skills and knowledge you need to implement these powerful automation techniques in your projects.
+Introduction course on GitHub Actions and Continuous Integration/Continuous Deployment (CI/CD). This course is designed to provide and hands-on-learning experience, guiding me through the essentials of automating software development processes using GitHub Actions. Whether a developer, a student, or someone curious about CI/CD practices, this course will equip you with the practical skills and knowledge you need to implement these powerful automation techniques in your projects.
 
 # Why is This Relevant for Learners?
 
@@ -370,7 +370,7 @@ jobs:
 ![The Image shows the workflow file](image/images/node-js-yaml.png)
 
 
-![The Image shows the workflow file](image/images/node-js-workflow-build-successful.png)
+![The Image shows the workflow file](image/images/node-js-wokflow-build-successful.png)
 
 
 ### Explanation:
