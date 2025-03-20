@@ -232,9 +232,9 @@ Key Features of `nvm`
 
 [the Image shows the `nvm` link for installation](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 
-Once you have access to the site the scroll down to `Installing and Updating` and copy either of the two command below and run it on the terminal linked to your Linux Ubuntu.
+Once you have access to the site then scroll down to `Installing and Updating` and copy either of the two command below and run it on the terminal linked to your Linux Ubuntu.
 
-![The Image shows the link to deploy nvm in the server or system](image/images/install-nvm1.png)
+![The Image shows the link to deploy nvm in the server or system](image/images/nvm.png)
 
 
 ![The Image shows the site channel to deploy nvm in the server or system via Github link](image/images/install-nvm2.png)
