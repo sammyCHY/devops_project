@@ -320,7 +320,6 @@ jobs:
     - Tailor your workflow for different environments (development, staging, production) by using conditions or different workflow files.
 
 
-
 Additional Resources:
 
    - GitHub Actions Documentation: For a comprehensive understanding, refers to the [official documentation](https://docs.github.com/en/actions) 
