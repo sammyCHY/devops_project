@@ -22,7 +22,11 @@ The goal is to automate the integration and deployment process for both componen
 
    - Create a new GitHub repository named `e-commerce-platform`. 
 
+![The Image shows the GitHub repository name e-commerce-platform](image/images/ecommerce-repository.png)
+
    - Inside the repository, create two directories: `api` for the backend and `webapp` for the frontend.
+
+![The Image shows the two directories api & webapp in the repository](image/images/two-directory-api-webapp.png)
 
 **Task 2: Initialize GitHub Actions**
 
