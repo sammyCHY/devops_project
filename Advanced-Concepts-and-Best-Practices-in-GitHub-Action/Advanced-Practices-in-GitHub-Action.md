@@ -106,3 +106,35 @@ Caching Dependencies for Faster Builds:
    - Implement security best practices in GitHub Actions.
 
    - Secure secrets and sensitive information. 
+
+
+**Implementing Security Best Practices:**
+
+1. **Least Privilege Principle:**
+
+    - Grant minimum permissions necessary for the workflows.
+
+    - Regularly review and update permissions.
+
+2. **Audit and Monitor Workflow Runs:**
+
+    - Regularly check workflow run logs for unexpected behavior.
+
+
+**Securing Secrets and Sensitive Information**
+
+1. **Use Encrypted Secrets:**
+
+    - Store sensitive information like tokens and keys in [GitHub Encrypted Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
+
+
+
+```
+env:
+  ACCESS_TOKEN: ${{" secrets.ACCESS_TOKEN "}}
+# Use secrets as environment variables in your workflow.
+``` 
+
+**Avoid Hardcoding Sensitive Information:**
+
+- Never hardcode sensitive details like passwords directly in your workflow files.
