@@ -147,6 +147,8 @@ Lesson Details:
         # Steps will be defined next
     ```
 
+![The Image shows the build steps on the Github action workflow](build-step1.png)
+
 **Adding Build Steps:**
 
 - Each step in the job performs a specific task.
@@ -166,6 +168,7 @@ steps:
   run: npm run build
   # 'npm run build' runs the build script defined in your 'package.json'. This is typically used for compiling or preparing your code for deployment.
 ```
+![The Image shows the build steps on the Github action workflow](build-step2.png)
 
 Running Tests in the Workflow:
 
@@ -181,10 +184,11 @@ Running Tests in the Workflow:
   # 'npm test' runs the test script defined in your 'package.json'. It's crucial for ensuring that your code works as expected before deployment.
 ```  
 
+![The Image shows the run test on the Github action workflow](run-test.png)
+
 **Learner Notes:**
 
   - The `build`job consists of steps to check out the code, install dependencies, build the code, and run tests.
-
   - The `runs-on: ubuntu-latest` line specifies that the job should run on the latest version of Ubuntu provided by GitHub Actions.
 
   - Using actions like `actions/checkout@v2` helps in leveraging community-maintained actions to simplify command tasks.
@@ -224,6 +228,8 @@ jobs:
       run: echo $CUSTOM_VAR
       # Access 'CUSTOM_VAR' in a step.
 ```
+
+![The Image shows the environment variable on the Github action workflow](environmental_variables.png)
 
 2. ### Working with Secrets: 
 
@@ -275,6 +281,15 @@ jobs:
         echo "Received value from previous step: ${{" steps.step-one.outputs.value "}}"
         # Access the output of 'step-one' in 'step-two'.
 ```
+
+![The Image shows the pipeline deployment on the Github action workflow](build-completed2.png)
+
+
+![The Image shows the pipeline deployment on the Github action workflow](build-completed.png)
+
+
+![The Image shows the pipeline deployment on the Github action workflow](git-yaml-final1.png)
+
 
 **Learner Notes:**
 
