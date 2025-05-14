@@ -147,7 +147,7 @@ Lesson Details:
         # Steps will be defined next
     ```
 
-![The Image shows the build steps on the Github action workflow](build-step1.png)
+![The Image shows the build steps on the Github action workflow](image/images/build-step1.png)
 
 **Adding Build Steps:**
 
@@ -168,7 +168,7 @@ steps:
   run: npm run build
   # 'npm run build' runs the build script defined in your 'package.json'. This is typically used for compiling or preparing your code for deployment.
 ```
-![The Image shows the build steps on the Github action workflow](build-step2.png)
+![The Image shows the build steps on the Github action workflow](image/images/build-step2.png)
 
 Running Tests in the Workflow:
 
@@ -184,7 +184,7 @@ Running Tests in the Workflow:
   # 'npm test' runs the test script defined in your 'package.json'. It's crucial for ensuring that your code works as expected before deployment.
 ```  
 
-![The Image shows the run test on the Github action workflow](run-test.png)
+![The Image shows the run test on the Github action workflow](image/images/run-test.png)
 
 **Learner Notes:**
 
@@ -229,7 +229,7 @@ jobs:
       # Access 'CUSTOM_VAR' in a step.
 ```
 
-![The Image shows the environment variable on the Github action workflow](environmental_variables.png)
+![The Image shows the environment variable on the Github action workflow](image/images/environmental_variables.png)
 
 2. ### Working with Secrets: 
 
@@ -282,13 +282,13 @@ jobs:
         # Access the output of 'step-one' in 'step-two'.
 ```
 
-![The Image shows the pipeline deployment on the Github action workflow](build-completed2.png)
+![The Image shows the pipeline deployment on the Github action workflow](image/images/build-completed2.png)
 
 
-![The Image shows the pipeline deployment on the Github action workflow](build-completed.png)
+![The Image shows the complete deployment on the Github action workflow](image/images/build-completed.png)
 
 
-![The Image shows the pipeline deployment on the Github action workflow](git-yaml-final1.png)
+![The Image shows the last display  deployment on the Github action workflow](image/images/git-yaml-final1.png)
 
 
 **Learner Notes:**
