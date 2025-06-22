@@ -145,7 +145,7 @@ Automating Versioning in CI/CD:
     - Resources: [Semantic Versioning](https://semver.org/)
 
 
-2. **Automatic Versioning with GitHub Actions:**
+2. **Automated Versioning with GitHub Actions:**
 
     - Implement automated versioning using GitHub Actions to increment version numbers automatically based on code changes.
 
@@ -268,6 +268,16 @@ Step 1: Choose a Cloud Platform
 
     - A workflow is defined with a series of steps that run on specified events.
 
+![The Image shows the creation of workflow](image/images/creating-workflow-file.png)
+
+
+The AWS IAM creation and secret key generation for pipeline procedure.
+
+![The Image shows the creation of aws "IAM" secret keys and id for deployment and access ](image/images/access&secret-key.png)
+
+
+![The Image shows the creation of aws "IAM" secret keys and id for deployment and access ](image/images/allowec2&s3access-policies.png)
+
 
 **Example for AWS Deployment:**
 
@@ -303,8 +313,25 @@ jobs:
         # For example, using AWS CLI commands to deploy.
 ```
 
+![The Image shows the addition of secrets](image/images/Github-accesskey&secretkey-id.png)
 
-   - This workflow deploys your application to AWS when changes are pushed to the main branch. 
+
+![The Image shows the correct set of pipeline deployment to the cloud](image/images/aws-deployment.png)
+
+- This workflow deploys your application to AWS when changes are pushed to the main branch. 
+
+![The Image shows the pipeline deployment to the cloud](image/images/deploy-to-aws1.png)
+
+![The Image shows the pipeline deployment to the cloud](image/images/deploy-to-aws2.png)
+
+![The Image shows the pipeline deployment to the cloud](image/images/deploy-to-aws3.png)
+
+![The Image shows the pipeline deployment to the cloud](image/images/deploy-to-aws4.png)
+
+![The Image shows the pipeline deployment to the cloud](image/images/deploy-to-aws5.png)
+
+![The Image shows the pipeline deployment to the cloud](image/images/deploy-to-aws6.png)
+
 
 **Step 3: Configuring Deployment Environments:**
 
