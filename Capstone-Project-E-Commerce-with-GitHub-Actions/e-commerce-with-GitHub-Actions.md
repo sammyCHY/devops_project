@@ -45,21 +45,26 @@ The goal is to automate the integration and deployment process for both componen
 1. (a) Install Node.js and NPM
 Ensure the Node.js installed either in local computer or server. Check by running.
 
-   ```
-  - node -v
-  - npm -v
-   ```
+   
+  `node -v`
+
+  `npm -v`
+   
 ![The Image shows the node.js and npm](image/images/node-npm.png)
 
 If Node.js is not installed, download it from [Node.js official website.](https://nodejs.org/en)
 
 2. (b) Initialize a Node.js Project
-   Navigate to the `api` directory and initialize a new Node.js Project:
 
-    ```
-    mkdir api && cd api
-    npm init -y
-    ```
+Navigate to the `api` directory and initialize a new Node.js Project:
+
+
+      ```
+      mkdir api && cd api
+      ```
+
+npm init -y
+
 ![The Image shows the created api directory](image/images/cp-api-json-file.png)
 
 This will creates a 'package.json' file.
@@ -76,6 +81,7 @@ Unit testing ensures that each part of my API works correctly. I will use **Jest
 ```
 npm install --save-dev jest supertest
 ```
+
 - **Jest:** A popular JavaScript testing framework.
 
 - **Supertest:** Helps test HTTP endpoints.
@@ -101,6 +107,8 @@ Run the following command bellow:
 ```
 npx create-react-app webapp
 ```
+
+
 ![The Image shows the Installation of npx-react-app webapp](image/images/npx-webapp1.png)
 
 
