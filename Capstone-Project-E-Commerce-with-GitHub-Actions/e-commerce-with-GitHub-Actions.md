@@ -103,13 +103,18 @@ npx create-react-app webapp
 ```
 ![The Image shows the Installation of npx-react-app webapp](image/images/npx-webapp1.png)
 
+
 ![The Image shows the Installation of npx-react-app webapp](image/images/npx-webapp2.png)
+
 
 ![The Image shows the Installation of npx-react-app webapp](image/images/npx-webapp3.png)
 
+
 ![The Image shows the Installation of npx-react-app webapp](image/images/npx-webapp4.png)
 
+
 ![The Image shows the Installation of npx-react-app webapp](image/images/npx-webapp5.png)
+
 
 This will generate a new "React app" inside the `webapp` directory
 
@@ -198,7 +203,7 @@ npm start
 
 This capstone project aims to provide hands-on experience in automating CI/CD pipeline for a real-world e-commerce application, encompassing aspects like backend API management, frontend web development, Docker containerization, and cloud deployment.
 
-Additional Resources:
+### Additional Resources:
 
    - [Node.js](https://nodejs.org/docs/latest/api/)
 
@@ -208,12 +213,12 @@ Additional Resources:
 
    - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 
-   - Cloud Platforms Documentation:
+   ## Cloud Platforms Documentation:
 
-       - [AWS](https://docs.aws.amazon.com/)
+   - [AWS](https://docs.aws.amazon.com/)
 
-       - [Azure](https://learn.microsoft.com/en-us/azure/?product=popular)
+   - [Azure](https://learn.microsoft.com/en-us/azure/?product=popular)
 
-       - [Google Cloud](https://cloud.google.com/docs)
+   - [Google Cloud](https://cloud.google.com/docs)
 
 This project will challenge your skills in developing a full-stack application and automating its deployment, offering a comprehensive understanding of CI/CD practices in a commercial setting.
