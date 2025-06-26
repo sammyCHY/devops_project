@@ -100,5 +100,3 @@ Side Hustle Task: Docker Container Operations
 - Remove the container
 - Verify that the container is removed 
 - Confirm that the container is no longer listed.
-
-- confirmed.
