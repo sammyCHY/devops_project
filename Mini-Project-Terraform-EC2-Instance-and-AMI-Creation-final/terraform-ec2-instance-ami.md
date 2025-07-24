@@ -99,15 +99,15 @@ resource "aws_ami" "example_ami" {"\n  name        = \"example-ami\"\n  descript
 
 After terraform init,then the next is "terraform plan" the terraform plan will highlight all the deployment process.
 
-![The Image shows the "terraform plan"](image/images/terraform-plan1.png)
+![The Image shows the "terraform plan"](image/images/Terraform-plan1.png)
 
-![The Image shows the "terraform plan"](image/images/terraform-plan2.png)
+![The Image shows the "terraform plan"](image/images/Terraform-plan2.png)
 
-![The Image shows the "terraform plan"](image/images/terraform-plan3.png)
+![The Image shows the "terraform plan"](image/images/Terraform-plan3.png)
 
-![The Image shows the "terraform plan"](image/images/terraform-plan4.png)
+![The Image shows the "terraform plan"](image/images/Terraform-plan4.png)
 
-![The Image shows the "terraform plan"](image/images/terraform-plan5.png)
+![The Image shows the "terraform plan"](image/images/Terraform-plan5.png)
 
 
 6.  Apply the Terraform configuration using `terraform apply` and confirm the creation of the EC2 instances and AMI. 
