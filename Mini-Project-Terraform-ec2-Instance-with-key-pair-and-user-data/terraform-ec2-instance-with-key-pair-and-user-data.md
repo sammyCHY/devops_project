@@ -31,9 +31,12 @@ In this mini project, You will use terraform to automate the launch of an EC2 in
 
 1. Create a new directory for your Terraform Project (e.g., `terraform-ec2-keypair`).
 
+![The Image show the creation for terraform project ie terraform-ec2-keypair](image/images/terraform-ec2-keypair.png)
 
 2. Inside the project directory, create a Terraform configuration file (e.g., `main.tf`).
 
+
+![The Image show the change of directory into terraform project ie terraform-ec2-keypair](image/images/terraform-ec2-keypair.png)
 
 3. Write Terraform code to create an EC2 instance with the following specifications:
 
@@ -73,13 +76,24 @@ In this mini project, You will use terraform to automate the launch of an EC2 in
 
 1. Create a new directory for your Terraform project using a terminal (`mkdir terraform-ec2-keypair`).
 
+![The Image show the creation for terraform project ie terraform-ec2-keypair](image/images/terraform-ec2-keypair.png)
+
+
 2. Change into the project directory (`cd terraform-ec2-keypair`).
+
+
+![The Image show the change of directory into terraform project ie terraform-ec2-keypair](image/images/terraform-ec2-keypair.png)
 
 
 3. Create a Terraform configuration file (`nano main.tf`).
 
 
+![The Image show the configuration terraform](image/images/touch-nano-main.tf.png)
+
 4. Copy and paste the sample Terraform configuration template into your file. 
+
+
+![The Image show the terraform configuration template ](image/images/terraform-configuration-template.png)
 
 
 ```
@@ -92,18 +106,41 @@ resource "aws_instance" "example_instance" {"\n  ami           = \"ami-0c55b159c
 output "public_ip" {"\n  value = aws_instance.example_instance.public_ip\n"}
 ```
 
+Before applying for terraform init make sure `aws` is configured in the `local CLI`
+
+
+![The Image show the aws configuration in the cli](image/images/aws-configuration.png)
+
+
 5. Save the file and initialize the Terraform project using `terraform init`.
 
 
+![The Image show the initializing of the terraform project script using terraform init](image/images/ terraform-init.png)
+
+
 6. Apply the Terraform configuration using `terraform apply` and confirm the creation of the EC2 instance.
+
+![The Image show the terraform configuration using "terraform apply"](image/images/terraform-apply1.png)
+
+
+![The Image show the terraform configuration using "terraform apply"](image/images/terraform-apply2.png)
+
+
+![The Image show the terraform configuration using "terraform apply"](image/images/terraform-apply3.png)
+
+
+![The Image show the terraform configuration using "terraform apply"](image/images/terraform-apply4.png)
+
+
+![The Image show the terraform configuration using "terraform apply"](image/images/terraform-apply5.png)
 
 
 7. Access the Apache web server on the created EC2 instance using its public IP address.
 
 
+![The Image show the creation of Apache web-server"](image/images/apache-web-server-created.png)
+
 8. Document your observations and any challenges faced during the project.
-
-
 
 
 ```
