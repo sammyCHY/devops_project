@@ -432,16 +432,41 @@
     - Enter a Unique Name
     - Enter the Lockid
  
- 
+
     ![The Image below the represents s3 bucket (dynamoDB creation and the process)](image/images/terraform-bucket1.png)
  
  
     ![The Image below the represents s3 bucket (dynamoDB creation and the process)](image/images/terraform-bucket2.png) 
  
  
- 
+After the process above, the amazon s3 bucket has to be created manually.
+The Image below shows the creation of the s3 bucket via amazon console.
+
+![The Image below shows the creation of s3 bucket manually)](image/images/amazon-s3-bucket-creation1.png)
+
+![The Image below shows the creation of s3 bucket manually)](image/images/amazon-s3-bucket-creation2.png)
+
+
+Remember before creating a policy that will be attached to the IAM User policy, the json file has to be edited.
+
+![The Image below the represents the json file policy edition)](image/images/terraform-plan-dynamoDB-lock.png)
+
+ The Image below shows the creation of the policies.
+
+ ![The Image below the represents policy creation)](image/images/policy-terraform-dynamodb-lock-created1.png)
+
+
+  ![The Image below the represents policy creation)](image/images/policy-terraform-dynamodb-lock-created2.png)
+  
+
  6. Create the backend configuration file (`nano backend.tf`) to specify the backend storage.
  
+
+ When "backend.ft" file is created.
+
+
+![The Image below the terraform backend file created)](image/images/touch-backend.png)
+
  
  ```
  terraform {"\n  backend \"s3\" {\n    bucket         = \"your-terraform-state-bucket\"\n    key            = \"terraform.tfstate\"\n    region         = \"us-east-1\"  # Change this to your desired AWS region\n    encrypt        = true\n    dynamodb_table = \"your-lock-table\"\n  "}
@@ -463,18 +488,60 @@
  ```
  
  7. Initialize the Terraform project using `terraform init`.
+
+
+ ![The Image shows the terraform init on the cli](image/images/terraform-init.png)
+
+
+ ![The Image shows the terraform init on the cli](image/images/terraform-init-final.png)
+
+
+Then terraform validate.
+
+![The Image shows the terraform validate](image/images/terraform-validate.png)
+
+![The Image shows the terraform validate](image/images/terraform-validate-final.png)
+
+
+ After the terraform init then the next stage is "terraform plan" to actually ascertain the alignment of the project.
+
+
+![The Image shows the terraform plan process](image/images/terraform-plan1.png)
+
+![The Image shows the terraform plan process](image/images/terraform-plan2.png)
+
+![The Image shows the terraform plan process](image/images/terraform-plan3.png)
+
+![The Image shows the terraform plan process](image/images/terraform-plan4.png)
+
+![The Image shows the terraform plan process](image/images/terraform-plan5.png)
+
  
  8. Apply the Terraform configuration using `terraform apply` and confirm the creation of the VPC and S3 bucket.
  
- 
+ After which the project has been finalized, the next is to run terraform apply.
+
+![The Image shows the terraform apply process](image/images/terraform-apply1.png)
+
+![The Image shows the terraform apply process](image/images/terraform-apply2.png)
+
+![The Image shows the terraform apply process](image/images/terraform-apply3.png)
+
+![The Image shows the terraform apply process](image/images/terraform-apply4.png)
+
+![The Image shows the terraform apply process](image/images/terraform-apply5.png)
+
+![The Image shows the terraform apply process](image/images/terraform-apply-final.png)
+
+
  9. Document your observations and any challenges faced during the project.
  
- 
- ```
+
+  
  - Ensure you have the AWS CLI installed and configured with appropriate credentials.
  - Modify variables and configurations in the modules based on your specific requirements.
  - Replace placeholder values in the main and backend configuration files with actual values.
  - This is a learning exercise; use it to gain hands-on experience with Terraform modules and backend storage.
- ```
+ 
  
  
